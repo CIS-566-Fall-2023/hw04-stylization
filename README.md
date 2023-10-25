@@ -20,10 +20,11 @@ Shadows:
 * Interesting rendering of shadows. This could be a texture like in the lab, or simplified or warped shapes. Apply this shadow effect to your whole scene.
 
 ## Depth and Normal Based Outlines
-1. Create render features for sourcing custom depth and normal maps of select objects in your scene
-2. Create an interesting, animated outline effect that resembles some kind of 2D art medium.
-  1. E.g. Pencil Sketch/Crayons/Paint Strokes/Etc.
-  2. In addition to depth/normal based post processing, you are also allowed to explore non-post process techniques such as inverse hull edge rendering for outer edges. 
+Make your objects pop by adding outlines to your scene. 
+1. Start by sourcing custom depth and normal maps of select objects in your scene. [ADD MORE TECHNICAL DETAIL] You should be able to reference this video for some hints on how to do this [VIDEO LINK]
+2. Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
+  1. E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time. Here's an example of outline animation [LINK]
+  2. IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## Full Screen Post Process Effect
 1. Using what you know about render features, create your own render feature for some kind of interesting full screen post process effect
