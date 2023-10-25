@@ -4,7 +4,7 @@
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
 
 ## Picking a piece of concept art
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. Here are some examples of styles that will work well. Feel ffree to choose one of these, but we encourage your to pick your own.
+Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 [EXAMPLE IMAGES]
 
 
@@ -27,9 +27,8 @@ Make your objects pop by adding outlines to your scene.
   2. IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## Full Screen Post Process Effect
-1. Using what you know about render features, create your own render feature for some kind of interesting full screen post process effect
-    1. E.g. An animated watercolor vignette
-
+Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add some post-process to give your scene a unique look. Your psot processing effect should do at least two of the following.
+* A vingette that darkens the edges of your images.
 
 ## Interactivity
 
