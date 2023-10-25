@@ -27,17 +27,30 @@ Make your objects pop by adding outlines to your scene.
   2. IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## Full Screen Post Process Effect
-Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add some post-process to give your scene a unique look. Your psot processing effect should do at least two of the following.
+We're nearing the end! Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add some post-process to give your scene a unique look. Your psot processing effect should do at least two of the following.
 * A vingette that darkens the edges of your images with a color or pattern
-* Color / tone mapping that changes the colorization of your renders
+* Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
 * A texture to make your image look like it's drawn on paper or some other surface.
 * A blur to make your image look smudged.
 * Fog or clouds that drift over your scene
 * Whatever else you can think of that complements your scene!
 
+## Create a scene
+Using Unity's controls, create a SUPER BASIC scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Art direct your scene a little :)
+
 ## Interactivity
+As a finishing touch, let's show off the face that our scene is rendered in real-time! Please add an elment of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
+* Party mode (things speed up, different colorization)
+* Memory mode (different post-processing effects to color you scene differently)
+* Fanart mode (different surface shaders, as if done by a different artist)
+* Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
+
+## Extra Credit
+Explore! What else can you do to polish your scene?
+[ADD MORE IDEAS]
 
 
+[CUT]
 Other aspects of the HW:
 Picking inspiration art
 Keep it simple!
@@ -61,6 +74,7 @@ A turnaround mp4 of your rendered scene!
 
 ## Submission
 1. Video of a turnaround of your scene
+2. All your source files, submitted as PR against this repository.
 
 ## Resources:
 1. [Link to my HW videos]
