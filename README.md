@@ -28,7 +28,12 @@ Make your objects pop by adding outlines to your scene.
 
 ## Full Screen Post Process Effect
 Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add some post-process to give your scene a unique look. Your psot processing effect should do at least two of the following.
-* A vingette that darkens the edges of your images.
+* A vingette that darkens the edges of your images with a color or pattern
+* Color / tone mapping that changes the colorization of your renders
+* A texture to make your image look like it's drawn on paper or some other surface.
+* A blur to make your image look smudged.
+* Fog or clouds that drift over your scene
+* Whatever else you can think of that complements your scene!
 
 ## Interactivity
 
