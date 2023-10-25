@@ -9,14 +9,15 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 
 ## More Interesting Surface and Shadow Shaders
-Based on your concept art, let's create a custom surface shader for the objects in your scene. This should include the following:
+Based on your concept art, let's create some custom surface shaders for the objects in your scene. This should include the following:
 
 Surface shading:
-  * Surface shading that conveys the effects of different amount of light on the surface of the objects. This should be more complex than our three tone lab toon shader.
-  * A SPECIAL second shader that adds a glow, a highlight or some other special effect that
+  * A surface shader that conveys the effects of different amount of light on the surface of the objects. This should be more complex than our three tone lab toon shader and make your objects look like they belong in the concept art you've chosen.
+  * A SPECIAL second shader that adds a glow, a highlight or some other special effect that makes the object stand out in some way. This is intended to give you practice riffing on existing shaders. Most games or applications require some kind of highlighting: this could be an effect in a game that draw player focus, or a highlight on hover like you see in a tool. If your concept art doesn't provide a visual example of what highlighting could look like, use your imagination or find another piece of concept art.
+  * Create two materials, one for each of these shaders. Apply the shaders, to at least one object each in your scene.
 
 Shadows:
-* Interesting rendering of shadows. This could be a texture, simplified or warped shapes.
+* Interesting rendering of shadows. This could be a texture like in the lab, or simplified or warped shapes. Apply this shadow effect to your whole scene.
 
 ## Depth and Normal Based Outlines
 1. Create render features for sourcing custom depth and normal maps of select objects in your scene
