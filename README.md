@@ -10,9 +10,11 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 ## More Interesting Surface and Shadow Shader
 Based on your concept art, let's create a custom surface shader for the objects in your scene. This should include the following:
+
 Surface shading:
   * Surface shading that conveys the effects of different amount of light on the surface of the objects. This should be more complex than our three tone lab toon shader.
   * A SPECIAL second shader that adds a glow, a highlight or some other special effect that
+
 Shadows:
 * Interesting rendering of shadows. This could be a texture, simplified or warped shapes.
 
