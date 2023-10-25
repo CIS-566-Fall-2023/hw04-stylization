@@ -1,14 +1,20 @@
 # hw04-stylization
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the chance to learn more about stylized techniques used to try replicate 2D art techniques in 3D, as well as explore real-time rendering in Unity.
+In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
 
 ## Picking a piece of concept art
+Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. Here are some examples of styles that will work well. Feel ffree to choose one of these, but we encourage your to pick your own.
+[EXAMPLE IMAGES]
 
 
-## A More Interesting Toon Shader
-1. Make your own shadow texture!
-2. ...
+## More Interesting Surface and Shadow Shader
+Based on your concept art, let's create a custom surface shader for the objects in your scene. This should include the following:
+Surface shading:
+  * Surface shading that conveys the effects of different amount of light on the surface of the objects. This should be more complex than our three tone lab toon shader.
+  * A SPECIAL second shader that adds a glow, a highlight or some other special effect that
+Shadows:
+* Interesting rendering of shadows. This could be a texture, simplified or warped shapes.
 
 ## Depth and Normal Based Outlines
 1. Create render features for sourcing custom depth and normal maps of select objects in your scene
