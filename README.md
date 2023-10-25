@@ -8,7 +8,7 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 [EXAMPLE IMAGES]
 
 
-## More Interesting Surface and Shadow Shader
+## More Interesting Surface and Shadow Shaders
 Based on your concept art, let's create a custom surface shader for the objects in your scene. This should include the following:
 
 Surface shading:
