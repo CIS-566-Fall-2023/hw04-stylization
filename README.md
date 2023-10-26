@@ -24,9 +24,9 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 [EXAMPLE IMAGES]
 [Emma Koch 1] [Emma Koch 2] [Emma Koch 3]
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) |
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1f0929b2-082e-4029-967b-7c309cbbad8f) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b0ba183d-7b9d-4597-853a-5973b0daf5d9) |
 |:--:|:--:|:--:|
-| *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *Scaling to give the capsule look* |  *Sine wave gives the smiley-looking shape* |
+| *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *https://twitter.com/trudicastle/status/1122648793009098752* |  *https://www.artstation.com/artwork/nYlbao* |
 ## 2. Interesting Shaders
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
