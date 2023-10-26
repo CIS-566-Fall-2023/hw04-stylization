@@ -64,6 +64,9 @@ These are all things we want you to think about before diving into your shaders!
           3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
           4. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
+              - <img width="450" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
+              - Notice in this artwork how Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
+
       4. **Accurate Color Palette**
           - Do your best to replicate the colors/lighting of your concept art!
 3. **Special Surface Shader**
