@@ -79,13 +79,14 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
     - This is not the case for a Normal Buffer/Map, and thus, you will learn how to source a custom Normal Map/Buffer through following along this tutorial: [VIDEO LINK].
 3. Render Features are awesome. Now that we've seen how they work with the Normal Map example, let's make a render feature that applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
-4. Finally, using everything you've learnt about Render Features, and our access to both a Depth and a Normal Buffer/Map, let's create an Outline Shader (Full Screen Shader Graph) that will use the buffers to draw appealing outlines onto the screen!
-    - Do some research into different kinds of edge detection methods, including Sobel and Robert's Cross filters
-    - Create a basic depth and normal based outline prototype that produces black outlines on areas of large depth and normal difference across the screen.
+4. Finally, using everything you've learnt about Render Features alongside the fact that we have access to both Depth and a Normal Buffers, let's create a Post Process Outline Shader!
+    - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
+    - Create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
+            - Make sure the outline has adjustable parameters, such as width. 
     - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
             - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
             - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
-    - **Lastly, here are some Incredibly Useful Tutorials/Resources for getting started on Post Process Outlines in Unity:**
+    - **Lastly, we strongly recommend watching at least one of these Incredibly Useful Tutorials for getting started on Outlines in Unity**
         - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
         - [Robin Seibold]
