@@ -3,7 +3,7 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/72027589-e5d1-4719-bbc8-552e2cd83513/>
+<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b/>
 <p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
 
 
@@ -95,9 +95,9 @@ Ok, now regardless of what your concept art looks like, using what you know abou
 ## 5. Create a Scene
 Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
 
-Note that your modelling will NOT be graded at all for this assignment. That said, we still encourage you to art direct your scene a little in the style of your concept art : ) !
+Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online that resemble your concept art, instead of spending a lot of your time on modeling geometry if you don't have much free time to spend. (Model your own geometry at your own risk!)
 
-Here are some resources for Finding 3D Assets to populate your scene With:
+Some example resources for finding 3D assets to populate your scene With:
 1. SketchFab
 2. Mixamo
 3. TurboSquid
