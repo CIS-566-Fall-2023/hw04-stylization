@@ -60,7 +60,7 @@ These are all things we want you to think about before diving into your shaders!
 3. **Special Surface Shader**
    - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
        - **Option 1: Animated Crayon/Watercolor/Pencil Sketch/.../Halftone Effect**
-          - In my demo, I created a creenspace, animated hand drawn effect on my Sonic materials
+          - In my Stylized Sonic Scene Demo, I created a screenspace, animated hand drawn effect on my Sonic materials
               -   <img width="200" alt="Texture Example" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/32d7402e-3757-4764-b63e-0b9f381ec0c6"> 
           - Useful tips to get started:
               - Either create your own texture similar to the shadow texture that you made for your surface shaders or procedurally generate some noise texture that resembles some kind of hatching/crayon/watercolor/some traditional art medium. You could either have this procedural generation occur within a custom function node in real-time, or you can do the generation on something like ShaderToy, and then output/screenshot the image to import into your Unity project.
@@ -81,27 +81,30 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - [See here](Insert my link to video)
 4. Using what we've learnt about Render Features/URP as a base, let's now get access to the Depth and Normal Buffers of our scene!
     - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
-    - This is not the case for a Normal Buffer/Map, and thus, we need a render feature to render out the scene's normals into a render texture for us. Similarly to 2), there is something missing from NormalsFeature.cs that's preventing it from rendering out normals into the "Normal Buffer" render texture.
-    - Watch the following video to get hints on both Depth and Normal buffer access/sourcing: [See here](Link to video.)
+    - This is not the case for a Normal Buffer, and thus, we need a render feature to render out the scene's normals into a render texture. Similarly to with the Full Screen Feature, there is something missing from NormalsFeature.cs that's preventing it from rendering out normals into the "Normal Buffer" render texture.
+    - Watch the following video to learn how to enable access onto the default Depth Buffer, and also, get hints on how to complete the NormalFeature render feature.
+        - [See here](Link to video.)
 
-5. Finally, using everything you've learnt about Render Features alongside the fact that we have access to both Depth and a Normal Buffers, let's create a Post Process Outline Shader!
-    - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
-    - Create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
-            - Make sure the outline has adjustable parameters, such as width. 
-    - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
-        - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
-        - In my example below, you might be able to notice that the internal Normal Buffer based edges actually don't have any warping/animation. I did this intentionally because I wanted the final look to still have some kind of structure. Thus, by doing the depth and normal outlines in separate passes, I'm able to have a variety of animated/non-animated outlines composited together : ) !
-            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9f1a76e4-c2ef-475e-b589-0807518a97aa/>
-    - **Lastly, we STRONGLY RECOMMEND watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:**
+5. Finally, using everything you've learnt about Render Features alongside the fact that we now have proper access to both Depth and Normal Buffers, let's create a Post Process Outline Shader!
+    - We **STRONGLY RECOMMEND** watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:**
         - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
         - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
             -  [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
         - [Alexander Ameye](https://ameye.dev/about/)
             - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
-    - **Important Clarification/Note on the Tutorials:**
-        - You will quickly notice after watching/reading any of these tutorial that many of them use a Render Feature to render out a single DepthNormals Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. For this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
-6. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
+        - **Important Clarification/Note on the Tutorials:**
+            - You will quickly notice after watching/reading any of these tutorials that many of them use a Render Feature to render out a single DepthNormals Texture that encodes both depth and normal information into a single texture. This optimization saves on performance but results in less accurate depth or normals information and is overall more confusing for a first time experience into Render Features. Thus, for this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
+   
+    - Next, we will create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
+            - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
+            - Make sure the outline has adjustable parameters, such as width. 
+    - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
+        - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+        - In my example below, you might be able to notice that the internal Normal Buffer based edges actually don't have any warping/animation. I did this intentionally because I wanted the final look to still have some kind of structure. Thus, by doing the depth and normal outlines in separate passes, I'm able to have a variety of animated/non-animated outlines composited together : ) !
+            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9f1a76e4-c2ef-475e-b589-0807518a97aa/>
+
+7. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
     - Check out Alexander Ameye's article on alternative methods of outline rendering in Unity: [See Here](https://ameye.dev/notes/rendering-outlines/)
 
 ---
