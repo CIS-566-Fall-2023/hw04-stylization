@@ -64,8 +64,8 @@ These are all things we want you to think about before diving into your shaders!
           3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
           4. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
-              - <img width="450" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
-              - Notice in this artwork how Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
+              - <img width="350" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
+              - Notice how in this artwork by Emma Koch, Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
 
       4. **Accurate Color Palette**
           - Do your best to replicate the colors/lighting of your concept art!
@@ -118,7 +118,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
         - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
         - In my example below, you might be able to notice that the internal Normal Buffer based edges actually don't have any warping/animation. I did this intentionally because I wanted the final look to still have some kind of structure. Thus, by doing the depth and normal outlines in separate passes, I'm able to have a variety of animated/non-animated outlines composited together : ) !
-            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9f1a76e4-c2ef-475e-b589-0807518a97aa/>
+            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/69b3705b-4e65-4d44-b535-b0fd198d7b6f/>
 
 7. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
     - Check out Alexander Ameye's article on alternative methods of outline rendering in Unity: [See Here](https://ameye.dev/notes/rendering-outlines/)
