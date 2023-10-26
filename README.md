@@ -80,15 +80,18 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - This is not the case for a Normal Buffer/Map, and thus, you will learn how to source a custom Normal Map/Buffer through following along this tutorial: [VIDEO LINK].
 3. Render Features are awesome. Now that we've seen how they work with the Normal Map example, let's make a render feature that applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
 4. Finally, using everything you've learnt about Render Features, and our access to both a Depth and a Normal Buffer/Map, let's create an Outline Shader (Full Screen Shader Graph) that will use the buffers to draw appealing outlines onto the screen!
-    - Incredibly useful resources on Post Process Outlines in Unity:
-        - [NedMakesGames]
+    - Do some research into different kinds of edge detection methods, including Sobel and Robert's Cross filters
+    - Create a basic depth and normal based outline prototype that produces black outlines on areas of large depth and normal difference across the screen.
+    - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
+            - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+            - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
+    - **Lastly, here are some Incredibly Useful Tutorials/Resources for getting started on Post Process Outlines in Unity:**
+        - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
         - [Robin Seibold]
+            -  Tutorial on Depth + Normal Map 
         - [Alexander Ameye]
-    - Do some research into different kinds of edge detection filters, including Sobel and Robert's Cross
-    - Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
-        - E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
-            - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
+    - Important Note on Tutorials: You will quickly notice after watching these tutorial that many of them use a Render Feature to acquire a single Depth-Normal Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. We will be sticking to our approach of having separate Depth and Normal buffers.
 5. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ---
