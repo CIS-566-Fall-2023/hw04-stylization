@@ -43,6 +43,7 @@ These are all things we want you to think about before diving into your shaders!
       3. **Interesting Shadow**
           1. Create your own custom shadow texture!
               - You can use whatever mediums you have available- digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan), you have complete freedom!
+          2. Make uour texture seamless/tesselatable. You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
           2. Modify shadows using your custom texture
           3. Use the default object UVs instead of Screen position!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
@@ -67,13 +68,15 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
 ### To-Do:
 1. Start by sourcing custom depth and normal buffers of your scene. Bla bla bla. You should be able to reference this video for some hints on how to do this [VIDEO LINK].
 2. Watch and follow along this additional video to learn more about Unity's Custom Render Features in the Universal Render Pipeline, and implement your own very simple "Inversion" Render Feature.
-3. Finally, create a Full Screen shader that will take in the depth and/or normal buffers we sourced, in order to draw outlines onto the screen!
-    - Do some research into different kinds of edge detection filters, including SobeCreate an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
-  1. E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time. Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
-  2. IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
+3. Finally, create an Outline Shader (Full Screen Shader Graph) that will use the depth and normal buffers we sourced in order to draw outlines onto the screen!
+    - Do some research into different kinds of edge detection filters, including Sobel and Robert's Cross
+    - Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
+        - E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+            - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
+4. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## 4. Full Screen Post Process Effect
-We're nearing the end! Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add some post-process to give your scene a unique look. Your psot processing effect should do at least one of the following.
+We're nearing the end! Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
 * A vingette that darkens the edges of your images with a color or pattern
 * Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
 * A texture to make your image look like it's drawn on paper or some other surface.
@@ -81,8 +84,15 @@ We're nearing the end! Ok, now regardless of what your concept art looks like, u
 * Fog or clouds that drift over your scene
 * Whatever else you can think of that complements your scene!
 
+***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
+
 ## 5. Create a scene
-Using Unity's controls, create a SUPER BASIC scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Art direct your scene a little :)
+Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). While your modelling will not be graded for this assignment, we do encourage you to art direct your scene a little : )
+
+Some Resources for Finding 3D Assets to Populate Your Scene With:
+1. SketchFab
+2. Mixamo
+3. TurboSquid
 
 ## 6. Interactivity
 As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
