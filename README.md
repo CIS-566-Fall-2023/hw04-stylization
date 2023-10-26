@@ -1,12 +1,13 @@
 # HW 4: 3D Stylization
 
-<p align="center">
-  <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
-
-
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
+<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/72027589-e5d1-4719-bbc8-552e2cd83513/>
+<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
+
+
+### Task List:
 1. Picking a Piece of Concept Art
 2. Interesting Shaders
 3. Outlines
@@ -15,7 +16,9 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 6. Interactivty
 7. Extra Credit
 
-# HW Tasks:
+---
+
+# Tasks
 
 ## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
@@ -76,7 +79,10 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
 4. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## 4. Full Screen Post Process Effect
-We're nearing the end! Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
+We're nearing the end! 
+
+### To-Do:
+Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
 * A vingette that darkens the edges of your images with a color or pattern
 * Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
 * A texture to make your image look like it's drawn on paper or some other surface.
@@ -86,16 +92,18 @@ We're nearing the end! Ok, now regardless of what your concept art looks like, u
 
 ***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
 
-## 5. Create a scene
-Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). While your modelling will not be graded for this assignment, we do encourage you to art direct your scene a little : )
+## 5. Create a Scene
+Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
 
-Some Resources for Finding 3D Assets to Populate Your Scene With:
+Note that your modelling will NOT be graded at all for this assignment. That said, we still encourage you to art direct your scene a little in the style of your concept art : ) !
+
+Here are some resources for Finding 3D Assets to populate your scene With:
 1. SketchFab
 2. Mixamo
 3. TurboSquid
 
 ## 6. Interactivity
-As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
+As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
 * Party mode (things speed up, different colorization)
 * Memory mode (different post-processing effects to color you scene differently)
 * Fanart mode (different surface shaders, as if done by a different artist)
@@ -104,6 +112,7 @@ As a finishing touch, let's show off the fact that our scene is rendered in real
 ## Extra Credit
 Explore! What else can you do to polish your scene?
 [ADD MORE IDEAS]
+Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring
 Interesting Terrain
 Interesting Skybox
 Day-Night Cycle/Lighting Manager
