@@ -85,13 +85,14 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
             - Make sure the outline has adjustable parameters, such as width. 
     - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
             - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
-            - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
-    - **Lastly, we strongly recommend watching at least one of these Incredibly Useful Tutorials for getting started on Outlines in Unity**
+            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9f1a76e4-c2ef-475e-b589-0807518a97aa/>
+    - **Lastly, we STRONGLY RECOMMEND watching at least one of these Incredibly Useful Tutorials for getting started on Outlines in Unity:**
         - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
-        - [Robin Seibold]
-            -  Tutorial on Depth + Normal Map 
-        - [Alexander Ameye]
+        - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
+            -  [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
+        - [Alexander Ameye](https://ameye.dev/about/)
+            - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
     - Important Note on the Tutorials:
         - You will quickly notice after watching these tutorial that many of them use a Render Feature to acquire a single Depth-Normal Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. We will be sticking to our approach of having separate Depth and Normal buffers.
 5. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
