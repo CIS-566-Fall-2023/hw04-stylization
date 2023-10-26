@@ -75,12 +75,16 @@ Make your objects pop by adding outlines to your scene!
 Specifically, we'll be creating ***Post Process Outlines*** based on Depth and Normal buffers of our scene!
 
 ### To-Do:
-1. Render Features! Render Features are awesome, they let us add customizable render passes to any part of the render pipeline. To learn more about them, let's explore a bit about the existing render fe applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
-2. Using what we've learnt about Render Features/URP as a base, let's produce Depth and Normal Buffers of our scene.
-    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process. (Just need to click a tick box to enable)
-    - This is not the case for a Normal Buffer/Map, and thus, you will learn how to source a custom Normal Map/Buffer through following along this tutorial: [VIDEO LINK].
+1. Render Features! Render Features are awesome, they let us add customizable render passes to any part of the render pipeline. To learn more about them, first, watch the following video which introduces an example usecase of a renderer feature in Unity:
+    - [See here](https://youtu.be/GAh225QNpm0?si=XvKqVsvv9Gy1ufi3)
+2. Next, let's explore the HW base code briely, and specifically, learn more about the "Full Screen Feature" that's included as part of your base project. There's a small part missing from "Full Screen Feature.cs" that's preventing it from applying any type of full screen shader to the screen. Your job is to solve this bug and in the process, learn how to create a Full Screen Shadergraph, and then have it actually affect the game view! Watch the following video to get a deeper break down of the Render Feature's code and some hints on what the solution may be.
+    - [See here](Insert my link to video)
+4. Using what we've learnt about Render Features/URP as a base, let's now get access to the Depth and Normal Buffers of our scene!
+    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
+    - This is not the case for a Normal Buffer/Map, and thus, we need a render feature to render out the scene's normals into a render texture for us. Similarly to 2), there is something missing from NormalsFeature.cs that's preventing it from rendering out normals into the "Normal Buffer" render texture.
+    - Watch the following video to get hints on both Depth and Normal buffer access/sourcing: [See here](Link to video.)
 
-4. Finally, using everything you've learnt about Render Features alongside the fact that we have access to both Depth and a Normal Buffers, let's create a Post Process Outline Shader!
+5. Finally, using everything you've learnt about Render Features alongside the fact that we have access to both Depth and a Normal Buffers, let's create a Post Process Outline Shader!
     - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
     - Create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
             - Make sure the outline has adjustable parameters, such as width. 
@@ -97,7 +101,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
             - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
     - **Important Clarification/Note on the Tutorials:**
         - You will quickly notice after watching/reading any of these tutorial that many of them use a Render Feature to render out a single DepthNormals Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. For this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
-5. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
+6. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
     - Check out Alexander Ameye's article on alternative methods of outline rendering in Unity: [See Here](https://ameye.dev/notes/rendering-outlines/)
 
 ---
