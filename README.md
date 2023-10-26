@@ -7,7 +7,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 <p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
 
 
-### Task List:
+### HW Task List:
 1. Picking a Piece of Concept Art
 2. Interesting Shaders
 3. Outlines
