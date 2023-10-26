@@ -20,7 +20,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 
 ## 0. Base Project Overview
 
-After forking the repo, spend a moment to watch this project overview video that goes over what you do and don't need to bring over from the lab, as well as different bits of code and such that you'll be using in the later parts of the HW.
+Take a moment to watch this HW/Base Project overview:
 - [See the Project Overview here](https://youtu.be/wEgt9fbMvMg)
 
 ## 1. Picking a Piece of Concept Art
