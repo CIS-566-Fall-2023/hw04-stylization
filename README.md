@@ -3,7 +3,7 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
+| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 ### HW Task List:
@@ -26,9 +26,10 @@ After forking the repo, take a moment to watch this brief HW/Base Project overvi
 ## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1f0929b2-082e-4029-967b-7c309cbbad8f) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b0ba183d-7b9d-4597-853a-5973b0daf5d9) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1c6b318f-3726-466d-81f3-61cf71c2b1cc) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/817335d2-de15-4f6d-b284-cbe4724d2068) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) 
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | ![]() | ![]() |
 |:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/trudicastle/status/1122648793009098752* | *https://www.artstation.com/artwork/nYlbao* | *https://twitter.com/cysketch/status/1712442821389713597* | *https://twitter.com/birduyen13* | *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | 
+| *https://twitter.com/caomor* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/cysketch/status/1712442821389713597* | *https://twitter.com/birduyen13* | *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | 
+
 
 **Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
 
