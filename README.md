@@ -16,17 +16,17 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 7. Extra Credit
 
 ---
-
 # Tasks
+
 
 ## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 [EXAMPLE IMAGES]
 [Emma Koch 1] [Emma Koch 2] [Emma Koch 3]
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1f0929b2-082e-4029-967b-7c309cbbad8f) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b0ba183d-7b9d-4597-853a-5973b0daf5d9) |
-|:--:|:--:|:--:|
-| *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *https://twitter.com/trudicastle/status/1122648793009098752* |  *https://www.artstation.com/artwork/nYlbao* |
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1f0929b2-082e-4029-967b-7c309cbbad8f) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b0ba183d-7b9d-4597-853a-5973b0daf5d9) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1c6b318f-3726-466d-81f3-61cf71c2b1cc) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/817335d2-de15-4f6d-b284-cbe4724d2068) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) 
+|:--:|:--:|:--:|:--:|:--:|
+| *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://www.artstation.com/artwork/nYlbao* | *https://twitter.com/cysketch/status/1712442821389713597* | *https://twitter.com/birduyen13*
 ## 2. Interesting Shaders
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
