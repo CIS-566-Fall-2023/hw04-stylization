@@ -3,7 +3,7 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | <p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | <img width="500px" height="282px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 ### HW Task List:
