@@ -3,10 +3,9 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b/>
-<p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
-
-
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | <p align="center"> <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
+|:--:|:--:|
+| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 ### HW Task List:
 1. Picking a Piece of Concept Art
 2. Interesting Shaders
@@ -23,8 +22,11 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 ## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 [EXAMPLE IMAGES]
+[Emma Koch 1] [Emma Koch 2] [Emma Koch 3]
 
-
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) |
+|:--:|:--:|:--:|
+| *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *Scaling to give the capsule look* |  *Sine wave gives the smiley-looking shape* |
 ## 2. Interesting Shaders
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
@@ -76,6 +78,10 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
         - E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
             - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
+    - Very useful resources on Post Process Outlines:
+        - NedMakesGames
+        - Robin Seibold
+        - Alexander Meyes
 4. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ## 4. Full Screen Post Process Effect
@@ -95,12 +101,12 @@ Ok, now regardless of what your concept art looks like, using what you know abou
 ## 5. Create a Scene
 Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
 
-Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online that resemble your concept art, instead of spending a lot of your time on modeling geometry if you don't have much free time to spend. (Model your own geometry at your own risk!)
+Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; Model your own geometry for this project at your own risk!)
 
 Some example resources for finding 3D assets to populate your scene With:
-1. SketchFab
-2. Mixamo
-3. TurboSquid
+1. [SketchFab](https://sketchfab.com/)
+2. [Mixamo](https://www.mixamo.com/#/)
+3. [TurboSquid](https://www.turbosquid.com/)
 
 ## 6. Interactivity
 As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
@@ -119,14 +125,15 @@ Day-Night Cycle/Lighting Manager
 
 ## Submission
 1. Video of a turnaround of your scene
-2. A comprehensive ReadMe.md that outlines all of the different components you accomplished throughout the homework. 
+2. A comprehensive readme doc that outlines all of the different components you accomplished throughout the homework. 
 3. All your source files, submitted as a PR against this repository.
 
 ## Resources:
+
 1. [Link to my HW videos]
 2. Lab Video
 3. URP / Render Feature / Frame Debugger Video
 4. Videos from Youtube
-  1. NedMakesGames
-  2. MinionsArt
-  3. Brackeys
+    1. NedMakesGames
+    2. MinionsArt
+    3. Brackeys
