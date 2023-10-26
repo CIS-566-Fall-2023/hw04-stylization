@@ -1,6 +1,8 @@
 # HW 4: 3D Stylization
 
-[GIF of Sonic Example Demo]
+<p align="center">
+  <img width="400px" height="220px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
+
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
