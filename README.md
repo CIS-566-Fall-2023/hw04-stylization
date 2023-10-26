@@ -143,17 +143,16 @@ Some example resources for finding 3D assets to populate your scene With:
 3. [TurboSquid](https://www.turbosquid.com/)
 
 ---
-## 6. Interactivity
+## Extra Credit
+Explore! What else can you do to polish your scene?
+
+- Interactivity
 As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
 * Party mode (things speed up, different colorization)
 * Memory mode (different post-processing effects to color you scene differently)
 * Fanart mode (different surface shaders, as if done by a different artist)
 * Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
-
----
-## Extra Credit
-Explore! What else can you do to polish your scene?
-
+  
 - Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
     - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
 - Add an interesting terrain with grass and/or other interesting features
