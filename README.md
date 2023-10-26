@@ -1,4 +1,4 @@
-# hw04-stylization
+# 3D Stylization
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
@@ -9,15 +9,34 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 
 ## 2. More Interesting Surface and Shadow Shaders
+
+### **2. Description:**
 Based on your concept art, let's create some custom surface shaders for the objects in your scene! 
 
-You should dpend some time trying to analyze and break down what makes the surface shading in your concept art look appealing/aesthetic.
-* Is it the color palette? Sudden or smooth transitions in color bands? Directional rim highlights?
-* These are all things you should have fun trying to break down while prototyping your shaders!
+Spend some time thinking about the main characteristics you see in the surface shading of your concept art. 
+* What makes it look appealing/aesthetic?
+  * Is it the color palette? How smooth or blocky are the transitions between colors?
+  * Are there additional effects such as rim or specular highlights?
+  * Are there multiple lights in the scene?
 
-We recommend you prototype your surface shaders on very simple geometry to begin with- such as floating spheres and some kind of shadow receiving plane. 
+*These are all examples of things we want you to try thinking about before diving into your shaders!*
 
-You should include the following:
+### **2. To-Do:**
+1. Create a surface shader inspired by the surface(s) in your concept art. Build off of the three tone toon shader you created from the lab as a starting point, but the final shader must be more complex with the following requirements:
+    1. **Multiple Light Support**
+        - Follow the following tutorial to implement multiple light support
+    2. **Additional Lighting Feature**
+        - Implement a Specular Highlight, Rim Highlight or another similar new effect in your shader
+    3. **Interesting Shadow Texture**
+        - Source your own shadow texture!
+    4. **Accurate Color Palette**
+        - Do your best to replicate the colors of your concept art!
+ 2. Create an additional shader that will make an object stand out in some way. 
+
+Tips:
+
+I recommend you work with very simple geometry when prototyping your shaders/materials. E.g. Spheres/Cubes and planes- anything simple enough to showcase lighting and shadows.
+
 
 Surface shading:
   * A surface shader that conveys the effects of different amount of light on the surface of the objects. This should be morecomplex than our three tone lab toon shader from the lab, and make your objects look like they belong in the concept art you've chosen.
@@ -61,33 +80,13 @@ As a finishing touch, let's show off the face that our scene is rendered in real
 ## Extra Credit
 Explore! What else can you do to polish your scene?
 [ADD MORE IDEAS]
-
-
-[CUT]
-Other aspects of the HW:
-Picking inspiration art
-Keep it simple!
-Outlines
-Aesthetic colors
-Patterns	
-Sketchy? Hatching? Crayon? Watercolor?
-Geometry
-Sketchfab, etc.
-Mixamo for animated
-Manual creation
-Maya, ZBrush
-Do this at your own benefit and peril. Your geometry/modeling will NOT be graded in this assignment. 
-Interactivity
-Unity is a game engine after all
-Make an interactive component of your scene
-E.g. Pressing a button results in all of the materials switching/going crazy- something simple like that!
-Think of the post process water effect in Minecraft- it can be simple like that.
-Final product:
-A turnaround mp4 of your rendered scene!
+Interesting Terrain
+Interesting Skybox
+Day-Night Cycle/Lighting Manager
 
 ## Submission
 1. Video of a turnaround of your scene
-2. All your source files, submitted as PR against this repository.
+2. All your source files, submitted as a PR against this repository.
 
 ## Resources:
 1. [Link to my HW videos]
