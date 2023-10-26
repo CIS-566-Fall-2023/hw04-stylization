@@ -60,8 +60,8 @@ These are all things we want you to think about before diving into your shaders!
 3. **Special Surface Shader**
    - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
        - **Option 1: Animated Crayon/Watercolor/Pencil Sketch/.../Halftone Effect**
-          - [Example Image]
-              - In my demo, I imported a texture I created in Procreate in order to create a screenspace, animated hand drawn effect on my Sonic materials, alongside the grass plane.
+          - In my demo, I created a creenspace, animated hand drawn effect on my Sonic materials
+              -   <img width="200" alt="Texture Example" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/32d7402e-3757-4764-b63e-0b9f381ec0c6"> 
           - Useful tips to get started:
               - Either create your own texture similar to the shadow texture that you made for your surface shaders or procedurally generate some noise texture that resembles some kind of hatching/crayon/watercolor/some traditional art medium. You could either have this procedural generation occur within a custom function node in real-time, or you can do the generation on something like ShaderToy, and then output/screenshot the image to import into your Unity project.
               - Use the Time node in Unity's shader graph to get access to time for animation. Consider using a Floor node on time to explore staggered/stepped interpolation! This can be really helpful for selling the illusion of the animation feeling handdrawn.
