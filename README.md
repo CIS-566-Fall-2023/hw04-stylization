@@ -81,8 +81,9 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - [See here](Insert my link to video)
 4. Using what we've learnt about Render Features/URP as a base, let's now get access to the Depth and Normal Buffers of our scene!
     - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
-    - This is not the case for a Normal Buffer, and thus, we need a render feature to render out the scene's normals into a render texture. Similarly to with the Full Screen Feature, there is something missing from NormalsFeature.cs that's preventing it from rendering out normals into the "Normal Buffer" render texture.
-    - Watch the following video to learn how to enable access onto the default Depth Buffer, and also, get hints on how to complete the NormalFeature render feature.
+    - This is not the case for a Normal Buffer, and thus, we need a render feature to render out the scene's normals into a render texture. Since the render feature for this has too much syntax specific fluff that's too Unity heavy and not very fun, I've provided a working render feature that renders objects' normals into a render texture- it is called the "Normal Feature." There is also a shader provided, "Hidden/Normal Copy" or "Normal Copy.shader." Your task is to add the Normal Feature to the render pipeline, make a material off of the Normal Copy shader and then plug it into the Normal Feature, and finally, connect the render texture called "Normal Buffer" located in the "/Buffers" directory as the destination target for the render feature.
+        - Set the resolution of the Normal Buffer render texture to be equal to your game window resolution.
+    - Watch the following video for clarifications on both of these processes, and also, how to actually access and read the depth and normal buffers once we've created them?
         - [See here](Link to video.)
 
 5. Finally, using everything you've learnt about Render Features alongside the fact that we now have proper access to both Depth and Normal Buffers, let's create a Post Process Outline Shader!
