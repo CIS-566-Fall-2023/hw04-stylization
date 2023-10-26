@@ -81,9 +81,10 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
 3. Render Features are awesome. Now that we've seen how they work with the Normal Map example, let's make a render feature that applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
 4. Finally, using everything you've learnt about Render Features, and our access to both a Depth and a Normal Buffer/Map, let's create an Outline Shader (Full Screen Shader Graph) that will use the buffers to draw appealing outlines onto the screen!
     - Incredibly useful resources on Post Process Outlines in Unity:
-        - NedMakesGames
-        - Robin Seibold
-        - Alexander Meyes
+        - [NedMakesGames]
+            - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
+        - [Robin Seibold]
+        - [Alexander Ameye]
     - Do some research into different kinds of edge detection filters, including Sobel and Robert's Cross
     - Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
         - E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
