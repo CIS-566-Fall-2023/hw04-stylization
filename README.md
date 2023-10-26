@@ -66,11 +66,13 @@ These are all things we want you to think about before diving into your shaders!
 3. **Special Surface Shader**
    - *Let's get creative!* Create a SPECIAL second shader that adds a glow, a highlight or some other special effect that makes the object stand out in some way. This is intended to give you practice riffing on existing shaders. Most games or applications require some kind of highlighting: this could be an effect in a game that draw player focus, or a highlight on hover like you see in a tool. If your concept art doesn't provide a visual example of what highlighting could look like, use your imagination or find another piece of concept art. Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
        - **Option 1: Animated colors**
-              -   <img width="200" alt="Texture Example" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/32d7402e-3757-4764-b63e-0b9f381ec0c6"> 
+              -   ![image](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/783251e6-1cd3-412c-a150-035128acf1d8)
+          - The above is a simple example of what an animated surface shader might do, eg flash through a bunch of different colors. Using at least two toolbox functions, animate some aspect of the surface shader to create an eye-catching effect. Consider how procedural patterns, the screen space position and noise might contribute.
           - Useful tips to get started:
-              - Either create your own texture similar to the shadow texture that you made for your surface shaders or procedurally generate some noise texture that resembles some kind of hatching/crayon/watercolor/some traditional art medium. You could either have this procedural generation occur within a custom function node in real-time, or you can do the generation on something like ShaderToy, and then output/screenshot the image to import into your Unity project.
               - Use the Time node in Unity's shader graph to get access to time for animation. Consider using a Floor node on time to explore staggered/stepped interpolation! This can be really helpful for selling the illusion of the animation feeling handdrawn.
-       - **Option 2: Another Custom Effect Tailored to your Concept Art**
+       - **Option 2: Vertex animation**
+          - Similar to the noise cloud assignment, modify your object shader to animate the vertex positions of your object, eg. making an object sway or bob up and down to make it stand out. You should be able to figure out how to do this given the walkthrough so far, but if you need addition help, check out [this tutorial](https://www.youtube.com/watch?v=VQxubpLxEqU&ab_channel=GabrielAguiarProd).
+       - **Option 3: Another Custom Effect Tailored to your Concept Art**
           - If you'd like to do an alternative effect to Option 1, just make sure that your idea is roughly similar in scope/difficulty. Feel free to make an EdStem post or ask any TA to double check whether your effect would be sufficient.
 
 ---
