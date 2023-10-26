@@ -53,6 +53,7 @@ These are all things we want you to think about before diving into your shaders!
    - Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the Stylization Lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
       1. **Multiple Light Support**
           - Follow the following tutorial to implement multiple light support.
+              - <img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b4c8dfed-b79d-4c2a-b280-41a617d69aaf">
               - [Link to Complete Additional Light Support Tutorial Video](https://youtu.be/1CJ-ZDSFsMM)
       2. **Additional Lighting Feature**
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
