@@ -12,7 +12,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 3. Outlines
 4. Full Screen Post Process Effect
 5. Creating a Scene
-6. Interactivty
+6. Interactivity
 7. Extra Credit
 
 ---
@@ -20,13 +20,16 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 
 
 ## 1. Picking a Piece of Concept Art
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
-[EXAMPLE IMAGES]
-[Emma Koch 1] [Emma Koch 2] [Emma Koch 3]
+Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 
 | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1f0929b2-082e-4029-967b-7c309cbbad8f) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b0ba183d-7b9d-4597-853a-5973b0daf5d9) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1c6b318f-3726-466d-81f3-61cf71c2b1cc) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/817335d2-de15-4f6d-b284-cbe4724d2068) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/55863a27-b8c7-4819-b4cf-fba3992bfc09) 
 |:--:|:--:|:--:|:--:|:--:|
 | *https://twitter.com/bluekomadori/status/1245787353752494082?s=20* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://www.artstation.com/artwork/nYlbao* | *https://twitter.com/cysketch/status/1712442821389713597* | *https://twitter.com/birduyen13*
+
+**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
+
+
+---
 ## 2. Interesting Shaders
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
@@ -65,6 +68,7 @@ These are all things we want you to think about before diving into your shaders!
        - **Option 2: Another Custom Effect Tailored to your Concept Art**
           - If you'd like to do an alternative effect to Option 1, just make sure that your idea is roughly similar in scope/difficulty. Feel free to make an EdStem post or ask any TA to double check whether your effect would be sufficient.
 
+---
 ## 3. Outlines
 Make your objects pop by adding outlines to your scene! 
 
@@ -84,6 +88,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
         - Alexander Meyes
 4. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
+---
 ## 4. Full Screen Post Process Effect
 We're nearing the end! 
 
@@ -98,16 +103,18 @@ Ok, now regardless of what your concept art looks like, using what you know abou
 
 ***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
 
+---
 ## 5. Create a Scene
 Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
 
-Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; Model your own geometry for this project at your own risk!)
+Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; If you choose to model your own geometry for this project, be aware of the time-constraint and risk!)
 
 Some example resources for finding 3D assets to populate your scene With:
 1. [SketchFab](https://sketchfab.com/)
 2. [Mixamo](https://www.mixamo.com/#/)
 3. [TurboSquid](https://www.turbosquid.com/)
 
+---
 ## 6. Interactivity
 As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
 * Party mode (things speed up, different colorization)
@@ -115,6 +122,7 @@ As a finishing touch, let's show off the fact that our scene is rendered in real
 * Fanart mode (different surface shaders, as if done by a different artist)
 * Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
 
+---
 ## Extra Credit
 Explore! What else can you do to polish your scene?
 [ADD MORE IDEAS]
