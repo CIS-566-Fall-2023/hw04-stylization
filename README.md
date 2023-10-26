@@ -147,10 +147,12 @@ As a finishing touch, let's show off the fact that our scene is rendered in real
 ## Extra Credit
 Explore! What else can you do to polish your scene?
 
-- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring
+- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
+    - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
 - Add an interesting terrain with grass and/or other interesting features
 - Implement a Custom Skybox alongside a day-night cycle lighting script that changes the main directional light's colors and direction over time.
 - Add water puddles with screenspace reflections!
+- Any other similar level of extra spice to your scene : ) (Evaluated on a case-by-case basis by TAs/Rachel/Adam)
 
 ## Submission
 1. Video of a turnaround of your scene
