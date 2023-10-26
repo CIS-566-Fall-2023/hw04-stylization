@@ -51,11 +51,11 @@ These are all things we want you to think about before diving into your shaders!
       3. **Interesting Shadow**
           1. Create your own custom shadow texture!
               - You can use whatever tools you have available! Digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan)-you have complete freedom!
-          2. Make uour texture seamless/tesselatable. You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
-          2. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
-          3. Now, instead of using screen position, use the default object UVs!
+          2. Make your texture seamless/tesselatable! You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
+          3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
+          4. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
-      3. **Accurate Color Palette**
+      4. **Accurate Color Palette**
           - Do your best to replicate the colors/lighting of your concept art!
 3. **Special Surface Shader**
    - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
