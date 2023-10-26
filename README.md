@@ -18,6 +18,10 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 ---
 # Tasks
 
+## 0. Base Project Overview
+
+After forking the repo, spend a moment to watch this project overview video that goes over what you do and don't need to bring over from the lab, as well as different bits of code and such that you'll be using in the later parts of the HW.
+- [See the Project Overview here](https://youtu.be/wEgt9fbMvMg)
 
 ## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
