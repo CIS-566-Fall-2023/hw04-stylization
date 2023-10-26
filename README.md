@@ -1,7 +1,7 @@
 # HW 4: 3D Stylization
 
 <p align="center">
-  <img width="400px" height="220px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
+  <img width="600px" height="338px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/>
 
 
 ## Project Overview:
@@ -62,8 +62,13 @@ These are all things we want you to think about before diving into your shaders!
 ## 3. Outlines
 Make your objects pop by adding outlines to your scene! 
 
-1. Start by sourcing custom depth and normal maps of select objects in your scene. [ADD MORE TECHNICAL DETAIL] You should be able to reference this video for some hints on how to do this [VIDEO LINK]
-2. Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
+Specifically, we'll be creating ***Post Process Outlines*** based on Depth and Normal buffers of our scene!
+
+### To-Do:
+1. Start by sourcing custom depth and normal buffers of your scene. Bla bla bla. You should be able to reference this video for some hints on how to do this [VIDEO LINK].
+2. Watch and follow along this additional video to learn more about Unity's Custom Render Features in the Universal Render Pipeline, and implement your own very simple "Inversion" Render Feature.
+3. Finally, create a Full Screen shader that will take in the depth and/or normal buffers we sourced, in order to draw outlines onto the screen!
+    - Do some research into different kinds of edge detection filters, including SobeCreate an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
   1. E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time. Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
   2. IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
@@ -80,7 +85,7 @@ We're nearing the end! Ok, now regardless of what your concept art looks like, u
 Using Unity's controls, create a SUPER BASIC scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Art direct your scene a little :)
 
 ## 6. Interactivity
-As a finishing touch, let's show off the face that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
+As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
 * Party mode (things speed up, different colorization)
 * Memory mode (different post-processing effects to color you scene differently)
 * Fanart mode (different surface shaders, as if done by a different artist)
@@ -95,7 +100,8 @@ Day-Night Cycle/Lighting Manager
 
 ## Submission
 1. Video of a turnaround of your scene
-2. All your source files, submitted as a PR against this repository.
+2. A comprehensive ReadMe.md that outlines all of the different components you accomplished throughout the homework. 
+3. All your source files, submitted as a PR against this repository.
 
 ## Resources:
 1. [Link to my HW videos]
