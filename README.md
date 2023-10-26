@@ -28,6 +28,7 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 **Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
 
+***[Emma Koch](https://www.artstation.com/ekoch), an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
 ---
 ## 2. Interesting Shaders
