@@ -75,10 +75,11 @@ Make your objects pop by adding outlines to your scene!
 Specifically, we'll be creating ***Post Process Outlines*** based on Depth and Normal buffers of our scene!
 
 ### To-Do:
-1. Start by sourcing depth and normal buffers of your scene.
-    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
+1. Render Features! Render Features are awesome, they let us add customizable render passes to any part of the render pipeline. To learn more about them, let's explore a bit about the existing render fe applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
+2. Using what we've learnt about Render Features/URP as a base, let's produce Depth and Normal Buffers of our scene.
+    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process. (Just need to click a tick box to enable)
     - This is not the case for a Normal Buffer/Map, and thus, you will learn how to source a custom Normal Map/Buffer through following along this tutorial: [VIDEO LINK].
-3. Render Features are awesome. Now that we've seen how they work with the Normal Map example, let's make a render feature that applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
+
 4. Finally, using everything you've learnt about Render Features alongside the fact that we have access to both Depth and a Normal Buffers, let's create a Post Process Outline Shader!
     - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
     - Create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
