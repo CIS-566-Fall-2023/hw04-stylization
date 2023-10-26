@@ -3,6 +3,15 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
 
+1. Picking a piece of concept art
+2. More Interesting Surface and Shadow Shaders
+3. Interesting Depth and Normal Based Outlines
+4. Full Screen Post Process Effect
+5. Create a Scene
+6. Small Interactive Component
+
+# Components:
+
 ## 1. Picking a piece of concept art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 [EXAMPLE IMAGES]
@@ -31,7 +40,8 @@ Spend some time thinking about the main characteristics you see in the surface s
         - Source your own shadow texture!
     4. **Accurate Color Palette**
         - Do your best to replicate the colors of your concept art!
- 2. Create an additional shader that will make an object stand out in some way. 
+ 2. Create a variant of your shader from 1) with an additional special feature that will make objects stand out!
+     - E.g. Create some crayon like noise texture, and overlay it onto the UV or Screenspace Positions of your shader to make it look hand drawn!
 
 Tips:
 
