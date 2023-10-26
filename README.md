@@ -50,7 +50,7 @@ These are all things we want you to think about before diving into your shaders!
           - Do your best to replicate the colors of your concept art!
 3. **Special Surface Shader**
    - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
-       - **Option 1: Animated Pencil Sketch/Crayon/Watercolor Effect**
+       - **Option 1: Animated Crayon/Watercolor/Pencil Sketch/.../Halftone Effect**
           - [Example Image]
               - In my demo, I imported a texture I created in Procreate in order to create a screenspace, animated hand drawn effect on my Sonic materials, alongside the grass plane.
           - Useful tips to get started:
