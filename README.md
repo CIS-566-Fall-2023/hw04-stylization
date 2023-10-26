@@ -3,7 +3,7 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b) | <img width="500px" height="282px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
+| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/972ac4b4-50a8-49d5-be8e-6ead615b983b/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/e200c9b3-be41-45ff-9f04-f9112ac388e3/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 ### HW Task List:
@@ -50,13 +50,13 @@ These are all things we want you to think about before diving into your shaders!
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
       3. **Interesting Shadow**
           1. Create your own custom shadow texture!
-              - You can use whatever mediums you have available- digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan), you have complete freedom!
+              - You can use whatever tools you have available! Digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan)-you have complete freedom!
           2. Make uour texture seamless/tesselatable. You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
-          2. Modify shadows using your custom texture
-          3. Use the default object UVs instead of Screen position!
+          2. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
+          3. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
       3. **Accurate Color Palette**
-          - Do your best to replicate the colors of your concept art!
+          - Do your best to replicate the colors/lighting of your concept art!
 3. **Special Surface Shader**
    - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
        - **Option 1: Animated Crayon/Watercolor/Pencil Sketch/.../Halftone Effect**
@@ -75,18 +75,20 @@ Make your objects pop by adding outlines to your scene!
 Specifically, we'll be creating ***Post Process Outlines*** based on Depth and Normal buffers of our scene!
 
 ### To-Do:
-1. Start by sourcing custom depth and normal buffers of your scene. Bla bla bla. You should be able to reference this video for some hints on how to do this [VIDEO LINK].
-2. Watch and follow along this additional video to learn more about Unity's Custom Render Features in the Universal Render Pipeline, and implement your own very simple "Inversion" Render Feature.
-3. Finally, create an Outline Shader (Full Screen Shader Graph) that will use the depth and normal buffers we sourced in order to draw outlines onto the screen!
+1. Start by sourcing depth and normal buffers of your scene.
+    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
+    - This is not the case for a Normal Buffer/Map, and thus, you will learn how to source a custom Normal Map/Buffer through following along this tutorial: [VIDEO LINK].
+3. Render Features are awesome. Now that we've seen how they work with the Normal Map example, let's make a render feature that applies a Full Screen Post Process shader at some customizable point in the rendering pipeline! After you follow along this tutorial, you'll have a working render feature that when enabled, inverts all of the colors on the screen. [Link to Tutorial]
+4. Finally, using everything you've learnt about Render Features, and our access to both a Depth and a Normal Buffer/Map, let's create an Outline Shader (Full Screen Shader Graph) that will use the buffers to draw appealing outlines onto the screen!
+    - Incredibly useful resources on Post Process Outlines in Unity:
+        - NedMakesGames
+        - Robin Seibold
+        - Alexander Meyes
     - Do some research into different kinds of edge detection filters, including Sobel and Robert's Cross
     - Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
         - E.g. Pencil Sketch/Crayons/Paint Strokes/Etc. Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
             - Here's an example of outline animation [LINK TO SONIC OUTLINE ZOOMED IN]
-    - Very useful resources on Post Process Outlines:
-        - NedMakesGames
-        - Robin Seibold
-        - Alexander Meyes
-4. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
+5. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ---
 ## 4. Full Screen Post Process Effect
@@ -125,11 +127,11 @@ As a finishing touch, let's show off the fact that our scene is rendered in real
 ---
 ## Extra Credit
 Explore! What else can you do to polish your scene?
-[ADD MORE IDEAS]
-Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring
-Interesting Terrain
-Interesting Skybox
-Day-Night Cycle/Lighting Manager
+
+- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring
+- Add an interesting terrain with grass and/or other interesting features
+- Implement a Custom Skybox alongside a day-night cycle lighting script that changes the main directional light's colors and direction over time.
+- Add water puddles with screenspace reflections!
 
 ## Submission
 1. Video of a turnaround of your scene
