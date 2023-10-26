@@ -92,7 +92,8 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
         - [Robin Seibold]
             -  Tutorial on Depth + Normal Map 
         - [Alexander Ameye]
-    - Important Note on Tutorials: You will quickly notice after watching these tutorial that many of them use a Render Feature to acquire a single Depth-Normal Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. We will be sticking to our approach of having separate Depth and Normal buffers.
+    - Important Note on the Tutorials:
+        - You will quickly notice after watching these tutorial that many of them use a Render Feature to acquire a single Depth-Normal Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. We will be sticking to our approach of having separate Depth and Normal buffers.
 5. (OPTIONAL) IF you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look [LINK]
 
 ---
