@@ -149,7 +149,7 @@ Some example resources for finding 3D assets to populate your scene With:
 2. [Mixamo](https://www.mixamo.com/#/)
 3. [TurboSquid](https://www.turbosquid.com/)
 
-## - Interactivity
+## 6. Interactivity
 As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
 * Party mode (things speed up, different colorization)
 * Memory mode (different post-processing effects to color you scene differently)
@@ -184,7 +184,7 @@ void SwapToNextMaterial (int index) {
 * Assign all the relevant materials to the Materials list field so you object knows what to swap between.
  
 ---
-## Extra Credit
+## 7. Extra Credit
 Explore! What else can you do to polish your scene?
   
 - Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
