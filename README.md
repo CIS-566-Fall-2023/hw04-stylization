@@ -32,20 +32,32 @@ Take a moment to think about the main characteristics that you see in the shadin
 These are all things we want you to think about before diving into your shaders!
 
 ### To-Do:
-1. Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
-    1. **Multiple Light Support**
-        - Follow the following tutorial to implement multiple light support. [Link to additional light support]
-    2. **Additional Lighting Feature**
-        - Implement a Specular Highlight, Rim Highlight or another similar new effect in your shader
-    3. **Interesting Shadow Texture**
-        - Source your own shadow texture!
-    4. **Accurate Color Palette**
-        - Do your best to replicate the colors of your concept art!
- 2. Let's get creative! Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
-     - Option 1: Pencil Sketch/Crayon/Watercolor Effect
-        - ...
-     - Option 2: Your own custom effect based on your concept art
-        - The effect must be interesting enough
+1. **Improved Surface Shader**
+   - Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the Stylization Lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
+      1. **Multiple Light Support**
+          - Follow the following tutorial to implement multiple light support. [Link to additional light support]
+      2. **Additional Lighting Feature**
+          - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
+      3. **Interesting Shadow**
+          1. Create your own custom shadow texture!
+              - You can use whatever mediums you have available- digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan), you have complete freedom!
+          2. Modify shadows using your custom texture
+          3. Use the default object UVs instead of Screen position!
+              - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
+      3. **Accurate Color Palette**
+          - Do your best to replicate the colors of your concept art!
+3. **Special Surface Shader**
+   - *Let's get creative!* Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
+       - **Option 1: Animated Pencil Sketch/Crayon/Watercolor Effect**
+          - [Example Image]
+              - In my demo, I imported a texture I created in Procreate in order to create a screenspace, animated hand drawn effect on my Sonic materials, alongside the grass plane.
+          - Useful tips to get started:
+              - Either create your own texture similar to the shadow texture that you made for your surface shaders or procedurally generate some noise texture that resembles some kind of hatching/crayon/watercolor/some traditional art medium. You could either have this procedural generation occur within a custom function node in real-time, or you can do the generation on something like ShaderToy, and then output/screenshot the image to import into your Unity project.
+              - Use the Time node in Unity's shader graph to get access to time for animation. Consider using a Floor node on time to explore staggered/stepped interpolation! This can be really helpful for selling the illusion of the animation feeling handdrawn.
+       - **Option 2: Another Custom Effect Tailored to your Concept Art**
+          - If you'd like to do an alternative effect to Option 1, make sure that your idea is relatively similar in scope/difficulty.
+          - Some ideas include:
+            - Uhhh
 
 ## 3. Outlines
 Make your objects pop by adding outlines to your scene!
@@ -67,7 +79,7 @@ We're nearing the end! Ok, now regardless of what your concept art looks like, u
 Using Unity's controls, create a SUPER BASIC scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Art direct your scene a little :)
 
 ## 6. Interactivity
-As a finishing touch, let's show off the face that our scene is rendered in real-time! Please add an elment of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
+As a finishing touch, let's show off the face that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress (see video for help with this). The triggered change could be
 * Party mode (things speed up, different colorization)
 * Memory mode (different post-processing effects to color you scene differently)
 * Fanart mode (different surface shaders, as if done by a different artist)
