@@ -20,7 +20,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 
 ## 0. Base Project Overview
 
-After forking the repo, take a moment to watch this brief HW/Base Project overview which goes over things that you're expected to bring over from the lab, and etc.
+After forking the repo, take a moment to watch this brief HW/Base Project Overview which goes over things that you're expected to bring over from the lab, and etc.
 - [See the Project Overview here](https://youtu.be/JmVTmpgSz5U)
 
 ## 1. Picking a Piece of Concept Art
@@ -34,7 +34,7 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 **Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
 
-***[Emma Koch](https://www.artstation.com/ekoch), an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
+**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
 ---
 ## 2. Interesting Shaders
@@ -65,7 +65,7 @@ These are all things we want you to think about before diving into your shaders!
           4. Now, instead of using screen position, use the default object UVs!
               - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
               - <img width="350" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
-              - Notice how in this artwork by Emma Koch, Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
+              - Notice how in this artwork by [Emma Koch](https://www.artstation.com/ekoch), Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
 
       4. **Accurate Color Palette**
           - Do your best to replicate the colors/lighting of your concept art!
@@ -102,7 +102,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
         - [See here for complete tutorial video on Depth and Normal Buffers](https://youtu.be/giLPZA-xAXk)
 
 5. Finally, using everything you've learnt about Render Features alongside the fact that we now have proper access to both Depth and Normal Buffers, let's create a Post Process Outline Shader!
-    - We **STRONGLY RECOMMEND** watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:**
+    - We **STRONGLY RECOMMEND** watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:
         - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
         - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
