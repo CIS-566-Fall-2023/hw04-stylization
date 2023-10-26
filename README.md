@@ -45,7 +45,8 @@ These are all things we want you to think about before diving into your shaders!
 1. **Improved Surface Shader**
    - Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the Stylization Lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
       1. **Multiple Light Support**
-          - Follow the following tutorial to implement multiple light support. [Link to additional light support]
+          - Follow the following tutorial to implement multiple light support.
+              - [Link to Complete Additional Light Support Tutorial Video](https://youtu.be/1CJ-ZDSFsMM)
       2. **Additional Lighting Feature**
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
       3. **Interesting Shadow**
