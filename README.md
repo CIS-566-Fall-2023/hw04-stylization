@@ -93,7 +93,7 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
             -  [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
         - [Alexander Ameye](https://ameye.dev/about/)
             - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
-    - Important Note on the Tutorials:
+    - **Important Clarification/Note on the Tutorials:**
         - You will quickly notice after watching/reading any of these tutorial that many of them use a Render Feature to render out a single DepthNormals Buffer that encodes both depth and normal information into a single texture. This optimization saves on performance, but results in less accurate depth or normals information. For this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
 5. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
     - Check out Alexander Ameye's article on alternative methods of outline rendering in Unity: [See Here](https://ameye.dev/notes/rendering-outlines/)
