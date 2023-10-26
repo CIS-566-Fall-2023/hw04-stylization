@@ -162,10 +162,10 @@ Explore! What else can you do to polish your scene?
 
 ## Resources:
 
-1. [Link to my HW videos]
-2. Lab Video
-3. URP / Render Feature / Frame Debugger Video
-4. Videos from Youtube
+1. Link to all my videos: [Playlist link](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
+3. Lab Video
+4. URP / Render Feature / Frame Debugger Video
+5. Videos from Youtube
     1. NedMakesGames
     2. MinionsArt
     3. Brackeys
