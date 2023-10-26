@@ -1,67 +1,53 @@
-# 3D Stylization
+# HW 4: 3D Stylization
+
+[GIF of Sonic Example Demo]
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a stylized 3D scene in Unity. This will give you the opportunity to explore transforming concepts into graphics rendered in realtime, as well as explore rendering in Unity.
 
-1. Picking a piece of concept art
+1. Picking a Piece of Concept Art
 2. More Interesting Surface and Shadow Shaders
-3. Interesting Depth and Normal Based Outlines
+3. Outlines
 4. Full Screen Post Process Effect
-5. Create a Scene
-6. Small Interactive Component
+5. Creating a Scene
+6. Interactivty
+7. Extra Credit
 
-# Components:
+# HW Tasks:
 
-## 1. Picking a piece of concept art
+## 1. Picking a Piece of Concept Art
 Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You might want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 [EXAMPLE IMAGES]
 
 
 ## 2. More Interesting Surface and Shadow Shaders
 
-### **2. Description:**
-Based on your concept art, let's create some custom surface shaders for the objects in your scene! 
+Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
-Spend some time thinking about the main characteristics you see in the surface shading of your concept art. 
-* What makes it look appealing/aesthetic?
-  * Is it the color palette? How smooth or blocky are the transitions between colors?
+Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
+  * Is it the color palette? How are the different colors blending into each other? Is there any particular texture or pattern you notice?
   * Are there additional effects such as rim or specular highlights?
   * Are there multiple lights in the scene?
 
-*These are all examples of things we want you to try thinking about before diving into your shaders!*
+These are all things we want you to think about before diving into your shaders!
 
-### **2. To-Do:**
-1. Create a surface shader inspired by the surface(s) in your concept art. Build off of the three tone toon shader you created from the lab as a starting point, but the final shader must be more complex with the following requirements:
+### To-Do:
+1. Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
     1. **Multiple Light Support**
-        - Follow the following tutorial to implement multiple light support
+        - Follow the following tutorial to implement multiple light support. [Link to additional light support]
     2. **Additional Lighting Feature**
         - Implement a Specular Highlight, Rim Highlight or another similar new effect in your shader
     3. **Interesting Shadow Texture**
         - Source your own shadow texture!
     4. **Accurate Color Palette**
         - Do your best to replicate the colors of your concept art!
- 2. Create a variant of your shader from 1) with an additional special feature that will make objects stand out!
-     - E.g. Create some crayon like noise texture, and overlay it onto the UV or Screenspace Positions of your shader to make it look hand drawn!
+ 2. Let's get creative! Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following two options:
+     - Option 1: Pencil Sketch/Crayon/Watercolor Effect
+        - ...
+     - Option 2: Your own custom effect based on your concept art
+        - The effect must be interesting enough
 
-Tips:
-
-I recommend you work with very simple geometry when prototyping your shaders/materials. E.g. Spheres/Cubes and planes- anything simple enough to showcase lighting and shadows.
-
-
-Surface shading:
-  * A surface shader that conveys the effects of different amount of light on the surface of the objects. This should be morecomplex than our three tone lab toon shader from the lab, and make your objects look like they belong in the concept art you've chosen.
-    * TO-DO:
-      * Support additional lights and shadows  
-    * There must be at least 2 significant new features. For example:
-      * Specular Highlight
-      * Directional Light Rim Highlight
-  * A SPECIAL second shader that adds a glow, a highlight or some other special effect that makes the object stand out in some way. This is intended to give you practice riffing on existing shaders. Most games or applications require some kind of highlighting: this could be an effect in a game that draw player focus, or a highlight on hover like you see in a tool. If your concept art doesn't provide a visual example of what highlighting could look like, use your imagination or find another piece of concept art.
-  * Create two materials, one for each of these shaders. Apply the shaders, to at least one object each in your scene.
-
-Shadows:
-* Interesting rendering of shadows. This could be a texture like in the lab, or simplified or warped shapes. Apply this shadow effect to your whole scene.
-
-## 3. Depth and Normal Based Outlines
+## 3. Outlines
 Make your objects pop by adding outlines to your scene!
 1. Start by sourcing custom depth and normal maps of select objects in your scene. [ADD MORE TECHNICAL DETAIL] You should be able to reference this video for some hints on how to do this [VIDEO LINK]
 2. Create an interesting, ANIMATED outline effect that resembles some kind of 2D art medium.
