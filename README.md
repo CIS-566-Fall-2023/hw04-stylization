@@ -84,9 +84,10 @@ Specifically, we'll be creating ***Post Process Outlines*** based on Depth and N
     - Create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
             - Make sure the outline has adjustable parameters, such as width. 
     - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
-            - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+        - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+        - In my example below, you might be able to notice that the internal Normal Buffer based edges actually don't have any warping/animation. I did this intentionally because I wanted the final look to still have some kind of structure. Thus, by doing the depth and normal outlines in separate passes, I'm able to have a variety of animated/non-animated outlines composited together : ) !
             <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9f1a76e4-c2ef-475e-b589-0807518a97aa/>
-    - **Lastly, we STRONGLY RECOMMEND watching at least one of these Incredibly Useful Tutorials for getting started on Outlines in Unity:**
+    - **Lastly, we STRONGLY RECOMMEND watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:**
         - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
             - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
         - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
