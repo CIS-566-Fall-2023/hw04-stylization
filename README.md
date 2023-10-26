@@ -156,6 +156,7 @@ Your C# script should look something like this:
 ```
 public Material[] materials;
 private MeshRenderer meshRenderer;
+int index;
 
 void Start () {
           meshRenderer = GetComponent<MeshRenderer>();
@@ -163,11 +164,17 @@ void Start () {
 
 void Update () {
           if (Input.GetKeyDown(KeyCode.Space)){
-                      meshRenderer.material = materials[number];
+                 index = (index + 1) % materials.Count;
+                 SwapToNextMaterial(index);
           }
+}
+
+void SwapToNextMaterial (int index) {
+          meshRenderer.material = materials[index % materials.Count];
 }
 ```
 * Attach the c# script as a component to the object(s) that you want to change on keypress
+* Assign all the relevant materials to the Materials list field so you object knows what to swap between.
  
 ---
 ## Extra Credit
