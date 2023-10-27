@@ -43,26 +43,20 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         half NdotL = saturate(dot(WorldNormal, light.direction));
         half distanceAtten = light.distanceAttenuation;
 
-        half thisDiffuse = distanceAtten * shadowAtten * NdotL;
+        half thisDiffuse = distanceAtten * shadowAtten * NdotL; //Quantization the lights themselves
         
         half rampedDiffuse = 0;
         
-        if (thisDiffuse < Thresholds.x)
-        {
+        if (thisDiffuse < Thresholds.x) {
             rampedDiffuse = RampedDiffuseValues.x;
-        }
-        else if (thisDiffuse < Thresholds.y)
-        {
+        } else if (thisDiffuse < Thresholds.y) {
             rampedDiffuse = RampedDiffuseValues.y;
-        }
-        else
-        {
+        } else {
             rampedDiffuse = RampedDiffuseValues.z;
         }
 
         
-        if (light.distanceAttenuation <= 0)
-        {
+        if (light.distanceAttenuation <= 0) {
             rampedDiffuse = 0.0;
         }
 
@@ -70,8 +64,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Diffuse += rampedDiffuse;
     }
     
-    if (Diffuse <= 0.3)
-    {
+    if (Diffuse <= 0.3) { //Manual threshold for distance attenuation
         Color = float3(0, 0, 0);
         Diffuse = 0;
     }
@@ -79,18 +72,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
-{
-    if (Diffuse < Thresholds.x)
-    {
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float HatchedDiffuse, float2 Thresholds, bool isHatchedShadow, out
+float3 OUT){
+    if (Diffuse < Thresholds.x) {
         OUT = Shadow;
-    }
-    else if (Diffuse < Thresholds.y)
-    {
+    } else if (Diffuse < Thresholds.y) {
         OUT = Midtone;
-    }
-    else
-    {
+    } else {
         OUT = Highlight;
     }
 }
