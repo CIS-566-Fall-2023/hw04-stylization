@@ -36,6 +36,11 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 **[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
+This is the concept art I chose by Emma Koch: 
+![Concept art](https://github.com/kyraSclark/hw04-stylization/assets/60115638/59ab5ba5-226b-4a3b-a550-1967af2dc5c4)
+Link: https://www.artstation.com/artwork/B1JND4
+
+
 ---
 ## 2. Interesting Shaders
 
