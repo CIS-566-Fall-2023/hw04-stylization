@@ -94,6 +94,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_1902bf209e7a4a968dfd2cabcf1fac57_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 093908ec90117ec47b4b17f7c70a5610, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -144,6 +148,7 @@ Material:
     - _ReceiveShadows: 1
     - _ReflectionSource: 0
     - _SHADOWS_SOFT: 1
+    - _Shadow_Scale: 3
     - _Shininess: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -157,14 +162,16 @@ Material:
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _isHatchedShadow: 0
+    - _isHatchedShadow: 1
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 1, g: 0.44811314, b: 0.44811314, a: 0}
     - _Midtones: {r: 0.7735849, g: 0.31016377, b: 0.31016377, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
     - _Shadow: {r: 0.6415094, g: 0.06959772, b: 0.24983037, a: 0}
+    - _Shadow_Scale: {r: 2, g: 2, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Thresholds: {r: 0.1, g: 0.8, b: 0, a: 0}
   m_BuildTextureStacks: []
