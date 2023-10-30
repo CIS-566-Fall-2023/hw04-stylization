@@ -8,7 +8,7 @@
 
 https://github.com/dw218192/hw04-stylization/assets/31294154/bf364049-0ecb-4ab2-8273-3aacfc108bfe
 
-- the demo shows features such as material swapping, noisy outlines, and post-processing effects (see below for more details)
+- the demo shows features such as material swapping, noisy outlines, multiple lights, and post-processing effects (see below for more details)
 
 ## My Inspirations
 - I have no specific sample art style to imitate for this project. I just want to make something that has a horror vibe and looks like it's sketched by a pen. Below are the list of artists whose work I took inspiration from when making this project.
