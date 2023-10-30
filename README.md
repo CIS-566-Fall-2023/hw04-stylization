@@ -1,4 +1,4 @@
-# Unity URP Sketching Stylization Shader
+# Unity URP Pen Sketching Stylization Shader
 - Name: Tongwei Dai
 - email: tongweid@gmail.com
 
