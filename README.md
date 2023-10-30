@@ -1,4 +1,4 @@
-# Sketching Stylization
+# Unity URP Sketching Stylization Shader
 - Name: Tongwei Dai
 - email: tongweid@gmail.com
 
@@ -81,6 +81,7 @@ https://github.com/dw218192/hw04-stylization/assets/31294154/bf364049-0ecb-4ab2-
 - The paper shader takes a `Texture2D` as an input, which corresponds to the paper texture we want to use.
 
 
-## Credits
+## Credits 
 - `Assets/Textures/Stroke1` contains tonal art maps from [Kyle Halladay's blog](http://kylehalladay.com/blog/tutorial/2017/02/21/Pencil-Sketch-Effect.html), which are GPL licensed.
 - Furniture models are all found on [Sketchfab](https://sketchfab.com/), which are CC licensed.
+- Texture2DArray Importer by [pschraut](https://github.com/pschraut/UnityTexture2DArrayImportPipeline), under MIT license.
