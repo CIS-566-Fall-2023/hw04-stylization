@@ -9,7 +9,9 @@ public class FullScreenFeature : ScriptableRendererFeature
     public class FullScreenPassSettings
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
-        public Material material;
+        public Material outlineMaterial;
+        public Material wobbleMaterials;
+        public Material filterMaterial;
     }
 
     [SerializeField] private FullScreenPassSettings settings;
@@ -17,14 +19,14 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         const string ProfilerTag = "Full Screen Pass";
         public FullScreenFeature.FullScreenPassSettings settings;
-        RenderTargetIdentifier colorBuffer, temporaryBuffer;
-        private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
+        RenderTargetIdentifier colorBuffer;
+        RenderTargetIdentifier[] temporaryBuffers = new RenderTargetIdentifier[2];
+        int[] temporaryBufferIDs = new int[2];
 
         public FullScreenPass(FullScreenFeature.FullScreenPassSettings passSettings)
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
-            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
         }
 
         // This method is called before executing the render pass.
@@ -37,8 +39,13 @@ public class FullScreenFeature : ScriptableRendererFeature
             RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
             colorBuffer = renderingData.cameraData.renderer.cameraColorTarget;
 
-            cmd.GetTemporaryRT(temporaryBufferID, descriptor, FilterMode.Point);
-            temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
+
+            for (int i = 0; i < temporaryBuffers.Length; i++)
+            {
+                temporaryBufferIDs[i] = Shader.PropertyToID("_TemporaryColorBuffer" + i.ToString());
+                cmd.GetTemporaryRT(temporaryBufferIDs[i], descriptor, FilterMode.Point);
+                temporaryBuffers[i] = new RenderTargetIdentifier(temporaryBufferIDs[i]);
+            }
         }
 
         // Here you can implement the rendering logic.
@@ -51,7 +58,10 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, colorBuffer, temporaryBuffers[0], settings.outlineMaterial);
+                Blit(cmd, colorBuffer, temporaryBuffers[1]);
+                Blit(cmd, temporaryBuffers[0], temporaryBuffers[1], settings.wobbleMaterials);
+                Blit(cmd, temporaryBuffers[1], colorBuffer, settings.filterMaterial);
             }
 
             // Execute the command buffer and release it.
@@ -63,7 +73,10 @@ public class FullScreenFeature : ScriptableRendererFeature
         public override void OnCameraCleanup(CommandBuffer cmd)
         {
             if (cmd == null) throw new ArgumentNullException("cmd");
-            cmd.ReleaseTemporaryRT(temporaryBufferID);
+            for (int i = 0; i < temporaryBuffers.Length; i++)
+            {
+                cmd.ReleaseTemporaryRT(temporaryBufferIDs[i]);
+            }
         }
     }
 
