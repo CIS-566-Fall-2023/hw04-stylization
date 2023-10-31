@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8081582795363580827
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,13 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Default
-  m_Shader: {fileID: 4800000, guid: 61e53729ad706d049b12a441f328fe34, type: 3}
+  m_Name: ToonEye
+  m_Shader: {fileID: -6465566751694194690, guid: 7e5de2b6b6af9e84480b57e6c0deb4f9,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_ValidKeywords:
+  - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
   - _ADDITIONAL_LIGHTS
+  - _MAIN_LIGHT_SHADOWS_CASCADE
+  - _SHADOWS_SOFT
+  m_InvalidKeywords:
   - _ADDITIONAL_SHADOWS
   - _SHADOWS
   - _SHADOWS_CASCADE
@@ -45,14 +36,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ClearCoatMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -80,16 +63,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicSpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_09e2b6da7a37423f8d2df611cac1910d_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c7228ad56bcb1984094cedd876b2c44f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_1e1608fcf03448a1a9f980c2b11613f9_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 12c7f506187dc0f4194d1c36be4a1ecb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_92b43c54207a46e1a8b8347bac93cb43_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c7228ad56bcb1984094cedd876b2c44f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ac8c6c0c4c5d49eda3946418ee5a09c8_Texture_1_Texture2D:
@@ -114,6 +105,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_SHADOWS: 1
     - _AlphaClip: 0
@@ -121,7 +113,6 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _ClearCoat: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -131,39 +122,48 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossinessSource: 0
-    - _GlossyReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic: 0
-    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ReflectionSource: 0
     - _SHADOWS: 1
     - _SHADOWS_CASCADE: 1
-    - _Shininess: 1
+    - _SHADOWS_SOFT: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Highlight: {r: 1, g: 1, b: 1, a: 0}
-    - _Midtone: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0}
-    - _RampedDiffuseValues: {r: 0.2, g: 0.7, b: 1, a: 0}
-    - _Shadow: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Thresholds: {r: 0.02, g: 0.9, b: 0, a: 0}
+    - _Midtone: {r: 0.7686275, g: 0.7568628, b: 0.7803922, a: 0}
+    - _RampedDiffuseValues: {r: 0.38, g: 0.8, b: 1, a: 0}
+    - _Shadow: {r: 0.47058827, g: 0.5137255, b: 0.7294118, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Thresholds: {r: 0.2, g: 0.81, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &4256637338312908814
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
