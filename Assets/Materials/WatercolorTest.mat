@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WatercolorTest
+  m_Shader: {fileID: -6465566751694194690, guid: 0064d9c196adb6e4e8f73ce440707de3,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: c2acf6cabf34bf042ad69f87bba43162, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
+  - MAIN_LIGHT_CALCULATE_SHADOWS
+  - _ADDITIONAL_LIGHTS
+  - _MAIN_LIGHT_SHADOWS_CASCADE
+  - _SHADOWS_SOFT
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Threshold2: 0.6
+    m_Colors:
+    - _Highlight: {r: 0.9056604, g: 0.5254539, b: 0.8810479, a: 0}
+    - _Midtone: {r: 0.8301887, g: 0.42684227, b: 0.8052396, a: 0}
+    - _Shadow: {r: 0.509434, g: 0.12735847, b: 0.43926707, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &2638209929394793549
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

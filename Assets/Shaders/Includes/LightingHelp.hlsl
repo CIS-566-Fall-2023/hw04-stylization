@@ -94,3 +94,23 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
         OUT = Highlight;
     }
 }
+
+float3 LightingSpecular(float3 lightColor, float3 lightDir, float3 normal, float3 viewDir, float4 specular, float smoothness) {
+    float3 halfVec = SafeNormalize(lightDir + viewDir);
+    float NDotH = saturate(dot(normal, halfVec));
+    float modifier = pow(NDotH, smoothness);
+    float3 specularReflection = specular.rgb * modifier;
+    return lightColor * specularReflection;
+}
+
+void DirectSpecular_float(float3 Specular, float Smoothness, float3 Direction, float3 Color, float3 WorldNormal,
+    float3 WorldView, out float3 OUT) {
+#if SHADERGRAPH_PREVIEW
+	OUT = 0;
+#else
+    Smoothness = exp2(10.0f * Smoothness + 1.0f);
+    WorldNormal = normalize(WorldNormal);
+    WorldView = SafeNormalize(WorldView);
+    OUT = LightingSpecular(Color, Direction, WorldNormal, WorldView, float4(Specular, 0.0f), Smoothness);
+#endif
+}
