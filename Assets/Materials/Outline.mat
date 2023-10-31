@@ -50,11 +50,11 @@ Material:
     - REQUIRE_DEPTH_TEXTURE: 1
     - _DepthStrength: 1
     - _DepthThickness: 5
-    - _DepthThreshold: 0.005
+    - _DepthThreshold: 0.01
     - _NoiseScale: 0.008
     - _RobertCrossMultiplier: 30
-    - _Thickness: 0.8
+    - _Thickness: 0.88
     m_Colors:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
-    - _RobertThresholds: {r: 30, g: 0.15, b: 0, a: 0}
+    - _RobertThresholds: {r: 30, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []

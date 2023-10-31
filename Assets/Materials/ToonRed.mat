@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_92b43c54207a46e1a8b8347bac93cb43_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: c7228ad56bcb1984094cedd876b2c44f, type: 3}
+        m_Texture: {fileID: 2800000, guid: b26224488fcc8cd4196d209eed06b794, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ac8c6c0c4c5d49eda3946418ee5a09c8_Texture_1_Texture2D:
@@ -115,6 +115,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _CrayonThreshold: 0.7
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -152,7 +153,7 @@ Material:
     - _RampedDiffuseValues: {r: 0.38, g: 0.8, b: 1, a: 0}
     - _Shadow: {r: 0.5686275, g: 0.22352943, b: 0.16078432, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Thresholds: {r: 0.2, g: 0.81, b: 0, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.81, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4256637338312908814
 MonoBehaviour:
