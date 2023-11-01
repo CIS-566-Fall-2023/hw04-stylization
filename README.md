@@ -36,6 +36,10 @@ Choose a simple illustration to guide your stylization. Choose a relatively simp
 
 **[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
+<img width="447" alt="Screenshot 2023-10-31 at 10 19 04 PM" src="https://github.com/printer83mph/cis566-hw04-stylization/assets/22186744/11cabd62-0e1a-4de7-8253-060a30ff76c6">
+
+from @stefscribbles on Twitter
+
 ---
 ## 2. Interesting Shaders
 
