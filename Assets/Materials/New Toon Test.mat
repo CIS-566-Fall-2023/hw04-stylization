@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: New Toon Test
   m_Shader: {fileID: -6465566751694194690, guid: 0064d9c196adb6e4e8f73ce440707de3,
     type: 3}
   m_Parent: {fileID: 0}
@@ -122,19 +122,20 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0
+    - _Glossiness: 24
     - _GlossyReflections: 0
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic: 0
-    - _NoiseStrength: 0.51
-    - _Noise_Brighten: 0.14
+    - _NoiseStrength: 1
+    - _Noise_Brighten: 0.869
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Rim_Amount: 0.46
     - _Rim_Light_Brightness: 1
-    - _Rim_Power: 2
+    - _Rim_Power: 0.4
     - _SHADOWS_SOFT: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -143,8 +144,9 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _Threshold: 0.5
     - _Threshold1: 0.5
-    - _Threshold2: 0.35
+    - _Threshold2: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -154,7 +156,9 @@ Material:
     - _Highlight: {r: 0.3019608, g: 0.5882353, b: 0.6117647, a: 0}
     - _Midtone: {r: 0.17661981, g: 0.6518839, b: 0.764151, a: 0}
     - _RampedDiffuseValues: {r: 0, g: 0, b: 0, a: 0}
+    - _Rim_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Shadow: {r: 0.08235294, g: 0.5803922, b: 0.69803923, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.7, b: 0, a: 0}
   m_BuildTextureStacks: []

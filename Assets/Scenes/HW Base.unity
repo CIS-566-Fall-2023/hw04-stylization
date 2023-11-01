@@ -552,6 +552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: eeve
       objectReference: {fileID: 0}
+    - target: {fileID: 2824768507254700813, guid: ccb8fa6ab0a1b274089a5965361b822c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2acf6cabf34bf042ad69f87bba43162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -618,7 +623,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2acf6cabf34bf042ad69f87bba43162, type: 2}
+  - {fileID: 2100000, guid: d60db1350aa31bd4080a3bb5e2541934, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
