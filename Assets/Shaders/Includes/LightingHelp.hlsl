@@ -31,7 +31,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #ifndef SHADERGRAPH_PREVIEW
 
     int pixelLightCount = GetAdditionalLightsCount();
-    
+
     for (int i = 0; i < pixelLightCount; ++i)
     {
         Light light = GetAdditionalLight(i, WorldPosition);
@@ -39,14 +39,14 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         uint light_i = tmp[i % 4];
 
         half shadowAtten = light.shadowAttenuation * AdditionalLightRealtimeShadow(light_i, WorldPosition, light.direction);
-        
+
         half NdotL = saturate(dot(WorldNormal, light.direction));
         half distanceAtten = light.distanceAttenuation;
 
         half thisDiffuse = distanceAtten * shadowAtten * NdotL;
-        
+
         half rampedDiffuse = 0;
-        
+
         if (thisDiffuse < Thresholds.x)
         {
             rampedDiffuse = RampedDiffuseValues.x;
@@ -60,7 +60,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
             rampedDiffuse = RampedDiffuseValues.z;
         }
 
-        
+
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
+
+        }
+
         if (light.distanceAttenuation <= 0)
         {
             rampedDiffuse = 0.0;
@@ -69,28 +75,50 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Shadow, float Diffuse, float Threshold, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (Diffuse < Threshold)
     {
         OUT = Shadow;
     }
-    else if (Diffuse < Thresholds.y)
+    else
     {
+        OUT = Highlight;
+    }
+}
+
+void ChooseColor2_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float Threshold1, float Threshold2, out float3 OUT)
+{
+    if (Diffuse < Threshold1)
+    {
+        OUT = Shadow;
+    }
+    else if (Diffuse >= Threshold1 && Diffuse <= Threshold2) {
         OUT = Midtone;
     }
     else
     {
         OUT = Highlight;
+    }
+}
+
+void ChooseColor3_float(float3 Highlight, float3 Midtone, float3 Shadow, float DiffuseHS, float DiffuseM, float Threshold1, float Threshold2, out float3 OUT)
+{
+    if (DiffuseM >= Threshold1 && DiffuseM <= Threshold2) {
+        OUT = Midtone;
+    }
+    else if (DiffuseHS < Threshold1)
+    {
+        OUT = Shadow;
+    }
+    else if (DiffuseHS > Threshold2)
+    {
+        OUT = Highlight;
+    }
+    else {
+        OUT = Midtone;
     }
 }
