@@ -51,8 +51,10 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                cmd.Blit(colorBuffer, temporaryBuffer, settings.material);
             }
+
+            cmd.Blit(temporaryBuffer, colorBuffer);
 
             // Execute the command buffer and release it.
             context.ExecuteCommandBuffer(cmd);

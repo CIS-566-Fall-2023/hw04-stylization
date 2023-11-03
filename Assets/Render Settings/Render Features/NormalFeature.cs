@@ -14,11 +14,12 @@ public class NormalFeature : ScriptableRendererFeature
     NormalsPass m_NormalsPass;
     public Material normalsMaterial;
 
+    public RenderQueueRange renderQueueRangeSetting = RenderQueueRange.all;
 
     /// <inheritdoc/>
     public override void Create()
     {
-        m_NormalsPass = new NormalsPass(NormalsTexture, normalsLayerMask, normalsMaterial);
+        m_NormalsPass = new NormalsPass(NormalsTexture, normalsLayerMask, normalsMaterial, renderQueueRangeSetting);
         m_NormalsPass.renderPassEvent = _NormalsEvent;
     }
 
@@ -39,10 +40,10 @@ class NormalsPass : ScriptableRenderPass
     private RenderTexture target;
     private Material normalsMaterial;
 
-    public NormalsPass(RenderTexture targetTexture, LayerMask layerMask, Material mat)
+    public NormalsPass(RenderTexture targetTexture, LayerMask layerMask, Material mat, RenderQueueRange renderQueueRangeSetting)
     {
         m_ProfilingSampler = new ProfilingSampler("RenderNormals");
-        m_FilteringSettings = new FilteringSettings(RenderQueueRange.opaque, layerMask);
+        m_FilteringSettings = new FilteringSettings(renderQueueRangeSetting, layerMask);
 
         target = targetTexture;
 
