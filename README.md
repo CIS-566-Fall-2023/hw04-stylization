@@ -14,6 +14,8 @@ In this assignment, I created a 3D stylized scene based on a 2D illustration, an
 Image source: [Roxy Migurdia Ani-Art Canvas Board](https://amnibus.com/products/detail/26574)
 
 
+https://github.com/GrahamZen/hw04-stylization/assets/31180310/9062c5a5-a12e-4051-b5ec-7f5204165117
+
 ## Implementation
 
 ### Lighting
@@ -54,6 +56,10 @@ float3 RandomColor(float3 Color, float Seed)
 ```
 
 For all of the above features, I implemented HLSL functions, which are then processed together in BlendLight_float. In the shadergraph, I used a custom function node BlendLight to connect corresponding inputs and outputs.
+
+
+https://github.com/GrahamZen/hw04-stylization/assets/31180310/f616e50f-10ca-4ee8-9088-1da504112ea5
+
 
 ### Outlines
 
