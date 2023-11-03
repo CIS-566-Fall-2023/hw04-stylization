@@ -9,7 +9,8 @@ public class FullScreenFeature : ScriptableRendererFeature
     public class FullScreenPassSettings
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
-        public Material material;
+        //public Material material;
+        public Material outlineMaterial;
     }
 
     [SerializeField] private FullScreenPassSettings settings;
@@ -24,7 +25,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
-            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
+            //if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
         }
 
         // This method is called before executing the render pass.
@@ -51,7 +52,8 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, colorBuffer, temporaryBuffer);
+                Blit(cmd, temporaryBuffer, colorBuffer, settings.outlineMaterial);
             }
 
             // Execute the command buffer and release it.
@@ -82,6 +84,14 @@ public class FullScreenFeature : ScriptableRendererFeature
         if (renderingData.cameraData.cameraType != CameraType.Game)
             return;
         renderer.EnqueuePass(m_FullScreenPass);
+    }
+
+    internal void SetMaterial(Material material)
+    {
+        if (settings != null)
+        {
+            settings.outlineMaterial = material;
+        }
     }
 }
 
