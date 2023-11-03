@@ -7,7 +7,7 @@ In this assignment, I created a 3D stylized scene based on a 2D illustration, an
 
 ## Demo
 
-| ![1699044641428](image/README/1699044641428.jpg)| ![1699045036877](image/README/1699045036877.png) |
+| ![1699044641428](image/README/1699044641428.jpg)|![1699050024911](image/README/1699050024911.png)|
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 
