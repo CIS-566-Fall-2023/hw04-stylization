@@ -19,7 +19,7 @@ MonoBehaviour:
   NormalsTexture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
   _NormalsEvent: 300
   normalsMaterial: {fileID: 2100000, guid: 9b928119d17a85741b0ea7d1b24f24bf, type: 2}
---- !u!114 &-4127287527424819557
+--- !u!114 &-4127692715054521458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,7 +33,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    Event: 500
+    Event: 300
     blitMaterial: {fileID: 2100000, guid: 206ecf1c280b24143a4f1f29ded56128, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
@@ -63,8 +63,8 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
-  - {fileID: -4127287527424819557}
-  m_RendererFeatureMap: 9b7ef171dcedb8c6
+  - {fileID: -4127692715054521458}
+  m_RendererFeatureMap: 8e233559587db7c6
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
