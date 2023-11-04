@@ -58,8 +58,10 @@ class NormalsPass : ScriptableRenderPass
 
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
-        if (renderingData.cameraData.cameraType != CameraType.Game)
+        if (renderingData.cameraData.cameraType != CameraType.Game) //Differentiates the scene and game camera
+        {
             return;
+        } 
         SortingCriteria sortingCriteria = renderingData.cameraData.defaultOpaqueSortFlags;
         DrawingSettings drawingSettings = CreateDrawingSettings(m_ShaderTagIdList, ref renderingData, sortingCriteria);
         drawingSettings.overrideMaterial = normalsMaterial;

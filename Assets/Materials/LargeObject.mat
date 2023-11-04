@@ -98,8 +98,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 093908ec90117ec47b4b17f7c70a5610, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_474c87596f764f94813427b6cc32ddc8_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 71e9fbc69bcc6ec4685e7e14ba9c72d6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_47ce971bfd3e4d53b7cdb534963f0808_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 6ed106f067a18ed469ca6857e6689f36, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6d3185e6a1824965a831bf65d948bca0_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 71e9fbc69bcc6ec4685e7e14ba9c72d6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_8e360414ee9349c79afd282349641f0c_Texture_1_Texture2D:
@@ -108,6 +116,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_d839e979708e45019140b452ce5441f4_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 4b86c392055cf054ba1f22d2b04c1980, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d8e584a8dfd14bbfbf71f31930481e86_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 71e9fbc69bcc6ec4685e7e14ba9c72d6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -162,8 +174,8 @@ Material:
     - _ReflectionSource: 0
     - _SHADOWS_SOFT: 1
     - _Secondaryhatching: 1
-    - _ShadowAttenScaler: 0.8
-    - _Shadow_Line_Discontinuity: 400
+    - _ShadowAttenScaler: 0.9
+    - _Shadow_Line_Discontinuity: 0
     - _Shadow_Line_Scale: 8
     - _Shadow_Scale: 2
     - _Shininess: 1
@@ -171,7 +183,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
     - _SpecularHighlights: 1
-    - _Speed: 4
+    - _Speed: 3
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
@@ -187,11 +199,11 @@ Material:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 1, g: 0.9710745, b: 0.9198113, a: 0}
-    - _Midtones: {r: 0.509434, g: 0.48690596, b: 0.44935924, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.14150941, g: 0.13379315, b: 0.13016196, a: 0}
+    - _Highlight: {r: 1, g: 1, b: 1, a: 0}
+    - _Midtones: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.1, g: 0.8, b: 1, a: 0}
+    - _Shadow: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0}
     - _Shadow_Scale: {r: 2, g: 2, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Thresholds: {r: 0.7, g: 0.8, b: 0, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.9, b: 0, a: 0}
   m_BuildTextureStacks: []

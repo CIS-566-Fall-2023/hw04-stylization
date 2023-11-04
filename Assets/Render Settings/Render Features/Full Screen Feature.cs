@@ -54,17 +54,24 @@ public class FullScreenFeature : ScriptableRendererFeature //All features inheri
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             CommandBuffer cmd = CommandBufferPool.Get();
-            using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
 
+            using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 //BLit: Moves all the pixel data from color to temporary buffer, applying the material onto it
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
-            }
 
+                cmd.SetGlobalTexture("_BlitTexture", colorBuffer); 
+                cmd.Blit(colorBuffer, temporaryBuffer); //Sets maintex to color buffer, but settings.material looks from "_BlitTexture"
+                cmd.Blit(temporaryBuffer,  colorBuffer, settings.material);
+
+            }
 
             // Execute the command buffer and release it.
             context.ExecuteCommandBuffer(cmd);
+
+
+            cmd.Clear();
+
             CommandBufferPool.Release(cmd);
         }
 
