@@ -24,8 +24,8 @@ In this is project I use a 2D concept art piece as inspiration to create a 3D St
 
 # Interactivity
 * `Space`: Swap the material of Sonic.
-* 'A': Turn ON/OFF Outline post-process.
-* ‘S': Turn ON/OFF Old Movie post-process effect.
+* `A`: Turn ON/OFF Outline post-process.
+* `S`: Turn ON/OFF Old Movie post-process effect.
 
 ## 0. Base Project Overview
 
