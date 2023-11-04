@@ -33,9 +33,7 @@ void GaussianBlur_float(UnityTexture2D Texture, float2 UV, float Blur, UnitySamp
             kernelSum++;
 
             float2 offset = float2(_MainTex_TexelSize.x * x, _MainTex_TexelSize.y * y);
-            float3 rgb;
-            grayScale_float(Texture.Sample(Sampler, UV + offset).rgb, UV, rgb);
-            col += float4(rgb, 1.0);
+            col += float4(Texture.Sample(Sampler, UV + offset).rgb, 1.0);
         }
     }
 
@@ -116,4 +114,60 @@ void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, floa
     Col2 /= cnt2 * 1.65f;
 
     Col = Col1;
+}
+
+void calcRegion(UnityTexture2D Texture, UnitySamplerState Sampler, int2 lower, int2 upper, int samples, float2 uv, out float3 mean, out float variance)
+{
+    float3 sum = 0.0;
+    float3 squareSum = 0.0;
+
+    for (int x = lower.x; x <= upper.x; ++x)
+    {
+        for (int y = lower.y; y <= upper.y; ++y)
+        {
+            float2 offset = float2(_MainTex_TexelSize.x * x, _MainTex_TexelSize.y * y);
+            float3 tex = Texture.Sample(Sampler, uv + offset).rgb;
+
+            sum += tex;
+            squareSum += tex * tex;
+        }
+    }
+
+    mean = sum / samples;
+    variance = length(abs((squareSum / samples) - (mean * mean)));
+}
+
+void kuwahara_float(UnityTexture2D Texture, UnitySamplerState Sampler, float2 UV, int Radius, out float4 out_Col)
+{
+    int upper = (Radius - 1) / 2;
+    int lower = -upper;
+
+    int samples = (upper + 1) * (upper + 1);
+
+    float3 meanA, meanB, meanC, meanD;
+    float varianceA, varianceB, varianceC, varianceD;
+    calcRegion(Texture, Sampler, int2(lower, lower), int2(0, 0), samples, UV, meanA, varianceA);
+    calcRegion(Texture, Sampler, int2(0, lower), int2(upper, 0), samples, UV, meanB, varianceB);
+    calcRegion(Texture, Sampler, int2(lower, 0), int2(0, upper), samples, UV, meanC, varianceC);
+    calcRegion(Texture, Sampler, int2(0, 0), int2(upper, upper), samples, UV, meanD, varianceD);
+
+    float3 col = meanA;
+    float minVar = varianceA;
+    float testVal;
+
+    // Test region B.
+    testVal = step(varianceB, minVar);
+    col = lerp(col, meanB, testVal);
+    minVar = lerp(minVar, varianceB, testVal);
+
+    // Test region C.
+    testVal = step(varianceC, minVar);
+    col = lerp(col, meanC, testVal);
+    minVar = lerp(minVar, varianceC, testVal);
+
+    // Text region D.
+    testVal = step(varianceD, minVar);
+    col = lerp(col, meanD, testVal);
+
+    out_Col = float4(col, 1.0);
 }
