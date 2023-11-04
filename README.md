@@ -1,14 +1,16 @@
-# HW 4: *3D Stylization*
+# *Unity: Stylized Illustration Shader*
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
+The goal of this project was to learn how to use the Unity Shader graph and experiment with mimicking a target style using stylized rendering. 
 
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
-| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
+| *2D Concept Illustration* | *Stylized Scene in Unity* |
+
+
+### Table of Contents:
 1. Picking a Piece of Concept Art
-2. Interesting Shaders
+2. Developing the shaders
 3. Outlines
 4. Full Screen Post Process Effect
 5. Creating a Scene
@@ -16,45 +18,21 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 7. Extra Credit
 
 ---
-# Tasks
-
-## 0. Base Project Overview
-
-After forking the repo, take a moment to watch this brief HW/Base Project Overview which goes over things that you're expected to bring over from the lab, and etc.
-- [See the Project Overview here](https://youtu.be/JmVTmpgSz5U)
-
 ## 1. Picking a Piece of Concept Art
 
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
+My inspiration for this project started with 15th-century style metal engraving, but seeing how moody things looked, quickly increased in scope. Some of the inspirations for this scene include:   
 
 | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
 |:--:|:--:|:--:|:--:|:--:|
 | *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
 
 
-**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
-
-**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
-
 ---
 ## 2. Interesting Shaders
 
-Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
-
-Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
-  * Is it the color palette? How are the different colors blending into each other? Is there any particular texture or pattern you notice?
-  * Are there additional effects such as rim or specular highlights?
-  * Are there multiple lights in the scene?
-
-These are all things we want you to think about before diving into your shaders!
-
-### To-Do:
 1. **Improved Surface Shader**
-   - Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the Stylization Lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
-      1. **Multiple Light Support**
-          - Follow the following tutorial to implement multiple light support.
-              - <img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b4c8dfed-b79d-4c2a-b280-41a617d69aaf">
-              - [Link to Complete Additional Light Support Tutorial Video](https://youtu.be/1CJ-ZDSFsMM)
+- **Multiple Light Support:** Followed this [tutorial](https://youtu.be/1CJ-ZDSFsMM) to implement multiple light support:
+              
       2. **Additional Lighting Feature**
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
       3. **Interesting Shadow**
