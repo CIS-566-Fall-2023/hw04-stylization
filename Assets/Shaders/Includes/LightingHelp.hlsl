@@ -79,15 +79,28 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float DiffuseM, float DiffuseHS, float Min_Threshold, float Max_Threshold, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float DiffuseM, float DiffuseSB, float Min_Threshold, float Max_Threshold, out float3 OUT)
 {
-    if (DiffuseM > Min_Threshold && DiffuseM < Max_Threshold) {
-        OUT = Midtone;
-    } else if (DiffuseHS < Min_Threshold) {
-        OUT = Shadow;
-    } else if (DiffuseHS > Max_Threshold) {
-        OUT = Highlight;
+    float3 col;
+    if (DiffuseM < Min_Threshold) {
+        col = Shadow;        
+    } else if (DiffuseM > Max_Threshold) {
+        col = Highlight;
     } else {
-        OUT = Midtone;
+        col = Midtone;
+    }
+
+    float a = 1.025;
+    float b = 1.05;
+    float c = 1.1;
+    float d = 1.15;
+    if (DiffuseSB < Min_Threshold * 0.25) {
+        OUT = float3(col[0] / d, col[1] / c, col[2] / a);
+    } else if (DiffuseSB < Min_Threshold * 0.5) {
+        OUT = float3(col[0] / c, col[1] / d, col[2] / b);
+    } else if (DiffuseSB < Min_Threshold * 0.75) {
+        OUT = float3(col[0] / c, col[1] / c, col[2] / b);
+    } else {
+        OUT = float3(col[0] / b, col[1] / b, col[2] / 1.01);
     }
 }
