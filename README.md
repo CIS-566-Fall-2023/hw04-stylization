@@ -14,6 +14,10 @@ In this assignment, I created a 3D stylized scene based on a 2D illustration, an
 Image source: [Roxy Migurdia Ani-Art Canvas Board](https://amnibus.com/products/detail/26574)
 
 
+https://github.com/GrahamZen/hw04-stylization/assets/31180310/2da9a96f-5a08-4c67-88c9-f19411556e47
+
+
+
 ## Implementation
 
 ### Lighting
