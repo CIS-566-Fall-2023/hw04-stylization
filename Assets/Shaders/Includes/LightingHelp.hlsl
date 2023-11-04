@@ -158,7 +158,7 @@ float3 blendOverwrite(float3 Base, float3 Blend, float3 Mask)
 }
 
 
-void BlendLight_float(const float3 Color, const float3 Shadow, const float3 Midtone, const float3 Highlight, const float3 ExtraHighlight,
+void BlendLight_float(const float3 Color, const float3 Shadow, const float3 skinShadow, const float3 Midtone, const float3 Highlight, const float3 ExtraHighlight,
     const float2 Weight, const float2 uv, Texture2D _HairMask, Texture2D _SkinMask, Texture2D _ShadowTexture,
     SamplerState sampler_BodyMask, 
     const float Seed, bool Animated, const float4 ShadowTextureScale,
@@ -167,12 +167,13 @@ void BlendLight_float(const float3 Color, const float3 Shadow, const float3 Midt
     float3 hairMask = SAMPLE_TEXTURE2D(_HairMask, sampler_BodyMask, uv).rgb;
     float3 skinMask = SAMPLE_TEXTURE2D(_SkinMask, sampler_BodyMask, uv).rgb;
     float3 randColor = RandomColor(Color, Seed);
-    float3 FaceColor = Color;
+    float3 skinColor = Color;
     MidtoneColor = blendOverwrite(Color * Midtone, Color, hairMask);
-    MidtoneColor = blendOverwrite(MidtoneColor, FaceColor, skinMask);
+    MidtoneColor = blendOverwrite(MidtoneColor, skinColor, skinMask);
     float offset = (sin(Seed * 0.01) + 1.0) * 0.5;
     float3 ShadowTextureColor = SAMPLE_TEXTURE2D(_ShadowTexture, sampler_BodyMask, float2(uv.x + offset, uv.y + offset* 20.f) * ShadowTextureScale).rgb;
-    ShadowColor = Color * Shadow * Tint(Color, Shadow, ShadowTextureColor);
+    ShadowColor = Color * Tint(Color, Shadow, ShadowTextureColor);
+    const float3 SkinShadowColor = skinShadow;
     ExtraHighlightColor = lerp(Color, ExtraHighlight, Weight.x);
     HighlightColor = lerp(Color, Highlight, Weight.y);
     if (Animated){
@@ -183,6 +184,8 @@ void BlendLight_float(const float3 Color, const float3 Shadow, const float3 Midt
         HighlightColor = blendOverwrite(randHighlightColor,  MidtoneColor, hairMask);
         ExtraHighlightColor = blendOverwrite(randExtraHighlightColor,  MidtoneColor, hairMask);
     }else{
+        ShadowColor = blendOverwrite(ShadowColor, Color, hairMask);
+        ShadowColor = blendOverwrite(ShadowColor, SkinShadowColor, skinMask);
         HighlightColor = blendOverwrite(HighlightColor, MidtoneColor, hairMask);
         ExtraHighlightColor = blendOverwrite(ExtraHighlightColor, MidtoneColor, hairMask);
     }

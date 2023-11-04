@@ -47,6 +47,9 @@
         },
         {
             "m_Id": "d1728522008a405f87c8a2b0daef97d4"
+        },
+        {
+            "m_Id": "4378ca1d8de044fa94eaffb0e4d0646e"
         }
     ],
     "m_Keywords": [
@@ -189,6 +192,9 @@
         },
         {
             "m_Id": "7cef76c5e37c4450b1613d2dd7a0ad5d"
+        },
+        {
+            "m_Id": "d01561f676f348e18777cc009dfaa29e"
         }
     ],
     "m_GroupDatas": [],
@@ -752,6 +758,20 @@
                     "m_Id": "29e66882b4ea41b685900c4fd9d318bf"
                 },
                 "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "d01561f676f348e18777cc009dfaa29e"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "a15497d1ae6142008f14991adc8d6758"
+                },
+                "m_SlotId": 19
             }
         },
         {
@@ -1922,6 +1942,36 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "4378ca1d8de044fa94eaffb0e4d0646e",
+    "m_Guid": {
+        "m_GuidSerialized": "9b5515b2-a5fc-4dd6-acec-5e2013efe9f6"
+    },
+    "m_Name": "SkinShadow",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "SkinShadow",
+    "m_DefaultReferenceName": "_SkinShadow",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "44c9cd588d8e48109305747ebf9db284",
@@ -2310,6 +2360,29 @@
     "m_StageCapability": 3,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "53f16eeed0de4d2881e13aff8089afde",
+    "m_Id": 19,
+    "m_DisplayName": "SkinShadow",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "SkinShadow",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
     "m_Labels": []
 }
 
@@ -3624,10 +3697,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 273.5999755859375,
+            "x": 275.20001220703127,
             "y": 788.7999877929688,
-            "width": 312.00006103515627,
-            "height": 541.6000366210938
+            "width": 315.2000732421875,
+            "height": 613.6000366210938
         }
     },
     "m_Slots": [
@@ -3636,6 +3709,9 @@
         },
         {
             "m_Id": "a22b5baf7f78468082218b068124b2a4"
+        },
+        {
+            "m_Id": "53f16eeed0de4d2881e13aff8089afde"
         },
         {
             "m_Id": "81a3e021370541b1975fabce02ab89dd"
@@ -3930,6 +4006,9 @@
         },
         {
             "m_Id": "2df16724d0e34c47ae70d40b1b325037"
+        },
+        {
+            "m_Id": "4378ca1d8de044fa94eaffb0e4d0646e"
         },
         {
             "m_Id": "8d692bc7bcf84d1686c8dc7488f55022"
@@ -4633,6 +4712,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "d01561f676f348e18777cc009dfaa29e",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 116.80000305175781,
+            "y": 893.5999145507813,
+            "width": 141.6000518798828,
+            "height": 33.60009765625
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "d1cec13295fc42daa870dfdce6e5ae43"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "4378ca1d8de044fa94eaffb0e4d0646e"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "d03fa230f4fc4513939d8483c4ce7c2c",
     "m_Id": 2,
@@ -4695,6 +4810,31 @@
         "z": 2.0,
         "w": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "d1cec13295fc42daa870dfdce6e5ae43",
+    "m_Id": 0,
+    "m_DisplayName": "SkinShadow",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {

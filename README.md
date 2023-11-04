@@ -7,14 +7,12 @@ In this assignment, I created a 3D stylized scene based on a 2D illustration, an
 
 ## Demo
 
-| ![1699044641428](image/README/1699044641428.jpg)|![1699050024911](image/README/1699050024911.png)|
+| ![1699044641428](image/README/1699044641428.jpg)|![1699066074126](image/README/1699066074126.png)|
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 
 Image source: [Roxy Migurdia Ani-Art Canvas Board](https://amnibus.com/products/detail/26574)
 
-
-https://github.com/GrahamZen/hw04-stylization/assets/31180310/9062c5a5-a12e-4051-b5ec-7f5204165117
 
 ## Implementation
 

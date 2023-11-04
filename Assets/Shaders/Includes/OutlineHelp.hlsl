@@ -81,9 +81,11 @@ void Postprocess_float(Texture2D MainTex, float2 UV, float2 UVScale,
     outlineMask += DepthSobel(warpUV(UV, Seed, 0.001, Thickness, 0.00035), Thickness, Threshold, Strength, Seed);
     outlineMask += DepthSobel(warpUV(UV, Seed, 0.001, Thickness, 0.0004), Thickness, Threshold, Strength, Seed);
     outlineMask += DepthSobel(warpUV(UV, Seed, 0.001, Thickness, 0.00045), Thickness, Threshold, Strength, Seed);
-    OUT = blendOverwrite(screenColor, OutlineColor, outlineMask);
-    if (!Paper)
-        return;
-    const float3 paperColor = SAMPLE_TEXTURE2D(PaperTex, sampler_point_clamp, UV * UVScale).rgb;
-    OUT = pow(PaperEffect(OUT, paperColor) * ModulateColor, Power);
+    if (!Paper){
+        OUT = blendOverwrite(screenColor, OutlineColor, outlineMask);
+    }else{
+        const float3 paperColor = SAMPLE_TEXTURE2D(PaperTex, sampler_point_clamp, UV * UVScale).rgb;
+        OUT = pow(PaperEffect(screenColor, paperColor) * ModulateColor, Power);
+        OUT = blendOverwrite(OUT, OutlineColor, outlineMask);
+    }
 }

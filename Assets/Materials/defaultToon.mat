@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Body
+  m_Name: defaultToon
   m_Shader: {fileID: -6465566751694194690, guid: e0c3b836f5c12a746ab1c1c64faacb51,
     type: 3}
   m_Parent: {fileID: 0}
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Body_Mask:
-        m_Texture: {fileID: 2800000, guid: 35ea07042c89bd8429339642ff579434, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -75,7 +75,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Hair_Mask:
-        m_Texture: {fileID: 2800000, guid: 67e2c0ac569c0da4bb440313d63f25a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: c51872ac373cbf84699f672b7027eea1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -83,7 +83,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: 1057aa6b00ec2e94cabac2e0be3772d3, type: 3}
+        m_Texture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -91,7 +91,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mouth_Mask:
-        m_Texture: {fileID: 2800000, guid: 4caf100ac6606204d815b72938562255, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -103,7 +103,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Skin_Mask:
-        m_Texture: {fileID: 2800000, guid: bf9b9c3bf1826044fb40412f43b0f19a, type: 3}
+        m_Texture: {fileID: 2800000, guid: c51872ac373cbf84699f672b7027eea1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -156,7 +156,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimPower: 10
+    - _RimPower: 8
     - _SHADOWS_SOFT: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -174,14 +174,16 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ExtraHighlight: {r: 1, g: 1, b: 1, a: 1}
-    - _Highlight: {r: 0.9607844, g: 0.8980393, b: 0.34901962, a: 1}
-    - _Highlight_Weight: {r: 0.8, g: 0.8, b: 0, a: 0}
-    - _Midtone: {r: 1, g: 1, b: 1, a: 1}
-    - _Midtone_Vector: {r: 0.8, g: 1, b: 0.7, a: 0}
+    - _FaceShadow: {r: 0, g: 0, b: 0, a: 0}
+    - _Highlight: {r: 1, g: 1, b: 0, a: 1}
+    - _Highlight_Weight: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Midtone: {r: 0.75294125, g: 0.78823537, b: 0.7686275, a: 1}
+    - _Midtone_Vector: {r: 0.8, g: 0.6, b: 0.2, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+    - _Shadow: {r: 0.38431376, g: 0.29803923, b: 0.21568629, a: 1}
     - _ShadowMultiplier: {r: 1, g: 1, b: 1, a: 0}
-    - _Shadow_Texture_Scale: {r: 5, g: 5, b: 5, a: 1}
+    - _Shadow_Texture_Scale: {r: 10, g: 10, b: 2, a: 1}
+    - _SkinShadow: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Threshold: {r: 0.1, g: 0.97, b: 0.99, a: 0}
+    - _Threshold: {r: 0.4, g: 0.6, b: 0.9, a: 0}
   m_BuildTextureStacks: []

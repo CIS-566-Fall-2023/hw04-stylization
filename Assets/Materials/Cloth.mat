@@ -2959,6 +2959,7 @@ Material:
     - _ExtraHighlight: {r: 1, g: 1, b: 1, a: 1}
     - _FXProximityColorMaxColor: {r: 1, g: 1, b: 1, a: 1}
     - _FXProximityColorMinColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceShadow: {r: 0, g: 0, b: 0, a: 0}
     - _FlipbookColor: {r: 1, g: 1, b: 1, a: 1}
     - _FlipbookCrossfadeRange: {r: 0.75, g: 1, b: 0, a: 1}
     - _FlipbookMaskPan: {r: 0, g: 0, b: 0, a: 0}
@@ -3029,7 +3030,7 @@ Material:
     - _HighColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighColor_TexPan: {r: 0, g: 0, b: 0, a: 0}
     - _Highlight: {r: 0.9529412, g: 0.8733268, b: 0.33924708, a: 1}
-    - _Highlight_Weight: {r: 0.2, g: 0.5, b: 0, a: 0}
+    - _Highlight_Weight: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _IridescenceAudioLinkEmissionAdd: {r: 0, g: 0, b: 0, a: 0}
     - _IridescenceAudioLinkIntensityAdd: {r: 0, g: 0, b: 0, a: 0}
     - _IridescenceMaskPan: {r: 0, g: 0, b: 0, a: 0}
@@ -3137,7 +3138,7 @@ Material:
     - _Set_HighColorMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _Set_Rim2LightMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _Set_RimLightMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Shadow: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    - _Shadow: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _Shadow2ndColor: {r: 0, g: 0, b: 0, a: 0}
     - _Shadow2ndColorTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _Shadow3rdColor: {r: 0, g: 0, b: 0, a: 0}
@@ -3146,6 +3147,7 @@ Material:
     - _ShadowColor: {r: 0.7, g: 0.75, b: 0.85, a: 1}
     - _ShadowColorTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _Shadow_Texture_Scale: {r: 10, g: 1, b: 2, a: 1}
+    - _SkinShadow: {r: 1, g: 1, b: 1, a: 0}
     - _SkinThicknessMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _SphericalDissolveCenter: {r: 0, g: 0, b: 0, a: 1}
     - _SssColorBleedAoWeights: {r: 0.4, g: 0.15, b: 0.13, a: 0}
@@ -3166,7 +3168,7 @@ Material:
     - _TextTimeOffset: {r: 0, g: 0, b: 0, a: 0}
     - _TextTimePadding: {r: 0, g: 0, b: 0, a: 0}
     - _TextTimeScale: {r: 1, g: 1, b: 1, a: 1}
-    - _Threshold: {r: 0.1, g: 0.8, b: 0.85, a: 0}
+    - _Threshold: {r: 0.1, g: 0.95, b: 0.97, a: 0}
     - _VertexLocalRotationAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalRotationCTALSpeed: {r: 0, g: 0, b: 0, a: 1}
     - _VertexLocalScaleALMax: {r: 0, g: 0, b: 0, a: 0}

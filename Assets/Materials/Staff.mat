@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hall
+  m_Name: Staff
   m_Shader: {fileID: -6465566751694194690, guid: e0c3b836f5c12a746ab1c1c64faacb51,
     type: 3}
   m_Parent: {fileID: 0}
@@ -83,7 +83,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: 26b08427cd6772c46af05edef6b698f1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d1e3e0b10240b443b7a38422e3144de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -111,7 +111,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: eeb0fd072331e494ea3d94c54da21cba, type: 3}
+        m_Texture: {fileID: 2800000, guid: d6e452a2b2753cc418e2fc3d5fc736a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -156,7 +156,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimPower: 8
+    - _RimPower: 10
     - _SHADOWS_SOFT: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -173,15 +173,17 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ExtraHighlight: {r: 1, g: 0.8338421, b: 0.615, a: 1}
-    - _Highlight: {r: 1, g: 0.7129256, b: 0.33199996, a: 1}
+    - _ExtraHighlight: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceShadow: {r: 0, g: 0, b: 0, a: 0}
+    - _Highlight: {r: 0.99607843, g: 0.99607843, b: 0.99607843, a: 1}
     - _Highlight_Weight: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Midtone: {r: 1, g: 1, b: 1, a: 1}
-    - _Midtone_Vector: {r: 3, g: 2, b: 1, a: 0}
+    - _Midtone_Vector: {r: 1, g: 1, b: 1, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 1, g: 0.91244, b: 0.801, a: 1}
+    - _Shadow: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
     - _ShadowMultiplier: {r: 1, g: 1, b: 1, a: 0}
-    - _Shadow_Texture_Scale: {r: 10, g: 10, b: 1, a: 1}
+    - _Shadow_Texture_Scale: {r: 5, g: 5, b: 5, a: 1}
+    - _SkinShadow: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Threshold: {r: 0.2, g: 0.6, b: 0.65, a: 0}
+    - _Threshold: {r: 0.6, g: 0.95, b: 1, a: 0}
   m_BuildTextureStacks: []
