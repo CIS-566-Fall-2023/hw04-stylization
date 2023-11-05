@@ -10,7 +10,7 @@
 <br/>
 
 ### Inspiration 
-![pic](/img/r1.jpg){:height="80%" width="80%"} ![pic](/img/r2.jpg){:height="80%" width="80%"}
+![pic](/img/r1.jpg){:height="50%" width="50%"} ![pic](/img/r2.jpg){:height="50%" width="50%"}
 [@agu_knzml](https://twitter.com/agu_knzm)
 
 
