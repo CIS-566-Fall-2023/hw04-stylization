@@ -12,17 +12,6 @@ Using a 2D concept art piece as inspiration to create a 3D stylized scene in Uni
 
 https://github.com/wc41/hw04-stylization/assets/97757188/3e1981d1-dd14-4e35-b095-fbcc65f1e0c6
 
-
-
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
-
 ---
 # Process
 
