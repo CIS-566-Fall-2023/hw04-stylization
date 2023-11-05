@@ -122,3 +122,43 @@ void ChooseColor3_float(float3 Highlight, float3 Midtone, float3 Shadow, float D
         OUT = Midtone;
     }
 }
+
+// Toolbox helper function
+float bias_float(float b, float t) {
+    return pow(t, log(b) / log(0.5f));
+}
+
+void StylisedBoundsHelper_float(float Diffuse, float Threshold1, float Threshold2, float TransitionBorder, out float DIFFUSE) {
+    if (abs(Threshold1 - Diffuse) < abs(Threshold1 - TransitionBorder)) {
+        if (Diffuse < Threshold1) {
+            float denominator = TransitionBorder;
+            float numerator = Diffuse - (Threshold1 - TransitionBorder);
+            DIFFUSE = lerp(0, 1, numerator / denominator);
+        }
+        else {
+            float denominator = TransitionBorder;
+            float numerator = (Threshold1 + TransitionBorder) - Diffuse;
+            DIFFUSE = lerp(0, 1, numerator / denominator);
+        }
+    }
+    else if (abs(Threshold2 - Diffuse) < abs(Threshold2 - TransitionBorder)) {
+        if (Diffuse < Threshold2) {
+            float denominator = TransitionBorder;
+            float numerator = Diffuse - (Threshold2 - TransitionBorder);
+            DIFFUSE = lerp(0, 1, numerator / denominator);
+        }
+        else {
+            float denominator = TransitionBorder;
+            float numerator = (Threshold2 + TransitionBorder) - Diffuse;
+            DIFFUSE = lerp(0, 1, numerator / denominator);
+        }
+    }
+    else {
+        DIFFUSE = 0.0;
+    }
+}
+
+void StylisedBounds_float(float Camel, float Diffuse, float2 ObjectUVs, out float FINAL_DIFFUSE) {
+    float noise = 0.1 * sin((ObjectUVs.x + ObjectUVs.y) * 100.0);
+    FINAL_DIFFUSE = Diffuse + Camel * noise;
+}
