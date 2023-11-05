@@ -79,12 +79,12 @@ Improvements upon previously created three tone toon shader.
 
 Added ***Post Process Outlines*** based on Depth buffers of the scene.
 
-### To-Do:
 1. Created render feature from base code (help from https://youtu.be/Bc9eTlMPdjU), which then takes in a new full-screen material to create outlines
 2. Created a new shader for this material which accesses normal and depth buffers
 3. Followed [this tutorial](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF) to write a depth-based sobel edge detection function which takes in many parameters for edge detection.
 4. To make outlines seem more hand-drawn with pen, a bunch of noise parameters were added to vary the darkness, thickness, and offset of the lines.<br>![image](https://github.com/wc41/hw04-stylization/assets/97757188/7927baff-d33f-4ded-86a0-190692db91af)
-5. Final look + parameters:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/eda1344d-9543-49d0-9c5f-0c5de02a8492"><img width="250" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/f4ce8ee6-b915-4269-91c3-a74622964b53">
+5. The noise for each of these outline parameters is also animated using a time node and a perlinTime function.
+6. Final look + parameters:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/eda1344d-9543-49d0-9c5f-0c5de02a8492"><img width="250" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/f4ce8ee6-b915-4269-91c3-a74622964b53">
 
 
 ---
