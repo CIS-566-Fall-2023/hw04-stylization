@@ -6,8 +6,8 @@ This readme file is for a page. Please view the github page https://xchennnw.git
 ![pic](/img/2023-11-05-03-18-55.gif){:height="80%" width="80%"}
 <br/>
 ### Video
-<iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" width="800" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" width="800" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/6RgxzSTxndU?si=EaIWBPwCViFtg6F8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="500" src="https://www.youtube.com/embed/5kLzVXE_DNo?si=KzOr9Voo4NXnXXux" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br/>
 
 ### Inspiration 
