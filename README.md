@@ -1,13 +1,18 @@
 
 ## Demo
 ### GIF
-![pic](/img/2023-11-05-03-15-14.gif){:height="100%" width="100%"}
-![pic](/img/2023-11-05-03-18-55.gif){:height="100%" width="100%"}
+![pic](/img/2023-11-05-03-15-14.gif){:height="80%" width="80%"}
+![pic](/img/2023-11-05-03-18-55.gif){:height="80%" width="80%"}
 <br/>
 ### Video
-<iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" width="800" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" width="800" height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <br/>
+
+### Inspiration 
+![pic](/img/r1.jpg){:height="80%" width="80%"} ![pic](/img/r2.jpg){:height="80%" width="80%"}
+[@agu_knzml](https://twitter.com/agu_knzm)
+
 
 ## Process
 ### 1. Basic surface shaders & shadow 
