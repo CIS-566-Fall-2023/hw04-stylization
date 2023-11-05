@@ -44,7 +44,7 @@ In this is project I use a 2D concept art piece as inspiration to create a 3D St
  - I made an old movie-style full screen post-process effect.
  - I used the `Simple Noise` node to make the screen flicker like an old-school projector.
  - I also utilized the Simple Noise node and the Voronoi node to simulate the burn marks and vertical line effects reminiscent of old film.
-![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/7.gif)
+![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/8.gif)
 
 # Interactivity
 * `Space`: Swap the material of Sonic.
