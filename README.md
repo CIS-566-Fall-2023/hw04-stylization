@@ -1,8 +1,7 @@
 # HW 4: *3D Stylization*
 
 ## Demo
-![](2023-11-05-03-15-14.gif) 
-![](2023-11-05-03-18-55.gif) 
+<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322294879&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <br/>
 
 
