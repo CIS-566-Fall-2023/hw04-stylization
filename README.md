@@ -3,9 +3,9 @@
 ## Project Overview:
 The goal of this project was to learn how to use the Unity Shader graph and experiment with mimicking a target style using stylized rendering. 
 
-| <img width="500px" src=https://github.com/Diana-ou/hw04-stylization/blob/main/darkness.jpg  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
+| ![](https://github.com/Diana-ou/hw04-stylization/blob/main/darkness.jpg)  |  |
 |:--:|:--:|
-| *2D Concept Illustration* | *Stylized Scene in Unity* |
+| *Concept Illustration (Tatsuki Fujimoto)* | *Stylized Scene in Unity* |
 
 
 ### Table of Contents:
@@ -21,11 +21,9 @@ The goal of this project was to learn how to use the Unity Shader graph and expe
 
 My inspiration for this project started with 15th-century style metal engraving, but seeing how moody things looked, quickly increased in scope. Some of the inspirations for this scene include:   
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
-|:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
-
-
+| ![](https://github.com/Diana-ou/hw04-stylization/blob/main/engraving.png) | ![darkness](https://github.com/Diana-ou/hw04-stylization/assets/90532124/e9b3f765-d1d2-43eb-bb0e-1c79d5ffdb2c) | 
+|:--:|:--:|
+| *Engraving Style* | *https://twitter.com/trudicastle/status/1122648793009098752* | 
 ---
 ## 2. Interesting Shaders
 - **Improved Surface Shader**
