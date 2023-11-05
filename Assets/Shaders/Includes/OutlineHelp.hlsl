@@ -42,6 +42,17 @@ void GaussianBlur_float(UnityTexture2D Texture, float2 UV, float Blur, UnitySamp
     Out_Alpha = col.a;
 }
 
+void GetMixStyle_float(float time, out float val) {
+    float t = (time / 30.0f);
+    t -= floor(t);
+
+    val = 0.0f;
+    if (t < 0.3) val = 0.0f;
+    else if (t < 0.5) val = (t - 0.3) / 0.2;
+    else if (t < 0.8) val = 1.0f;
+    else val = lerp(1, 0, (t - 0.8) / 0.2);
+}
+
 float3 GetMixColor_float(UnityTexture2D Texture, float3 MixColor, float2 Pos, UnitySamplerState Sampler)
 {
     float3 rgb = Texture.Sample(Sampler, Pos * _MainTex_TexelSize.xy).rgb;
