@@ -12,17 +12,6 @@ Using a 2D concept art piece as inspiration to create a 3D stylized scene in Uni
 
 https://github.com/wc41/hw04-stylization/assets/97757188/3e1981d1-dd14-4e35-b095-fbcc65f1e0c6
 
-
-
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
-
 ---
 # Process
 
@@ -30,13 +19,12 @@ https://github.com/wc41/hw04-stylization/assets/97757188/3e1981d1-dd14-4e35-b095
 
 Concept art taken from @sseongryul on instagram:
 
-<img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/13586bc0-a1c5-4c3a-86b6-d558be0570e3/><img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/ea7273a3-3b7f-4e14-ae8d-84ed6e587276/><img width="240px" src=https://github.com/wc41/hw04-stylization/assets/97757188/c10eeea2-a6db-4e1e-a892-438d24def2b0/>
+<img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/13586bc0-a1c5-4c3a-86b6-d558be0570e3/><img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/ea7273a3-3b7f-4e14-ae8d-84ed6e587276/>
 
 
 ---
 ## 2. Shaders
 
-### To-Do:
 1. **Improved Toon Shader**
 Improvements upon previously created three tone toon shader.
       1. **Multiple Light Support**
@@ -53,11 +41,10 @@ Improvements upon previously created three tone toon shader.
           - ![image](https://github.com/wc41/hw04-stylization/assets/97757188/b5827b2d-f8dd-44f2-9e63-2379ad1273c0)
           - Rim lighting done similarly, except multiplying diffuse lighting with 1-saturate(dot(view, normal))
           - ![image](https://github.com/wc41/hw04-stylization/assets/97757188/b1d2bf09-0374-4561-b41b-786f312974b6)
-
       3. **Textured Shadow**
           1. Custom shadow texture to create a textured look
           2. Using default object UVs to map shadows onto ground
-          3. With both specular and rim lighting:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/3c2e7f77-af88-401d-8a25-eab8b08c6eb6">
+          3. Shadows + specular/rim lighting before blending/noise:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/3c2e7f77-af88-401d-8a25-eab8b08c6eb6">
 3. **Special Surface Shader**
    - Added more effects to the coloring and lighting
        - Blur between the diffuse colors
@@ -79,18 +66,18 @@ Improvements upon previously created three tone toon shader.
 
 Added ***Post Process Outlines*** based on Depth buffers of the scene.
 
-### To-Do:
 1. Created render feature from base code (help from https://youtu.be/Bc9eTlMPdjU), which then takes in a new full-screen material to create outlines
 2. Created a new shader for this material which accesses normal and depth buffers
 3. Followed [this tutorial](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF) to write a depth-based sobel edge detection function which takes in many parameters for edge detection.
 4. To make outlines seem more hand-drawn with pen, a bunch of noise parameters were added to vary the darkness, thickness, and offset of the lines.<br>![image](https://github.com/wc41/hw04-stylization/assets/97757188/7927baff-d33f-4ded-86a0-190692db91af)
-5. Final look + parameters:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/eda1344d-9543-49d0-9c5f-0c5de02a8492"><img width="250" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/f4ce8ee6-b915-4269-91c3-a74622964b53">
+5. The noise for each of these outline parameters is also animated using a time node and a perlinTime function.
+6. Final look + parameters:<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/eda1344d-9543-49d0-9c5f-0c5de02a8492"><img width="250" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/f4ce8ee6-b915-4269-91c3-a74622964b53">
 
 
 ---
 ## 4. Full Screen Post Process Effect + Creating Scene
 
-Finally, I added a post-process paper texture to the scene in my fullscreen shader and created my scene. It consists of a pine tree model and an ice bear model both downloaded from SketchFab.
+Added a post-process paper texture to the scene in my fullscreen shader and created the scene. It consists of a pine tree model and an ice bear model both downloaded from SketchFab.
 
 https://sketchfab.com/3d-models/pine-tree-d45218a3fab349e5b1de040f29e7b6f9
 
@@ -98,7 +85,7 @@ https://sketchfab.com/3d-models/ice-bear-we-bare-bears-77f6d43d4dc740dfb8a500743
 
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/601e0e7a-207c-404c-8f22-9aedc6ccb8fa)
 
-## 6. Interactivity
+## 5. Interactivity
 To add interactivity, I created a new shader with a different method of blending between the diffuse color separation values using Perlin Noise:
 
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/8a5bc942-3ed9-4b60-a4d6-96234cbf17e1)
@@ -108,9 +95,3 @@ This applies a sort of inky effect, so I decided to make new materials with colo
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/2110a713-071c-4d3d-8748-a3a7db2a7492)
 
 Finally, I applied a C# script to toggle between the 2 main scenes, as well as a script for the camera to toggle between beige and black for the background.
-
-        - [Intro to Unity Shader Graph](https://www.youtube.com/watch?v=Ar9eIn4z6XE&ab_channel=Brackeys)
-    - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
-        - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
-    - [Alexander Ameye](https://ameye.dev/about/)
-        - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
