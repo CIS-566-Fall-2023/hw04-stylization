@@ -107,9 +107,3 @@ This applies a sort of inky effect, so I decided to make new materials with colo
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/2110a713-071c-4d3d-8748-a3a7db2a7492)
 
 Finally, I applied a C# script to toggle between the 2 main scenes, as well as a script for the camera to toggle between beige and black for the background.
-
-        - [Intro to Unity Shader Graph](https://www.youtube.com/watch?v=Ar9eIn4z6XE&ab_channel=Brackeys)
-    - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
-        - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
-    - [Alexander Ameye](https://ameye.dev/about/)
-        - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
