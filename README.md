@@ -1,3 +1,4 @@
+This readme file is for a page. Please view the github page https://xchennnw.github.io/hw04-stylization/
 
 ## Demo
 ### GIF
@@ -10,7 +11,7 @@
 <br/>
 
 ### Inspiration 
-![pic](/img/r1.jpg){:height="50%" width="50%"} ![pic](/img/r2.jpg){:height="50%" width="50%"}
+![pic](/img/r1.jpg){:height="30%" width="30%"} ![pic](/img/r2.jpg){:height="30%" width="30%"}
 [@agu_knzml](https://twitter.com/agu_knzm)
 
 
