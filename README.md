@@ -25,7 +25,6 @@ Concept art taken from @sseongryul on instagram:
 ---
 ## 2. Shaders
 
-### To-Do:
 1. **Improved Toon Shader**
 Improvements upon previously created three tone toon shader.
       1. **Multiple Light Support**
