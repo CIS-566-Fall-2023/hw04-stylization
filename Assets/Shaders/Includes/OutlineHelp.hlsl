@@ -10,7 +10,7 @@ void GetNormal_float(float2 uv, out float3 Normal)
     //Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
 }
 
-void grayScale_float(float3 rgb, float2 uv, out float3 OUT)
+void GrayScale_float(float3 rgb, float2 uv, out float3 OUT)
 {
     float gray = dot(rgb, float3(0.21, 0.72, 0.07));
     float vig = smoothstep(0.7f, 0.45f, length(uv - 0.5f));
@@ -42,32 +42,34 @@ void GaussianBlur_float(UnityTexture2D Texture, float2 UV, float Blur, UnitySamp
     Out_Alpha = col.a;
 }
 
-float3 GetMixColor_float(UnityTexture2D Texture, float3 MixColor, float2 UV, UnitySamplerState Sampler)
+float3 GetMixColor_float(UnityTexture2D Texture, float3 MixColor, float2 Pos, UnitySamplerState Sampler)
 {
-    float3 rgb = Texture.Sample(Sampler, UV).rgb;
+    float3 rgb = Texture.Sample(Sampler, Pos * _MainTex_TexelSize.xy).rgb;
     float d = clamp(dot(rgb, float3(-0.5, 1.0, -0.5)), 0.0, 1.0);
     return lerp(rgb, MixColor, 1.8 * d);
 }
 
-float3 GetBWDist_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, float2 UV, UnitySamplerState Sampler) {
-    float val = length(GetMixColor_float(Texture, float3(0.4, 0.4, 0.4), UV, Sampler)) +
-        0.0001 * length(UV);
+float3 GetBWDist_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, float2 NoiseTexelSize, float2 Pos, UnitySamplerState Sampler) {
+    float val = length(GetMixColor_float(Texture, float3(0.4, 0.4, 0.4), Pos, Sampler)) +
+        0.0001 * length(Pos);
     val *= 0.9f;
-    val += clamp(pow(NoiseTexture.Sample(Sampler, UV * 0.4f).x + 0.3f, 2.0f) - 0.45f, 0.0f, 1.0f);
+    val += clamp(pow(NoiseTexture.Sample(Sampler, Pos * NoiseTexelSize * 0.4f).x + 0.3f, 2.0f) + 0.1f, 0.0f, 1.0f);
 
-    return smoothstep(0.9, 1.1, val);
+    float d = smoothstep(0.9, 1.1, val);
+    return float3(d, d, d);
 }
 
-void GetGradientValue_float(UnityTexture2D Texture, float3 MixColor, float2 UV, float Delta, UnitySamplerState Sampler, out float2 Out_Gradient) {
+void GetGradientValue_float(UnityTexture2D Texture, float3 MixColor, float2 Pos, float Delta, UnitySamplerState Sampler, out float2 Out_Gradient) {
     float2 d = float2(Delta, 0.0);
     Out_Gradient = float2(
-        dot(GetMixColor_float(Texture, MixColor, UV + _MainTex_TexelSize.x * d.xy, Sampler) - GetMixColor_float(Texture, MixColor, UV - _MainTex_TexelSize.x * d.xy, Sampler), float3(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0)),
-        dot(GetMixColor_float(Texture, MixColor, UV + _MainTex_TexelSize.y * d.yx, Sampler) - GetMixColor_float(Texture, MixColor, UV - _MainTex_TexelSize.y * d.yx, Sampler), float3(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0))) / Delta ;
+        dot(GetMixColor_float(Texture, MixColor, Pos + d.xy, Sampler) - GetMixColor_float(Texture, MixColor, Pos - d.xy, Sampler), float3(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0)),
+        dot(GetMixColor_float(Texture, MixColor, Pos + d.yx, Sampler) - GetMixColor_float(Texture, MixColor, Pos - d.yx, Sampler), float3(1.0 / 3.0, 1.0 / 3.0, 1.0 / 3.0))) / Delta ;
 }
 
-void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, float2 Pos, float SampleNum, UnitySamplerState Sampler, out float3 Col) {
+void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, float2 NoiseTexelSize, float2 UV, float SampleNum, UnitySamplerState Sampler, out float3 Col) {
     float3 Col1 = float3(0.0, 0.0, 0.0);
     float3 Col2 = float3(0.0, 0.0, 0.0);
+    float2 Pos = UV / _MainTex_TexelSize.xy;
     float2 Pos1 = Pos, Pos2 = Pos, Pos3 = Pos, Pos4 = Pos;
     float cnt = 0.0, cnt2 = 0.0;
 
@@ -76,15 +78,19 @@ void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, floa
     for (int i = 0; i < SampleNum; ++i) {
         // get gradients
 
-        float2 gr1, gr2, gr3, gr4;
-        GetGradientValue_float(Texture, float3(0.4, 0.4, 0.4), Pos1, 2.0, Sampler, gr1);
-        gr1 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos1).rg - 0.5f);
-        GetGradientValue_float(Texture, float3(0.4, 0.4, 0.4), Pos2, 2.0, Sampler, gr2);
-        gr2 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos2).rg - 0.5f);
-        GetGradientValue_float(Texture, float3(1.5, 1.5, 1.5), Pos3, 2.0, Sampler, gr3);
-        gr3 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos3).rg - 0.5f);
-        GetGradientValue_float(Texture, float3(1.5, 1.5, 1.5), Pos4, 2.0, Sampler, gr4);
-        gr4 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos4).rg - 0.5f);
+        float2 gr1 = float2(0.0, 0.0), gr2 = float2(0.0, 0.0), gr3 = float2(0.0, 0.0), gr4 = float2(0.0, 0.0);
+
+        // gradient for outlines
+        GetGradientValue_float(Texture, float3(0.4, 0.4, 0.4), Pos1, delta, Sampler, gr1);
+        gr1 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos1 * NoiseTexelSize).rg - 0.5f);
+        GetGradientValue_float(Texture, float3(0.4, 0.4, 0.4), Pos2, delta, Sampler, gr2);
+        gr2 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos2 * NoiseTexelSize).rg - 0.5f);
+
+        // gradient for wash effect
+        GetGradientValue_float(Texture, float3(1.5, 1.5, 1.5), Pos3, delta, Sampler, gr3);
+        gr3 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos3 * NoiseTexelSize).rg - 0.5f);
+        GetGradientValue_float(Texture, float3(1.5, 1.5, 1.5), Pos4, delta, Sampler, gr4);
+        gr4 += 0.0001 * (NoiseTexture.Sample(Sampler, Pos4 * NoiseTexelSize).rg - 0.5f);
 
         float d1 = clamp(10. * length(gr1), 0., 1.);
         float d2 = clamp(10. * length(gr2), 0., 1.);
@@ -93,18 +99,16 @@ void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, floa
         Pos2 -= 0.8 * normalize(gr2.yx * float2(1.0f, -1.0f));
 
         float fact = 1.0f - float(i) / SampleNum;
-        Col1 += fact * lerp(float3(1.2f, 1.2f, 1.2f), 2.0f * GetBWDist_float(Texture, NoiseTexture, Pos1, Sampler), d1);
-        Col1 += fact * lerp(float3(1.2f, 1.2f, 1.2f), 2.0f * GetBWDist_float(Texture, NoiseTexture, Pos2, Sampler), d2);
+        Col1 += fact * lerp(float3(1.2f, 1.2f, 1.2f), 2.0f * GetBWDist_float(Texture, NoiseTexture, NoiseTexelSize, Pos1, Sampler), d1);
+        Col1 += fact * lerp(float3(1.2f, 1.2f, 1.2f), 2.0f * GetBWDist_float(Texture, NoiseTexture, NoiseTexelSize, Pos2, Sampler), d2);
 
-
-        Pos3 += 0.25f * normalize(gr3) + 0.5 * (NoiseTexture.Sample(Sampler, Pos * 0.07).rg - 0.5f);
-        Pos4 += 0.5f * normalize(gr4) + 0.5 * (NoiseTexture.Sample(Sampler, Pos * 0.07).rg - 0.5f);
-
+        Pos3 += 0.25f * normalize(gr3);// +0.5 * (NoiseTexture.Sample(Sampler, NoiseTexelSize * Pos * 0.07).rg - 0.5f);
+        Pos4 -= 0.5f * normalize(gr4);// +0.5 * (NoiseTexture.Sample(Sampler, NoiseTexelSize * Pos * 0.07).rg - 0.5f);
 
         float f1 = 3.0f * fact;
         float f2 = 4.0f * (0.7f - fact);
-        Col2 += f1 * (GetMixColor_float(Texture, float3(1.5, 1.5, 1.5), Pos3, Sampler) + 0.25f + 0.4 * NoiseTexture.Sample(Sampler, Pos3).rgb);
-        Col2 += f2 * (GetMixColor_float(Texture, float3(1.5, 1.5, 1.5), Pos4, Sampler) + 0.25f + 0.4 * NoiseTexture.Sample(Sampler, Pos4).rgb);
+        Col2 += f1 * (GetMixColor_float(Texture, float3(1.5, 1.5, 1.5), Pos3, Sampler) + 0.25f + 0.4 * NoiseTexture.Sample(Sampler, NoiseTexelSize * Pos3).rgb);
+        Col2 += f2 * (GetMixColor_float(Texture, float3(1.5, 1.5, 1.5), Pos4, Sampler) + 0.25f + 0.4 * NoiseTexture.Sample(Sampler, NoiseTexelSize * Pos4).rgb);
 
         cnt2 += f1 + f2;
         cnt += fact;
@@ -113,7 +117,7 @@ void GetGradient_float(UnityTexture2D Texture, UnityTexture2D NoiseTexture, floa
     Col1 /= cnt * 2.5f;
     Col2 /= cnt2 * 1.65f;
 
-    Col = Col1;
+    Col = clamp(clamp(Col1 * .9 + .1, 0., 1.) * Col2, 0., 1.);
 }
 
 void calcRegion(UnityTexture2D Texture, UnitySamplerState Sampler, int2 lower, int2 upper, int samples, float2 uv, out float3 mean, out float variance)
