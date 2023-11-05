@@ -4,6 +4,9 @@
 In this project, I implemented two different stylizations using Unity ShaderGraph.
 
 ## Results
+<p align="center">
+   <img src=MdAssets//Stylize3.gif />
+</p>
  * The initial reference was originally implemented in Unreal Engine. I incorporated certain features of it into my Unity shader.
     * I generated a brush stroke texture in Adobe Substance 3D Designer (DS) for the shader to sample, resulting in the creation of stroke-like features.
     * I utilized the dot product between the view direction and the object's normal to calculate the Fresnel term and then sampled the texture to produce eroded outlines based on that.
