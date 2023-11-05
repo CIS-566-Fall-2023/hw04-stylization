@@ -94,3 +94,40 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
         OUT = Highlight;
     }
 }
+
+
+void AdditionalLight_float(float3 WorldPosition, float3 WorldNormal, out float Diffuse)
+{
+    Diffuse = 0;
+
+#ifndef SHADERGRAPH_PREVIEW
+
+    int pixelLightCount = GetAdditionalLightsCount();
+    
+    for (int i = 0; i < pixelLightCount; ++i)
+    {
+        Light light = GetAdditionalLight(i, WorldPosition);
+        float4 tmp = unity_LightIndices[i / 4];
+        uint light_i = tmp[i % 4];
+
+        half shadowAtten = light.shadowAttenuation * AdditionalLightRealtimeShadow(light_i, WorldPosition, light.direction);
+        
+        half NdotL = saturate(dot(light.direction,WorldNormal));
+        half distanceAtten = light.distanceAttenuation;
+
+        half thisDiffuse = distanceAtten * shadowAtten * NdotL;
+        
+        if (light.distanceAttenuation <= 0)
+        {
+            thisDiffuse = 0.0;
+        }
+        Diffuse += thisDiffuse;
+    }
+    
+    if (Diffuse <= 0.3)
+    {
+        Diffuse = 0;
+    }
+    
+#endif
+}

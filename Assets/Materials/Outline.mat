@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Outline
-  m_Shader: {fileID: -6465566751694194690, guid: 1fbf5df4b8dfe674286fed023ea8a4cc,
+  m_Shader: {fileID: -6465566751694194690, guid: 2225053e8e213c942957f7f1975eebd8,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -49,12 +49,15 @@ Material:
     m_Floats:
     - REQUIRE_DEPTH_TEXTURE: 1
     - _DepthStrength: 1
-    - _DepthThickness: 5
+    - _DepthThickness: 17.6
     - _DepthThreshold: 0.01
-    - _NoiseScale: 0.008
+    - _Freq: 0
+    - _NoiseScale: 0.01
+    - _NoiseScale2: -0.01
     - _RobertCrossMultiplier: 30
-    - _Thickness: 0.88
+    - _Thickness: 2.38
     m_Colors:
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor: {r: 0.7924528, g: 0.43659663, b: 0.43659663, a: 0}
+    - _OutlineColor2: {r: 0.7018868, g: 0.7704528, b: 1, a: 0}
     - _RobertThresholds: {r: 30, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
