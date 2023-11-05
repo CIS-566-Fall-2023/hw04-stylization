@@ -56,6 +56,7 @@ public class FullScreenFeature : ScriptableRendererFeature
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 foreach (var mat in settings.materials)
                 {
+                    Blit(cmd, colorBuffer, temporaryBuffer);
                     Blit(cmd, temporaryBuffer, colorBuffer, mat);
                 }
             }

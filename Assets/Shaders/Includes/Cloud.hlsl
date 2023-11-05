@@ -54,7 +54,7 @@ void Cloud_float(in float3 BackColor, in float2 UV, in float time, out float3 Co
 	//float2 UV = 2.0 * (pixelCoord.xy - resolution.xy / 2.0) / min(resolution.x, resolution.y);
 
 	Color = BackColor;
-	for (float J = 0.0; J <= 1.0; J += 0.2)
+	for (float J = 0.0; J <= 1.0; J += 0.5)
 	{
 		// Cloud Layer: 
 		float Lt = time * (0.5 + 2.0 * J) * (1.0 + 0.1 * sin(226.0 * J)) + 17.0 * J;

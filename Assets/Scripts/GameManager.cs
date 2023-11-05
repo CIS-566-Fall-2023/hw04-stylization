@@ -40,9 +40,27 @@ public class GameManager : MonoBehaviour
         get { return windForce; }
     }
 
+    [SerializeField]
+    float enforceWind = 10f;
+    float windMultiplier = 1f;
+    [SerializeField]
+    float enforceDecay = 10f;
+
+    private void Update()
+    {
+        if (windMultiplier > 1f)
+        {
+            windMultiplier = Mathf.Max(1f, windMultiplier - enforceDecay * Time.deltaTime);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            windMultiplier = enforceWind;
+        }
+    }
+
     void FixedUpdate()
     {
-        windForce = ComputeWindForce();
+        windForce = ComputeWindForce() * windMultiplier;
     }
     Vector3 ComputeWindForce()
     {

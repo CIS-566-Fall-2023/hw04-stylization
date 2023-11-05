@@ -34,7 +34,6 @@ void normalEdge_float(float2 uv, float2 texelSize, out float edge)
     sobelEdgeCheck(uv,  1.0 * texelSize.x,  1.0 * texelSize.y, value);
     vertical +=  1.0 * value;
 
-    // edge = sqrt(dot(horizontal, horizontal) + dot(vertical, vertical));
     edge = sqrt(dot(horizontal.xyz, horizontal.xyz) + dot(vertical.xyz, vertical.xyz));
 }
 
