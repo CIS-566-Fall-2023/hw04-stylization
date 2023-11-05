@@ -103,33 +103,3 @@ void depthSobel_float(
 
     Out = smooth;
 }
-
-void normalSobel_float(
-    float time, float2 UV, float Thickness, float depthThreshold,
-    float depthTightening, float depthStrength,
-    float thresholdNScale, float thresholdNIntensity,
-    float strengthNScale, float strengthNIntensity,
-    float lineNoiseScale, float lineNoiseIntensity,
-    out float Out) {
-
-    float2 noiseUV = UV + (perlinTime(UV * lineNoiseScale, time) * 2.0 - 1.0) * lineNoiseIntensity;
-
-    // Calculate noise offsets for the threshold and strength
-    float noiseOffsetThreshold = perlinTime(noiseUV * thresholdNScale, time) * thresholdNIntensity * depthThreshold;
-    float noiseOffsetStrength = (perlinTime(noiseUV * strengthNScale + float2(1.0, 1.0), time) * 2. - 1.) * strengthNIntensity * depthStrength;
-
-    float2 sobel = 0;
-
-    [unroll] for (int i = 0; i < 9; i++) {
-        float2 additionalNoise = perlinTime(noiseUV * lineNoiseScale + float2(5.0, 6.0) * i, time) * lineNoiseIntensity * Thickness;
-        float2 sampleUV = noiseUV + sobelSamplePoints[i] * Thickness + additionalNoise;
-        float depth = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
-        sobel += depth * float2(sobelXMatrix[i], sobelYMatrix[i]);
-    }
-
-    // Get the final sobel value
-    float smooth = smoothstep(0, depthThreshold + noiseOffsetThreshold, length(sobel));
-    smooth = pow(smooth, depthTightening) * (depthStrength + noiseOffsetStrength);
-
-    Out = smooth;
-}

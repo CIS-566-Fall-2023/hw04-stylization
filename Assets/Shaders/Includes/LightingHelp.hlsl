@@ -198,10 +198,7 @@ float perlin(float2 uv)
 void ChooseColorSpecial2_float(float perlinScale, float2 uv, float3 edgeSoftness,
     float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
 {
-    // Calculate the edge noise
-    // float noiseValue = _NoiseTex.Sample(_NoiseTexSampler, uv.xy).r;
     float noiseValue = perlin(uv * perlinScale);
-    // Modulate the thresholds with noise
     float modulatedThresholdX = Thresholds.x + (noiseValue * edgeSoftness * 2.0 - edgeSoftness);
     float modulatedThresholdY = Thresholds.y + (noiseValue * edgeSoftness * 2.0 - edgeSoftness);
 
@@ -211,17 +208,11 @@ void ChooseColorSpecial2_float(float perlinScale, float2 uv, float3 edgeSoftness
     float upperBlendStart = modulatedThresholdY - edgeSoftness;
     float upperBlendEnd = modulatedThresholdY + edgeSoftness;
 
-    // Calculate the blend factors using the noise-modulated thresholds
     float lowerBlend = smoothstep(lowerBlendStart, lowerBlendEnd, Diffuse);
     float upperBlend = smoothstep(upperBlendStart, upperBlendEnd, Diffuse);
 
-    // Blend the colors together
     float3 blendedColor = lerp(Shadow, Midtone, lowerBlend);
     blendedColor = lerp(blendedColor, Highlight, upperBlend);
-
-    // Apply watercolor blend effect here
-    // This could be a function that applies a more complex blending based on the
-    // paper texture, color bleeding, and other artistic effects.
 
     OUT = blendedColor;
 }
