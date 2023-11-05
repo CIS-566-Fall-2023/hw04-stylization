@@ -77,7 +77,7 @@ Added ***Post Process Outlines*** based on Depth buffers of the scene.
 ---
 ## 4. Full Screen Post Process Effect + Creating Scene
 
-Finally, I added a post-process paper texture to the scene in my fullscreen shader and created my scene. It consists of a pine tree model and an ice bear model both downloaded from SketchFab.
+Added a post-process paper texture to the scene in my fullscreen shader and created the scene. It consists of a pine tree model and an ice bear model both downloaded from SketchFab.
 
 https://sketchfab.com/3d-models/pine-tree-d45218a3fab349e5b1de040f29e7b6f9
 
