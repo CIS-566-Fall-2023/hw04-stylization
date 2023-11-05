@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17924717, g: 0.22444516, b: 0.30617136, a: 1}
+  m_IndirectSpecularColor: {r: 0.17924644, g: 0.22444499, b: 0.30617213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -363,13 +363,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.78377235, y: 0.32590127, z: 0.030326556, w: 0.5277969}
+  m_LocalRotation: {x: 0.5140087, y: -0.16207054, z: 0.5924643, w: 0.59876066}
   m_LocalPosition: {x: -1.43, y: 2.32, z: -2.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 126.14, y: 318.4, z: 293}
+  m_LocalEulerAnglesHint: {x: 126.14, y: 224.72, z: 293}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,17 +572,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dabb763391e9def48976394d9836946f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: -0.085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dabb763391e9def48976394d9836946f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: -0.414
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dabb763391e9def48976394d9836946f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.48
+      value: -2.522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dabb763391e9def48976394d9836946f,
         type: 3}
@@ -750,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1309247979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -864,7 +864,7 @@ Transform:
   m_GameObject: {fileID: 1501816196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.03, y: -0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
