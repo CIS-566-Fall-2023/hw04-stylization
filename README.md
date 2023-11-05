@@ -1,8 +1,8 @@
 # HW 4: *3D Stylization*
 
 ## Demo
-<iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" width="500" height="280" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" width="500" height="280" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <br/>
 
 ## Process
@@ -22,18 +22,27 @@ Very simple rim and specular. Here for the rim I used haftone points again based
 ### 4. Post process white edge 
 I moved the full screen outline pass to be before rendering opaques so that full screen outline doesn't cover anything we draw. Now it is actually using only the normal buffer to calculate the edges, but it is enough for what I wanna do. It ran twice, one without noises for the wide white outline, and one with noise for the noisy white color in the back.
 ![pic](/img/edge.png){:height="100%" width="100%"}
-
+<br/>
 ### 4. Post process book paper effect
 ![pic](/img/paper.png){:height="100%" width="100%"}
+<br/>
 
-## Some homework requirement
+## Some homework requirements
 ### Post process outline
 For the outline, at first I tried the method required for this homework, post process outlines based on depth and normal buffers. It looks like not working really well with my target style.
 ![pic](/img/dn_outline.png){:height="100%" width="100%"}
 Then I tried the normal extrusion method which moves the vertices along their normal vector. This one looks better.
 ![pic](/img/ex_outline.png){:height="100%" width="100%"}
 The post process outline shader is not wasted, it was used later for creating the white edge and noise in the background.
-
+<br/>
 ### Multiple light support
 ![pic](/img/mult.gif){:height="100%" width="100%"}
+<br/>
 
+## Reference
+- [Normal extrusion outline](https://zhuanlan.zhihu.com/p/361285222)
+- [Post process outline](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
+- [Halftone](https://zhuanlan.zhihu.com/p/321884529)
+- [Nier model](https://sketchfab.com/3d-models/nier-automata-3d-print-figure-1027cd12a93341e1ab15105415696a9a)
+- [Small car model](https://sketchfab.com/3d-models/thermal-ex-from-arknights-02986155f515462ab2507bb4ac9563e7)
+- Other models are from Unity assets store
