@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class Turntable : MonoBehaviour
 {
+    public Material[] materials;
+    private MeshRenderer meshRenderer;
+    int index;
 
-    public float rotationSpeed = 1.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start () {
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        this.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+    void Update () {
+        if (Input.GetKeyDown(KeyCode.Space)){
+            index = (index + 1);
+            SwapToNextMaterial(index);
+        }
+    }
+    void SwapToNextMaterial (int index) {
+        meshRenderer.material = materials[index % materials.Length];
     }
 }
