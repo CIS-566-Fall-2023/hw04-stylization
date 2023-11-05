@@ -53,7 +53,6 @@ Improvements upon previously created three tone toon shader.
           - ![image](https://github.com/wc41/hw04-stylization/assets/97757188/b5827b2d-f8dd-44f2-9e63-2379ad1273c0)
           - Rim lighting done similarly, except multiplying diffuse lighting with 1-saturate(dot(view, normal))
           - ![image](https://github.com/wc41/hw04-stylization/assets/97757188/b1d2bf09-0374-4561-b41b-786f312974b6)
-
       3. **Textured Shadow**
           1. Custom shadow texture to create a textured look
           2. Using default object UVs to map shadows onto ground
