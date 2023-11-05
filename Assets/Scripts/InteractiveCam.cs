@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InteractiveCam : MonoBehaviour
 {
-    private Color originalColor = new Color(231f / 255f, 221f / 255f, 210f / 255f);
+    private Color originalColor = new Color(241f / 255f, 231f / 255f, 220f / 255f);
     private Color blackColor = Color.black; // Shorthand for new Color(0, 0, 0)
     private bool isOriginalColor = true;
 
