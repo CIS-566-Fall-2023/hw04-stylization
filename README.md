@@ -2,7 +2,7 @@
 
 ## Result
 
-https://github.com/IwakuraRein/CIS-566-hw04-stylization/assets/28486541/b00f82b7-f975-4627-a888-334602d1af21
+https://github.com/IwakuraRein/CIS-566-hw04-stylization/assets/28486541/5057922b-4473-4bd0-8405-8b31d6e1cc11
 
 ## Reference
 
