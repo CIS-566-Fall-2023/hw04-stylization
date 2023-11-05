@@ -1,11 +1,16 @@
 # 3D Stylization
 
 ## Project Overview:
-In this is project I use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity.
+ - In this is project I use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity.
 
-| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/1.png>  | <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/3.png> |
+| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/11.png>  | <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/3.png> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
+
+ - I attempted to implement a toon shader style inspired by the game Zelda. To do this, I referenced actual scenes from the game.
+
+| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/1.png>  | <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/10.png> |
+|:--:|:--:|
 
 ---
 # Implementation
@@ -16,7 +21,6 @@ In this is project I use a 2D concept art piece as inspiration to create a 3D St
 
 ## Lighting Feature
  - Reference: https://roystan.net/articles/toon-shader/  
-![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/2.png)
 
 ### 1. Rim Light
 - The "rim" of an object is defined as surfaces that are facing away from the camera. I therefore calculate the rim by taking the dot product of the normal and the view direction, and inverting it. Then, I used smoothstep to toonify the effect and multiple it with the `rimColor`. With the rim being drawn around the entire object, it tends to resemble an outline more than a lighting effect.I modified it to only appear on the illuminated surfaces of the object by multiplying it with the dot product of light position and normal.
