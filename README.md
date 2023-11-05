@@ -44,7 +44,7 @@ Improvements upon previously created three tone toon shader.
       3. **Textured Shadow**
           1. Custom shadow texture to create a textured look
           2. Using default object UVs to map shadows onto ground
-          3. With both specular and rim lighting (screenshot taken before blending/noise added):<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/3c2e7f77-af88-401d-8a25-eab8b08c6eb6">
+          3. With both specular and rim lighting (before blending/noise added):<br><img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/wc41/hw04-stylization/assets/97757188/3c2e7f77-af88-401d-8a25-eab8b08c6eb6">
 3. **Special Surface Shader**
    - Added more effects to the coloring and lighting
        - Blur between the diffuse colors
