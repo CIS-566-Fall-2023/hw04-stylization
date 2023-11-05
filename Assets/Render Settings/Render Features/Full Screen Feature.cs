@@ -1,7 +1,10 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using static UnityEngine.XR.XRDisplaySubsystem;
 
 public class FullScreenFeature : ScriptableRendererFeature
 {
@@ -9,7 +12,7 @@ public class FullScreenFeature : ScriptableRendererFeature
     public class FullScreenPassSettings
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
-        public Material material;
+        public List<Material> materials = new List<Material>();
     }
 
     [SerializeField] private FullScreenPassSettings settings;
@@ -24,7 +27,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
-            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
+            if (settings.materials.Count == 0) settings.materials.Add(CoreUtils.CreateEngineMaterial("Shader Graphs/Outline"));
         }
 
         // This method is called before executing the render pass.
@@ -51,7 +54,11 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                foreach (var mat in settings.materials)
+                {
+                    Blit(cmd, colorBuffer, temporaryBuffer);
+                    Blit(cmd, temporaryBuffer, colorBuffer, mat);
+                }
             }
 
             // Execute the command buffer and release it.
@@ -83,6 +90,7 @@ public class FullScreenFeature : ScriptableRendererFeature
             return;
         renderer.EnqueuePass(m_FullScreenPass);
     }
+
 }
 
 
