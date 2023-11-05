@@ -1,22 +1,51 @@
-# HW 4: *3D Stylization*
+# 3D Stylization
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
+In this is project I use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity.
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
+| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/1.png>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
 
 ---
-# Tasks
+# Implementation
+
+## Three Tone Toon Shader
+- As start, I used my three-tone toon shader as basic shader to implement my 3D stylized scene. It's a shader with just three colors output based on the threshold you setting. You can have the highlight, midtone, and shadow in your object.
+ ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+
+## Lighting Feature
+Reference: https://roystan.net/articles/toon-shader/
+### 1. Rim Light
+- The "rim" of an object is defined as surfaces that are facing away from the camera. I therefore calculate the rim by taking the dot product of the normal and the view direction, and inverting it. Then, I used smoothstep to toonify the effect and multiple it with the `rimColor`. With the rim being drawn around the entire object, it tends to resemble an outline more than a lighting effect.I modified it to only appear on the illuminated surfaces of the object by multiplying it with the dot product of light position and normal.
+![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+
+### 2. Specular Highlight
+ - I used the Blinn-Phong model to calculate the specular highlight of my toon shader. This calculation takes in two properties from the surface, a `specularColor` that tints the reflection, and a `glossiness` that controls the size of the reflection.  
+![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+
+## Shadow
+ - I used the following texture to cast the shadow texture onto the object's surface.  
+<img width="250px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Assets/Textures/Shadow1.jpg>  
+
+## Vertex Animation
+
+![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+
+## Outline
+ - I developed a screen-space outline shader that utilizes depth and normal buffers for edge detection. This shader generates outlines in regions with substantial disparities in depth and normals across the screen. You have the flexibility to fine-tune the threshold to determine the magnitude of difference required to classify a pixel as part of an outline.  
+![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+
+## Animated Outline Shader
+
+## Full-Screen Post-Process Effect
+ - I made an old movie-style full screen post-process effect.
+ - 
+
+# Interactivity
+* `Space`: Swap the material of Sonic.
+* `A`: Turn ON/OFF Outline post-process.
+* `S`: Turn ON/OFF Old Movie post-process effect.
 
 ## 0. Base Project Overview
 
