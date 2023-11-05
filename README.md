@@ -30,7 +30,7 @@ https://github.com/wc41/hw04-stylization/assets/97757188/3e1981d1-dd14-4e35-b095
 
 Concept art taken from @sseongryul on instagram:
 
-<img width="250px" src=https://github.com/wc41/hw04-stylization/assets/97757188/13586bc0-a1c5-4c3a-86b6-d558be0570e3/><img width="250px" src=https://github.com/wc41/hw04-stylization/assets/97757188/ea7273a3-3b7f-4e14-ae8d-84ed6e587276/><img width="250px" src=https://github.com/wc41/hw04-stylization/assets/97757188/c10eeea2-a6db-4e1e-a892-438d24def2b0/>
+<img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/13586bc0-a1c5-4c3a-86b6-d558be0570e3/><img width="300px" src=https://github.com/wc41/hw04-stylization/assets/97757188/ea7273a3-3b7f-4e14-ae8d-84ed6e587276/>
 
 
 ---
