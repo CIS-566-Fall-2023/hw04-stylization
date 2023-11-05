@@ -1,6 +1,10 @@
-# HW 4: *3D Stylization*
 
 ## Demo
+### GIF
+![pic](/img/2023-11-05-03-15-14.gif){:height="100%" width="100%"}
+![pic](/img/2023-11-05-03-18-55.gif){:height="100%" width="100%"}
+<br/>
+### Video
 <iframe src="//player.bilibili.com/player.html?aid=323074799&bvid=BV1rw411s7Th&cid=1322842424&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <iframe src="//player.bilibili.com/player.html?aid=918042889&bvid=BV1wu4y187Rj&cid=1322851006&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <br/>
