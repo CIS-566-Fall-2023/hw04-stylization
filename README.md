@@ -98,7 +98,7 @@ https://sketchfab.com/3d-models/ice-bear-we-bare-bears-77f6d43d4dc740dfb8a500743
 
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/601e0e7a-207c-404c-8f22-9aedc6ccb8fa)
 
-## 6. Interactivity
+## 5. Interactivity
 To add interactivity, I created a new shader with a different method of blending between the diffuse color separation values using Perlin Noise:
 
 ![image](https://github.com/wc41/hw04-stylization/assets/97757188/8a5bc942-3ed9-4b60-a4d6-96234cbf17e1)
