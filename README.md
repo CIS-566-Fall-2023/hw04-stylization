@@ -3,7 +3,7 @@
 ## Project Overview:
 The goal of this project was to learn how to use the Unity Shader graph and experiment with mimicking a target style using stylized rendering. 
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
+| <img width="500px" src=https://github.com/Diana-ou/hw04-stylization/blob/main/darkness.jpg  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *Stylized Scene in Unity* |
 
