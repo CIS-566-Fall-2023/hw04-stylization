@@ -10,33 +10,37 @@ https://github.com/IwakuraRein/CIS-566-hw04-stylization/assets/28486541/5057922b
 
 Author: [𝖘𝖍𝖆𝖓𝖓𝖎](https://twitter.com/soggyworms)
 
-The skeletal mesh I used is from http://sprishri.nobody.jp/mmd_model1.html.
+The skeletal mesh I used is from http://sprishri.nobody.jp/mmd_model1.html:
 
-I used some animation from Mixamo to pose her.
+![image](https://github.com/IwakuraRein/CIS-566-hw04-stylization/assets/28486541/17eb2663-f0b1-4d49-8ddd-c1b0aeadc9c8)
+
+I used Maya to modify the UV of her eye to glance sideways. 
+
+I also used some animation from Mixamo to pose her.
 
 ## Interesting Shaders
 
-The surface shaders I used are based on the toon shader in Lab 05. I used different approahces for her skin and cloths.
+The surface shaders I used are based on the toon shader in Lab 05. I used different approaches for her skin and clothes.
 
-- I added a transitional zone between highlight and shadow to make the skin looks more natural:
+- I added a transitional zone between highlight and shadow to make the skin look more natural:
 
 ![](Doc/2.png)
 
-- For her cloths, I used two sketch-look textures for the shadow and transitional zone:
+- For her clothes, I used two sketch-look textures for the shadow and transitional zone:
 
 ![](Doc/1.png)
 
-- Based on the Reference Art, there is no need for multiple light sources aren't needed except for the can which has additional highlight. I added a point light source to simulate it.
+- Based on the Reference Art, there is no need for multiple light sources except for the can which has additional highlights. I added a point light source to simulate it.
 
 ![](Doc/3.png)
 
-- I make the shadow on her clothes jittering by randomly altering the UV:
+- I make the shadow on her clothes jitter by randomly altering the UV:
 
 ![](Doc/4.gif)
 
 ## Outlines
 
-- I use Sobel operator to detect edges on the normal map and depth map:
+- I used the Sobel operator to detect edges on the normal map and depth map:
 
     ```C
     void normalEdge_float(float2 uv, float2 texelSize, out float edge)
@@ -71,19 +75,19 @@ The surface shaders I used are based on the toon shader in Lab 05. I used differ
     }
     ```
 
-- Since I don't want outlines on her face, I implemented the normal outline within the toon shader and added a switch for it. For the depth outline, I implemented in a fullscreen render feature.
+- Since I don't want outlines on her face, I implemented the normal outline within the toon shader and added a switch for it. For the depth outline, I implemented it in a fullscreen render feature.
 
-- I use Perlin noise to offset the UV when sampling the normal/depth map:
+- I use Perlin noise to offset the UV when sampling the normal/depth map to make it more sketch-like:
 
     ![](Doc/5.png)
 
-## Full Screen Post Process Effect
+## Full-Screen Post-Process Effects
 
 - I added some film grain by generating random values based on UV and time:
 
     ![](Doc/7.gif)
 
-- I created some floating clouds in the background by ramdomly generate disks:
+- I created some floating clouds in the background by randomly generating disks:
 
     ![](Doc/8.png)
 
