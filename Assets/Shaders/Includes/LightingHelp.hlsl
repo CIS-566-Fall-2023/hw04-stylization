@@ -227,26 +227,24 @@ void ChooseColorSpecial2_float(float perlinScale, float2 uv, float3 edgeSoftness
 }
 
 float3 ApplyNoiseToColor(float3 color, float2 uv, float noiseScale, float noiseIntensity, float time) {
-    // Create a fractal noise pattern for granulation.
+    // fractal noise pattern for granulation
     float granulationNoise = perlinTime(uv * noiseScale, time) * noiseIntensity;
 
-    // For flow noise, you can use a directional noise pattern, or warp the UVs
+    // warped uvs for flow noise
     float2 flowUV = uv + ((perlin(uv * noiseScale * 0.5) * 2.0 - 1.0) * 0.5);
     float flowNoise = perlin(flowUV * noiseScale) * noiseIntensity;
 
-    // Combine the granulation and flow noises with the base color
+    // combined granulation and flow
     float3 noisyColor = color + color * granulationNoise + color * flowNoise;
 
     return noisyColor;
 }
 
-// Function to calculate the edge darkening effect
 float EdgeDarkeningFactor(float diffuseValue, float threshold, float edgeRange, float noiseScale, float noiseIntensity, float2 uv) {
     float edgeCenter = smoothstep(threshold - edgeRange, threshold, diffuseValue);
     float edgeTransition = smoothstep(threshold, threshold + edgeRange, diffuseValue);
-    float edgeFactor = edgeCenter * (1.0 - edgeTransition); // This creates a sharp edge window around the threshold
+    float edgeFactor = edgeCenter * (1.0 - edgeTransition); // creates a sharp edge window around the threshold
 
-    // Add noise to the edge factor to simulate watercolor irregularities
     float noise = perlin(uv * noiseScale) * noiseIntensity;
     edgeFactor *= noise;
 
@@ -263,10 +261,7 @@ void ChooseColorSpecial3_float(
     float2 uv, float3 edgeSoftness, float3 Highlight, float3 Midtone, float3 Shadow,
     float Diffuse, float2 Thresholds, out float3 OUT)
 {
-    // Calculate the noise based on the UV coordinates
     float noise = perlinTime(uv * perlinScale, time) * perlinStrength;
-
-    // Warp the Diffuse value by the noise
     Diffuse += noise;
 
     float3 noisyShadow = ApplyNoiseToColor(Shadow, uv, colorNoiseScale, colorNoiseIntensity, time);
