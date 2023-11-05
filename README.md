@@ -36,7 +36,7 @@ In this is project I use a 2D concept art piece as inspiration to create a 3D St
 
 ## Outline
  - I developed a screen-space outline shader that utilizes depth and normal buffers for edge detection. This shader generates outlines in regions with substantial disparities in depth and normals across the screen. You have the flexibility to fine-tune the threshold to determine the magnitude of difference required to classify a pixel as part of an outline.  
-![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
+![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/9.gif)
 
 ## Animated Outline Shader
 
