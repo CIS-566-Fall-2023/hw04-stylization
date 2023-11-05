@@ -2,8 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering.Universal.Internal;
 
-public class FullScreenFeature : ScriptableRendererFeature
+public class FullScreenFeature : ScriptableRendererFeature //All features inherit from this
 {
     [System.Serializable]
     public class FullScreenPassSettings
@@ -17,9 +18,10 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         const string ProfilerTag = "Full Screen Pass";
         public FullScreenFeature.FullScreenPassSettings settings;
-        RenderTargetIdentifier colorBuffer, temporaryBuffer;
-        private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
 
+        //Color buffer is what colors are on the screen
+        RenderTargetIdentifier colorBuffer, temporaryBuffer; 
+        private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
         public FullScreenPass(FullScreenFeature.FullScreenPassSettings passSettings)
         {
             this.settings = passSettings;
@@ -27,11 +29,13 @@ public class FullScreenFeature : ScriptableRendererFeature
             if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
         }
 
-        // This method is called before executing the render pass.
-        // It can be used to configure render targets and their clear state. Also to create temporary render target textures.
-        // When empty this render pass will render to the active camera render target.
-        // You should never call CommandBuffer.SetRenderTarget. Instead call <c>ConfigureTarget</c> and <c>ConfigureClear</c>.
-        // The render pipeline will ensure target setup and clearing happens in a performant manner.
+
+        /* This method is called before executing the render pass.
+         * It can be used to configure render targets and their clear state. Also to create temporary render target textures.
+         * When empty this render pass will render to the active camera render target.
+         * You should never call CommandBuffer.SetRenderTarget. Instead call <c>ConfigureTarget</c> and <c>ConfigureClear</c>.
+         * The render pipeline will ensure target setup and clearing happens in a performant manner.
+         */
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
         {
             RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
@@ -41,21 +45,33 @@ public class FullScreenFeature : ScriptableRendererFeature
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
         }
 
-        // Here you can implement the rendering logic.
-        // Use <c>ScriptableRenderContext</c> to issue drawing commands or execute command buffers
-        // https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.html
-        // You don't have to call ScriptableRenderContext.submit, the render pipeline will call it at specific points in the pipeline.
+
+        /* Here you can implement the rendering logic.
+         * Use <c>ScriptableRenderContext</c> to issue drawing commands or execute command buffers
+         * https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.html
+         * You don't have to call ScriptableRenderContext.submit, the render pipeline will call it at specific points in the pipeline.
+        */
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             CommandBuffer cmd = CommandBufferPool.Get();
+
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
-                Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                //BLit: Moves all the pixel data from color to temporary buffer, applying the material onto it
+
+                cmd.SetGlobalTexture("_BlitTexture", colorBuffer); 
+                cmd.Blit(colorBuffer, temporaryBuffer); //Sets maintex to color buffer, but settings.material looks from "_BlitTexture"
+                cmd.Blit(temporaryBuffer,  colorBuffer, settings.material);
+
             }
 
             // Execute the command buffer and release it.
             context.ExecuteCommandBuffer(cmd);
+
+
+            cmd.Clear();
+
             CommandBufferPool.Release(cmd);
         }
 
@@ -63,25 +79,24 @@ public class FullScreenFeature : ScriptableRendererFeature
         public override void OnCameraCleanup(CommandBuffer cmd)
         {
             if (cmd == null) throw new ArgumentNullException("cmd");
+
             cmd.ReleaseTemporaryRT(temporaryBufferID);
         }
     }
 
     FullScreenPass m_FullScreenPass;
 
-    /// <inheritdoc/>
-    public override void Create()
+    public override void Create() //Creates a render pass (class that is defined within feature)
     {
-        m_FullScreenPass = new FullScreenPass(settings);
+        m_FullScreenPass = new FullScreenPass(settings); //Creates the pass 
     }
 
-    // Here you can inject one or multiple render passes in the renderer.
-    // This method is called when setting up the renderer once per-camera.
+    // Here you can inject one or multiple render passes in the renderer This method is called when setting up the renderer once per-camera.
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
     {
         if (renderingData.cameraData.cameraType != CameraType.Game)
             return;
-        renderer.EnqueuePass(m_FullScreenPass);
+        renderer.EnqueuePass(m_FullScreenPass); //Queues it onto the render pass
     }
 }
 

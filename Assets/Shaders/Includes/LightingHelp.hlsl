@@ -59,7 +59,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
+        
+        
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
 
+        }
         
         if (light.distanceAttenuation <= 0)
         {
@@ -69,28 +75,16 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
-{
-    if (Diffuse < Thresholds.x)
-    {
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float HatchedDiffuse, float2 Thresholds, bool isHatchedShadow, out
+float3 OUT){
+    if (Diffuse < Thresholds.x) {
         OUT = Shadow;
-    }
-    else if (Diffuse < Thresholds.y)
-    {
+    } else if (Diffuse < Thresholds.y) {
         OUT = Midtone;
-    }
-    else
-    {
+    } else {
         OUT = Highlight;
     }
 }
