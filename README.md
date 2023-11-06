@@ -22,6 +22,8 @@ Credit: ElectricShan on DeviantArt
 
 ## 4. Full Screen Post Process Effect
 
+[Paper Texture Source](https://forum.unity.com/threads/setting-a-paper-texture-effect-to-2d-sprites.458874/)
+
 ## 5. Final Scene
 
 I conveniently chose Chowder for this assignment so I could use my model from the character modeling project from
