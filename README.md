@@ -1,6 +1,6 @@
 # *3D Stylization*
 
-## Project Overview:
+## Project Overview
 In this assignment, I implement a toon style 3D sea island scene in Unity URP pipeline.
 
 ![](/Recordings/result.png)
@@ -8,6 +8,14 @@ In this assignment, I implement a toon style 3D sea island scene in Unity URP pi
 As you can see, the player could switch between the normal 3D PBR shading and toon style shading, when pressing SPACE.
 
 ![](/Recordings/gif.gif)
+
+## Inspiration
+
+I have several reference images, which altogether inspire me to achive this project. To make this project more creative, artistic and wonderful, I made some small adjustments on details based on my understanding.
+
+| Image | ![](/ref_0.png) | ![](https://user-images.githubusercontent.com/72320867/278452211-ae1d0fae-7998-4287-8269-13e2cafd740b.jpg) | ![](https://user-images.githubusercontent.com/72320867/278458163-dae1ffc2-8269-493d-919f-b3811c76ed30.jpg) |
+| :--: | :--: | :--: | :--: |
+| Source | https://store.steampowered.com/app/1156990/_Return_to_Shironagasu_Island/ | https://twitter.com/cysketch/status/1712442821389713597 | https://twitter.com/stefscribbles/status/1646235145110683650 |
 
 ## Toon Shading Surface Shader
 
