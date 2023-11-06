@@ -113,3 +113,16 @@ void DirectSpecular_float(float3 Specular, float Smoothness, float3 Direction, f
     OUT = LightingSpecular(Color, Direction, WorldNormal, WorldView, float4(Specular, 0.0f), Smoothness);
 #endif
 }
+
+void AnimationColor_float(float time, out float3 color) {
+    float t = (time / 10.0f);
+    t -= floor(t);
+
+    float val = 0.0f;
+    if (t < 0.3) val = 0.0f;
+    else if (t < 0.5) val = (t - 0.3) / 0.2;
+    else if (t < 0.8) val = 1.0f;
+    else val = lerp(1, 0, (t - 0.8) / 0.2);
+
+    color = lerp(float3(1, 1, 1), float3(0.91, 0.11, 0.39), val);
+}
