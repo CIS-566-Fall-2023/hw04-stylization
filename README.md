@@ -1,4 +1,3 @@
-![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/0c1acc0d-bc1e-4b4e-82f3-6657338023fd)# HW 4: *3D Stylization*
 ---
 # 1. Concept Art
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
