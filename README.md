@@ -1,22 +1,23 @@
-# HW 4: *3D Stylization*
+# 0. Context
+For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
+
+# 1. Concept Art
+![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
+![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d3c01477-1874-47ed-b0e7-86d89ac22b46)
 ---
-## 1. Concept Art
-![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e74463b9-345a-4037-8921-200192de762d)
-For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Paimon as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
+# 2. Shader Creation
+## Base Color
+![HighresScreenshot_2023 11 06-00 52 57](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d9f7cce2-90ab-4a35-84f6-57045fe6c76e)
 
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
+## Simple Dot with Sunlight Sampling
+![Dot](https://github.com/xcupsilon/hw04-stylization/assets/50472308/fb0fa9c7-2306-4826-aedb-6b7ddf604b29)
+<img width="646" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/09c6728b-f922-4246-a07e-9845a583d6f1">
 
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
-|:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
+## CelShading: Color Lookup Using a Custom Color Curve
+![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
 
-
-**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
-
-**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
-
----
-## 2. Interesting Shaders
+## Slight Self-Shadowing by Sampling a Simple Light/Shade Texture using Matcap UV
+![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
