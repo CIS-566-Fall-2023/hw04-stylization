@@ -3,7 +3,7 @@
 ## Project Overview:
  - In this is project I use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity.
 
-| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/11.png>  | <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/3.png> |
+| <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/11.png>  | <img width="500px" src=https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/14.gif> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 
@@ -43,6 +43,8 @@
 ![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/9.gif)
 
 ## Animated Outline Shader
+ - I used Gradient Noise to perturb the UV coordinates at the input stage of the outline process.
+![](https://github.com/Jeff-Ling/hw04-stylization/blob/main/Images%20Resource/12.gif)
 
 ## Full-Screen Post-Process Effect
  - I made an old movie-style full screen post-process effect.
