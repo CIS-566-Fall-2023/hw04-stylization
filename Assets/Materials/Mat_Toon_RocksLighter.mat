@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Toon
+  m_Name: Mat_Toon_RocksLighter
   m_Shader: {fileID: -6465566751694194690, guid: f2d7fff62a8adda41a6ad4fccf0eddf5,
     type: 3}
   m_Parent: {fileID: 0}
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8b003871b0e41984ea657290c549c872, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTexture:
@@ -94,24 +94,23 @@ Material:
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _MidtoneTextureRotation: 0.5
-    - _MidtoneThreshold: 0.7
+    - _MidtoneThreshold: 0.62
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
     - _ShadowTextureRotation: -1
-    - _ShadowThreshold: 0.5
-    - _Threshold: 0.02
+    - _ShadowThreshold: 0.73
+    - _Threshold: 0.5
     - _Threshold2: 0.7
-    - _Threshold_2: 0.539
+    - _Threshold_2: 0.7
     m_Colors:
-    - _AdditionalLightsRampedDiffuseValues: {r: 0.3, g: 0.5, b: 1, a: 0}
-    - _Highlight: {r: 0.46603763, g: 1, b: 0.4881814, a: 1}
-    - _MainColor: {r: 1, g: 0.8573818, b: 0.4666667, a: 1}
-    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _AdditionalLightsRampedDiffuseValues: {r: 0, g: 0, b: 0, a: 0}
+    - _Highlight: {r: 1, g: 0.6932729, b: 0, a: 1}
+    - _MainColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
-    - _Shadow: {r: 0.20270556, g: 0.36792448, b: 0.20877975, a: 1}
-    - _ShadowColor: {r: 0.6037736, g: 0.51843446, b: 0.28138125, a: 1}
+    - _Shadow: {r: 0.6698113, g: 0.50822395, b: 0.141545, a: 1}
+    - _ShadowColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
     - _ShadowTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow_Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Toon
-  m_Shader: {fileID: -6465566751694194690, guid: f2d7fff62a8adda41a6ad4fccf0eddf5,
+  m_Name: Mat_Toon_DoorFrameFake
+  m_Shader: {fileID: -6465566751694194690, guid: fb2bc95859f7cc3458801c0a8012f8df,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,6 +46,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -93,25 +97,27 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _MaxDitherDistance: 5
     - _MidtoneTextureRotation: 0.5
-    - _MidtoneThreshold: 0.7
+    - _MidtoneThreshold: 0.126
+    - _MinDitherDistance: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
     - _ShadowTextureRotation: -1
-    - _ShadowThreshold: 0.5
+    - _ShadowThreshold: 0.159
     - _Threshold: 0.02
     - _Threshold2: 0.7
     - _Threshold_2: 0.539
     m_Colors:
     - _AdditionalLightsRampedDiffuseValues: {r: 0.3, g: 0.5, b: 1, a: 0}
     - _Highlight: {r: 0.46603763, g: 1, b: 0.4881814, a: 1}
-    - _MainColor: {r: 1, g: 0.8573818, b: 0.4666667, a: 1}
+    - _MainColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
     - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow: {r: 0.20270556, g: 0.36792448, b: 0.20877975, a: 1}
-    - _ShadowColor: {r: 0.6037736, g: 0.51843446, b: 0.28138125, a: 1}
+    - _ShadowColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
     - _ShadowTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow_Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
