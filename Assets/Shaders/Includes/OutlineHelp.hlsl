@@ -91,3 +91,24 @@ void ColorSaturation_float(float2 UV, float2 screenRatio, out float4 OUT)
     
     OUT = shade;
 }
+
+void ColorBucket_float(float2 UV, float pixelAmt, out float2 OUT)
+{
+    float pixelateAmt = 1 - pixelAmt;
+    
+    float2 newUV = floor(UV * pixelateAmt) / pixelateAmt;
+    
+    OUT = newUV;
+}
+
+void ColorConvertToBlackAndWhite_float(float4 rgb, float threshold, out float4 OUT)
+{
+    float4 newColor = float4(0, 0, 0, 0);
+    
+    if (rgb[0] + rgb[1] + rgb[2] + rgb[3] > threshold)
+    {
+        newColor = float4(1, 1, 1, 0);
+    }
+    
+    OUT = newColor;
+}
