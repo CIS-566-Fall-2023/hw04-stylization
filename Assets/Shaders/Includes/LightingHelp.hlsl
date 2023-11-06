@@ -1,3 +1,20 @@
+void WaterWaves_float(float3 WorldPos, float SineTime, out float3 Position) {
+    
+    Position = WorldPos;
+    //Position[1] = SineTime * WorldPos[1] * 0.01 * abs(sin(WorldPos[2]));
+    Position[1] = WorldPos[1] * 0.02 * abs(sin(WorldPos[2] * 100000 + SineTime));
+    
+}
+
+void WaterCaustics_float(float3 CurrColor, float3 Highlight, out float3 FinalColor) {
+    
+    
+    
+    
+    FinalColor = CurrColor;
+    
+}
+
 void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
 {
 #ifdef SHADERGRAPH_PREVIEW
