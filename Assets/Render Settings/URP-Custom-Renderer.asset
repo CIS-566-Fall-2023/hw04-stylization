@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5890927658201695017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad94d1997b93eb438ca2857b6f551fb, type: 3}
+  m_Name: MultiPassRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  lightModePasses:
+  - _Outline
+  - _Outline_Two
+  - _Interior
+  - _Interior2
+  - _Interior3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,10 +35,12 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
-  m_RendererFeatures: []
-  m_RendererFeatureMap: 
+  m_RendererFeatures:
+  - {fileID: 639421806273056278}
+  - {fileID: -5890927658201695017}
+  m_RendererFeatureMap: 164e8bb8beaedf08d73c5d9f81383fae
   m_UseNativeRenderPass: 0
-  postProcessData: {fileID: 0}
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -60,6 +81,22 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &639421806273056278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecabaaef8f67194ab633d1805d8f6a1, type: 3}
+  m_Name: CustomPostProcessFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_bloomShader: {fileID: 4800000, guid: 91660ff18f7d18e4ba9b7a06cd54e76b, type: 3}
+  m_compositeShader: {fileID: -6465566751694194690, guid: c4c23c2efe999ef488a45091d416188b,
+    type: 3}
 --- !u!114 &5953239638328874002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +106,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68b624435dfe08149a1f2b91daccda61, type: 3}
+  m_Script: {fileID: 11500000, guid: aecabaaef8f67194ab633d1805d8f6a1, type: 3}
   m_Name: Dummy
   m_EditorClassIdentifier: 
   m_Active: 1
+  m_bloomShader: {fileID: 0}
+  m_compositeShader: {fileID: 0}
