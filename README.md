@@ -21,8 +21,11 @@ For this project, I am looking to recreate the character toon-shading effect use
 
 ## Custom 1 & 2: Specular & Metallic Rendering
 ![ezgif com-video-to-gif](https://github.com/xcupsilon/hw04-stylization/assets/50472308/3649e7c6-97ed-45bf-9a22-c45ecb241a3d)
-Achieved through reading PBR info from channels of the lightmap and compute using BlinnPhong 
+
+Achieved through reading PBR info from channels of the lightmap and compute using BlinnPhong
+
 <img width="643" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/66243f02-053b-4efc-af42-7c75dfd3d034">
+
 <img width="1210" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/d5f4611c-f624-409a-846c-4592263f3ad8">
 
 
