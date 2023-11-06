@@ -31,7 +31,6 @@ Achieved through reading PBR info from channels of the lightmap and compute usin
 <img width="1045" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/b679efc7-a01c-4afa-9903-5deec1cdd398">
 
 ## Custom 2 Additional Light Feature: Metallic Rendering
-Metallic:
 ![Metallic](https://github.com/xcupsilon/hw04-stylization/assets/50472308/1e478734-b605-43ad-bc73-0ec00fb4df72)
 <img width="414" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4e5909d2-948b-4936-9f7c-c63c58657827">
 <img width="851" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4d30026c-7ff2-4e01-bf41-1b4176c848e5">
