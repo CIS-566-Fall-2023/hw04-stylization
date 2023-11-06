@@ -21,7 +21,7 @@ For this project, I am looking to recreate the character toon-shading effect use
 ![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
 <img width="1438" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/debdab8b-6c3c-4cbb-8f8c-a8a166587071">
 
-## Custom 1 & 2: Specular & Metallic Rendering
+## Custom 1 & 2: Specular & Metallic Rendering (Talked with Rachel to replace multiple lighting support + additional lighting feature)
 ![ezgif com-video-to-gif (1)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/01ac7936-8064-4fff-bf69-3bdce579f8bc)
 
 ![ezgif com-video-to-gif (2)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/11d46889-9a62-40d1-b66f-2b9195479d1e)
@@ -31,6 +31,18 @@ Achieved through reading PBR info from channels of the lightmap and compute usin
 <img width="643" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/66243f02-053b-4efc-af42-7c75dfd3d034">
 
 <img width="1210" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/d5f4611c-f624-409a-846c-4592263f3ad8">
+
+## Custom Shadow Texture
+
+## Special Surface Shader: Custom Normal Rendering For Face
+
+## Outline
+
+## Screen Post Process Effect
+
+## Scene
+
+## Interactivity
 
 
 
