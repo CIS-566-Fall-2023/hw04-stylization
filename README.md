@@ -1,13 +1,23 @@
-# HW 4: *3D Stylization*
+![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/0c1acc0d-bc1e-4b4e-82f3-6657338023fd)# HW 4: *3D Stylization*
 ---
-## 1. Concept Art
+# 1. Concept Art
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/fd36ac5d-48d2-413c-88ee-516efcf0ad60)
 For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 ---
-## 2. Shader Creation
-# Base Color
+# 2. Shader Creation
+## Base Color
 ![HighresScreenshot_2023 11 06-00 52 57](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d9f7cce2-90ab-4a35-84f6-57045fe6c76e)
+
+## Simple Dot with Sunlight Sampling
+![Dot](https://github.com/xcupsilon/hw04-stylization/assets/50472308/fb0fa9c7-2306-4826-aedb-6b7ddf604b29)
+<img width="646" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/09c6728b-f922-4246-a07e-9845a583d6f1">
+
+## CelShading: Color Lookup Using a Custom Color Curve
+![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
+
+## Shader Mixing in with Matcap sampled shadowed region
+
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
 Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
