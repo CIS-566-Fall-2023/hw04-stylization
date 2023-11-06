@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Default 3
-  m_Shader: {fileID: -6465566751694194690, guid: 9837f66b0c0e74d44b4cda09224b1f2d,
+  m_Name: skin
+  m_Shader: {fileID: -6465566751694194690, guid: 57f6752ba0253ff4d867cb515d368791,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -92,10 +92,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_14f936a522db46efb2ac69672c2ab6e7_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: c787c6fa945ac8445a31cf778f13bc63, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -170,10 +166,10 @@ Material:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.9716981, g: 0.7278569, b: 0.893699, a: 0}
-    - _Midtone: {r: 0.8490566, g: 0.5478818, b: 0.804621, a: 1}
-    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.7686275, g: 0.39607847, b: 0.7137255, a: 1}
+    - _Highlight: {r: 0.8313726, g: 0.6901961, b: 0.9803922, a: 1}
+    - _Midtone: {r: 0.8304448, g: 0.68864363, b: 0.9811321, a: 1}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.7, b: 1, a: 0}
+    - _Shadow: {r: 0.8569107, g: 0.7571022, b: 0.9622642, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Thresholds: {r: 0.1, g: 0.7, b: 0, a: 0}
+    - _Thresholds: {r: 0.00001, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

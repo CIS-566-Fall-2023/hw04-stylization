@@ -5,6 +5,31 @@
 - [ ] Edit texture to be black and white in GIMP
 
 
+## 1. Reference
+Here is my reference image of Chowder from my favorite Cartoon Network series of all time,
+*Chowder*:
+
+![](img/chowder-ref-0.jpg)
+Credit: ElectricShan on DeviantArt
+
+## 2. Adding some interesting shaders
+
+1. Improved Surface Shader
+
+2. Special Surface Shader
+
+## 3. Outlines
+
+## 4. Full Screen Post Process Effect
+
+## 5. Final Scene
+
+I conveniently chose Chowder for this assignment so I could use my model from the character modeling project from
+DSGN 5005:
+
+![](img/chowder-render-0.jpg)
+
+## 6. Realtime Interactivity
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
