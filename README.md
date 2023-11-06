@@ -15,12 +15,16 @@ For this project, I am looking to recreate the character toon-shading effect use
 
 ## CelShading: Color Lookup Using a Custom Color Curve
 ![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
+<img width="1089" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/934fea4c-7565-4163-b114-e207cf87765d">
 
 ## Slight Self-Shadowing by Sampling a Simple Light/Shade Texture using Matcap UV
 ![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
+<img width="1438" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/debdab8b-6c3c-4cbb-8f8c-a8a166587071">
 
 ## Custom 1 & 2: Specular & Metallic Rendering
-![ezgif com-video-to-gif](https://github.com/xcupsilon/hw04-stylization/assets/50472308/3649e7c6-97ed-45bf-9a22-c45ecb241a3d)
+![ezgif com-video-to-gif (1)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/01ac7936-8064-4fff-bf69-3bdce579f8bc)
+
+![ezgif com-video-to-gif (2)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/11d46889-9a62-40d1-b66f-2b9195479d1e)
 
 Achieved through reading PBR info from channels of the lightmap and compute using BlinnPhong
 
