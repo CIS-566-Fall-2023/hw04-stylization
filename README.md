@@ -1,8 +1,8 @@
+For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
+
 # 1. Concept Art
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d3c01477-1874-47ed-b0e7-86d89ac22b46)
-
-For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 ---
 # 2. Shader Creation
 ## Base Color
