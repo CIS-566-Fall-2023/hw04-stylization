@@ -6,12 +6,52 @@ void WaterWaves_float(float3 WorldPos, float SineTime, out float3 Position) {
     
 }
 
-void WaterCaustics_float(float3 CurrColor, float3 Highlight, out float3 FinalColor) {
+float2 Random2(float2 p)
+{
+    return frac(sin(float2(dot(p, float2(127.1, 311.7)), dot(p, float2(269.5, 183.3)))) * 43209);
+
+}
+
+float WorleyNoise(float2 uv, float time) {
     
+    uv *= 10;
     
+    float2 uvInt = floor(uv);
     
+    float2 uvFract = frac(uv);
     
-    FinalColor = CurrColor;
+    float minDist = 1.0;
+    
+    for (int y = -1; y <= 1; ++y)
+    {
+        for (int x = -1; x <= 1; ++x)
+        {
+            float2 neighbor = float2(float(x), float(y));
+            float2 p = Random2(uvInt + neighbor);
+            float2 diff = neighbor + p - uvFract;
+            float dist = length(diff);
+            minDist = min(minDist, dist);
+
+        }
+
+    }
+    return minDist;
+}
+
+void WaterCaustics_float(float3 WorldUV, float3 CurrColor, float SineTime, out
+float3 FinalColor) {
+    
+    if (WorleyNoise(float2(WorldUV[0], WorldUV[2]), SineTime) < 0.9)
+    {
+        FinalColor = CurrColor * (2 - WorleyNoise(float2(WorldUV[0], WorldUV[2]), SineTime));
+    
+    }
+    else
+    {
+        FinalColor = CurrColor;
+    }
+    
+   
     
 }
 
