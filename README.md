@@ -16,7 +16,8 @@ For this project, I am looking to recreate the character toon-shading effect use
 ## CelShading: Color Lookup Using a Custom Color Curve
 ![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
 
-## Shader Mixing in with Matcap sampled shadowed region
+## Slight Self-Shading by Sampling a Simple Light/Shade Texture using Matcap UV
+![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
