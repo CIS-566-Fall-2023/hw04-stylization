@@ -22,11 +22,12 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
 }
 
 void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
-    float2 Thresholds, float3 RampedDiffuseValues,
-    out float3 Color, out float Diffuse)
+    float2 Thresholds, float3 RampedDiffuseValues, float shininess, float3 specularColor,
+    out float3 Color, out float Diffuse, out float Specular)
 {
     Color = float3(0, 0, 0);
     Diffuse = 0;
+    Specular = 0;
 
 #ifndef SHADERGRAPH_PREVIEW
 
@@ -59,7 +60,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
+        
+        
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
 
+        }
         
         if (light.distanceAttenuation <= 0)
         {
@@ -69,23 +76,16 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Shadow, float3 Midtone, float Diffuse, float ShadowThreshold, float HighlightThreshold, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (Diffuse < ShadowThreshold)
     {
         OUT = Shadow;
     }
-    else if (Diffuse < Thresholds.y)
+    else if (Diffuse < HighlightThreshold)
     {
         OUT = Midtone;
     }
