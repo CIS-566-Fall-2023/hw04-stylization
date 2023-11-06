@@ -1,3 +1,4 @@
+# 0. Context
 For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 
 # 1. Concept Art
