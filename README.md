@@ -25,10 +25,13 @@ I follow the following tutorial to implement multiple light support.
 I started by create your own custom shadow textures!
 I wanted something kind of plain, but when tiled, it looks a bit like scales:
 ![Shadow4](https://github.com/kyraSclark/hw04-stylization/assets/60115638/13e713b8-5238-4ec1-a332-e61f0fd32fb1)
+
 When you tile it, it looks like this:
 ![image](https://github.com/kyraSclark/hw04-stylization/assets/60115638/91046e2b-fd93-40f3-b2fa-17aad2828112)
+
 Next, I used FBM noise to make this texture, which I used a very large scale to tile, in order to keep it blurrly, like grass. 
 ![Shadow3](https://github.com/kyraSclark/hw04-stylization/assets/60115638/a4f4808f-92d8-4472-99db-0c1664a00604)
+
 Here, we can more easily see the FBM noise in the midtone, as grass on the ground: 
 ![image](https://github.com/kyraSclark/hw04-stylization/assets/60115638/5c3eddbe-2939-4404-a80a-bdcd23a8a401)
 
