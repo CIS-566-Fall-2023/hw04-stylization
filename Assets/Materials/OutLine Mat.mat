@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutLine Mat
-  m_Shader: {fileID: -6465566751694194690, guid: e910ddc8677c3174b89bdb97490247bc,
+  m_Name: Outline Mat
+  m_Shader: {fileID: -6465566751694194690, guid: 0366685ca48d6c44f89303f9955ce681,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,15 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth_Threshold: 0.01
-    - _NoiseOffset: 0.005
-    - _NoiseScale: 40
+    - _Depth_Threshold: 0.001
+    - _NoiseOffset: -0.041
+    - _NoiseScale: 0
     - _Normal_Threshold: 5
     - _On: 1
-    - _Scale: 0
-    - _Thickness: 1
-    - _Time_Rate: 1
-    - _Wave_Freq: 2.91
+    - _Thickness: 0.5
+    - _Time_Rate: 8.4
+    - _Wave_Freq: 0.62
     m_Colors:
     - _NoiseUVOffset: {r: 0, g: 0, b: 0, a: 0}
     - _Outline_Color: {r: 1, g: 1, b: 1, a: 0}
