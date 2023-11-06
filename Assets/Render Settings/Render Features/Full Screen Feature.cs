@@ -10,6 +10,7 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
         public Material material;
+        //public Material OutLineMaterial;
     }
 
     [SerializeField] private FullScreenPassSettings settings;
@@ -24,7 +25,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
-            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
+            if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Testing Buffers");
         }
 
         // This method is called before executing the render pass.
@@ -52,6 +53,7 @@ public class FullScreenFeature : ScriptableRendererFeature
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, temporaryBuffer, colorBuffer, settings.material);
             }
 
             // Execute the command buffer and release it.
