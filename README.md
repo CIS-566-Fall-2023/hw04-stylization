@@ -2,7 +2,7 @@
 ---
 # 1. Concept Art
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
-![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/fd36ac5d-48d2-413c-88ee-516efcf0ad60)
+![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d3c01477-1874-47ed-b0e7-86d89ac22b46)
 For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 ---
 # 2. Shader Creation
@@ -16,7 +16,7 @@ For this project, I am looking to recreate the character toon-shading effect use
 ## CelShading: Color Lookup Using a Custom Color Curve
 ![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
 
-## Slight Self-Shading by Sampling a Simple Light/Shade Texture using Matcap UV
+## Slight Self-Shadowing by Sampling a Simple Light/Shade Texture using Matcap UV
 ![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
