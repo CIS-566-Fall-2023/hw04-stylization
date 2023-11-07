@@ -1,7 +1,7 @@
 # 0. Context & My Result
 For this project, I looked to recreate the character toon-shading effect used in Genshin. I used Klee, an iconic character, as my base model to work from. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 ## Completed Viewport Screenshot in Unreal of My Character Materials:
-![HighresScreenshot00001](https://github.com/xcupsilon/hw04-stylization/assets/50472308/5763a360-d81a-48e5-a3a8-3fd369d1250d)
+![Final Result](https://github.com/xcupsilon/hw04-stylization/assets/50472308/34a3d331-0149-4021-9da6-c0341964f223)
 
 # 1. Original Concept Art
 Found some nice in-game screenshots in Genshin:
@@ -92,7 +92,7 @@ Threshold at 1/29:
 I used some marketplace assets that closely resembled Genshin Impact's modeling styles with the architecture mirroring the city where the character was from: "Mondstadt". Then I added my own lighting setup and post processes effect to it.
 
 Here is one of my final hero render: 
-![HighresScreenshot00001](https://github.com/xcupsilon/hw04-stylization/assets/50472308/5763a360-d81a-48e5-a3a8-3fd369d1250d)
+![Final Result](https://github.com/xcupsilon/hw04-stylization/assets/50472308/34a3d331-0149-4021-9da6-c0341964f223)
 
 For the interactivity part, I wanted to showcase the shader performing at different lighting scenarios: another one at dawn, and another very stylized one. I implemented functions that would quick unload/load different lighting components & post process materials to achieve this. Here are the results:
 
