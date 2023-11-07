@@ -49,7 +49,22 @@ World-Aligned Shadow Texture Mapping
 ![ezgif com-video-to-gif (5)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/043c8a2f-3ea2-47dd-b421-e3d7eb519cd6)
 ![ezgif com-video-to-gif (6)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/4b7869aa-cbaf-4ae3-aa38-2d8fdaf18862)
 
-## Special Surface Shader: Custom Normal Rendering For Face
+## Special Surface Shader: Custom SDF & Custom Normal-Based Face Rendering
+Old:
+
+![ezgif com-video-to-gif (7)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e4c5c8bf-3053-4987-8f20-232a815ffaa8)
+
+New:
+
+![ezgif com-video-to-gif (8)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/939f4eb8-1fa7-4a52-8415-35e8e46ad1da)
+
+SDF-based Shadow Calculation
+
+<img width="1305" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/b1cd237c-c71f-49c2-b3a5-9c2d4dc49e62">
+
+Lerping Artist-Controlled Light and Shadow Colors
+<img width="1030" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/13bd97a8-e404-49d9-b69d-5fed87ca1954">
+
 
 ## Outline
 Base Outline
