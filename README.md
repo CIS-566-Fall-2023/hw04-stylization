@@ -35,6 +35,9 @@ There are two passes for my post-process outline to mimic the Chinese writing br
 
 To create the rice paper look, I used another post-process pass, which steals the bloom texture created by Unity's default post-process, and then combined it with a Voronoi noise to create the dotted effect. There are a bunch of parameters that can control this process, like Dot Density, Dot Cutoff, Threshold, Intensity, etc.
 
+### basic requirements
+
+all basic requirements are implemented in the Additional Lighting scenes.
 
 ## Credits
 [Post-Process](https://www.youtube.com/watch?v=9fa4uFm1eCE&t=332s)
