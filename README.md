@@ -35,7 +35,8 @@ Achieved through reading PBR info from channels of the lightmap and compute usin
 <img width="414" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4e5909d2-948b-4936-9f7c-c63c58657827">
 <img width="851" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4d30026c-7ff2-4e01-bf41-1b4176c848e5">
 
-MetalMap used: 
+MetalMap used:
+
 ![Avatar_Tex_MetalMap](https://github.com/xcupsilon/hw04-stylization/assets/50472308/36ba6bda-8821-4154-9754-a905c23ba9c4)
 
 
