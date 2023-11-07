@@ -1,5 +1,5 @@
 # 0. Context & My Final Render in Unreal
-A closeup viewport screenshot in Unreal after completing the Material shaders:
+A closeup viewport screenshot in Unreal after completing the material shaders:
 ![HighresScreenshot00001](https://github.com/xcupsilon/hw04-stylization/assets/50472308/5763a360-d81a-48e5-a3a8-3fd369d1250d)
 For this project, I looked to recreate the character toon-shading effect used in Genshin. I used Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 
