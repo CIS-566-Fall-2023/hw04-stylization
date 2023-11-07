@@ -1,7 +1,7 @@
 # *3D Stylization*
 
 ## Project Overview
-In this assignment, I implement a toon style 3D sea island scene in Unity URP pipeline.
+In this assignment, I implement a toon style 3D sea island scene in Unity URP pipeline. Where the tree model is built in Houdini, and stone model is from Unity ofiicial 3D ToolKit project .
 
 ![](/Recordings/result.png)
 
