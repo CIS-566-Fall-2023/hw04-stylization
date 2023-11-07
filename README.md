@@ -15,9 +15,50 @@ For this project, I am looking to recreate the character toon-shading effect use
 
 ## CelShading: Color Lookup Using a Custom Color Curve
 ![LUT](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e0c1ab5d-e130-47c6-8d64-4641ddeb61ce)
+<img width="1089" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/934fea4c-7565-4163-b114-e207cf87765d">
 
 ## Slight Self-Shadowing by Sampling a Simple Light/Shade Texture using Matcap UV
 ![SelfShade](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d929c9aa-a1cf-4854-bfed-bb24084f760c)
+<img width="1438" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/debdab8b-6c3c-4cbb-8f8c-a8a166587071">
+
+## Custom 1: Specular Rendering (Talked with Rachel to replace multiple lighting support)
+![ezgif com-video-to-gif (2)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/11d46889-9a62-40d1-b66f-2b9195479d1e)
+![ezgif com-video-to-gif (1)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/01ac7936-8064-4fff-bf69-3bdce579f8bc)
+
+Achieved through reading PBR info from channels of the lightmap and compute using BlinnPhong
+
+<img width="643" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/66243f02-053b-4efc-af42-7c75dfd3d034">
+<img width="1045" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/b679efc7-a01c-4afa-9903-5deec1cdd398">
+
+## Custom 2 Additional Light Feature: Metallic Rendering
+![Metallic](https://github.com/xcupsilon/hw04-stylization/assets/50472308/1e478734-b605-43ad-bc73-0ec00fb4df72)
+<img width="414" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4e5909d2-948b-4936-9f7c-c63c58657827">
+<img width="851" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4d30026c-7ff2-4e01-bf41-1b4176c848e5">
+
+## Diffuse + Specular + Metallic Combined Result 
+![ezgif com-video-to-gif (3)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/da399cae-f6f6-4f1d-bfa4-d365b90bb728)
+
+## Custom Shadow Texture
+
+
+## Special Surface Shader: Custom Normal Rendering For Face
+
+## Outline
+Base Outline
+![Outline](https://github.com/xcupsilon/hw04-stylization/assets/50472308/feae656b-c9b3-4348-8bac-65e1457d4950)
+<img width="1458" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/c5be0ff7-18e0-4161-ac84-d43547faec41">
+
+Using Noise to Offset Outline For a Windy Effect on Hair
+![ezgif com-video-to-gif (4)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/3082d987-ab09-4476-94e5-00b13f330a8a)
+<img width="1349" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/1965eba6-a487-4dc8-96ea-51bb9659fb08">
+
+## Screen Post Process Effect
+
+# 3. Scene
+
+# 4. Interactivity
+
+
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
