@@ -4,7 +4,8 @@ by Sherry Li
 
 https://github.com/sherryli02/hw04-stylization/assets/97941858/b9421571-6a60-4e2f-973c-1a2bfab24adf
 
-https://github.com/sherryli02/hw04-stylization/assets/97941858/4d2c92fc-671c-4cd1-8cac-685939cbe586
+https://github.com/sherryli02/hw04-stylization/assets/97941858/524e7ec3-daa8-4cd6-b9e2-4e0dd6536ea0
+
 
 Original concept by Alariko:
 ![F9btwfLWAAAd8vy](https://github.com/sherryli02/hw04-stylization/assets/97941858/a168adbe-84f5-4a80-99cb-f28ba333931d)
