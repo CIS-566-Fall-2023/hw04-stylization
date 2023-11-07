@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_toon_2_sonic_body
-  m_Shader: {fileID: -6465566751694194690, guid: 2fadafc0a6f04b74a868dd5c278e548f,
+  m_Shader: {fileID: -6465566751694194690, guid: 32d76ba9fdad1c646877e56b6006c794,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -86,11 +86,14 @@ Material:
     - _SHADOWS_CASCADE: 0
     - _SHADOWS_SOFT: 1
     - _SOFTSHADOWS: 0
-    - _Threshold: 0.01
-    - _Threshold_2: 0.29
+    - _Threshold: 0.067
+    - _Threshold_2: 0.787
     m_Colors:
     - _Highlight: {r: 1, g: 0.9647059, b: 0.72156864, a: 1}
+    - _Midtone: {r: 0.7058824, g: 0.5372549, b: 0.34509805, a: 0}
     - _Midtone_Tiling: {r: 10, g: 10, b: 0, a: 0}
-    - _Shadow: {r: 0.509434, g: 0.49669072, b: 0.36717695, a: 1}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
+    - _Shadow: {r: 0.5377358, g: 0.32752883, b: 0.10484152, a: 1}
     - _Shadow_Tiling: {r: 7, g: 7, b: 0, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.75, b: 0, a: 0}
   m_BuildTextureStacks: []
