@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: green
+  m_Name: bamboo
   m_Shader: {fileID: -6465566751694194690, guid: e8146c761447f5c4e809f2ff10fe0695,
     type: 3}
   m_Parent: {fileID: 0}
@@ -125,10 +125,10 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
-    - _Smoothness: 42
+    - _Smoothness: 32
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Specular_Brightness: 0.15
+    - _Specular_Brightness: 0.5
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
@@ -138,10 +138,10 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.74568397, g: 0.9245283, b: 0.6244927, a: 0}
-    - _Midtone: {r: 0.6901657, g: 0.85882354, b: 0.5411765, a: 0}
+    - _Highlight: {r: 1, g: 0.9397625, b: 0.85490197, a: 0}
+    - _Midtone: {r: 0.9716981, g: 0.87358683, b: 0.72969025, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.63650066, g: 0.8113208, b: 0.44086865, a: 0}
+    - _Shadow: {r: 0.8584906, g: 0.7521095, b: 0.59608406, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7628855902782416339
