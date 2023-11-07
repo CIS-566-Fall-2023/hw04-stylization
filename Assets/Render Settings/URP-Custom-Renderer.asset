@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7479533446246311637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: FullScreenFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    renderPassEvent: 300
+    material: {fileID: 2100000, guid: e2fa265bba59dc34eb5aee2a39ec9727, type: 2}
 --- !u!114 &-3238721645789730047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +68,8 @@ MonoBehaviour:
   - {fileID: 8145698805267881697}
   - {fileID: -3238721645789730047}
   - {fileID: -2294552312082341791}
-  m_RendererFeatureMap: e1de50d7e7550b7101ab5598d2bf0dd361e0c747d41c28e0
+  - {fileID: -7479533446246311637}
+  m_RendererFeatureMap: e1de50d7e7550b7101ab5598d2bf0dd361e0c747d41c28e02bd9d57af55b3398
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
