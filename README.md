@@ -35,6 +35,10 @@ Achieved through reading PBR info from channels of the lightmap and compute usin
 <img width="414" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4e5909d2-948b-4936-9f7c-c63c58657827">
 <img width="851" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/4d30026c-7ff2-4e01-bf41-1b4176c848e5">
 
+MetalMap used: 
+![Avatar_Tex_MetalMap](https://github.com/xcupsilon/hw04-stylization/assets/50472308/36ba6bda-8821-4154-9754-a905c23ba9c4)
+
+
 ## Diffuse + Specular + Metallic Combined Result 
 ![ezgif com-video-to-gif (3)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/da399cae-f6f6-4f1d-bfa4-d365b90bb728)
 
@@ -48,7 +52,7 @@ Base Outline
 ![Outline](https://github.com/xcupsilon/hw04-stylization/assets/50472308/feae656b-c9b3-4348-8bac-65e1457d4950)
 <img width="1458" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/c5be0ff7-18e0-4161-ac84-d43547faec41">
 
-Using Noise to Offset Outline For a Windy Effect on Hair
+Using Noise to Offset Outline Based on Time For a Windy Effect on Hair
 ![ezgif com-video-to-gif (4)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/3082d987-ab09-4476-94e5-00b13f330a8a)
 <img width="1349" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/1965eba6-a487-4dc8-96ea-51bb9659fb08">
 
