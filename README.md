@@ -2,7 +2,7 @@
 
 by Sherry Li
 
-https://github.com/sherryli02/hw04-stylization/assets/97941858/b9421571-6a60-4e2f-973c-1a2bfab24adf
+https://github.com/sherryli02/hw04-stylization/assets/97941858/120e7d54-04fe-4aea-a57c-a6b0777c7a25
 
 https://github.com/sherryli02/hw04-stylization/assets/97941858/524e7ec3-daa8-4cd6-b9e2-4e0dd6536ea0
 
@@ -20,6 +20,7 @@ I implemented both Blinn and Phong reflections by following [this video](https:/
 
 # Custom Textures
 Using Photoshop, I created a few textures that I incorporated throughout all materials in order to emulate the look of the concept art.
+
 ![textures](https://github.com/sherryli02/hw04-stylization/assets/97941858/f1445554-d786-4c61-a63f-cc7b00144d21)
 
 # Leaf Shader
