@@ -1,5 +1,7 @@
 # HW 4: *3D Stylization*
 
+### Got an extension from Rachel until Wednesday 11/8 11:59 pm!
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
