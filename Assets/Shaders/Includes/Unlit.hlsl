@@ -121,7 +121,7 @@ VOut2 OutlineTwo_Vert(VIn2 v)
 float4 OutlintTwo_Frag(VOut2 i) : SV_Target
 {
     // clip random outline here
-    float4 c = _StrokeColor;
+    float4 c = float4(1,0,0,1);// _StrokeColor;
     float3 burn = _OutlineNoise.Sample(sampler_OutlineNoise, i.uv).rgb;
     if (burn.x > 0.35)
         discard;

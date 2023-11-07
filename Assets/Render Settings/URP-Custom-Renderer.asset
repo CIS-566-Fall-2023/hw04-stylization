@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad94d1997b93eb438ca2857b6f551fb, type: 3}
   m_Name: MultiPassRendererFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   lightModePasses:
   - _Outline
   - _Outline_Two
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecabaaef8f67194ab633d1805d8f6a1, type: 3}
   m_Name: CustomPostProcessFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   m_bloomShader: {fileID: 4800000, guid: 91660ff18f7d18e4ba9b7a06cd54e76b, type: 3}
   m_compositeShader: {fileID: -6465566751694194690, guid: c4c23c2efe999ef488a45091d416188b,
     type: 3}
