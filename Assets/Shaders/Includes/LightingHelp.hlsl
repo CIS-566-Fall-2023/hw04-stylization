@@ -1,10 +1,11 @@
-void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
+void GetMainLight_float(float3 WorldPos, float3 viewDir, float3 normal, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten, out float highlight)
 {
 #ifdef SHADERGRAPH_PREVIEW
     Direction = normalize(float3(0.5, 0.5, 0));
     Color = 1;
     DistanceAtten = 1;
     ShadowAtten = 1;
+    highlight = 0.5;
 #else
 #if SHADOWS_SCREEN
         float4 clipPos = TransformWorldToClip(WorldPos);
@@ -18,6 +19,10 @@ void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction,
     Color = mainLight.color;
     DistanceAtten = mainLight.distanceAttenuation;
     ShadowAtten = mainLight.shadowAttenuation;
+
+    float3 Half = (viewDir + Direction) / 2.0;
+    highlight = pow(dot(Half, normal), 32);
+
 #endif
 }
 
@@ -79,9 +84,12 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, float highlight, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (highlight > 0.8) {
+        OUT = float3(1, 1, 1);
+    }
+    else if (Diffuse < Thresholds.x)
     {
         OUT = Shadow;
     }
