@@ -83,24 +83,27 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
 {
     float3 col;
     if (DiffuseM < Min_Threshold) {
-        col = Shadow;        
-    } else if (DiffuseM > Max_Threshold) {
-        col = Highlight;
+        col = Shadow;      
+        float a = 1.025;
+        float b = 1.05;
+        float c = 1.1;
+        float d = 1.15;
+        if (DiffuseSB <= Min_Threshold * 0.25) {
+            OUT = float3(col[0] / d, col[1] / c, col[2] / a);
+        } else if (DiffuseSB < Min_Threshold * 0.5) {
+            OUT = float3(col[0] / c, col[1] / d, col[2] / b);
+        } else if (DiffuseSB < Min_Threshold * 0.75) {
+            OUT = float3(col[0] / c, col[1] / c, col[2] / b);
+        } else {
+            OUT = float3(col[0] / b, col[1] / b, col[2] / 1.01);
+        }
+    } else if (DiffuseM >= Max_Threshold) {
+        OUT = Highlight;
     } else {
-        col = Midtone;
+        float t = (DiffuseM - Min_Threshold) / (Max_Threshold - Min_Threshold);
+        //OUT = Vector3.Lerp(Highlight, Midtone, t);
+        OUT = Midtone;
     }
 
-    float a = 1.025;
-    float b = 1.05;
-    float c = 1.1;
-    float d = 1.15;
-    if (DiffuseSB < Min_Threshold * 0.25) {
-        OUT = float3(col[0] / d, col[1] / c, col[2] / a);
-    } else if (DiffuseSB < Min_Threshold * 0.5) {
-        OUT = float3(col[0] / c, col[1] / d, col[2] / b);
-    } else if (DiffuseSB < Min_Threshold * 0.75) {
-        OUT = float3(col[0] / c, col[1] / c, col[2] / b);
-    } else {
-        OUT = float3(col[0] / b, col[1] / b, col[2] / 1.01);
-    }
+    
 }
