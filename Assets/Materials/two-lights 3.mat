@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: two-lights 3
-  m_Shader: {fileID: -6465566751694194690, guid: 9f27cde8dbd29bd438bebdac19414105,
+  m_Shader: {fileID: -6465566751694194690, guid: 34217b40bb28f254a854c110d0d998ea,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -67,6 +67,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0c669b8b5cfa4d45936ce8c4a49b3f92_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d957b3f459da2104bb7e79b73eb69426, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_80773d1baca14715a9ef79ecc9cbc9bc_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bdd3f5acd855c284dbf86f29916a2231, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d67b4a30782c4577ac0460c0cede2205_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bdd3f5acd855c284dbf86f29916a2231, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -129,12 +141,12 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 0.5660378, g: 0.44853318, b: 0.41473836, a: 0}
-    - _Midtone: {r: 0.3962264, g: 0.3055739, b: 0.25293696, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.254717, g: 0.1773154, b: 0.14578141, a: 0}
+    - _Highlight: {r: 0.5471698, g: 0.3806099, b: 0.33896995, a: 0}
+    - _Midtone: {r: 0.3490566, g: 0.24642515, b: 0.18001659, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.3, b: 0.1, a: 0}
+    - _Shadow: {r: 0.3773585, g: 0.23857297, b: 0.18037258, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Thresholds: {r: 0.05, g: 0.5, b: 0, a: 0}
+    - _Thresholds: {r: 0.05, g: 0.7, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6672398918749367381
 MonoBehaviour:
