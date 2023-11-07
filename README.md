@@ -1,6 +1,6 @@
-# 0. Context & My Result
+# 0. Context & Result of My Version of Genshin Character Materials
 For this project, I looked to recreate the character toon-shading effect used in Genshin. I used Klee, an iconic character, as my base model to work from. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
-## Completed Viewport Screenshot in Unreal of My Character Materials:
+## Completed Viewport Screenshot in Unreal:
 ![Final Result](https://github.com/xcupsilon/hw04-stylization/assets/50472308/34a3d331-0149-4021-9da6-c0341964f223)
 
 # 1. Original Concept Art
