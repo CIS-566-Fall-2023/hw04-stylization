@@ -1,16 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class CharacterControllerDumb : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
+    [Header("Outside References")]
     [SerializeField] private Door door;
     private Transform doorTransform;
     private Rigidbody rb;
+    [SerializeField] private Camera cam;
 
     [SerializeField] private Water water;
 
+    [Header("Main Visuals")]
     [SerializeField] private float moveSpeed = 0.005f;
     [SerializeField] private float maxSpeedInitial = 0.05f;
     [SerializeField] private float maxSpeedFinal = 0.015f;
@@ -20,6 +24,7 @@ public class CharacterControllerDumb : MonoBehaviour
     [SerializeField] private float dist2DeactivateDoor = 2.0f;
     [SerializeField] private float dist2ToFullVignette = 2.0f;
 
+    [Header("Vignette Curves")]
     [SerializeField] private Material vignetteMaterial;
     [SerializeField] private AnimationCurve vignetteStrengthCurve;
     [SerializeField] private AnimationCurve vignetteAlphaCurve;
@@ -34,6 +39,17 @@ public class CharacterControllerDumb : MonoBehaviour
     private bool hasChangedWaves = false;
     private bool hasDeactivatedDoor = false;
 
+    [Header("Second Visuals")]
+    [SerializeField] private Transform characterFinalLocation;
+    [SerializeField] private AnimationCurve characterMovementCurve;
+    [SerializeField] private float characterMoveToSecondLocationDuration;
+    [SerializeField] private float secondCamFOV;
+    [SerializeField] private AnimationCurve camFOVChangeCurve;
+    [SerializeField] private float fovChangeDuration;
+
+    public static event Action OnChangeToSecondVisuals;
+    private bool hasStartedSecondVisuals;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -43,6 +59,8 @@ public class CharacterControllerDumb : MonoBehaviour
         doorTransform = door.transform;
         maxDist2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
         vignetteMaterial.SetFloat("_VignetteStrength", 0.0f);
+
+        hasStartedSecondVisuals = false;
     }
 
     private void Move(float distance2)
@@ -67,6 +85,11 @@ public class CharacterControllerDumb : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (hasStartedSecondVisuals)
+        {
+            return;     // no more user control, the aliens have taken over, sorry :(
+        }
+
         float distance2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
         Move(distance2);
 
@@ -98,6 +121,64 @@ public class CharacterControllerDumb : MonoBehaviour
             float colorT = vignetteAlphaCurve.Evaluate(distance2);
             vignetteMaterial.SetColor("_VignetteColor", vignetteGradient.Evaluate(colorT));
         }
+
+        if (distance2 <= 1.0f)
+        {
+            SwitchVisuals();
+            OnChangeToSecondVisuals?.Invoke();
+        }
+    }
+
+    private void SwitchVisuals()
+    {
+        hasStartedSecondVisuals = true;
+        rb.isKinematic = true;      // disable any non-programmatic movement including external forces like gravity
+        StartCoroutine(MoveCharacterCoroutine());
+        StartCoroutine(LerpFOV());
+    }
+
+    private IEnumerator MoveCharacterCoroutine()
+    {
+        float timeSinceStarted = 0.0f;
+        float percentageComplete = 0.0f;
+
+        Vector3 startPos = rb.position;
+        float t;
+
+        while (percentageComplete <= 1.0f)
+        {
+            timeSinceStarted += Time.deltaTime;
+            percentageComplete = timeSinceStarted / characterMoveToSecondLocationDuration;
+
+            t = characterMovementCurve.Evaluate(percentageComplete);
+            rb.MovePosition(Vector3.LerpUnclamped(startPos, characterFinalLocation.position, t));
+
+            yield return null;
+        }
+
+        rb.MovePosition(characterFinalLocation.position);
+    }
+
+    private IEnumerator LerpFOV()
+    {
+        float timeSinceStarted = 0.0f;
+        float percentageComplete = 0.0f;
+
+        float startFOV = cam.fieldOfView;
+        float t;
+
+        while (percentageComplete <= 1.0f)
+        {
+            timeSinceStarted += Time.deltaTime;
+            percentageComplete = timeSinceStarted / characterMoveToSecondLocationDuration;
+
+            t = characterMovementCurve.Evaluate(percentageComplete);
+            cam.fieldOfView = Mathf.Lerp(startFOV, secondCamFOV, t);
+
+            yield return null;
+        }
+
+        cam.fieldOfView = secondCamFOV;
     }
 
     private void OnDestroy()

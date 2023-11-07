@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6244232839366800188}
   - component: {fileID: 2958601446286185606}
   - component: {fileID: 7229323117797435447}
+  - component: {fileID: 259955145292177884}
   m_Layer: 0
   m_Name: PalmTreeType3
   m_TagString: Untagged
@@ -84,3 +85,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &259955145292177884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774036624856691410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e6a140316924d4ea20826b2ad5ba1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualsToChange:
+  - meshRenderer: {fileID: 7229323117797435447}
+    matToChangeTo: {fileID: 2100000, guid: bd7cde6c58f25d743aac2eae94b484c5, type: 2}
