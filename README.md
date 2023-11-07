@@ -4,6 +4,10 @@
 
 
 
+https://github.com/HummaWhite/CIS566-hw04-stylization/assets/48054481/a6b1ec20-c50a-42bd-8f65-c8d10e1eccce
+
+
+
 ### Project Overview
 
 This is a stylization rendering project in Unity.
