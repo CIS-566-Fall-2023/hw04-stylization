@@ -1,7 +1,10 @@
-# 0. Context
-For this project, I am looking to recreate the character toon-shading effect used in Genshin. I used this in-game screenshot of Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
+# 0. Context & My Final Render in Unreal
+A closeup viewport screenshot in Unreal after completing the Material shaders:
+![Uploading HighresScreenshot00000.png…]()
+For this project, I looked to recreate the character toon-shading effect used in Genshin. I used Klee, an iconic character, as a reference. Thanks to Rachel who allowed me to explore the project in Unreal Engine instead :)
 
-# 1. Concept Art
+# 1. Original Concept Art
+Found some nice in-game screenshots in Genshin:
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/22fe919d-2012-4d8f-b2b7-fd8a3910ab92)
 ![image](https://github.com/xcupsilon/hw04-stylization/assets/50472308/d3c01477-1874-47ed-b0e7-86d89ac22b46)
 ---
@@ -85,9 +88,11 @@ Threshold at 1/29:
 ![Pixalted29](https://github.com/xcupsilon/hw04-stylization/assets/50472308/47638dad-03fa-4660-a1ab-f348b978c435)
 <img width="997" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/8f2ec0ac-9538-4b5e-94fa-9e24ceca10c1">
 
-# 3. Scene
+# 3. Game Scene & Interactivity
+I used some marketplace assets that closely resembled Genshin Impact's modeling styles with the architecture mirroring the city where the character was from: "Mondstadt". Then I added my own lighting setup and post processes effect to it.
 
-# 4. Interactivity
+Here is one of my final hero render: 
+
 ---
 ## 4. Full Screen Post Process Effect
 We're nearing the end! 
