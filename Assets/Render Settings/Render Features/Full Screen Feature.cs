@@ -12,12 +12,17 @@ public class FullScreenFeature : ScriptableRendererFeature
         public Material material;
     }
 
-    [SerializeField] private FullScreenPassSettings settings;
+    [SerializeField] private FullScreenPassSettings settings; // serialized to user so they can click dropdown
+
+    // when a Feature is created, it creates a Pass, which is going to be queued onto the Render call
+        // this is why we need settings as an input
     class FullScreenPass : ScriptableRenderPass
     {
-        const string ProfilerTag = "Full Screen Pass";
+        const string ProfilerTag = "Full Screen Pass"; // for debugging purposes
         public FullScreenFeature.FullScreenPassSettings settings;
-        RenderTargetIdentifier colorBuffer, temporaryBuffer;
+        RenderTargetIdentifier colorBuffer, temporaryBuffer;    // buffers! - needed for post processing
+            // colorBuffer - will be what colors are on the screen
+            // temporaryBuffer - blit from color to temp and back
         private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
 
         public FullScreenPass(FullScreenFeature.FullScreenPassSettings passSettings)
@@ -35,7 +40,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
         {
             RenderTextureDescriptor descriptor = renderingData.cameraData.cameraTargetDescriptor;
-            colorBuffer = renderingData.cameraData.renderer.cameraColorTarget;
+            colorBuffer = renderingData.cameraData.renderer.cameraColorTarget;  // color buffer getting initialized to camera data
 
             cmd.GetTemporaryRT(temporaryBufferID, descriptor, FilterMode.Point);
             temporaryBuffer = new RenderTargetIdentifier(temporaryBufferID);
@@ -51,7 +56,19 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
+                // "blitting" all pixel data from colorBuffer to temporary buffer
+                    // transferring all pixel information from first to second
+                    // might modify info on the way to blitting it
+                    // everything red to blue
+                    //
+                // in this process, we end up applying this material onto it.
+                // material in tempBuffer has already been applied to scene and is being stored
+                // there currently
+                // need to go back to color buffer bc it represents what camera is seeing
+                //cmd.SetRenderTarget(colorBuffer);
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                Blit(cmd, temporaryBuffer, colorBuffer);
+                
             }
 
             // Execute the command buffer and release it.
@@ -63,7 +80,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         public override void OnCameraCleanup(CommandBuffer cmd)
         {
             if (cmd == null) throw new ArgumentNullException("cmd");
-            cmd.ReleaseTemporaryRT(temporaryBufferID);
+            cmd.ReleaseTemporaryRT(temporaryBufferID);  // releasing memory taken up by temporary buffer whenever we're cleaning up after render pass
         }
     }
 
