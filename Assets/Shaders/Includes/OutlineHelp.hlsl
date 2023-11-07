@@ -76,13 +76,50 @@ void ColourSobel_float(float2 UV, float Thickness, out float OUT) {
     OUT = max(length(sobelR), max(length(sobelG), length(sobelB)));
 }
 
-void NormalSobel_float(float2 UV, float Thickness, out float OUT) {
+float2 random(float2 r) {
+    return float2(sin(float2(dot(r, float2(127.1, 311.7)), dot(r, float2(269.5, 183.3)))) * 43758.5453);
+}
+
+float surflet(float2 P, float2 gridPoint) {
+    // Compute falloff function by converting linear distance to a polynomial
+    float distX = abs(P.x - gridPoint.x);
+    float distY = abs(P.y - gridPoint.y);
+    float tX = 1.0 - 6.0 * pow(distX, 5.f) + 15.0 * pow(distX, 4.f) - 10.0 * pow(distX, 3.f);
+    float tY = 1.0 - 6.0 * pow(distY, 5.f) + 15.0 * pow(distY, 4.f) - 10.0 * pow(distY, 3.f);
+    // Get the random vector for the grid point
+    float2 gradient = 2.f * random(gridPoint) - float2(1.f, 0.f);
+    // Get the vector from the grid point to P
+    float2 diff = P - gridPoint;
+    // Get the value of our height field by dotting grid->P with our gradient
+    float height = dot(diff, gradient);
+    // Scale our height field (i.e. reduce it) by our polynomial falloff function
+    return height * tX * tY;
+}
+
+
+float perlinNoise(float2 uv) {
+    float surfletSum = 0.f;
+    // Iterate over the four integer corners surrounding uv
+    for (int dx = 0; dx <= 1; ++dx) {
+        for (int dy = 0; dy <= 1; ++dy) {
+            surfletSum += surflet(uv, floor(uv) + float2(dx, dy));
+        }
+    }
+    return surfletSum;
+}
+
+
+void NormalSobel_float(float2 UV, float Thickness, float NoiseScale, float NoiseIntensity, out float OUT) {
     float redSobel = 0;
     float greenSobel = 0;
     float blueSobel = 0;
 
+    // Noise on lines.
+    float2 noisePixelOffset = perlinNoise(UV * NoiseScale) * NoiseIntensity;
+    float2 UVAccum = 0.0000001 * noisePixelOffset + UV;
+
     [unroll] for (int i = 0; i < 9; i++) {
-        float2 currPixel = UV + sobelSamplePoints[i] * Thickness;
+        float2 currPixel = UVAccum + sobelSamplePoints[i] * Thickness;
 
         float3 Normal;
         GetNormal_float(currPixel, Normal);

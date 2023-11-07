@@ -7,15 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Another Test
-  m_Shader: {fileID: -6465566751694194690, guid: 6ee82e8c327a9b841a5e3fb3bac99cf4,
+  m_Name: Weird Lol
+  m_Shader: {fileID: -6465566751694194690, guid: abb0e2f566cd8c24e86fde32491fc7b3,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - REQUIRE_DEPTH_TEXTURE
-  m_InvalidKeywords:
-  - 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -26,12 +24,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalsBuffer:
-        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: dfa6863bda0ffd14d897d43f82b4f94a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -47,15 +41,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - REQUIRE_DEPTH_TEXTURE: 1
-    - _Depth_Strength: -4.45
-    - _Depth_Thickness: 15.89
-    - _Depth_Thickness_1: 3.9
-    - _Depth_Threshold: 12
-    - _Noise_Intensity: 1
-    - _Noise_Scale: 1
-    - _Thickness: 0.001
-    m_Colors:
-    - _Colour: {r: 0.9423097, g: 1, b: 0.5613208, a: 1}
+    m_Floats: []
+    m_Colors: []
   m_BuildTextureStacks: []
