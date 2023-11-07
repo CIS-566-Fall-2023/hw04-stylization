@@ -2,12 +2,12 @@
 
 by Sherry Li
 
-https://github.com/sherryli02/hw04-stylization/assets/97941858/89d5e23b-3cd9-400c-8c92-34988ca1568c
-https://github.com/sherryli02/hw04-stylization/assets/97941858/48014e21-6a06-4877-8470-f848be8426f3
+https://github.com/sherryli02/hw04-stylization/assets/97941858/b9421571-6a60-4e2f-973c-1a2bfab24adf
+
+https://github.com/sherryli02/hw04-stylization/assets/97941858/4d2c92fc-671c-4cd1-8cac-685939cbe586
 
 Original concept by Alariko:
 ![F9btwfLWAAAd8vy](https://github.com/sherryli02/hw04-stylization/assets/97941858/a168adbe-84f5-4a80-99cb-f28ba333931d)
-
 
 # Lights
 I implemented multiple light support by following Logan's tutorial. For the primary light, I  implemented interpolation between the color bands by using smoothstep and lerp; the user can control the level of interpolation by adjusting a “Smoothness” value. 
