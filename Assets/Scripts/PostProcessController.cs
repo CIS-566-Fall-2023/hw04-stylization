@@ -23,16 +23,6 @@ public class PostProcessController : MonoBehaviour
             isStaticActive = !isStaticActive;
             int val = isStaticActive ? 1 : 0;
             matStatic.SetFloat("_IsStaticActive", val);
-            /*if (isActive)
-            {
-                mat.SetFloat("_IsStaticActive", 1);
-            }
-            else
-            {
-                mat.SetFloat("_IsStaticActive", 0);
-            }*/
-
-
         } else if (Input.GetKeyDown(KeyCode.B))
         {
             isBWActive = !isBWActive;
