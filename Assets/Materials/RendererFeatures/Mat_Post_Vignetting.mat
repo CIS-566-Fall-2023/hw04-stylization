@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_OutlinePost
-  m_Shader: {fileID: -6465566751694194690, guid: 9b28d45e04a83944887cc99293d30253,
+  m_Name: Mat_Post_Vignetting
+  m_Shader: {fileID: -6465566751694194690, guid: f48fc4ab55681694c8552d039811eff9,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,10 +25,6 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -50,10 +46,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: 1
-    - _KernelRadius: 3
-    - _Normals: 1
-    - _OutlineWidth: 0.93
+    - _Intensity: 1.4977559
+    - _OutlineWidth: 1.12
+    - _VignetteStrength: 0
     m_Colors:
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0.5566037, b: 0.22601485, a: 1}
+    - _VignetteColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

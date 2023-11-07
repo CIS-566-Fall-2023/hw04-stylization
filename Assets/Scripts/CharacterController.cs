@@ -18,6 +18,13 @@ public class CharacterControllerDumb : MonoBehaviour
     [SerializeField] private float dist2ToOpenDoor = 5.0f;
     [SerializeField] private float dist2ToChangeWaves = 40f;
     [SerializeField] private float dist2DeactivateDoor = 2.0f;
+    [SerializeField] private float dist2ToFullVignette = 2.0f;
+
+    [SerializeField] private Material vignetteMaterial;
+    [SerializeField] private AnimationCurve vignetteStrengthCurve;
+    [SerializeField] private AnimationCurve vignetteAlphaCurve;
+    [SerializeField] private Gradient vignetteGradient;
+    [SerializeField] private AnimationCurve vignetteIntensityCurve;
 
     private float maxSpeed;
     private float maxDist2;
@@ -35,12 +42,11 @@ public class CharacterControllerDumb : MonoBehaviour
         maxSpeed = maxSpeedInitial;
         doorTransform = door.transform;
         maxDist2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
+        vignetteMaterial.SetFloat("_VignetteStrength", 0.0f);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Move(float distance2)
     {
-        float distance2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
         float percent = 1.0f - (distance2 / maxDist2);
         float t = maxSpeedCurve.Evaluate(percent);
         maxSpeed = Mathf.Lerp(maxSpeedInitial, maxSpeedFinal, t);
@@ -56,6 +62,13 @@ public class CharacterControllerDumb : MonoBehaviour
         }
 
         rb.MovePosition(transform.position + transform.forward * curSpeed);
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        float distance2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
+        Move(distance2);
 
         if (distance2 < dist2ToOpenDoor && !hasDoorOpened)
         {
@@ -74,5 +87,21 @@ public class CharacterControllerDumb : MonoBehaviour
             hasDeactivatedDoor = true;
             door.DeactivateEverythingExceptFrame();
         }
+
+        if (distance2 < dist2ToFullVignette)
+        {
+            float t = vignetteStrengthCurve.Evaluate(distance2);
+            vignetteMaterial.SetFloat("_VignetteStrength", t);
+
+            vignetteMaterial.SetFloat("_Intensity", vignetteIntensityCurve.Evaluate(distance2));
+
+            float colorT = vignetteAlphaCurve.Evaluate(distance2);
+            vignetteMaterial.SetColor("_VignetteColor", vignetteGradient.Evaluate(colorT));
+        }
+    }
+
+    private void OnDestroy()
+    {
+        vignetteMaterial.SetFloat("_VignetteStrength", 0.0f);
     }
 }
