@@ -94,4 +94,5 @@ I used some marketplace assets that closely resembled Genshin Impact's modeling 
 Here is one of my final hero render: 
 ![Final Result](https://github.com/xcupsilon/hw04-stylization/assets/50472308/34a3d331-0149-4021-9da6-c0341964f223)
 
-For the interactivity part, I wanted to showcase the shader performing at different lighting scenarios: another one at dawn, and another very stylized one. I implemented functions that would quick unload/load different lighting components & post process materials to achieve this. Here are the results:
+For the interactivity part, I wanted to showcase the shader performing at different lighting scenarios: another one at dawn, and another very stylized one. I implemented functions that would quick unload/load different lighting components & post process materials to achieve this. Here are the results on YouTube:
+[YouTube Demo](https://youtu.be/mEJGJS_OtMs)
