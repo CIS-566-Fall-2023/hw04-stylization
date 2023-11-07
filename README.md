@@ -78,12 +78,9 @@ Using Noise to Offset Outline Based on Time For a Windy Effect on Hair
 
 ## Pixel Art Screen Post Process Effect
 Threshold at 1/10:
-
 ![Pixelated10](https://github.com/xcupsilon/hw04-stylization/assets/50472308/661a5788-1ac3-45ab-80e5-2af206897c1b)
-
 Threshold at 1/20:
 ![Pixelated20](https://github.com/xcupsilon/hw04-stylization/assets/50472308/a1f7dc3e-2398-4fee-b361-6d54ca0efabe)
-
 Threshold at 1/29:
 ![Pixalted29](https://github.com/xcupsilon/hw04-stylization/assets/50472308/47638dad-03fa-4660-a1ab-f348b978c435)
 <img width="997" alt="image" src="https://github.com/xcupsilon/hw04-stylization/assets/50472308/8f2ec0ac-9538-4b5e-94fa-9e24ceca10c1">
