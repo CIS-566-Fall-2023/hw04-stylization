@@ -15,6 +15,17 @@ public class Turntable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            //rotationSpeed += 1.0f;
+            this.transform.Rotate(0, 90.0f, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            // rotationSpeed -= 1.0f;
+            //if (rotationSpeed < 0.0f)   rotationSpeed = 0.0f;
+            this.transform.Rotate(0, -90.0f, 0);
+        }
+        //this.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
     }
 }
