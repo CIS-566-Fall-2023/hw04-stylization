@@ -39,6 +39,9 @@ class NormalsPass : ScriptableRenderPass
     private RenderTexture target;
     private Material normalsMaterial;
 
+    private FilteringSettings occluderFilteringSettings;
+    private Material occluderMaterial;
+
     public NormalsPass(RenderTexture targetTexture, LayerMask layerMask, Material mat)
     {
         m_ProfilingSampler = new ProfilingSampler("RenderNormals");
@@ -64,10 +67,14 @@ class NormalsPass : ScriptableRenderPass
         DrawingSettings drawingSettings = CreateDrawingSettings(m_ShaderTagIdList, ref renderingData, sortingCriteria);
         drawingSettings.overrideMaterial = normalsMaterial;
 
+        /*DrawingSettings occluderSettings = drawingSettings;
+        occluderSettings.overrideMaterial = occludersMaterial;*/
+
         CommandBuffer cmd = CommandBufferPool.Get();
         using (new ProfilingScope(cmd, m_ProfilingSampler))
         {
             context.DrawRenderers(renderingData.cullResults, ref drawingSettings, ref m_FilteringSettings);
+            /*context.DrawRenderers(renderingData.cullResults, ref occluderSettings, ref occluderFilteringSettings);*/
         }
 
         context.ExecuteCommandBuffer(cmd);

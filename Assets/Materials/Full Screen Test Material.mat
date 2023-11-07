@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Full Screen Test Material
+  m_Shader: {fileID: -6465566751694194690, guid: 25e9ace3a2612984e897312034e76179,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _HairBuffer:
+        m_Texture: {fileID: 8400000, guid: b69ed5101f700e749988573e5007fd34, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalsBuffer:
+        m_Texture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d1582610c4e04561976e247ef1f3baf1_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 966f2baf5f8eaa745a5bcdc4c8127425, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Depth_Strength: 0.674
+    - _Depth_Thickness: 4.06
+    - _Depth_Threshold: 0.06
+    - _Lightning_Opacity: 0.5
+    - _Noise_Speed: 0.2
+    - _Noise_Strength: 0.005
+    - _Normal_Radius: 0.03
+    - _Normal_Threshold: 1
+    - _Steep_Angle_Multiplier: 0
+    - _Steep_Angle_Threshold: 0
+    - _Thickness: 0.0005
+    m_Colors:
+    - _Color: {r: 0.5764706, g: 0.13725491, b: 0.121568635, a: 1}
+    - _Lightining_Outer_Color: {r: 0.5960785, g: 0.02352941, b: 0.07058821, a: 1}
+    - _Lightning_Inner_Color: {r: 0.7232704, g: 0.8365187, b: 1, a: 1}
+    - _Lightning_Outer_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Lightning_Speed: {r: 0.8, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []

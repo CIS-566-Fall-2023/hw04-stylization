@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class FullScreenFeature : ScriptableRendererFeature
 {
@@ -10,6 +11,7 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
         public Material material;
+        public Material[] materials;
     }
 
     [SerializeField] private FullScreenPassSettings settings;
@@ -19,6 +21,7 @@ public class FullScreenFeature : ScriptableRendererFeature
         public FullScreenFeature.FullScreenPassSettings settings;
         RenderTargetIdentifier colorBuffer, temporaryBuffer;
         private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
+        int index;
 
         public FullScreenPass(FullScreenFeature.FullScreenPassSettings passSettings)
         {
@@ -50,8 +53,18 @@ public class FullScreenFeature : ScriptableRendererFeature
             CommandBuffer cmd = CommandBufferPool.Get();
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    index = (index + 1) % settings.materials.Length;
+                    settings.material = settings.materials[index % settings.materials.Length];
+                }
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                /*ConfigureTarget(colorBuffer);*/
+                Blit(cmd, temporaryBuffer, colorBuffer);
+                /*cmd.Blit(temporaryBuffer, colorBuffer, settings.material);*/
+                /*cmd.SetRenderTarget(colorBuffer);*/
+                /*CopyColorPass(colorBuffer, temporaryBuffer);*/
             }
 
             // Execute the command buffer and release it.

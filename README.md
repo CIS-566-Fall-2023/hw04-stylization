@@ -1,120 +1,220 @@
-# 3D Stylization
+# HW 4: *3D Stylization*
 
 ## Project Overview:
-In this project, I used a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity, allowing me to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
+In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-https://github.com/hansen-yi/hw04-stylization/assets/97490525/027910d6-379a-45c5-abc5-078dfd211f5d
-
-# References
-| *Original Reference* | *Additional Reference* |
+| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
-| <img width="500px" src="https://github.com/hansen-yi/hw04-stylization/assets/97490525/0f305504-e963-4556-ad6c-223693921357"> | <img width="500px" src="https://github.com/hansen-yi/hw04-stylization/assets/97490525/2ed1904e-875b-4887-bd56-43c6b18791f1"> |
+| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
+### HW Task List:
+1. Picking a Piece of Concept Art
+2. Interesting Shaders
+3. Outlines
+4. Full Screen Post Process Effect
+5. Creating a Scene
+6. Interactivity
+7. Extra Credit
 
-Since my original reference didn't really have much variation in color or shadows, it made it rather difficult to use for this project so I looked into several different sources for additional references. The second reference is from [this video](https://www.youtube.com/watch?v=FUzJJB8wLvQ). The form that the character takes in these videos allows him to do all sorts of things so the animators played around with a lot of different styles when animating him and I tried to take inspiration from these different styles. For example, here is [another video](https://www.youtube.com/watch?v=PG2GLkqeMYM) that I looked at.
-Credit to Toei Animation for all of these references
+---
+# Tasks
 
-# Lighting
-## Additional Light Support
+## 0. Base Project Overview
 
-Having already created a toon shader in Unity before, the first thing I did was add support for additional lights. This was done using a custom function that would detect additional lights in the scene and compute a color based on the additional lights that could be then added on top of the color in the scene.
-| *No additional lights* | *One additional light* | *Two additional lights* |
-|:--:|:--:|:--:|
-|![No Lights](https://github.com/hansen-yi/hw04-stylization/assets/97490525/6008cf8a-381d-46ce-8815-3e0c7c18a883) | ![One Light](https://github.com/hansen-yi/hw04-stylization/assets/97490525/d29adbcf-0bdf-4b9b-98d6-33f833f094b5) | ![Two Lights](https://github.com/hansen-yi/hw04-stylization/assets/97490525/5ce1ceec-eaf6-4362-9c74-fc3d86d1bcf0) |
+After forking the repo, take a moment to watch this brief HW/Base Project Overview which goes over things that you're expected to bring over from the lab, and etc.
+- [See the Project Overview here](https://youtu.be/JmVTmpgSz5U)
 
-I utilized this in my final result to give sort of a glowing effect on my character:
-<p align="center">
- <img src="https://github.com/hansen-yi/hw04-stylization/assets/97490525/77fff9ad-ab39-4d56-8c87-9eb14b982e8d" height="400">
-</p>
+## 1. Picking a Piece of Concept Art
 
-## Specular Light
-Next, I added specular light for each object in the scene. This was done in the shader graph by first accessing the view direction, negating that and reflecting that against the object's normal. The result of this was then dot producted with the direction of the main light and saturated to ensure that the output was still between 0 and 1. Then I created a parameter that could be used to determine how shiny the object would appear. This parameter is then used in a power node to "decrease" the size of the light. Finally, to keep the toon effect of the scene, I rounded the output.
+Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
 
-![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/365beb16-7288-44f3-8de4-7acd9174f135)
-
-Looking at the scene at this angle, you can see this effect on the character (his face and fist) and on rock structures in the background.
-
-![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/3f9e998d-84b5-4ed9-9dc7-d29deb7c9bc5)
-
-# Shadows
-
-Since my reference image didn't have shadows (or not very stylized shadows), I opted to reference the creator of One Piece's shadows from the manga. For many of the darker shadows, the creator just shades it completely in black. However, the shadows on top of characters are pretty stylized. The lines are not perfectly parallel and often several lines are actually made up of multiple lines. The lines intersect and are hand drawn, and seem to be drawn pretty quickly.
-
-|![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/233d421e-839f-4660-931e-1a519f93b4ba) |![IMG_3339](https://github.com/hansen-yi/hw04-stylization/assets/97490525/8128150a-1335-4dad-82f6-e900eb6a03a3) |  ![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/17343e99-84bb-48d4-b575-e889189b9020) | ![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/d39d88a4-0c39-496a-8269-09a3a1491806) | ![image](https://github.com/hansen-yi/hw04-stylization/assets/97490525/47c56b18-15b4-4fea-94a1-8d9a229878d4) |
+| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
 |:--:|:--:|:--:|:--:|:--:|
+| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
 
-Credit to Eiichiro Oda for these images
 
-So I drew my own texture and used https://www.imgonline.com.ua/eng/make-seamless-texture.php to try and make it seamless. The results were not the best but they worked  for the purpose of this project (in addition it added to the imperfect aspect that the original shadows had).
-<p align="center">
- <img src="https://github.com/hansen-yi/hw04-stylization/assets/97490525/5ffb85ff-6c3d-43cc-8dd9-599c50cada78" height="300">
-</p>
+**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
 
-Here is the shadow applied onto the objects into the scene, and it uses the objects UVs to ensure that the shadows wrap correctly on the object.
-<p align = "center">
- <img src="https://github.com/hansen-yi/hw04-stylization/assets/97490525/81ea879a-b599-4be5-a910-9c4a2098d375">
-</p>
+**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
 
-# Special Surface Shaders
-## Vertex Animation
-The first special surface shader that I created was a vertex animation shader. Given specific parameters, the user can control how much of the character oscillates back and forth and how much it wobbles in a different direction. This shader was based on <a href="https://www.youtube.com/watch?v=VQxubpLxEqU&ab_channel=GabrielAguiarProd">this one</a>. However, since I wanted the character to be extending their arm in a sort of punch animation (this is something the character can do because they are made of rubber), I added inputs that would allow me to control the range of y and z values where the object was affected. The vertex animation is done by lerping between the original position and a position with a value added to the y direction (which is the forward direction for this mesh). There is additional "wobble" in the z direction to give it a bit more springiness.
+---
+## 2. Interesting Shaders
 
-![LuffyArmExtend](https://github.com/hansen-yi/hw04-stylization/assets/97490525/b4a6deef-485b-42c8-8540-e864ea801126)
+Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
-## Animated Colors
-The second special surface that I created was an animated color shader. This shader utilized several Lerp nodes to change between several different colors. For the interpolation, a sine function and a Time node were used to ensure a smoother interpolation between all the colors.
+Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
+  * Is it the color palette? How are the different colors blending into each other? Is there any particular texture or pattern you notice?
+  * Are there additional effects such as rim or specular highlights?
+  * Are there multiple lights in the scene?
 
-![LuffyColorChange](https://github.com/hansen-yi/hw04-stylization/assets/97490525/2bfec058-e385-4af2-b90e-15eb366dd340)
+These are all things we want you to think about before diving into your shaders!
 
-The inputs for this shader are slightly different which is why more of his body deforms.
+### To-Do:
+1. **Improved Surface Shader**
+   - Create a surface shader inspired by the surface(s) in your concept art. Use the three tone toon shader you created from the Stylization Lab as a starting point to build a more interesting shader that fulfills all of the following requirements:
+      1. **Multiple Light Support**
+          - Follow the following tutorial to implement multiple light support.
+              - <img width="450" alt="Screenshot 2023-10-26 140845" src="https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/b4c8dfed-b79d-4c2a-b280-41a617d69aaf">
+              - [Link to Complete Additional Light Support Tutorial Video](https://youtu.be/1CJ-ZDSFsMM)
+      2. **Additional Lighting Feature**
+          - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
+      3. **Interesting Shadow**
+          1. Create your own custom shadow texture!
+              - You can use whatever tools you have available! Digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan)-you have complete freedom!
+          2. Make your texture seamless/tesselatable! You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
+          3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
+          4. Now, instead of using screen position, use the default object UVs!
+              - In the 3rd Puzzle of the Lab, the shadow texture was sampled using the Screen Position node. This time, let's use the object's UV coordinates to have the shadows conform to geometry. Hint: To get a consistent looking shadow texture scale across multiple objects, you're going to want some exposed float parameter, "Shadow Scale," that will adjust the tiling of the shadow texture. This will allow for per material control over the tiling of your shadow texture.
+              - <img width="350" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/1ceef0fc-fd9d-4987-80de-0a8b6ba6fe76>
+              - Notice how in this artwork by [Emma Koch](https://www.artstation.com/ekoch), Link's shadow does not remain fixed in screen space as it is drawn via object UV coordinates.
 
-# Post Processing
-## Outlines
-The outlines for this project are post processing outlines. They are rendered using a Full Screen Rendered Feature. The outlines consist of two types, one based on the objects' normals and one based on the objects' depths. The Depth outlines use the Sobel edge detection method, while the Normal outlines use the Robert's Cross edge detection method. Each type of outline uses data from a texture to generate the outlines, the Depth outlines uses Unity's built in depth texture and the Normal outlines use a custom one stored to a Normal Buffer. The Depth normals are modified using noise that has been offset by time. The noise is added to each of the points that the Sobel edge detection method samples to generate the outline resulting in a waving distorted outline that sort of resembles a glow or aura. The color of the outlines was based on my original reference image. Both outlines are combined using a Max node and then used a Blend node to combine with (MainTex of) the original scene.
-| *Depth Outlines* | *Normal Outlines* |
-|:--:|:--:|
-|![Depth Outlines](https://github.com/hansen-yi/hw04-stylization/assets/97490525/b572e789-dff4-4fc0-9a0c-69728c0dbb6f) | ![Normal Outlines](https://github.com/hansen-yi/hw04-stylization/assets/97490525/c741f35e-a0ce-4cf3-b776-c0b90ea011ee) |
+      4. **Accurate Color Palette**
+          - Do your best to replicate the colors/lighting of your concept art!
+3. **Special Surface Shader**
+   - *Let's get creative!* Create a SPECIAL second shader that adds a glow, a highlight or some other special effect that makes the object stand out in some way. This is intended to give you practice riffing on existing shaders. Most games or applications require some kind of highlighting: this could be an effect in a game that draw player focus, or a highlight on hover like you see in a tool. If your concept art doesn't provide a visual example of what highlighting could look like, use your imagination or find another piece of concept art. Duplicate your shader to create a variant with an additional special feature that will make the hero object of your scene stand out. Choose one of the following three options:
+       - **Option 1: Animated colors**
+              -   ![animesher com_gif-hair-colorful-1560031](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/1758825/4ba53d68-5a82-4108-a842-e71abf522cbc)
 
-| *Both Outlines Together* |
-|:--:|
-|![Outlines](https://github.com/hansen-yi/hw04-stylization/assets/97490525/e79a5970-15f3-44e7-b565-98646f300509)|
+          - The above is a simple example of what an animated surface shader might do, eg flash through a bunch of different colors. Using at least two toolbox functions, animate some aspect of the surface shader to create an eye-catching effect. Consider how procedural patterns, the screen space position and noise might contribute.
+          - Useful tips to get started:
+              - Use the Time node in Unity's shader graph to get access to time for animation. Consider using a Floor node on time to explore staggered/stepped interpolation! This can be really helpful for selling the illusion of the animation feeling handdrawn.
+       - **Option 2: Vertex animation**
+          - Similar to the noise cloud assignment, modify your object shader to animate the vertex positions of your object, eg. making an object sway or bob up and down to make it stand out. You should be able to figure out how to do this given the walkthrough so far, but if you need addition help, check out [this tutorial](https://www.youtube.com/watch?v=VQxubpLxEqU&ab_channel=GabrielAguiarProd).
+       - **Option 3: Another Custom Effect Tailored to your Concept Art**
+          - If you'd like to do an alternative effect to Option 1, just make sure that your idea is roughly similar in scope/difficulty. Feel free to make an EdStem post or ask any TA to double check whether your effect would be sufficient.
 
-## Full Screen Shader
-An additional post-processing effect that I added was a lightning effect which was created by passing a UV that was a Lerp between the regular UVs and a noise UV into a Rectangle node. In addition, this UV was modified using a Tiling node and a Fraction node to split the UV into 5 allowing me to generate 5 lightning bolts. Then I repeated this with a Rectangle node with a different width to create an outline for the lightning. Finally, the lightning bolts were then placed on top of the scene using a Blend node.
-![Lightning](https://github.com/hansen-yi/hw04-stylization/assets/97490525/211e998d-c41b-461a-9aeb-942ea06fe280)
+---
+## 3. Outlines
+Make your objects pop by adding outlines to your scene! 
 
-# Interactivity
-Using the space button, the user can switch between 3 separate scenes each set up with their own parameters. This is achieved by creating scripts and attaching them to several objects to allow the Space button to change either the material, property, or parameter of the object or shader. The full screen post processing shader, since it is not attached to any object, has its parameters modified using a script attached to a Global object. The background color is changed with a script attached to the Camera. The appearance of the one point light uses a script to change its intensity. Basically, everything else changes by iterating through an array of preset materials with their parameters manually tuned.
+Specifically, we'll be creating ***Post Process Outlines*** based on Depth and Normal buffers of our scene!
 
-https://github.com/hansen-yi/hw04-stylization/assets/97490525/9544c683-c9bf-4f3b-a731-f5b772e0e70d
+### To-Do:
+1. Render Features! Render Features are awesome, they let us add customizable render passes to any part of the render pipeline. To learn more about them, first, watch the following video which introduces an example usecase of a renderer feature in Unity:
+    - [See here](https://youtu.be/GAh225QNpm0?si=XvKqVsvv9Gy1ufi3)
+2. Next, let's explore the HW base code briely, and specifically, learn more about the "Full Screen Feature" that's included as part of your base project. There's a small part missing from "Full Screen Feature.cs" that's preventing it from applying any type of full screen shader to the screen. Your job is to solve this bug and in the process, learn how to create a Full Screen Shadergraph, and then have it actually affect the game view! Watch the following video to get a deeper break down of the Render Feature's code and some hints on what the solution may be.
+    - [See here for Full Screen Render Feature Debugging Hints/Overview Video](https://youtu.be/Bc9eTlMPdjU)
+4. Using what we've learnt about Render Features/URP as a base, let's now get access to the Depth and Normal Buffers of our scene!
+    - Unity's Universal Render Pipeline actually already provides us with the option to have a depth buffer, and so obtaining a depth buffer is a very simple/trivial process.
+    - This is not the case for a Normal Buffer, and thus, we need a render feature to render out the scene's normals into a render texture. Since the render feature for this has too much syntax specific fluff that's too Unity heavy and not very fun, I've provided a working render feature that renders objects' normals into a render texture in the /Render Features folder, called the "Normal Feature." There is also a shader provided, "Hidden/Normal Copy" or "Normal Copy.shader."
+        - Your task is to add the Normal Feature to the render pipeline, make a material off of the Normal Copy shader and then plug it into the Normal Feature, and finally, connect the render texture called "Normal Buffer" located in the "/Buffers" directory as the destination target for the render feature.
+            - Set the resolution of the Normal Buffer render texture to be equal to your game window resolution.
+    - Watch the following video for clarifications on both of these processes, and also, how to actually access and read the depth and normal buffers once we've created them.
+        - [See here for complete tutorial video on Depth and Normal Buffers](https://youtu.be/giLPZA-xAXk)
 
-| *Scene 1* | *Scene 2* | *Scene 3* |
-|:--:|:--:|:--:|
-|![Lightning](https://github.com/hansen-yi/hw04-stylization/assets/97490525/211e998d-c41b-461a-9aeb-942ea06fe280) | ![Scene 2](https://github.com/hansen-yi/hw04-stylization/assets/97490525/07dff89e-967e-481a-9181-8ff0807d6f4d)  | ![Scene 3](https://github.com/hansen-yi/hw04-stylization/assets/97490525/226a5654-425b-4e47-a238-e1b55a879671) |
+5. Finally, using everything you've learnt about Render Features alongside the fact that we now have proper access to both Depth and Normal Buffers, let's create a Post Process Outline Shader!
+    - We **STRONGLY RECOMMEND** watching at least one of these Incredibly Useful Tutorials before getting started on Outlines:
+        - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
+            - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
+        - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
+            -  [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
+        - [Alexander Ameye](https://ameye.dev/about/)
+            - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
+        - **Important Clarification/Note on the Tutorials:**
+            - You will quickly notice after watching/reading any of these tutorials that many of them use a Render Feature to render out a single DepthNormals Texture that encodes both depth and normal information into a single texture. This optimization saves on performance but results in less accurate depth or normals information and is overall more confusing for a first time experience into Render Features. Thus, for this assignment, we will just be sticking to our approach of having separate Depth and Normal buffers.
+   
+    - Next, we will create a basic Depth and Normal based outline prototype that produces black outlines at areas of large depth and normal difference across the screen.
+            - Explore different kinds of edge detection methods, including Sobel and Robert's Cross filters
+            - Make sure the outline has adjustable parameters, such as width. 
+    - Let's get creative! Modify your outline to be ANIMATED and to have an appearance that resembles the outlines in your concept art / OR, if the outlines in your concept art are too plain, try to make your outline resemble crayon/pencil sketching/etc.
+        - Use your knowledge of toolbox functions to add some wobble, or warping or noise onto the lines that changes over time.
+        - In my example below, you might be able to notice that the internal Normal Buffer based edges actually don't have any warping/animation. I did this intentionally because I wanted the final look to still have some kind of structure. Thus, by doing the depth and normal outlines in separate passes, I'm able to have a variety of animated/non-animated outlines composited together : ) !
+            <p align="center"> <img width="300px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/69b3705b-4e65-4d44-b535-b0fd198d7b6f/>
 
-The second scene is attempt at a little clip from the [second reference's video](https://youtu.be/FUzJJB8wLvQ?si=6wH6Rg8r1JMDCJNF&t=22), and the third scene is an attempt at my original reference.
+7. (OPTIONAL) If you're not satisfied with the look of your outlines and are looking for an extra challenge, after implementing depth/normal based post processing, you may explore non-post process techniques such as inverse hull edge rendering for outer edges to render bolder, more solid looking outlines for a different look.
+    - Check out Alexander Ameye's article on alternative methods of outline rendering in Unity: [See Here](https://ameye.dev/notes/rendering-outlines/)
 
-# Future Improvements
-Some improvement that I definitely would like to do some time in the future are:
-- To improve the third scene so that it is closer to my original reference, I think what it is really missing is the texture of the outlines as they are very distinct in the reference
-- To figure out how to update the normals properly based on vertex deformation that way the Normal outlines will follow the deformed shapes as opposed to remaining still. Attempted [this](https://gamedevbill.com/shader-graph-normal-calculation/) fix, however didn't seem to work.
-- Also, for the normal outlines, figure out how to update the Normal texture based on occlusion so that I can remove objects from the being mapped to the Normal texture but ensuring that the hidden outlines of the object don't show
-   - This would also allow for assigning different color normal outlines to different objects
-- I would also like to relook at the lightning shader and try to adjust how it spawns and the direction that it travels
-- Finally, maybe improve the model as it is not completely accurate
-- Another bonus would be to add more scenes and shaders for different and new effects!
+---
+## 4. Full Screen Post Process Effect
+We're nearing the end! 
+
+### To-Do:
+Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
+* A vingette that darkens the edges of your images with a color or pattern
+* Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
+* A texture to make your image look like it's drawn on paper or some other surface.
+* A blur to make your image look smudged.
+* Fog or clouds that drift over your scene
+* Whatever else you can think of that complements your scene!
+
+***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
+
+---
+## 5. Create a Scene
+Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
+
+Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; If you choose to model your own geometry for this project, be aware of the time-constraint and risk!)
+
+Some example resources for finding 3D assets to populate your scene With:
+1. [SketchFab](https://sketchfab.com/)
+2. [Mixamo](https://www.mixamo.com/#/)
+3. [TurboSquid](https://www.turbosquid.com/)
+
+## 6. Interactivity
+As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
+* Party mode (things speed up, different colorization)
+* Memory mode (different post-processing effects to color you scene differently)
+* Fanart mode (different surface shaders, as if done by a different artist)
+* Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
+
+### To-Do:
+* Create at least one new material to be swapped in using a key press
+* Create and attach a new C# script that listens for a key press and swaps out the material on that key press. 
+Your C# script should look something like this:
+```
+public Material[] materials;
+private MeshRenderer meshRenderer;
+int index;
+
+void Start () {
+          meshRenderer = GetComponent<MeshRenderer>();
+}
+
+void Update () {
+          if (Input.GetKeyDown(KeyCode.Space)){
+                 index = (index + 1) % materials.Count;
+                 SwapToNextMaterial(index);
+          }
+}
+
+void SwapToNextMaterial (int index) {
+          meshRenderer.material = materials[index % materials.Count];
+}
+```
+* Attach the c# script as a component to the object(s) that you want to change on keypress
+* Assign all the relevant materials to the Materials list field so you object knows what to swap between.
  
-# Sources
-Models
-- [Luffy](https://sketchfab.com/3d-models/luffy-9f437d56785b49558482e3f5bb2c299d)
-- [Terrain](https://sketchfab.com/3d-models/mountainous-valley-102726ea9fa0411b994a5ca0c02de823)
-- [Rocky Structure](https://sketchfab.com/3d-models/desert-high-cliff-f50a8315c11c488c8ccaddee814501b0)
-- [Punch Pose and Animation](https://www.mixamo.com/)
+---
+## 7. Extra Credit
+Explore! What else can you do to polish your scene?
+  
+- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
+    - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
+- Add an interesting terrain with grass and/or other interesting features
+- Implement a Custom Skybox alongside a day-night cycle lighting script that changes the main directional light's colors and direction over time.
+- Add water puddles with screenspace reflections!
+- Any other similar level of extra spice to your scene : ) (Evaluated on a case-by-case basis by TAs/Rachel/Adam)
 
-Tutorials
-- [Logan Cho Tutorials](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
-- [Specular Light Explanation - Freya Holmér](https://www.youtube.com/watch?v=JmfQLHMw7N8)
-- [Vertex Animation - Gabriel Aguiar Prod.](https://www.youtube.com/watch?v=VQxubpLxEqU&ab_channel=GabrielAguiarProd)
-- [Sobel Edge Detection - NedMakesGames](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
-- [Robert's Cross Outlines - Robin Seibold](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
-- [Lightning Effect - Gabriel Aguiar Prod.](https://www.youtube.com/watch?v=40m_HUENh3E)
-- [Updating Parameters in Script - Dapper Dino](https://www.youtube.com/watch?v=IQ7qnMv01Vs)
+## Submission
+1. Video of a turnaround of your scene
+2. A comprehensive readme doc that outlines all of the different components you accomplished throughout the homework. 
+3. All your source files, submitted as a PR against this repository.
+
+## Resources:
+
+1. Link to all my videos:
+    - [Playlist link](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
+2. [Lab Video](https://youtu.be/jc5MLgzJong?si=JycYxROACJk8KpM4)
+3. Very Helpful Creators/Videos from the internet
+    - [Cyanilux](https://www.cyanilux.com/)
+        - [Article on Depth in Unity | How depth buffers work!](https://www.cyanilux.com/tutorials/depth/) 
+    - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
+        - [Toon Shader Lighting Tutorial](https://www.youtube.com/watch?v=GQyCPaThQnA&ab_channel=NedMakesGames)
+        - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
+    - [MinionsArt](https://www.youtube.com/@MinionsArt)
+        - [Toon Shader Tutorial](https://www.youtube.com/watch?v=FIP6I1x6lMA&ab_channel=MinionsArt)
+    - [Brackeys](https://www.youtube.com/@Brackeys)
+        - [Intro to Unity Shader Graph](https://www.youtube.com/watch?v=Ar9eIn4z6XE&ab_channel=Brackeys)
+    - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
+        - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
+    - [Alexander Ameye](https://ameye.dev/about/)
+        - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
