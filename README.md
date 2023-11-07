@@ -19,7 +19,7 @@ Since the additional lights themselves are quantized, not their outputs, I could
 I implemented both Blinn and Phong reflections by following [this video](https://www.youtube.com/watch?v=B56z6st6U8E). By using a Round node, I could create a cell shading-like look.
 
 # Custom Textures
-Using Photoshop, I created a few textures that I incorporated throughout all materials in order to emulate the look of the concept art.
+Using Photoshop, I created a few textures that I incorporated throughout all materials in order to emulate the look of the concept art. The user can control the strength (opacity) and scale of the textures.
 
 ![textures](https://github.com/sherryli02/hw04-stylization/assets/97941858/f1445554-d786-4c61-a63f-cc7b00144d21)
 
