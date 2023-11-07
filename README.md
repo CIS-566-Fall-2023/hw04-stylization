@@ -56,4 +56,4 @@ displayed in the final scene demo.
 
 ## Scene Demo
 
-<img src="img/readme-final-demo-0.gif" width="500">
+<video src="img/readme-vid-ppt.mp4" controls></video>
