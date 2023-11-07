@@ -1,11 +1,13 @@
-# HW 4: *3D Stylization*
+# Stylisation Project: Replicating My Painterly Art Style
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
+This project was made for an assignment of creating stylised shaders for my procedural graphics class. I used this opportunity to attempt to replicate my arguably distinct style of artwork with shaders and custom-made 3D models. Every asset that is displayed in this README.md was created by myself.
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
+| ![](Pictures/MushroomGuy.png)  | ![](aranaraWatercolour.png) |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
+Note: I am currently modelling an asset for the mushroom guy from my concept art, which I will then be updating on my README.md once it has been finished.
+
 ### HW Task List:
 1. Picking a Piece of Concept Art
 2. Interesting Shaders
