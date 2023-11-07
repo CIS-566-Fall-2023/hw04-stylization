@@ -22,11 +22,12 @@ Note: I am currently modelling an asset for the mushroom guy from my concept art
 
 The concept art that I am using as inspiration for my project is none other than my own artwork. Long has it been my dream to learn how to convert my 2D style into 3D artwork, and finally, I have the prime opportunity to figure out a medium just on doing so. As my art style has been developing for many years in the making, I will be pointing out a few key featuers of my artwork that defines my signature pieces. Below, I will also be attaching examples of such pieces that highlight the pinnacle of my style.
 
-|![](Pictures/glow.PNG)|![](Pictures/particles.PNG)|![](Pictures/painterlyBrushstrokes.PNG)|![](blue.PNG)|
+|![](Pictures/glow.PNG)|![](Pictures/particles.PNG)|![](Pictures/painterlyBrushstrokes.PNG)|![](Pictures/blue.PNG)|
 |:--:|:--:|:--:|:--:|
 | Glow | Particles | Painterly Brushstrokes | Blue |
 
 Most of my art is catalogued on my Instagram, @sagescherrytree. Here is the link for my Instagram: *https://www.instagram.com/sagescherrytree/*
+
 ---
 ## 2. Interesting Shaders
 
