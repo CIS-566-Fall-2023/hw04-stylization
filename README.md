@@ -2,8 +2,12 @@
 
 by Sherry Li
 
+https://github.com/sherryli02/hw04-stylization/assets/97941858/89d5e23b-3cd9-400c-8c92-34988ca1568c
+https://github.com/sherryli02/hw04-stylization/assets/97941858/48014e21-6a06-4877-8470-f848be8426f3
 
-Original concept by Alariko
+Original concept by Alariko:
+![F9btwfLWAAAd8vy](https://github.com/sherryli02/hw04-stylization/assets/97941858/a168adbe-84f5-4a80-99cb-f28ba333931d)
+
 
 # Lights
 I implemented multiple light support by following Logan's tutorial. For the primary light, I  implemented interpolation between the color bands by using smoothstep and lerp; the user can control the level of interpolation by adjusting a “Smoothness” value. 
@@ -15,6 +19,7 @@ I implemented both Blinn and Phong reflections by following [this video](https:/
 
 # Custom Textures
 Using Photoshop, I created a few textures that I incorporated throughout all materials in order to emulate the look of the concept art.
+![textures](https://github.com/sherryli02/hw04-stylization/assets/97941858/f1445554-d786-4c61-a63f-cc7b00144d21)
 
 # Leaf Shader
 For the leaves of the tree, I used a different texture from the other materials and played around with shadow attenuation to get a different look. Using [this link](https://www.shadertoy.com/view/DsK3W1) for a Perlin noise implementation, I added static noise to their vertex positions to approximate the look of leaves, and time-based noise to give off the impression of the leaves swaying in the wind.
