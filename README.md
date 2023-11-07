@@ -50,6 +50,7 @@ World-Aligned Shadow Texture Mapping
 ![ezgif com-video-to-gif (6)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/4b7869aa-cbaf-4ae3-aa38-2d8fdaf18862)
 
 ## Special Surface Shader: Custom SDF & Custom Normal-Based Face Rendering
+![SDF](https://github.com/xcupsilon/hw04-stylization/assets/50472308/6a2db61b-2ce2-454a-90be-6666fff60883)
 Old:
 
 ![ezgif com-video-to-gif (7)](https://github.com/xcupsilon/hw04-stylization/assets/50472308/e4c5c8bf-3053-4987-8f20-232a815ffaa8)
