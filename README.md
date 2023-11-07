@@ -3,7 +3,7 @@
 ## Project Overview:
 This project was made for an assignment of creating stylised shaders for my procedural graphics class. I used this opportunity to attempt to replicate my arguably distinct style of artwork with shaders and custom-made 3D models. Every asset that is displayed in this README.md was created by myself.
 
-| ![](Pictures/MushroomGuy.png)  | ![](Pictures/aranaraWatercolour.png) |
+| ![](Pictures/MushroomGuy.PNG)  | ![](Pictures/aranaraWatercolour.png) |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 
