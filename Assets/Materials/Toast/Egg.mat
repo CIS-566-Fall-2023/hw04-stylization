@@ -124,6 +124,7 @@ Material:
     - _ReceiveShadows: 1
     - _SHADOWS_SOFT: 1
     - _Shadow_Texture_Blend: 0.07
+    - _Shadow_Texture_Shift_Speed: 5
     - _Shadow_Threshold: 0.01
     - _Shadow_UV_Scale: 2.81
     - _Smoothness: 0.5
@@ -134,6 +135,9 @@ Material:
     - _Surface: 0
     - _Use_UV_for_Shadows: 0
     - _WorkflowMode: 1
+    - _Y_Bounce_Amplitude: 0
+    - _Y_Bounce_Speed: 1
+    - _Y_Bounce_Stops: 5
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
