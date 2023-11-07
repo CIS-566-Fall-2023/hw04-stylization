@@ -1,0 +1,3753 @@
+#line 1 "DumpShaderDefinesAsCommentedCode"
+// #define __SHADER_TARGET_MAJOR 6
+
+#line 2 "DumpShaderDefinesAsCommentedCode"
+// #define __SHADER_TARGET_MINOR 6
+
+#line 3 "DumpShaderDefinesAsCommentedCode"
+// #define ALLOW_STATIC_LIGHTING 1
+
+#line 4 "DumpShaderDefinesAsCommentedCode"
+// #define AMPLIFICATIONSHADER 0
+
+#line 5 "DumpShaderDefinesAsCommentedCode"
+// #define CLEAR_COAT_BOTTOM_NORMAL 0
+
+#line 6 "DumpShaderDefinesAsCommentedCode"
+// #define COMPILE_SHADERS_FOR_DEVELOPMENT 1
+
+#line 7 "DumpShaderDefinesAsCommentedCode"
+// #define COMPILER_DEFINE #define
+
+#line 8 "DumpShaderDefinesAsCommentedCode"
+// #define COMPILER_DXC 1
+
+#line 9 "DumpShaderDefinesAsCommentedCode"
+// #define COMPUTESHADER 0
+
+#line 10 "DumpShaderDefinesAsCommentedCode"
+// #define DISTORTION_ACCOUNT_FOR_COVERAGE 0
+
+#line 11 "DumpShaderDefinesAsCommentedCode"
+// #define DO_CHECK 1
+
+#line 12 "DumpShaderDefinesAsCommentedCode"
+// #define DO_GUARD_SLOW 0
+
+#line 13 "DumpShaderDefinesAsCommentedCode"
+// #define DUAL_SOURCE_COLOR_BLENDING_ENABLED 0
+
+#line 14 "DumpShaderDefinesAsCommentedCode"
+// #define DXT5_NORMALMAPS 0
+
+#line 15 "DumpShaderDefinesAsCommentedCode"
+// #define EARLY_Z_PASS_ONLY_MATERIAL_MASKING 0
+
+#line 16 "DumpShaderDefinesAsCommentedCode"
+// #define FORWARD_SHADING 0
+
+#line 17 "DumpShaderDefinesAsCommentedCode"
+// #define GBUFFER_HAS_DIFFUSE_SAMPLE_OCCLUSION 0
+
+#line 18 "DumpShaderDefinesAsCommentedCode"
+// #define GBUFFER_HAS_VELOCITY 0
+
+#line 19 "DumpShaderDefinesAsCommentedCode"
+// #define GBUFFER_REFACTOR 1
+
+#line 20 "DumpShaderDefinesAsCommentedCode"
+// #define GENERATE_SPHERICAL_PARTICLE_NORMALS 0
+
+#line 21 "DumpShaderDefinesAsCommentedCode"
+// #define GEOMETRYSHADER 0
+
+#line 22 "DumpShaderDefinesAsCommentedCode"
+// #define HAS_INVERTED_Z_BUFFER 1
+
+#line 23 "DumpShaderDefinesAsCommentedCode"
+// #define INSTANCED_STEREO 0
+
+#line 24 "DumpShaderDefinesAsCommentedCode"
+// #define INTERPOLATE_VERTEX_COLOR 0
+
+#line 25 "DumpShaderDefinesAsCommentedCode"
+// #define IRIS_NORMAL 0
+
+#line 26 "DumpShaderDefinesAsCommentedCode"
+// #define IS_MATERIAL_SHADER 1
+
+#line 27 "DumpShaderDefinesAsCommentedCode"
+// #define LEGACY_MATERIAL_ENERGYCONSERVATION 0
+
+#line 28 "DumpShaderDefinesAsCommentedCode"
+// #define MANUAL_STENCIL_TEST 0
+
+#line 29 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_ALLOW_NEGATIVE_EMISSIVECOLOR 0
+
+#line 30 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_COMPUTE_FOG_PER_PIXEL 0
+
+#line 31 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_CONTACT_SHADOWS 0
+
+#line 32 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_DECAL_READ_MASK 7
+
+#line 33 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_DITHER_OPACITY_MASK 0
+
+#line 34 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_DOMAIN_POSTPROCESS 1
+
+#line 35 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_ENABLE_TRANSLUCENCY_CLOUD_FOGGING 0
+
+#line 36 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_ENABLE_TRANSLUCENCY_FOGGING 1
+
+#line 37 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_FORWARD_BLENDS_SKYLIGHT_CUBEMAPS 0
+
+#line 38 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_FULLY_ROUGH 0
+
+#line 39 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_HQ_FORWARD_REFLECTION_CAPTURES 0
+
+#line 40 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_IS_SKY 0
+
+#line 41 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_IS_STRATA 0
+
+#line 42 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_ISTHINSURFACE 0
+
+#line 43 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_NONMETAL 1
+
+#line 44 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_NORMAL_CURVATURE_TO_ROUGHNESS 0
+
+#line 45 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_OUTPUT_OPACITY_AS_ALPHA 0
+
+#line 46 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_PATH_TRACING_BUFFER_READ 0
+
+#line 47 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_PLANAR_FORWARD_REFLECTIONS 0
+
+#line 48 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_ROUGHDIFFUSE 0
+
+#line 49 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_SHADINGMODEL_UNLIT 1
+
+#line 50 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_SINGLE_SHADINGMODEL 1
+
+#line 51 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_SKY_ATMOSPHERE 0
+
+#line 52 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_SSR 0
+
+#line 53 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_TANGENTSPACENORMAL 1
+
+#line 54 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_TWOSIDED 0
+
+#line 55 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USE_ALPHA_TO_COVERAGE 0
+
+#line 56 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USE_LM_DIRECTIONALITY 1
+
+#line 57 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USE_PREINTEGRATED_GF 0
+
+#line 58 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USES_ANISOTROPY 0
+
+#line 59 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USES_DECAL_LOOKUP 0
+
+#line 60 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_USES_SCENE_COLOR_COPY 0
+
+#line 61 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIAL_VIRTUALTEXTURE_FEEDBACK 0
+
+#line 62 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIALBLENDING_SOLID 1
+
+#line 63 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIALDECALRESPONSEMASK 7
+
+#line 64 "DumpShaderDefinesAsCommentedCode"
+// #define MATERIALDOMAIN_POSTPROCESS 1
+
+#line 65 "DumpShaderDefinesAsCommentedCode"
+// #define MESHSHADER 0
+
+#line 66 "DumpShaderDefinesAsCommentedCode"
+// #define MOBILE_HIGH_QUALITY_BRDF 0
+
+#line 67 "DumpShaderDefinesAsCommentedCode"
+// #define MOBILE_MULTI_VIEW 0
+
+#line 68 "DumpShaderDefinesAsCommentedCode"
+// #define MULTI_VIEW 0
+
+#line 69 "DumpShaderDefinesAsCommentedCode"
+// #define NEEDS_INSTANCE_LOCAL_TO_WORLD_PS 0
+
+#line 70 "DumpShaderDefinesAsCommentedCode"
+// #define NEEDS_INSTANCE_WORLD_TO_LOCAL_PS 0
+
+#line 71 "DumpShaderDefinesAsCommentedCode"
+// #define NEEDS_PARTICLE_COLOR 0
+
+#line 72 "DumpShaderDefinesAsCommentedCode"
+// #define NEEDS_PARTICLE_LOCAL_TO_WORLD 0
+
+#line 73 "DumpShaderDefinesAsCommentedCode"
+// #define NEEDS_PARTICLE_WORLD_TO_LOCAL 0
+
+#line 74 "DumpShaderDefinesAsCommentedCode"
+// #define NUM_VIRTUALTEXTURE_SAMPLES 0
+
+#line 75 "DumpShaderDefinesAsCommentedCode"
+// #define PIXELSHADER 1
+
+#line 76 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_ALLOW_SCENE_DATA_COMPRESSED_TRANSFORMS 1
+
+#line 77 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_BINDLESS 0
+
+#line 78 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_BUFFER_LOAD_TYPE_CONVERSION 1
+
+#line 79 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_CLIP_DISTANCE 1
+
+#line 80 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_DISTANCE_FIELDS 1
+
+#line 81 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_MESH_SHADERS_TIER0 1
+
+#line 82 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_MESH_SHADERS_TIER1 1
+
+#line 83 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_PER_PIXEL_DBUFFER_MASK 0
+
+#line 84 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_RENDERTARGET_WRITE_MASK 0
+
+#line 85 "DumpShaderDefinesAsCommentedCode"
+// #define PLATFORM_SUPPORTS_UB_STRUCT 1
+
+#line 86 "DumpShaderDefinesAsCommentedCode"
+// #define POST_PROCESS_ALPHA 0
+
+#line 87 "DumpShaderDefinesAsCommentedCode"
+// #define POST_PROCESS_MATERIAL 1
+
+#line 88 "DumpShaderDefinesAsCommentedCode"
+// #define POST_PROCESS_MATERIAL_BEFORE_TONEMAP 1
+
+#line 89 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_ALLOW_GLOBAL_CLIP_PLANE 0
+
+#line 90 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_MOBILE_DISABLE_VERTEX_FOG 1
+
+#line 91 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_OIT 0
+
+#line 92 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_STRATA_BACKCOMPATIBILITY 0
+
+#line 93 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_SUPPORT_SKY_ATMOSPHERE 1
+
+#line 94 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_SUPPORT_SKY_ATMOSPHERE_AFFECTS_HEIGHFOG 1
+
+#line 95 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_SUPPORTS_LUMEN 1
+
+#line 96 "DumpShaderDefinesAsCommentedCode"
+// #define PROJECT_VERTEX_FOGGING_FOR_OPAQUE 0
+
+#line 97 "DumpShaderDefinesAsCommentedCode"
+// #define RAYCALLABLESHADER 0
+
+#line 98 "DumpShaderDefinesAsCommentedCode"
+// #define RAYGENSHADER 0
+
+#line 99 "DumpShaderDefinesAsCommentedCode"
+// #define RAYHITGROUPSHADER 0
+
+#line 100 "DumpShaderDefinesAsCommentedCode"
+// #define RAYMISSSHADER 0
+
+#line 101 "DumpShaderDefinesAsCommentedCode"
+// #define REFRACTION_ROOT_NODE_OVERRIDES_DEFAULT 0
+
+#line 102 "DumpShaderDefinesAsCommentedCode"
+// #define REFRACTION_USE_NONE 1
+
+#line 103 "DumpShaderDefinesAsCommentedCode"
+// #define SELECTIVE_BASEPASS_OUTPUTS 0
+
+#line 104 "DumpShaderDefinesAsCommentedCode"
+// #define SHADING_PATH_DEFERRED 1
+
+#line 105 "DumpShaderDefinesAsCommentedCode"
+// #define SM6_PROFILE 1
+
+#line 106 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_ADVANCED_DEBUG_ENABLED 0
+
+#line 107 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_DEFERRED_SHADING 1
+
+#line 108 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_ENABLED 0
+
+#line 109 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_INLINE_SHADING 1
+
+#line 110 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_OPAQUE_ROUGH_REFRACTION_ENABLED 0
+
+#line 111 "DumpShaderDefinesAsCommentedCode"
+// #define STRATA_PREMULTIPLIED_ALPHA_OPACITY_OVERRIDEN 0
+
+#line 112 "DumpShaderDefinesAsCommentedCode"
+// #define SUPPORT_CLOUD_SHADOW_ON_FORWARD_LIT_TRANSLUCENT 0
+
+#line 113 "DumpShaderDefinesAsCommentedCode"
+// #define SUPPORT_CLOUD_SHADOW_ON_SINGLE_LAYER_WATER 0
+
+#line 114 "DumpShaderDefinesAsCommentedCode"
+// #define SUPPORT_RECTLIGHT_ON_FORWARD_LIT_TRANSLUCENT 0
+
+#line 115 "DumpShaderDefinesAsCommentedCode"
+// #define SUPPORT_VSM_FOWARD_QUALITY 0
+
+#line 116 "DumpShaderDefinesAsCommentedCode"
+// #define TEXTURE_SAMPLE_DEBUG 0
+
+#line 117 "DumpShaderDefinesAsCommentedCode"
+// #define TRANSLUCENT_SHADOW_WITH_MASKED_OPACITY 0
+
+#line 118 "DumpShaderDefinesAsCommentedCode"
+// #define TRANSLUCENT_WRITING_FRONT_LAYER_TRANSPARENCY 0
+
+#line 119 "DumpShaderDefinesAsCommentedCode"
+// #define TRANSLUCENT_WRITING_VELOCITY 0
+
+#line 120 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE 2097152.00f
+
+#line 121 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE_FMOD_2PI 0.673652053f
+
+#line 122 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE_FMOD_PI 0.673652053f
+
+#line 123 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE_RCP 4.76837158e-07f
+
+#line 124 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE_RSQRT 0.000690533954f
+
+#line 125 "DumpShaderDefinesAsCommentedCode"
+// #define UE_LWC_RENDER_TILE_SIZE_SQRT 1448.15466f
+
+#line 126 "DumpShaderDefinesAsCommentedCode"
+// #define USE_DBUFFER 1
+
+#line 127 "DumpShaderDefinesAsCommentedCode"
+// #define USE_DITHERED_LOD_TRANSITION_FROM_MATERIAL 0
+
+#line 128 "DumpShaderDefinesAsCommentedCode"
+// #define USE_STENCIL_LOD_DITHER_DEFAULT 0
+
+#line 129 "DumpShaderDefinesAsCommentedCode"
+// #define USES_DISPLACEMENT 0
+
+#line 130 "DumpShaderDefinesAsCommentedCode"
+// #define USES_DISTORTION 0
+
+#line 131 "DumpShaderDefinesAsCommentedCode"
+// #define USES_EMISSIVE_COLOR 1
+
+#line 132 "DumpShaderDefinesAsCommentedCode"
+// #define USES_PER_INSTANCE_CUSTOM_DATA 0
+
+#line 133 "DumpShaderDefinesAsCommentedCode"
+// #define USES_PER_INSTANCE_RANDOM 0
+
+#line 134 "DumpShaderDefinesAsCommentedCode"
+// #define USES_TRANSFORM_VECTOR 0
+
+#line 135 "DumpShaderDefinesAsCommentedCode"
+// #define USES_VERTEX_INTERPOLATOR 0
+
+#line 136 "DumpShaderDefinesAsCommentedCode"
+// #define USES_WORLD_POSITION_OFFSET 0
+
+#line 137 "DumpShaderDefinesAsCommentedCode"
+// #define VELOCITY_ENCODE_DEPTH 1
+
+#line 138 "DumpShaderDefinesAsCommentedCode"
+// #define VERTEXSHADER 0
+
+#line 139 "DumpShaderDefinesAsCommentedCode"
+// #define VIRTUAL_TEXTURE_ANISOTROPIC_FILTERING 0
+
+#line 140 "DumpShaderDefinesAsCommentedCode"
+// #define WANT_PIXEL_DEPTH_OFFSET 0
+
+#line 141 "DumpShaderDefinesAsCommentedCode"
+// #define WORKING_COLOR_SPACE_IS_SRGB 1
+
+#line 5 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCScalar
+{
+	float Tile;
+	float Offset;
+};
+
+#line 11 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCVector2
+{
+	float2 Tile;
+	float2 Offset;
+};
+
+#line 17 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCVector3
+{
+	float3 Tile;
+	float3 Offset;
+};
+
+#line 23 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCVector4
+{
+	float4 Tile;
+	float4 Offset;
+};
+
+#line 58 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCMatrix
+{
+	float4x4 M;
+	float3 Tile; 
+};
+
+#line 65 "/Engine/Private/LargeWorldCoordinates.ush"
+struct FLWCInverseMatrix
+{
+	float4x4 M;
+	float3 Tile; 
+	int Dummy; 
+};
+
+#line 103 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCScalar MakeLWCScalar(float Tile, float Offset)
+{
+	FLWCScalar Result;
+	 ( Result ).Tile = ( Tile );
+	Result.Offset = Offset;
+	return Result;
+}
+
+#line 111 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCVector2 MakeLWCVector2(float2 Tile, float2 Offset)
+{
+	FLWCVector2 Result;
+	 ( Result ).Tile = ( Tile );
+	Result.Offset = Offset;
+	return Result;
+}
+
+#line 119 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCVector3 MakeLWCVector3(float3 Tile, float3 Offset)
+{
+	FLWCVector3 Result;
+	 ( Result ).Tile = ( Tile );
+	Result.Offset = Offset;
+	return Result;
+}
+
+#line 127 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCVector4 MakeLWCVector4(float4 Tile, float4 Offset)
+{
+	FLWCVector4 Result;
+	 ( Result ).Tile = ( Tile );
+	Result.Offset = Offset;
+	return Result;
+}
+
+#line 135 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCVector4 MakeLWCVector4(float3 Tile, float4 Offset)
+{
+	return MakeLWCVector4(float4(Tile, 0), Offset);
+}
+
+#line 140 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCVector4 MakeLWCVector4(FLWCVector3 XYZ, float W)
+{
+	return MakeLWCVector4( (( XYZ ).Tile), float4(XYZ.Offset, W));
+}
+
+#line 161 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCMatrix MakeLWCMatrix(float3 Tile, float4x4 InMatrix)
+{
+	FLWCMatrix Result;
+	 ( Result ).Tile = ( Tile );
+	Result.M = InMatrix;
+	return Result;
+}
+
+#line 177 "/Engine/Private/LargeWorldCoordinates.ush"
+FLWCInverseMatrix MakeLWCInverseMatrix(float3 Tile, float4x4 InMatrix)
+{
+	FLWCInverseMatrix Result;
+	 ( Result ).Tile = ( -Tile );
+	Result.M = InMatrix;
+	Result.Dummy = 0;
+	return Result;
+}
+
+#line 56 "/Engine/Private/LWCOperations.ush"
+FLWCScalar LWCSubtract(FLWCScalar Lhs, FLWCScalar Rhs) { return MakeLWCScalar( (( Lhs ).Tile) -  (( Rhs ).Tile), Lhs.Offset - Rhs.Offset); }
+
+#line 57 "/Engine/Private/LWCOperations.ush"
+FLWCScalar LWCSubtract(float Lhs, FLWCScalar Rhs) { return MakeLWCScalar(- (( Rhs ).Tile), Lhs - Rhs.Offset); }
+
+#line 58 "/Engine/Private/LWCOperations.ush"
+FLWCScalar LWCSubtract(FLWCScalar Lhs, float Rhs) { return MakeLWCScalar( (( Lhs ).Tile), Lhs.Offset - Rhs); }
+
+#line 56 "/Engine/Private/LWCOperations.ush"
+FLWCVector2 LWCSubtract(FLWCVector2 Lhs, FLWCVector2 Rhs) { return MakeLWCVector2( (( Lhs ).Tile) -  (( Rhs ).Tile), Lhs.Offset - Rhs.Offset); }
+
+#line 57 "/Engine/Private/LWCOperations.ush"
+FLWCVector2 LWCSubtract(float2 Lhs, FLWCVector2 Rhs) { return MakeLWCVector2(- (( Rhs ).Tile), Lhs - Rhs.Offset); }
+
+#line 58 "/Engine/Private/LWCOperations.ush"
+FLWCVector2 LWCSubtract(FLWCVector2 Lhs, float2 Rhs) { return MakeLWCVector2( (( Lhs ).Tile), Lhs.Offset - Rhs); }
+
+#line 56 "/Engine/Private/LWCOperations.ush"
+FLWCVector3 LWCSubtract(FLWCVector3 Lhs, FLWCVector3 Rhs) { return MakeLWCVector3( (( Lhs ).Tile) -  (( Rhs ).Tile), Lhs.Offset - Rhs.Offset); }
+
+#line 57 "/Engine/Private/LWCOperations.ush"
+FLWCVector3 LWCSubtract(float3 Lhs, FLWCVector3 Rhs) { return MakeLWCVector3(- (( Rhs ).Tile), Lhs - Rhs.Offset); }
+
+#line 58 "/Engine/Private/LWCOperations.ush"
+FLWCVector3 LWCSubtract(FLWCVector3 Lhs, float3 Rhs) { return MakeLWCVector3( (( Lhs ).Tile), Lhs.Offset - Rhs); }
+
+#line 56 "/Engine/Private/LWCOperations.ush"
+FLWCVector4 LWCSubtract(FLWCVector4 Lhs, FLWCVector4 Rhs) { return MakeLWCVector4( (( Lhs ).Tile) -  (( Rhs ).Tile), Lhs.Offset - Rhs.Offset); }
+
+#line 57 "/Engine/Private/LWCOperations.ush"
+FLWCVector4 LWCSubtract(float4 Lhs, FLWCVector4 Rhs) { return MakeLWCVector4(- (( Rhs ).Tile), Lhs - Rhs.Offset); }
+
+#line 58 "/Engine/Private/LWCOperations.ush"
+FLWCVector4 LWCSubtract(FLWCVector4 Lhs, float4 Rhs) { return MakeLWCVector4( (( Lhs ).Tile), Lhs.Offset - Rhs); }
+
+#line 3 "/Engine/Generated/UniformBuffers/View.ush"
+cbuffer  UniformBufferConstants_View 
+{
+	 float4x4  View_TranslatedWorldToClip;
+	 float4x4  View_RelativeWorldToClip;
+	 float4x4  View_ClipToRelativeWorld;
+	 float4x4  View_TranslatedWorldToView;
+	 float4x4  View_ViewToTranslatedWorld;
+	 float4x4  View_TranslatedWorldToCameraView;
+	 float4x4  View_CameraViewToTranslatedWorld;
+	 float4x4  View_ViewToClip;
+	 float4x4  View_ViewToClipNoAA;
+	 float4x4  View_ClipToView;
+	 float4x4  View_ClipToTranslatedWorld;
+	 float4x4  View_SVPositionToTranslatedWorld;
+	 float4x4  View_ScreenToRelativeWorld;
+	 float4x4  View_ScreenToTranslatedWorld;
+	 float4x4  View_MobileMultiviewShadowTransform;
+	 float3  View_ViewTilePosition;
+	 float  PrePadding_View_972;
+	 float3  View_MatrixTilePosition;
+	 float  PrePadding_View_988;
+	 float3  View_ViewForward;
+	 float  PrePadding_View_1004;
+	 float3  View_ViewUp;
+	 float  PrePadding_View_1020;
+	 float3  View_ViewRight;
+	 float  PrePadding_View_1036;
+	 float3  View_HMDViewNoRollUp;
+	 float  PrePadding_View_1052;
+	 float3  View_HMDViewNoRollRight;
+	 float  PrePadding_View_1068;
+	 float4  View_InvDeviceZToWorldZTransform;
+	 float4  View_ScreenPositionScaleBias;
+	 float3  View_RelativeWorldCameraOrigin;
+	 float  PrePadding_View_1116;
+	 float3  View_TranslatedWorldCameraOrigin;
+	 float  PrePadding_View_1132;
+	 float3  View_RelativeWorldViewOrigin;
+	 float  PrePadding_View_1148;
+	 float3  View_RelativePreViewTranslation;
+	 float  PrePadding_View_1164;
+	 float4x4  View_PrevViewToClip;
+	 float4x4  View_PrevClipToView;
+	 float4x4  View_PrevTranslatedWorldToClip;
+	 float4x4  View_PrevTranslatedWorldToView;
+	 float4x4  View_PrevViewToTranslatedWorld;
+	 float4x4  View_PrevTranslatedWorldToCameraView;
+	 float4x4  View_PrevCameraViewToTranslatedWorld;
+	 float3  View_PrevTranslatedWorldCameraOrigin;
+	 float  PrePadding_View_1628;
+	 float3  View_PrevRelativeWorldCameraOrigin;
+	 float  PrePadding_View_1644;
+	 float3  View_PrevRelativeWorldViewOrigin;
+	 float  PrePadding_View_1660;
+	 float3  View_RelativePrevPreViewTranslation;
+	 float  PrePadding_View_1676;
+	 float4x4  View_PrevClipToRelativeWorld;
+	 float4x4  View_PrevScreenToTranslatedWorld;
+	 float4x4  View_ClipToPrevClip;
+	 float4x4  View_ClipToPrevClipWithAA;
+	 float4  View_TemporalAAJitter;
+	 float4  View_GlobalClippingPlane;
+	 float2  View_FieldOfViewWideAngles;
+	 float2  View_PrevFieldOfViewWideAngles;
+	 float4  View_ViewRectMin;
+	 float4  View_ViewSizeAndInvSize;
+	 uint4  View_ViewRectMinAndSize;
+	 float4  View_LightProbeSizeRatioAndInvSizeRatio;
+	 float4  View_BufferSizeAndInvSize;
+	 float4  View_BufferBilinearUVMinMax;
+	 float4  View_ScreenToViewSpace;
+	 float2  View_BufferToSceneTextureScale;
+	 float2  View_ResolutionFractionAndInv;
+	 int  View_NumSceneColorMSAASamples;
+	 float  View_ProjectionDepthThicknessScale;
+	 float  View_PreExposure;
+	 float  View_OneOverPreExposure;
+	 float4  View_DiffuseOverrideParameter;
+	 float4  View_SpecularOverrideParameter;
+	 float4  View_NormalOverrideParameter;
+	 float2  View_RoughnessOverrideParameter;
+	 float  View_PrevFrameGameTime;
+	 float  View_PrevFrameRealTime;
+	 float  View_OutOfBoundsMask;
+	 float  PrePadding_View_2196;
+	 float  PrePadding_View_2200;
+	 float  PrePadding_View_2204;
+	 float3  View_WorldCameraMovementSinceLastFrame;
+	 float  View_CullingSign;
+	 float  View_NearPlane;
+	 float  View_GameTime;
+	 float  View_RealTime;
+	 float  View_DeltaTime;
+	 float  View_MaterialTextureMipBias;
+	 float  View_MaterialTextureDerivativeMultiply;
+	 uint  View_Random;
+	 uint  View_FrameNumber;
+	 uint  View_FrameCounter;
+	 uint  View_StateFrameIndexMod8;
+	 uint  View_StateFrameIndex;
+	 uint  View_DebugViewModeMask;
+	 uint  View_WorldIsPaused;
+	 float  View_CameraCut;
+	 float  View_UnlitViewmodeMask;
+	 float  PrePadding_View_2284;
+	 float4  View_DirectionalLightColor;
+	 float3  View_DirectionalLightDirection;
+	 float  PrePadding_View_2316;
+	 float4  View_TranslucencyLightingVolumeMin[2];
+	 float4  View_TranslucencyLightingVolumeInvSize[2];
+	 float4  View_TemporalAAParams;
+	 float4  View_CircleDOFParams;
+	 float  View_DepthOfFieldSensorWidth;
+	 float  View_DepthOfFieldFocalDistance;
+	 float  View_DepthOfFieldScale;
+	 float  View_DepthOfFieldFocalLength;
+	 float  View_DepthOfFieldFocalRegion;
+	 float  View_DepthOfFieldNearTransitionRegion;
+	 float  View_DepthOfFieldFarTransitionRegion;
+	 float  View_MotionBlurNormalizedToPixel;
+	 float  View_GeneralPurposeTweak;
+	 float  View_GeneralPurposeTweak2;
+	 float  View_DemosaicVposOffset;
+	 float  View_DecalDepthBias;
+	 float3  View_IndirectLightingColorScale;
+	 float  PrePadding_View_2476;
+	 float3  View_PrecomputedIndirectLightingColorScale;
+	 float  PrePadding_View_2492;
+	 float3  View_PrecomputedIndirectSpecularColorScale;
+	 float  PrePadding_View_2508;
+	 float4  View_AtmosphereLightDirection[2];
+	 float4  View_AtmosphereLightIlluminanceOnGroundPostTransmittance[2];
+	 float4  View_AtmosphereLightIlluminanceOuterSpace[2];
+	 float4  View_AtmosphereLightDiscLuminance[2];
+	 float4  View_AtmosphereLightDiscCosHalfApexAngle_PPTrans[2];
+	 float4  View_SkyViewLutSizeAndInvSize;
+	 float3  View_SkyCameraTranslatedWorldOrigin;
+	 float  PrePadding_View_2700;
+	 float4  View_SkyPlanetTranslatedWorldCenterAndViewHeight;
+	 float4x4  View_SkyViewLutReferential;
+	 float4  View_SkyAtmosphereSkyLuminanceFactor;
+	 float  View_SkyAtmospherePresentInScene;
+	 float  View_SkyAtmosphereHeightFogContribution;
+	 float  View_SkyAtmosphereBottomRadiusKm;
+	 float  View_SkyAtmosphereTopRadiusKm;
+	 float4  View_SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize;
+	 float  View_SkyAtmosphereAerialPerspectiveStartDepthKm;
+	 float  View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution;
+	 float  View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv;
+	 float  View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm;
+	 float  View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv;
+	 float  View_SkyAtmosphereApplyCameraAerialPerspectiveVolume;
+	 float  PrePadding_View_2856;
+	 float  PrePadding_View_2860;
+	 float3  View_NormalCurvatureToRoughnessScaleBias;
+	 float  View_RenderingReflectionCaptureMask;
+	 float  View_RealTimeReflectionCapture;
+	 float  View_RealTimeReflectionCapturePreExposure;
+	 float  PrePadding_View_2888;
+	 float  PrePadding_View_2892;
+	 float4  View_AmbientCubemapTint;
+	 float  View_AmbientCubemapIntensity;
+	 float  View_SkyLightApplyPrecomputedBentNormalShadowingFlag;
+	 float  View_SkyLightAffectReflectionFlag;
+	 float  View_SkyLightAffectGlobalIlluminationFlag;
+	 float4  View_SkyLightColor;
+	 float4  View_MobileSkyIrradianceEnvironmentMap[8];
+	 float  View_MobilePreviewMode;
+	 float  View_HMDEyePaddingOffset;
+	 float  View_ReflectionCubemapMaxMip;
+	 float  View_ShowDecalsMask;
+	 uint  View_DistanceFieldAOSpecularOcclusionMode;
+	 float  View_IndirectCapsuleSelfShadowingIntensity;
+	 float  PrePadding_View_3096;
+	 float  PrePadding_View_3100;
+	 float3  View_ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight;
+	 int  View_StereoPassIndex;
+	 float4  View_GlobalVolumeTranslatedCenterAndExtent[6];
+	 float4  View_GlobalVolumeTranslatedWorldToUVAddAndMul[6];
+	 float4  View_GlobalDistanceFieldMipTranslatedWorldToUVScale[6];
+	 float4  View_GlobalDistanceFieldMipTranslatedWorldToUVBias[6];
+	 float  View_GlobalDistanceFieldMipFactor;
+	 float  View_GlobalDistanceFieldMipTransition;
+	 int  View_GlobalDistanceFieldClipmapSizeInPages;
+	 int  PrePadding_View_3516;
+	 float3  View_GlobalDistanceFieldInvPageAtlasSize;
+	 float  PrePadding_View_3532;
+	 float3  View_GlobalDistanceFieldInvCoverageAtlasSize;
+	 float  View_GlobalVolumeDimension;
+	 float  View_GlobalVolumeTexelSize;
+	 float  View_MaxGlobalDFAOConeDistance;
+	 uint  View_NumGlobalSDFClipmaps;
+	 float  View_CoveredExpandSurfaceScale;
+	 float  View_NotCoveredExpandSurfaceScale;
+	 float  View_NotCoveredMinStepScale;
+	 float  View_DitheredTransparencyStepThreshold;
+	 float  View_DitheredTransparencyTraceThreshold;
+	 int2  View_CursorPosition;
+	 float  View_bCheckerboardSubsurfaceProfileRendering;
+	 float  PrePadding_View_3596;
+	 float3  View_VolumetricFogInvGridSize;
+	 float  PrePadding_View_3612;
+	 float3  View_VolumetricFogGridZParams;
+	 float  PrePadding_View_3628;
+	 float2  View_VolumetricFogSVPosToVolumeUV;
+	 float2  View_VolumetricFogViewGridUVToPrevViewRectUV;
+	 float2  View_VolumetricFogPrevViewGridRectUVToResourceUV;
+	 float2  View_VolumetricFogPrevUVMax;
+	 float2  View_VolumetricFogScreenToResourceUV;
+	 float2  View_VolumetricFogUVMax;
+	 float  View_VolumetricFogMaxDistance;
+	 float  PrePadding_View_3684;
+	 float  PrePadding_View_3688;
+	 float  PrePadding_View_3692;
+	 float3  View_VolumetricLightmapWorldToUVScale;
+	 float  PrePadding_View_3708;
+	 float3  View_VolumetricLightmapWorldToUVAdd;
+	 float  PrePadding_View_3724;
+	 float3  View_VolumetricLightmapIndirectionTextureSize;
+	 float  View_VolumetricLightmapBrickSize;
+	 float3  View_VolumetricLightmapBrickTexelSize;
+	 float  View_IndirectLightingCacheShowFlag;
+	 float  View_EyeToPixelSpreadAngle;
+	 float  PrePadding_View_3764;
+	 float  PrePadding_View_3768;
+	 float  PrePadding_View_3772;
+	 float4  View_XRPassthroughCameraUVs[2];
+	 float  View_GlobalVirtualTextureMipBias;
+	 uint  View_VirtualTextureFeedbackShift;
+	 uint  View_VirtualTextureFeedbackMask;
+	 uint  View_VirtualTextureFeedbackStride;
+	 uint  View_VirtualTextureFeedbackJitterOffset;
+	 uint  View_VirtualTextureFeedbackSampleOffset;
+	 uint  PrePadding_View_3832;
+	 uint  PrePadding_View_3836;
+	 float4  View_RuntimeVirtualTextureMipLevel;
+	 float2  View_RuntimeVirtualTexturePackHeight;
+	 float  PrePadding_View_3864;
+	 float  PrePadding_View_3868;
+	 float4  View_RuntimeVirtualTextureDebugParams;
+	 float  View_OverrideLandscapeLOD;
+	 int  View_FarShadowStaticMeshLODBias;
+	 float  View_MinRoughness;
+	 float  PrePadding_View_3900;
+	 float4  View_HairRenderInfo;
+	 uint  View_EnableSkyLight;
+	 uint  View_HairRenderInfoBits;
+	 uint  View_HairComponents;
+	 float  View_bSubsurfacePostprocessEnabled;
+	 float4  View_SSProfilesTextureSizeAndInvSize;
+	 float4  View_SSProfilesPreIntegratedTextureSizeAndInvSize;
+	 float4  View_SpecularProfileTextureSizeAndInvSize;
+	 float3  View_PhysicsFieldClipmapCenter;
+	 float  View_PhysicsFieldClipmapDistance;
+	 int  View_PhysicsFieldClipmapResolution;
+	 int  View_PhysicsFieldClipmapExponent;
+	 int  View_PhysicsFieldClipmapCount;
+	 int  View_PhysicsFieldTargetCount;
+	 int4  View_PhysicsFieldTargets[32];
+	 uint  View_GPUSceneViewId;
+	 float  View_ViewResolutionFraction;
+	 float  View_SubSurfaceColorAsTransmittanceAtDistanceInMeters;
+	 float  PrePadding_View_4540;
+	 float4  View_TanAndInvTanHalfFOV;
+	 float4  View_PrevTanAndInvTanHalfFOV;
+	 float4  View_GlintLUTParameters0;
+	 float4  View_GlintLUTParameters1;
+	 uint BindlessSampler_View_MaterialTextureBilinearWrapedSampler ;
+	 uint  PrePadding_View_4612;
+	 uint BindlessSampler_View_MaterialTextureBilinearClampedSampler ;
+	 uint  PrePadding_View_4620;
+	 uint BindlessResource_View_VolumetricLightmapIndirectionTexture ;
+	 uint  PrePadding_View_4628;
+	 uint BindlessResource_View_VolumetricLightmapBrickAmbientVector ;
+	 uint  PrePadding_View_4636;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients0 ;
+	 uint  PrePadding_View_4644;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients1 ;
+	 uint  PrePadding_View_4652;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients2 ;
+	 uint  PrePadding_View_4660;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients3 ;
+	 uint  PrePadding_View_4668;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients4 ;
+	 uint  PrePadding_View_4676;
+	 uint BindlessResource_View_VolumetricLightmapBrickSHCoefficients5 ;
+	 uint  PrePadding_View_4684;
+	 uint BindlessResource_View_SkyBentNormalBrickTexture ;
+	 uint  PrePadding_View_4692;
+	 uint BindlessResource_View_DirectionalLightShadowingBrickTexture ;
+	 uint  PrePadding_View_4700;
+	 uint BindlessSampler_View_VolumetricLightmapBrickAmbientVectorSampler ;
+	 uint  PrePadding_View_4708;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler0 ;
+	 uint  PrePadding_View_4716;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler1 ;
+	 uint  PrePadding_View_4724;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler2 ;
+	 uint  PrePadding_View_4732;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler3 ;
+	 uint  PrePadding_View_4740;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler4 ;
+	 uint  PrePadding_View_4748;
+	 uint BindlessSampler_View_VolumetricLightmapTextureSampler5 ;
+	 uint  PrePadding_View_4756;
+	 uint BindlessSampler_View_SkyBentNormalTextureSampler ;
+	 uint  PrePadding_View_4764;
+	 uint BindlessSampler_View_DirectionalLightShadowingTextureSampler ;
+	 uint  PrePadding_View_4772;
+	 uint BindlessResource_View_GlobalDistanceFieldPageAtlasTexture ;
+	 uint  PrePadding_View_4780;
+	 uint BindlessResource_View_GlobalDistanceFieldCoverageAtlasTexture ;
+	 uint  PrePadding_View_4788;
+	 uint BindlessResource_View_GlobalDistanceFieldPageTableTexture ;
+	 uint  PrePadding_View_4796;
+	 uint BindlessResource_View_GlobalDistanceFieldMipTexture ;
+	 uint  PrePadding_View_4804;
+	 uint BindlessSampler_View_GlobalDistanceFieldPageAtlasTextureSampler ;
+	 uint  PrePadding_View_4812;
+	 uint BindlessSampler_View_GlobalDistanceFieldCoverageAtlasTextureSampler ;
+	 uint  PrePadding_View_4820;
+	 uint BindlessSampler_View_GlobalDistanceFieldMipTextureSampler ;
+	 uint  PrePadding_View_4828;
+	 uint BindlessResource_View_AtmosphereTransmittanceTexture ;
+	 uint  PrePadding_View_4836;
+	 uint BindlessSampler_View_AtmosphereTransmittanceTextureSampler ;
+	 uint  PrePadding_View_4844;
+	 uint BindlessResource_View_AtmosphereIrradianceTexture ;
+	 uint  PrePadding_View_4852;
+	 uint BindlessSampler_View_AtmosphereIrradianceTextureSampler ;
+	 uint  PrePadding_View_4860;
+	 uint BindlessResource_View_AtmosphereInscatterTexture ;
+	 uint  PrePadding_View_4868;
+	 uint BindlessSampler_View_AtmosphereInscatterTextureSampler ;
+	 uint  PrePadding_View_4876;
+	 uint BindlessResource_View_PerlinNoiseGradientTexture ;
+	 uint  PrePadding_View_4884;
+	 uint BindlessSampler_View_PerlinNoiseGradientTextureSampler ;
+	 uint  PrePadding_View_4892;
+	 uint BindlessResource_View_PerlinNoise3DTexture ;
+	 uint  PrePadding_View_4900;
+	 uint BindlessSampler_View_PerlinNoise3DTextureSampler ;
+	 uint  PrePadding_View_4908;
+	 uint BindlessResource_View_SobolSamplingTexture ;
+	 uint  PrePadding_View_4916;
+	 uint BindlessSampler_View_SharedPointWrappedSampler ;
+	 uint  PrePadding_View_4924;
+	 uint BindlessSampler_View_SharedPointClampedSampler ;
+	 uint  PrePadding_View_4932;
+	 uint BindlessSampler_View_SharedBilinearWrappedSampler ;
+	 uint  PrePadding_View_4940;
+	 uint BindlessSampler_View_SharedBilinearClampedSampler ;
+	 uint  PrePadding_View_4948;
+	 uint BindlessSampler_View_SharedBilinearAnisoClampedSampler ;
+	 uint  PrePadding_View_4956;
+	 uint BindlessSampler_View_SharedTrilinearWrappedSampler ;
+	 uint  PrePadding_View_4964;
+	 uint BindlessSampler_View_SharedTrilinearClampedSampler ;
+	 uint  PrePadding_View_4972;
+	 uint BindlessResource_View_PreIntegratedBRDF ;
+	 uint  PrePadding_View_4980;
+	 uint BindlessSampler_View_PreIntegratedBRDFSampler ;
+	 uint  PrePadding_View_4988;
+	 uint BindlessResource_View_SkyIrradianceEnvironmentMap ;
+	 uint  PrePadding_View_4996;
+	 uint BindlessResource_View_TransmittanceLutTexture ;
+	 uint  PrePadding_View_5004;
+	 uint BindlessSampler_View_TransmittanceLutTextureSampler ;
+	 uint  PrePadding_View_5012;
+	 uint BindlessResource_View_SkyViewLutTexture ;
+	 uint  PrePadding_View_5020;
+	 uint BindlessSampler_View_SkyViewLutTextureSampler ;
+	 uint  PrePadding_View_5028;
+	 uint BindlessResource_View_DistantSkyLightLutTexture ;
+	 uint  PrePadding_View_5036;
+	 uint BindlessSampler_View_DistantSkyLightLutTextureSampler ;
+	 uint  PrePadding_View_5044;
+	 uint BindlessResource_View_CameraAerialPerspectiveVolume ;
+	 uint  PrePadding_View_5052;
+	 uint BindlessSampler_View_CameraAerialPerspectiveVolumeSampler ;
+	 uint  PrePadding_View_5060;
+	 uint BindlessResource_View_CameraAerialPerspectiveVolumeMieOnly ;
+	 uint  PrePadding_View_5068;
+	 uint BindlessSampler_View_CameraAerialPerspectiveVolumeMieOnlySampler ;
+	 uint  PrePadding_View_5076;
+	 uint BindlessResource_View_CameraAerialPerspectiveVolumeRayOnly ;
+	 uint  PrePadding_View_5084;
+	 uint BindlessSampler_View_CameraAerialPerspectiveVolumeRayOnlySampler ;
+	 uint  PrePadding_View_5092;
+	 uint BindlessResource_View_HairScatteringLUTTexture ;
+	 uint  PrePadding_View_5100;
+	 uint BindlessSampler_View_HairScatteringLUTSampler ;
+	 uint  PrePadding_View_5108;
+	 uint BindlessResource_View_GGXLTCMatTexture ;
+	 uint  PrePadding_View_5116;
+	 uint BindlessSampler_View_GGXLTCMatSampler ;
+	 uint  PrePadding_View_5124;
+	 uint BindlessResource_View_GGXLTCAmpTexture ;
+	 uint  PrePadding_View_5132;
+	 uint BindlessSampler_View_GGXLTCAmpSampler ;
+	 uint  PrePadding_View_5140;
+	 uint BindlessResource_View_SheenLTCTexture ;
+	 uint  PrePadding_View_5148;
+	 uint BindlessSampler_View_SheenLTCSampler ;
+	 uint  PrePadding_View_5156;
+	 uint  View_bShadingEnergyConservation;
+	 uint  View_bShadingEnergyPreservation;
+	 uint BindlessResource_View_ShadingEnergyGGXSpecTexture ;
+	 uint  PrePadding_View_5172;
+	 uint BindlessResource_View_ShadingEnergyGGXGlassTexture ;
+	 uint  PrePadding_View_5180;
+	 uint BindlessResource_View_ShadingEnergyClothSpecTexture ;
+	 uint  PrePadding_View_5188;
+	 uint BindlessResource_View_ShadingEnergyDiffuseTexture ;
+	 uint  PrePadding_View_5196;
+	 uint BindlessSampler_View_ShadingEnergySampler ;
+	 uint  PrePadding_View_5204;
+	 uint BindlessResource_View_GlintTexture ;
+	 uint  PrePadding_View_5212;
+	 uint BindlessSampler_View_GlintSampler ;
+	 uint  PrePadding_View_5220;
+	 uint BindlessResource_View_SimpleVolumeTexture ;
+	 uint  PrePadding_View_5228;
+	 uint BindlessSampler_View_SimpleVolumeTextureSampler ;
+	 uint  PrePadding_View_5236;
+	 uint BindlessResource_View_SimpleVolumeEnvTexture ;
+	 uint  PrePadding_View_5244;
+	 uint BindlessSampler_View_SimpleVolumeEnvTextureSampler ;
+	 uint  PrePadding_View_5252;
+	 uint BindlessResource_View_SSProfilesTexture ;
+	 uint  PrePadding_View_5260;
+	 uint BindlessSampler_View_SSProfilesSampler ;
+	 uint  PrePadding_View_5268;
+	 uint BindlessSampler_View_SSProfilesTransmissionSampler ;
+	 uint  PrePadding_View_5276;
+	 uint BindlessResource_View_SSProfilesPreIntegratedTexture ;
+	 uint  PrePadding_View_5284;
+	 uint BindlessSampler_View_SSProfilesPreIntegratedSampler ;
+	 uint  PrePadding_View_5292;
+	 uint BindlessResource_View_SpecularProfileTexture ;
+	 uint  PrePadding_View_5300;
+	 uint BindlessSampler_View_SpecularProfileSampler ;
+	 uint  PrePadding_View_5308;
+	 uint BindlessResource_View_WaterIndirection ;
+	 uint  PrePadding_View_5316;
+	 uint BindlessResource_View_WaterData ;
+	 uint  PrePadding_View_5324;
+	 float4  View_RectLightAtlasSizeAndInvSize;
+	 float  View_RectLightAtlasMaxMipLevel;
+	 float  PrePadding_View_5348;
+	 uint BindlessResource_View_RectLightAtlasTexture ;
+	 uint  PrePadding_View_5356;
+	 uint BindlessSampler_View_RectLightAtlasSampler ;
+	 uint  PrePadding_View_5364;
+	 uint  PrePadding_View_5368;
+	 uint  PrePadding_View_5372;
+	 float4  View_IESAtlasSizeAndInvSize;
+	 uint BindlessResource_View_IESAtlasTexture ;
+	 uint  PrePadding_View_5396;
+	 uint BindlessSampler_View_IESAtlasSampler ;
+	 uint  PrePadding_View_5404;
+	 uint BindlessSampler_View_LandscapeWeightmapSampler ;
+	 uint  PrePadding_View_5412;
+	 uint BindlessResource_View_LandscapeIndirection ;
+	 uint  PrePadding_View_5420;
+	 uint BindlessResource_View_LandscapePerComponentData ;
+	 uint  PrePadding_View_5428;
+	 uint BindlessResource_View_VTFeedbackBuffer ;
+	 uint  PrePadding_View_5436;
+	 uint BindlessResource_View_PhysicsFieldClipmapBuffer ;
+	 uint  PrePadding_View_5444;
+	 uint  PrePadding_View_5448;
+	 uint  PrePadding_View_5452;
+	 float3  View_TLASRelativePreViewTranslation;
+	 float  PrePadding_View_5468;
+	 float3  View_TLASViewTilePosition;
+}
+
+#line 480 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_MaterialTextureBilinearWrapedSampler;
+
+#line 481 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_MaterialTextureBilinearClampedSampler;
+
+#line 482 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D<uint4>  View_VolumetricLightmapIndirectionTexture;
+
+#line 483 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickAmbientVector;
+
+#line 484 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients0;
+
+#line 485 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients1;
+
+#line 486 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients2;
+
+#line 487 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients3;
+
+#line 488 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients4;
+
+#line 489 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_VolumetricLightmapBrickSHCoefficients5;
+
+#line 490 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_SkyBentNormalBrickTexture;
+
+#line 491 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_DirectionalLightShadowingBrickTexture;
+
+#line 492 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapBrickAmbientVectorSampler;
+
+#line 493 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler0;
+
+#line 494 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler1;
+
+#line 495 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler2;
+
+#line 496 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler3;
+
+#line 497 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler4;
+
+#line 498 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_VolumetricLightmapTextureSampler5;
+
+#line 499 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SkyBentNormalTextureSampler;
+
+#line 500 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_DirectionalLightShadowingTextureSampler;
+
+#line 501 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_GlobalDistanceFieldPageAtlasTexture;
+
+#line 502 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_GlobalDistanceFieldCoverageAtlasTexture;
+
+#line 503 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D<uint>  View_GlobalDistanceFieldPageTableTexture;
+
+#line 504 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_GlobalDistanceFieldMipTexture;
+
+#line 505 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GlobalDistanceFieldPageAtlasTextureSampler;
+
+#line 506 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GlobalDistanceFieldCoverageAtlasTextureSampler;
+
+#line 507 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GlobalDistanceFieldMipTextureSampler;
+
+#line 508 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_AtmosphereTransmittanceTexture;
+
+#line 509 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_AtmosphereTransmittanceTextureSampler;
+
+#line 510 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_AtmosphereIrradianceTexture;
+
+#line 511 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_AtmosphereIrradianceTextureSampler;
+
+#line 512 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_AtmosphereInscatterTexture;
+
+#line 513 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_AtmosphereInscatterTextureSampler;
+
+#line 514 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_PerlinNoiseGradientTexture;
+
+#line 515 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_PerlinNoiseGradientTextureSampler;
+
+#line 516 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_PerlinNoise3DTexture;
+
+#line 517 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_PerlinNoise3DTextureSampler;
+
+#line 518 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D<uint>  View_SobolSamplingTexture;
+
+#line 519 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedPointWrappedSampler;
+
+#line 520 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedPointClampedSampler;
+
+#line 521 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedBilinearWrappedSampler;
+
+#line 522 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedBilinearClampedSampler;
+
+#line 523 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedBilinearAnisoClampedSampler;
+
+#line 524 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedTrilinearWrappedSampler;
+
+#line 525 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SharedTrilinearClampedSampler;
+
+#line 526 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_PreIntegratedBRDF;
+
+#line 527 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_PreIntegratedBRDFSampler;
+
+#line 528 "/Engine/Generated/UniformBuffers/View.ush"
+StructuredBuffer<float4>  View_SkyIrradianceEnvironmentMap;
+
+#line 529 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_TransmittanceLutTexture;
+
+#line 530 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_TransmittanceLutTextureSampler;
+
+#line 531 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_SkyViewLutTexture;
+
+#line 532 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SkyViewLutTextureSampler;
+
+#line 533 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_DistantSkyLightLutTexture;
+
+#line 534 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_DistantSkyLightLutTextureSampler;
+
+#line 535 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_CameraAerialPerspectiveVolume;
+
+#line 536 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_CameraAerialPerspectiveVolumeSampler;
+
+#line 537 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_CameraAerialPerspectiveVolumeMieOnly;
+
+#line 538 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_CameraAerialPerspectiveVolumeMieOnlySampler;
+
+#line 539 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_CameraAerialPerspectiveVolumeRayOnly;
+
+#line 540 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_CameraAerialPerspectiveVolumeRayOnlySampler;
+
+#line 541 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D  View_HairScatteringLUTTexture;
+
+#line 542 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_HairScatteringLUTSampler;
+
+#line 543 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_GGXLTCMatTexture;
+
+#line 544 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GGXLTCMatSampler;
+
+#line 545 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_GGXLTCAmpTexture;
+
+#line 546 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GGXLTCAmpSampler;
+
+#line 547 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_SheenLTCTexture;
+
+#line 548 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SheenLTCSampler;
+
+#line 549 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D<float2>  View_ShadingEnergyGGXSpecTexture;
+
+#line 550 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D<float2>  View_ShadingEnergyGGXGlassTexture;
+
+#line 551 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D<float2>  View_ShadingEnergyClothSpecTexture;
+
+#line 552 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D<float>  View_ShadingEnergyDiffuseTexture;
+
+#line 553 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_ShadingEnergySampler;
+
+#line 554 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2DArray<float4>  View_GlintTexture;
+
+#line 555 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_GlintSampler;
+
+#line 556 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D<float>  View_SimpleVolumeTexture;
+
+#line 557 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SimpleVolumeTextureSampler;
+
+#line 558 "/Engine/Generated/UniformBuffers/View.ush"
+Texture3D<float>  View_SimpleVolumeEnvTexture;
+
+#line 559 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SimpleVolumeEnvTextureSampler;
+
+#line 560 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D  View_SSProfilesTexture;
+
+#line 561 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SSProfilesSampler;
+
+#line 562 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SSProfilesTransmissionSampler;
+
+#line 563 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2DArray  View_SSProfilesPreIntegratedTexture;
+
+#line 564 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SSProfilesPreIntegratedSampler;
+
+#line 565 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2DArray  View_SpecularProfileTexture;
+
+#line 566 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_SpecularProfileSampler;
+
+#line 567 "/Engine/Generated/UniformBuffers/View.ush"
+Buffer<float4>  View_WaterIndirection;
+
+#line 568 "/Engine/Generated/UniformBuffers/View.ush"
+Buffer<float4>  View_WaterData;
+
+#line 569 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2D<float4>  View_RectLightAtlasTexture;
+
+#line 570 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_RectLightAtlasSampler;
+
+#line 571 "/Engine/Generated/UniformBuffers/View.ush"
+Texture2DArray<float>  View_IESAtlasTexture;
+
+#line 572 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_IESAtlasSampler;
+
+#line 573 "/Engine/Generated/UniformBuffers/View.ush"
+SamplerState  View_LandscapeWeightmapSampler;
+
+#line 574 "/Engine/Generated/UniformBuffers/View.ush"
+Buffer<uint>  View_LandscapeIndirection;
+
+#line 575 "/Engine/Generated/UniformBuffers/View.ush"
+Buffer<float>  View_LandscapePerComponentData;
+
+#line 576 "/Engine/Generated/UniformBuffers/View.ush"
+RWStructuredBuffer<uint>  View_VTFeedbackBuffer;
+
+#line 577 "/Engine/Generated/UniformBuffers/View.ush"
+Buffer<float>  View_PhysicsFieldClipmapBuffer;
+
+#line 578 "/Engine/Generated/UniformBuffers/View.ush"
+static const struct
+{
+	 float4x4  TranslatedWorldToClip;
+	 float4x4  RelativeWorldToClip;
+	 float4x4  ClipToRelativeWorld;
+	 float4x4  TranslatedWorldToView;
+	 float4x4  ViewToTranslatedWorld;
+	 float4x4  TranslatedWorldToCameraView;
+	 float4x4  CameraViewToTranslatedWorld;
+	 float4x4  ViewToClip;
+	 float4x4  ViewToClipNoAA;
+	 float4x4  ClipToView;
+	 float4x4  ClipToTranslatedWorld;
+	 float4x4  SVPositionToTranslatedWorld;
+	 float4x4  ScreenToRelativeWorld;
+	 float4x4  ScreenToTranslatedWorld;
+	 float4x4  MobileMultiviewShadowTransform;
+	 float3  ViewTilePosition;
+	 float3  MatrixTilePosition;
+	 float3  ViewForward;
+	 float3  ViewUp;
+	 float3  ViewRight;
+	 float3  HMDViewNoRollUp;
+	 float3  HMDViewNoRollRight;
+	 float4  InvDeviceZToWorldZTransform;
+	 float4  ScreenPositionScaleBias;
+	 float3  RelativeWorldCameraOrigin;
+	 float3  TranslatedWorldCameraOrigin;
+	 float3  RelativeWorldViewOrigin;
+	 float3  RelativePreViewTranslation;
+	 float4x4  PrevViewToClip;
+	 float4x4  PrevClipToView;
+	 float4x4  PrevTranslatedWorldToClip;
+	 float4x4  PrevTranslatedWorldToView;
+	 float4x4  PrevViewToTranslatedWorld;
+	 float4x4  PrevTranslatedWorldToCameraView;
+	 float4x4  PrevCameraViewToTranslatedWorld;
+	 float3  PrevTranslatedWorldCameraOrigin;
+	 float3  PrevRelativeWorldCameraOrigin;
+	 float3  PrevRelativeWorldViewOrigin;
+	 float3  RelativePrevPreViewTranslation;
+	 float4x4  PrevClipToRelativeWorld;
+	 float4x4  PrevScreenToTranslatedWorld;
+	 float4x4  ClipToPrevClip;
+	 float4x4  ClipToPrevClipWithAA;
+	 float4  TemporalAAJitter;
+	 float4  GlobalClippingPlane;
+	 float2  FieldOfViewWideAngles;
+	 float2  PrevFieldOfViewWideAngles;
+	 float4  ViewRectMin;
+	 float4  ViewSizeAndInvSize;
+	 uint4  ViewRectMinAndSize;
+	 float4  LightProbeSizeRatioAndInvSizeRatio;
+	 float4  BufferSizeAndInvSize;
+	 float4  BufferBilinearUVMinMax;
+	 float4  ScreenToViewSpace;
+	 float2  BufferToSceneTextureScale;
+	 float2  ResolutionFractionAndInv;
+	 int  NumSceneColorMSAASamples;
+	 float  ProjectionDepthThicknessScale;
+	 float  PreExposure;
+	 float  OneOverPreExposure;
+	 float4  DiffuseOverrideParameter;
+	 float4  SpecularOverrideParameter;
+	 float4  NormalOverrideParameter;
+	 float2  RoughnessOverrideParameter;
+	 float  PrevFrameGameTime;
+	 float  PrevFrameRealTime;
+	 float  OutOfBoundsMask;
+	 float3  WorldCameraMovementSinceLastFrame;
+	 float  CullingSign;
+	 float  NearPlane;
+	 float  GameTime;
+	 float  RealTime;
+	 float  DeltaTime;
+	 float  MaterialTextureMipBias;
+	 float  MaterialTextureDerivativeMultiply;
+	 uint  Random;
+	 uint  FrameNumber;
+	 uint  FrameCounter;
+	 uint  StateFrameIndexMod8;
+	 uint  StateFrameIndex;
+	 uint  DebugViewModeMask;
+	 uint  WorldIsPaused;
+	 float  CameraCut;
+	 float  UnlitViewmodeMask;
+	 float4  DirectionalLightColor;
+	 float3  DirectionalLightDirection;
+	 float4  TranslucencyLightingVolumeMin[2];
+	 float4  TranslucencyLightingVolumeInvSize[2];
+	 float4  TemporalAAParams;
+	 float4  CircleDOFParams;
+	 float  DepthOfFieldSensorWidth;
+	 float  DepthOfFieldFocalDistance;
+	 float  DepthOfFieldScale;
+	 float  DepthOfFieldFocalLength;
+	 float  DepthOfFieldFocalRegion;
+	 float  DepthOfFieldNearTransitionRegion;
+	 float  DepthOfFieldFarTransitionRegion;
+	 float  MotionBlurNormalizedToPixel;
+	 float  GeneralPurposeTweak;
+	 float  GeneralPurposeTweak2;
+	 float  DemosaicVposOffset;
+	 float  DecalDepthBias;
+	 float3  IndirectLightingColorScale;
+	 float3  PrecomputedIndirectLightingColorScale;
+	 float3  PrecomputedIndirectSpecularColorScale;
+	 float4  AtmosphereLightDirection[2];
+	 float4  AtmosphereLightIlluminanceOnGroundPostTransmittance[2];
+	 float4  AtmosphereLightIlluminanceOuterSpace[2];
+	 float4  AtmosphereLightDiscLuminance[2];
+	 float4  AtmosphereLightDiscCosHalfApexAngle_PPTrans[2];
+	 float4  SkyViewLutSizeAndInvSize;
+	 float3  SkyCameraTranslatedWorldOrigin;
+	 float4  SkyPlanetTranslatedWorldCenterAndViewHeight;
+	 float4x4  SkyViewLutReferential;
+	 float4  SkyAtmosphereSkyLuminanceFactor;
+	 float  SkyAtmospherePresentInScene;
+	 float  SkyAtmosphereHeightFogContribution;
+	 float  SkyAtmosphereBottomRadiusKm;
+	 float  SkyAtmosphereTopRadiusKm;
+	 float4  SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize;
+	 float  SkyAtmosphereAerialPerspectiveStartDepthKm;
+	 float  SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution;
+	 float  SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv;
+	 float  SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm;
+	 float  SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv;
+	 float  SkyAtmosphereApplyCameraAerialPerspectiveVolume;
+	 float3  NormalCurvatureToRoughnessScaleBias;
+	 float  RenderingReflectionCaptureMask;
+	 float  RealTimeReflectionCapture;
+	 float  RealTimeReflectionCapturePreExposure;
+	 float4  AmbientCubemapTint;
+	 float  AmbientCubemapIntensity;
+	 float  SkyLightApplyPrecomputedBentNormalShadowingFlag;
+	 float  SkyLightAffectReflectionFlag;
+	 float  SkyLightAffectGlobalIlluminationFlag;
+	 float4  SkyLightColor;
+	 float4  MobileSkyIrradianceEnvironmentMap[8];
+	 float  MobilePreviewMode;
+	 float  HMDEyePaddingOffset;
+	 float  ReflectionCubemapMaxMip;
+	 float  ShowDecalsMask;
+	 uint  DistanceFieldAOSpecularOcclusionMode;
+	 float  IndirectCapsuleSelfShadowingIntensity;
+	 float3  ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight;
+	 int  StereoPassIndex;
+	 float4  GlobalVolumeTranslatedCenterAndExtent[6];
+	 float4  GlobalVolumeTranslatedWorldToUVAddAndMul[6];
+	 float4  GlobalDistanceFieldMipTranslatedWorldToUVScale[6];
+	 float4  GlobalDistanceFieldMipTranslatedWorldToUVBias[6];
+	 float  GlobalDistanceFieldMipFactor;
+	 float  GlobalDistanceFieldMipTransition;
+	 int  GlobalDistanceFieldClipmapSizeInPages;
+	 float3  GlobalDistanceFieldInvPageAtlasSize;
+	 float3  GlobalDistanceFieldInvCoverageAtlasSize;
+	 float  GlobalVolumeDimension;
+	 float  GlobalVolumeTexelSize;
+	 float  MaxGlobalDFAOConeDistance;
+	 uint  NumGlobalSDFClipmaps;
+	 float  CoveredExpandSurfaceScale;
+	 float  NotCoveredExpandSurfaceScale;
+	 float  NotCoveredMinStepScale;
+	 float  DitheredTransparencyStepThreshold;
+	 float  DitheredTransparencyTraceThreshold;
+	 int2  CursorPosition;
+	 float  bCheckerboardSubsurfaceProfileRendering;
+	 float3  VolumetricFogInvGridSize;
+	 float3  VolumetricFogGridZParams;
+	 float2  VolumetricFogSVPosToVolumeUV;
+	 float2  VolumetricFogViewGridUVToPrevViewRectUV;
+	 float2  VolumetricFogPrevViewGridRectUVToResourceUV;
+	 float2  VolumetricFogPrevUVMax;
+	 float2  VolumetricFogScreenToResourceUV;
+	 float2  VolumetricFogUVMax;
+	 float  VolumetricFogMaxDistance;
+	 float3  VolumetricLightmapWorldToUVScale;
+	 float3  VolumetricLightmapWorldToUVAdd;
+	 float3  VolumetricLightmapIndirectionTextureSize;
+	 float  VolumetricLightmapBrickSize;
+	 float3  VolumetricLightmapBrickTexelSize;
+	 float  IndirectLightingCacheShowFlag;
+	 float  EyeToPixelSpreadAngle;
+	 float4  XRPassthroughCameraUVs[2];
+	 float  GlobalVirtualTextureMipBias;
+	 uint  VirtualTextureFeedbackShift;
+	 uint  VirtualTextureFeedbackMask;
+	 uint  VirtualTextureFeedbackStride;
+	 uint  VirtualTextureFeedbackJitterOffset;
+	 uint  VirtualTextureFeedbackSampleOffset;
+	 float4  RuntimeVirtualTextureMipLevel;
+	 float2  RuntimeVirtualTexturePackHeight;
+	 float4  RuntimeVirtualTextureDebugParams;
+	 float  OverrideLandscapeLOD;
+	 int  FarShadowStaticMeshLODBias;
+	 float  MinRoughness;
+	 float4  HairRenderInfo;
+	 uint  EnableSkyLight;
+	 uint  HairRenderInfoBits;
+	 uint  HairComponents;
+	 float  bSubsurfacePostprocessEnabled;
+	 float4  SSProfilesTextureSizeAndInvSize;
+	 float4  SSProfilesPreIntegratedTextureSizeAndInvSize;
+	 float4  SpecularProfileTextureSizeAndInvSize;
+	 float3  PhysicsFieldClipmapCenter;
+	 float  PhysicsFieldClipmapDistance;
+	 int  PhysicsFieldClipmapResolution;
+	 int  PhysicsFieldClipmapExponent;
+	 int  PhysicsFieldClipmapCount;
+	 int  PhysicsFieldTargetCount;
+	 int4  PhysicsFieldTargets[32];
+	 uint  GPUSceneViewId;
+	 float  ViewResolutionFraction;
+	 float  SubSurfaceColorAsTransmittanceAtDistanceInMeters;
+	 float4  TanAndInvTanHalfFOV;
+	 float4  PrevTanAndInvTanHalfFOV;
+	 float4  GlintLUTParameters0;
+	 float4  GlintLUTParameters1;
+	 uint  bShadingEnergyConservation;
+	 uint  bShadingEnergyPreservation;
+	 float4  RectLightAtlasSizeAndInvSize;
+	 float  RectLightAtlasMaxMipLevel;
+	 float4  IESAtlasSizeAndInvSize;
+	 float3  TLASRelativePreViewTranslation;
+	 float3  TLASViewTilePosition;
+	SamplerState MaterialTextureBilinearWrapedSampler;
+	SamplerState MaterialTextureBilinearClampedSampler;
+	Texture3D<uint4> VolumetricLightmapIndirectionTexture;
+	Texture3D VolumetricLightmapBrickAmbientVector;
+	Texture3D VolumetricLightmapBrickSHCoefficients0;
+	Texture3D VolumetricLightmapBrickSHCoefficients1;
+	Texture3D VolumetricLightmapBrickSHCoefficients2;
+	Texture3D VolumetricLightmapBrickSHCoefficients3;
+	Texture3D VolumetricLightmapBrickSHCoefficients4;
+	Texture3D VolumetricLightmapBrickSHCoefficients5;
+	Texture3D SkyBentNormalBrickTexture;
+	Texture3D DirectionalLightShadowingBrickTexture;
+	SamplerState VolumetricLightmapBrickAmbientVectorSampler;
+	SamplerState VolumetricLightmapTextureSampler0;
+	SamplerState VolumetricLightmapTextureSampler1;
+	SamplerState VolumetricLightmapTextureSampler2;
+	SamplerState VolumetricLightmapTextureSampler3;
+	SamplerState VolumetricLightmapTextureSampler4;
+	SamplerState VolumetricLightmapTextureSampler5;
+	SamplerState SkyBentNormalTextureSampler;
+	SamplerState DirectionalLightShadowingTextureSampler;
+	Texture3D GlobalDistanceFieldPageAtlasTexture;
+	Texture3D GlobalDistanceFieldCoverageAtlasTexture;
+	Texture3D<uint> GlobalDistanceFieldPageTableTexture;
+	Texture3D GlobalDistanceFieldMipTexture;
+	SamplerState GlobalDistanceFieldPageAtlasTextureSampler;
+	SamplerState GlobalDistanceFieldCoverageAtlasTextureSampler;
+	SamplerState GlobalDistanceFieldMipTextureSampler;
+	Texture2D AtmosphereTransmittanceTexture;
+	SamplerState AtmosphereTransmittanceTextureSampler;
+	Texture2D AtmosphereIrradianceTexture;
+	SamplerState AtmosphereIrradianceTextureSampler;
+	Texture3D AtmosphereInscatterTexture;
+	SamplerState AtmosphereInscatterTextureSampler;
+	Texture2D PerlinNoiseGradientTexture;
+	SamplerState PerlinNoiseGradientTextureSampler;
+	Texture3D PerlinNoise3DTexture;
+	SamplerState PerlinNoise3DTextureSampler;
+	Texture2D<uint> SobolSamplingTexture;
+	SamplerState SharedPointWrappedSampler;
+	SamplerState SharedPointClampedSampler;
+	SamplerState SharedBilinearWrappedSampler;
+	SamplerState SharedBilinearClampedSampler;
+	SamplerState SharedBilinearAnisoClampedSampler;
+	SamplerState SharedTrilinearWrappedSampler;
+	SamplerState SharedTrilinearClampedSampler;
+	Texture2D PreIntegratedBRDF;
+	SamplerState PreIntegratedBRDFSampler;
+	StructuredBuffer<float4> SkyIrradianceEnvironmentMap;
+	Texture2D TransmittanceLutTexture;
+	SamplerState TransmittanceLutTextureSampler;
+	Texture2D SkyViewLutTexture;
+	SamplerState SkyViewLutTextureSampler;
+	Texture2D DistantSkyLightLutTexture;
+	SamplerState DistantSkyLightLutTextureSampler;
+	Texture3D CameraAerialPerspectiveVolume;
+	SamplerState CameraAerialPerspectiveVolumeSampler;
+	Texture3D CameraAerialPerspectiveVolumeMieOnly;
+	SamplerState CameraAerialPerspectiveVolumeMieOnlySampler;
+	Texture3D CameraAerialPerspectiveVolumeRayOnly;
+	SamplerState CameraAerialPerspectiveVolumeRayOnlySampler;
+	Texture3D HairScatteringLUTTexture;
+	SamplerState HairScatteringLUTSampler;
+	Texture2D GGXLTCMatTexture;
+	SamplerState GGXLTCMatSampler;
+	Texture2D GGXLTCAmpTexture;
+	SamplerState GGXLTCAmpSampler;
+	Texture2D SheenLTCTexture;
+	SamplerState SheenLTCSampler;
+	Texture2D<float2> ShadingEnergyGGXSpecTexture;
+	Texture3D<float2> ShadingEnergyGGXGlassTexture;
+	Texture2D<float2> ShadingEnergyClothSpecTexture;
+	Texture2D<float> ShadingEnergyDiffuseTexture;
+	SamplerState ShadingEnergySampler;
+	Texture2DArray<float4> GlintTexture;
+	SamplerState GlintSampler;
+	Texture3D<float> SimpleVolumeTexture;
+	SamplerState SimpleVolumeTextureSampler;
+	Texture3D<float> SimpleVolumeEnvTexture;
+	SamplerState SimpleVolumeEnvTextureSampler;
+	Texture2D SSProfilesTexture;
+	SamplerState SSProfilesSampler;
+	SamplerState SSProfilesTransmissionSampler;
+	Texture2DArray SSProfilesPreIntegratedTexture;
+	SamplerState SSProfilesPreIntegratedSampler;
+	Texture2DArray SpecularProfileTexture;
+	SamplerState SpecularProfileSampler;
+	Buffer<float4> WaterIndirection;
+	Buffer<float4> WaterData;
+	Texture2D<float4> RectLightAtlasTexture;
+	SamplerState RectLightAtlasSampler;
+	Texture2DArray<float> IESAtlasTexture;
+	SamplerState IESAtlasSampler;
+	SamplerState LandscapeWeightmapSampler;
+	Buffer<uint> LandscapeIndirection;
+	Buffer<float> LandscapePerComponentData;
+	RWStructuredBuffer<uint> VTFeedbackBuffer;
+	Buffer<float> PhysicsFieldClipmapBuffer;
+} View = {View_TranslatedWorldToClip,View_RelativeWorldToClip,View_ClipToRelativeWorld,View_TranslatedWorldToView,View_ViewToTranslatedWorld,View_TranslatedWorldToCameraView,View_CameraViewToTranslatedWorld,View_ViewToClip,View_ViewToClipNoAA,View_ClipToView,View_ClipToTranslatedWorld,View_SVPositionToTranslatedWorld,View_ScreenToRelativeWorld,View_ScreenToTranslatedWorld,View_MobileMultiviewShadowTransform,View_ViewTilePosition,View_MatrixTilePosition,View_ViewForward,View_ViewUp,View_ViewRight,View_HMDViewNoRollUp,View_HMDViewNoRollRight,View_InvDeviceZToWorldZTransform,View_ScreenPositionScaleBias,View_RelativeWorldCameraOrigin,View_TranslatedWorldCameraOrigin,View_RelativeWorldViewOrigin,View_RelativePreViewTranslation,View_PrevViewToClip,View_PrevClipToView,View_PrevTranslatedWorldToClip,View_PrevTranslatedWorldToView,View_PrevViewToTranslatedWorld,View_PrevTranslatedWorldToCameraView,View_PrevCameraViewToTranslatedWorld,View_PrevTranslatedWorldCameraOrigin,View_PrevRelativeWorldCameraOrigin,View_PrevRelativeWorldViewOrigin,View_RelativePrevPreViewTranslation,View_PrevClipToRelativeWorld,View_PrevScreenToTranslatedWorld,View_ClipToPrevClip,View_ClipToPrevClipWithAA,View_TemporalAAJitter,View_GlobalClippingPlane,View_FieldOfViewWideAngles,View_PrevFieldOfViewWideAngles,View_ViewRectMin,View_ViewSizeAndInvSize,View_ViewRectMinAndSize,View_LightProbeSizeRatioAndInvSizeRatio,View_BufferSizeAndInvSize,View_BufferBilinearUVMinMax,View_ScreenToViewSpace,View_BufferToSceneTextureScale,View_ResolutionFractionAndInv,View_NumSceneColorMSAASamples,View_ProjectionDepthThicknessScale,View_PreExposure,View_OneOverPreExposure,View_DiffuseOverrideParameter,View_SpecularOverrideParameter,View_NormalOverrideParameter,View_RoughnessOverrideParameter,View_PrevFrameGameTime,View_PrevFrameRealTime,View_OutOfBoundsMask,View_WorldCameraMovementSinceLastFrame,View_CullingSign,View_NearPlane,View_GameTime,View_RealTime,View_DeltaTime,View_MaterialTextureMipBias,View_MaterialTextureDerivativeMultiply,View_Random,View_FrameNumber,View_FrameCounter,View_StateFrameIndexMod8,View_StateFrameIndex,View_DebugViewModeMask,View_WorldIsPaused,View_CameraCut,View_UnlitViewmodeMask,View_DirectionalLightColor,View_DirectionalLightDirection,View_TranslucencyLightingVolumeMin,View_TranslucencyLightingVolumeInvSize,View_TemporalAAParams,View_CircleDOFParams,View_DepthOfFieldSensorWidth,View_DepthOfFieldFocalDistance,View_DepthOfFieldScale,View_DepthOfFieldFocalLength,View_DepthOfFieldFocalRegion,View_DepthOfFieldNearTransitionRegion,View_DepthOfFieldFarTransitionRegion,View_MotionBlurNormalizedToPixel,View_GeneralPurposeTweak,View_GeneralPurposeTweak2,View_DemosaicVposOffset,View_DecalDepthBias,View_IndirectLightingColorScale,View_PrecomputedIndirectLightingColorScale,View_PrecomputedIndirectSpecularColorScale,View_AtmosphereLightDirection,View_AtmosphereLightIlluminanceOnGroundPostTransmittance,View_AtmosphereLightIlluminanceOuterSpace,View_AtmosphereLightDiscLuminance,View_AtmosphereLightDiscCosHalfApexAngle_PPTrans,View_SkyViewLutSizeAndInvSize,View_SkyCameraTranslatedWorldOrigin,View_SkyPlanetTranslatedWorldCenterAndViewHeight,View_SkyViewLutReferential,View_SkyAtmosphereSkyLuminanceFactor,View_SkyAtmospherePresentInScene,View_SkyAtmosphereHeightFogContribution,View_SkyAtmosphereBottomRadiusKm,View_SkyAtmosphereTopRadiusKm,View_SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize,View_SkyAtmosphereAerialPerspectiveStartDepthKm,View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution,View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv,View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm,View_SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv,View_SkyAtmosphereApplyCameraAerialPerspectiveVolume,View_NormalCurvatureToRoughnessScaleBias,View_RenderingReflectionCaptureMask,View_RealTimeReflectionCapture,View_RealTimeReflectionCapturePreExposure,View_AmbientCubemapTint,View_AmbientCubemapIntensity,View_SkyLightApplyPrecomputedBentNormalShadowingFlag,View_SkyLightAffectReflectionFlag,View_SkyLightAffectGlobalIlluminationFlag,View_SkyLightColor,View_MobileSkyIrradianceEnvironmentMap,View_MobilePreviewMode,View_HMDEyePaddingOffset,View_ReflectionCubemapMaxMip,View_ShowDecalsMask,View_DistanceFieldAOSpecularOcclusionMode,View_IndirectCapsuleSelfShadowingIntensity,View_ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight,View_StereoPassIndex,View_GlobalVolumeTranslatedCenterAndExtent,View_GlobalVolumeTranslatedWorldToUVAddAndMul,View_GlobalDistanceFieldMipTranslatedWorldToUVScale,View_GlobalDistanceFieldMipTranslatedWorldToUVBias,View_GlobalDistanceFieldMipFactor,View_GlobalDistanceFieldMipTransition,View_GlobalDistanceFieldClipmapSizeInPages,View_GlobalDistanceFieldInvPageAtlasSize,View_GlobalDistanceFieldInvCoverageAtlasSize,View_GlobalVolumeDimension,View_GlobalVolumeTexelSize,View_MaxGlobalDFAOConeDistance,View_NumGlobalSDFClipmaps,View_CoveredExpandSurfaceScale,View_NotCoveredExpandSurfaceScale,View_NotCoveredMinStepScale,View_DitheredTransparencyStepThreshold,View_DitheredTransparencyTraceThreshold,View_CursorPosition,View_bCheckerboardSubsurfaceProfileRendering,View_VolumetricFogInvGridSize,View_VolumetricFogGridZParams,View_VolumetricFogSVPosToVolumeUV,View_VolumetricFogViewGridUVToPrevViewRectUV,View_VolumetricFogPrevViewGridRectUVToResourceUV,View_VolumetricFogPrevUVMax,View_VolumetricFogScreenToResourceUV,View_VolumetricFogUVMax,View_VolumetricFogMaxDistance,View_VolumetricLightmapWorldToUVScale,View_VolumetricLightmapWorldToUVAdd,View_VolumetricLightmapIndirectionTextureSize,View_VolumetricLightmapBrickSize,View_VolumetricLightmapBrickTexelSize,View_IndirectLightingCacheShowFlag,View_EyeToPixelSpreadAngle,View_XRPassthroughCameraUVs,View_GlobalVirtualTextureMipBias,View_VirtualTextureFeedbackShift,View_VirtualTextureFeedbackMask,View_VirtualTextureFeedbackStride,View_VirtualTextureFeedbackJitterOffset,View_VirtualTextureFeedbackSampleOffset,View_RuntimeVirtualTextureMipLevel,View_RuntimeVirtualTexturePackHeight,View_RuntimeVirtualTextureDebugParams,View_OverrideLandscapeLOD,View_FarShadowStaticMeshLODBias,View_MinRoughness,View_HairRenderInfo,View_EnableSkyLight,View_HairRenderInfoBits,View_HairComponents,View_bSubsurfacePostprocessEnabled,View_SSProfilesTextureSizeAndInvSize,View_SSProfilesPreIntegratedTextureSizeAndInvSize,View_SpecularProfileTextureSizeAndInvSize,View_PhysicsFieldClipmapCenter,View_PhysicsFieldClipmapDistance,View_PhysicsFieldClipmapResolution,View_PhysicsFieldClipmapExponent,View_PhysicsFieldClipmapCount,View_PhysicsFieldTargetCount,View_PhysicsFieldTargets,View_GPUSceneViewId,View_ViewResolutionFraction,View_SubSurfaceColorAsTransmittanceAtDistanceInMeters,View_TanAndInvTanHalfFOV,View_PrevTanAndInvTanHalfFOV,View_GlintLUTParameters0,View_GlintLUTParameters1,View_bShadingEnergyConservation,View_bShadingEnergyPreservation,View_RectLightAtlasSizeAndInvSize,View_RectLightAtlasMaxMipLevel,View_IESAtlasSizeAndInvSize,View_TLASRelativePreViewTranslation,View_TLASViewTilePosition,View_MaterialTextureBilinearWrapedSampler,View_MaterialTextureBilinearClampedSampler,View_VolumetricLightmapIndirectionTexture,View_VolumetricLightmapBrickAmbientVector,View_VolumetricLightmapBrickSHCoefficients0,View_VolumetricLightmapBrickSHCoefficients1,View_VolumetricLightmapBrickSHCoefficients2,View_VolumetricLightmapBrickSHCoefficients3,View_VolumetricLightmapBrickSHCoefficients4,View_VolumetricLightmapBrickSHCoefficients5,View_SkyBentNormalBrickTexture,View_DirectionalLightShadowingBrickTexture,View_VolumetricLightmapBrickAmbientVectorSampler,View_VolumetricLightmapTextureSampler0,View_VolumetricLightmapTextureSampler1,View_VolumetricLightmapTextureSampler2,View_VolumetricLightmapTextureSampler3,View_VolumetricLightmapTextureSampler4,View_VolumetricLightmapTextureSampler5,View_SkyBentNormalTextureSampler,View_DirectionalLightShadowingTextureSampler,View_GlobalDistanceFieldPageAtlasTexture,View_GlobalDistanceFieldCoverageAtlasTexture,View_GlobalDistanceFieldPageTableTexture,View_GlobalDistanceFieldMipTexture,View_GlobalDistanceFieldPageAtlasTextureSampler,View_GlobalDistanceFieldCoverageAtlasTextureSampler,View_GlobalDistanceFieldMipTextureSampler,View_AtmosphereTransmittanceTexture,View_AtmosphereTransmittanceTextureSampler,View_AtmosphereIrradianceTexture,View_AtmosphereIrradianceTextureSampler,View_AtmosphereInscatterTexture,View_AtmosphereInscatterTextureSampler,View_PerlinNoiseGradientTexture,View_PerlinNoiseGradientTextureSampler,View_PerlinNoise3DTexture,View_PerlinNoise3DTextureSampler,View_SobolSamplingTexture,View_SharedPointWrappedSampler,View_SharedPointClampedSampler,View_SharedBilinearWrappedSampler,View_SharedBilinearClampedSampler,View_SharedBilinearAnisoClampedSampler,View_SharedTrilinearWrappedSampler,View_SharedTrilinearClampedSampler,View_PreIntegratedBRDF,View_PreIntegratedBRDFSampler,View_SkyIrradianceEnvironmentMap,View_TransmittanceLutTexture,View_TransmittanceLutTextureSampler,View_SkyViewLutTexture,View_SkyViewLutTextureSampler,View_DistantSkyLightLutTexture,View_DistantSkyLightLutTextureSampler,View_CameraAerialPerspectiveVolume,View_CameraAerialPerspectiveVolumeSampler,View_CameraAerialPerspectiveVolumeMieOnly,View_CameraAerialPerspectiveVolumeMieOnlySampler,View_CameraAerialPerspectiveVolumeRayOnly,View_CameraAerialPerspectiveVolumeRayOnlySampler,View_HairScatteringLUTTexture,View_HairScatteringLUTSampler,View_GGXLTCMatTexture,View_GGXLTCMatSampler,View_GGXLTCAmpTexture,View_GGXLTCAmpSampler,View_SheenLTCTexture,View_SheenLTCSampler,View_ShadingEnergyGGXSpecTexture,View_ShadingEnergyGGXGlassTexture,View_ShadingEnergyClothSpecTexture,View_ShadingEnergyDiffuseTexture,View_ShadingEnergySampler,View_GlintTexture,View_GlintSampler,View_SimpleVolumeTexture,View_SimpleVolumeTextureSampler,View_SimpleVolumeEnvTexture,View_SimpleVolumeEnvTextureSampler,View_SSProfilesTexture,View_SSProfilesSampler,View_SSProfilesTransmissionSampler,View_SSProfilesPreIntegratedTexture,View_SSProfilesPreIntegratedSampler,View_SpecularProfileTexture,View_SpecularProfileSampler,View_WaterIndirection,View_WaterData,View_RectLightAtlasTexture,View_RectLightAtlasSampler,View_IESAtlasTexture,View_IESAtlasSampler,View_LandscapeWeightmapSampler,View_LandscapeIndirection,View_LandscapePerComponentData,View_VTFeedbackBuffer,View_PhysicsFieldClipmapBuffer,};
+
+#line 33 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_SceneColorTexture;
+
+#line 34 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_SceneDepthTexture;
+
+#line 35 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_ScenePartialDepthTexture;
+
+#line 36 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferATexture;
+
+#line 37 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferBTexture;
+
+#line 38 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferCTexture;
+
+#line 39 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferDTexture;
+
+#line 40 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferETexture;
+
+#line 41 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferFTexture;
+
+#line 42 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_GBufferVelocityTexture;
+
+#line 43 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_ScreenSpaceAOTexture;
+
+#line 44 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D  SceneTexturesStruct_CustomDepthTexture;
+
+#line 45 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+Texture2D<uint2>  SceneTexturesStruct_CustomStencilTexture;
+
+#line 46 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+SamplerState  SceneTexturesStruct_PointClampSampler;
+
+#line 47 "/Engine/Generated/UniformBuffers/SceneTexturesStruct.ush"
+static const struct
+{
+	Texture2D SceneColorTexture;
+	Texture2D SceneDepthTexture;
+	Texture2D ScenePartialDepthTexture;
+	Texture2D GBufferATexture;
+	Texture2D GBufferBTexture;
+	Texture2D GBufferCTexture;
+	Texture2D GBufferDTexture;
+	Texture2D GBufferETexture;
+	Texture2D GBufferFTexture;
+	Texture2D GBufferVelocityTexture;
+	Texture2D ScreenSpaceAOTexture;
+	Texture2D CustomDepthTexture;
+	Texture2D<uint2> CustomStencilTexture;
+	SamplerState PointClampSampler;
+} SceneTexturesStruct = {SceneTexturesStruct_SceneColorTexture,SceneTexturesStruct_SceneDepthTexture,SceneTexturesStruct_ScenePartialDepthTexture,SceneTexturesStruct_GBufferATexture,SceneTexturesStruct_GBufferBTexture,SceneTexturesStruct_GBufferCTexture,SceneTexturesStruct_GBufferDTexture,SceneTexturesStruct_GBufferETexture,SceneTexturesStruct_GBufferFTexture,SceneTexturesStruct_GBufferVelocityTexture,SceneTexturesStruct_ScreenSpaceAOTexture,SceneTexturesStruct_CustomDepthTexture,SceneTexturesStruct_CustomStencilTexture,SceneTexturesStruct_PointClampSampler,};
+
+#line 3 "/Engine/Generated/UniformBuffers/Primitive.ush"
+cbuffer  UniformBufferConstants_Primitive 
+{
+	 uint  Primitive_Flags;
+	 uint  Primitive_InstanceSceneDataOffset;
+	 uint  Primitive_NumInstanceSceneDataEntries;
+	 int  Primitive_SingleCaptureIndex;
+	 float3  Primitive_TilePosition;
+	 uint  Primitive_PrimitiveComponentId;
+	 float4x4  Primitive_LocalToRelativeWorld;
+	 float4x4  Primitive_RelativeWorldToLocal;
+	 float4x4  Primitive_PreviousLocalToRelativeWorld;
+	 float4x4  Primitive_PreviousRelativeWorldToLocal;
+	 float4x4  Primitive_WorldToPreviousWorld;
+	 float3  Primitive_InvNonUniformScale;
+	 float  Primitive_ObjectBoundsX;
+	 float4  Primitive_ObjectRelativeWorldPositionAndRadius;
+	 float3  Primitive_ActorRelativeWorldPosition;
+	 uint  Primitive_LightmapUVIndex;
+	 float3  Primitive_ObjectOrientation;
+	 uint  Primitive_LightmapDataIndex;
+	 float4  Primitive_NonUniformScale;
+	 float3  Primitive_PreSkinnedLocalBoundsMin;
+	 uint  Primitive_NaniteResourceID;
+	 float3  Primitive_PreSkinnedLocalBoundsMax;
+	 uint  Primitive_NaniteHierarchyOffset;
+	 float3  Primitive_LocalObjectBoundsMin;
+	 float  Primitive_ObjectBoundsY;
+	 float3  Primitive_LocalObjectBoundsMax;
+	 float  Primitive_ObjectBoundsZ;
+	 float3  Primitive_InstanceLocalBoundsCenter;
+	 uint  Primitive_InstancePayloadDataOffset;
+	 float3  Primitive_InstanceLocalBoundsExtent;
+	 uint  Primitive_InstancePayloadDataStride;
+	 uint  Primitive_InstancePayloadExtensionSize;
+	 uint  PrePadding_Primitive_532;
+	 uint  PrePadding_Primitive_536;
+	 uint  PrePadding_Primitive_540;
+	 float3  Primitive_WireframeColor;
+	 uint  Primitive_PackedNaniteFlags;
+	 float3  Primitive_LevelColor;
+	 int  Primitive_PersistentPrimitiveIndex;
+	 float2  Primitive_InstanceDrawDistanceMinMaxSquared;
+	 float  Primitive_InstanceWPODisableDistanceSquared;
+	 uint  Primitive_NaniteRayTracingDataOffset;
+	 float  Primitive_MaxWPOExtent;
+	 float  Primitive_MinMaterialDisplacement;
+	 float  Primitive_MaxMaterialDisplacement;
+	 uint  Primitive_CustomStencilValueAndMask;
+	 uint  Primitive_VisibilityFlags;
+	 uint  PrePadding_Primitive_612;
+	 uint  PrePadding_Primitive_616;
+	 uint  PrePadding_Primitive_620;
+	 float4  Primitive_CustomPrimitiveData[9];
+}
+
+#line 57 "/Engine/Generated/UniformBuffers/Primitive.ush"
+static const struct
+{
+	 uint  Flags;
+	 uint  InstanceSceneDataOffset;
+	 uint  NumInstanceSceneDataEntries;
+	 int  SingleCaptureIndex;
+	 float3  TilePosition;
+	 uint  PrimitiveComponentId;
+	 float4x4  LocalToRelativeWorld;
+	 float4x4  RelativeWorldToLocal;
+	 float4x4  PreviousLocalToRelativeWorld;
+	 float4x4  PreviousRelativeWorldToLocal;
+	 float4x4  WorldToPreviousWorld;
+	 float3  InvNonUniformScale;
+	 float  ObjectBoundsX;
+	 float4  ObjectRelativeWorldPositionAndRadius;
+	 float3  ActorRelativeWorldPosition;
+	 uint  LightmapUVIndex;
+	 float3  ObjectOrientation;
+	 uint  LightmapDataIndex;
+	 float4  NonUniformScale;
+	 float3  PreSkinnedLocalBoundsMin;
+	 uint  NaniteResourceID;
+	 float3  PreSkinnedLocalBoundsMax;
+	 uint  NaniteHierarchyOffset;
+	 float3  LocalObjectBoundsMin;
+	 float  ObjectBoundsY;
+	 float3  LocalObjectBoundsMax;
+	 float  ObjectBoundsZ;
+	 float3  InstanceLocalBoundsCenter;
+	 uint  InstancePayloadDataOffset;
+	 float3  InstanceLocalBoundsExtent;
+	 uint  InstancePayloadDataStride;
+	 uint  InstancePayloadExtensionSize;
+	 float3  WireframeColor;
+	 uint  PackedNaniteFlags;
+	 float3  LevelColor;
+	 int  PersistentPrimitiveIndex;
+	 float2  InstanceDrawDistanceMinMaxSquared;
+	 float  InstanceWPODisableDistanceSquared;
+	 uint  NaniteRayTracingDataOffset;
+	 float  MaxWPOExtent;
+	 float  MinMaterialDisplacement;
+	 float  MaxMaterialDisplacement;
+	 uint  CustomStencilValueAndMask;
+	 uint  VisibilityFlags;
+	 float4  CustomPrimitiveData[9];
+} Primitive = {Primitive_Flags,Primitive_InstanceSceneDataOffset,Primitive_NumInstanceSceneDataEntries,Primitive_SingleCaptureIndex,Primitive_TilePosition,Primitive_PrimitiveComponentId,Primitive_LocalToRelativeWorld,Primitive_RelativeWorldToLocal,Primitive_PreviousLocalToRelativeWorld,Primitive_PreviousRelativeWorldToLocal,Primitive_WorldToPreviousWorld,Primitive_InvNonUniformScale,Primitive_ObjectBoundsX,Primitive_ObjectRelativeWorldPositionAndRadius,Primitive_ActorRelativeWorldPosition,Primitive_LightmapUVIndex,Primitive_ObjectOrientation,Primitive_LightmapDataIndex,Primitive_NonUniformScale,Primitive_PreSkinnedLocalBoundsMin,Primitive_NaniteResourceID,Primitive_PreSkinnedLocalBoundsMax,Primitive_NaniteHierarchyOffset,Primitive_LocalObjectBoundsMin,Primitive_ObjectBoundsY,Primitive_LocalObjectBoundsMax,Primitive_ObjectBoundsZ,Primitive_InstanceLocalBoundsCenter,Primitive_InstancePayloadDataOffset,Primitive_InstanceLocalBoundsExtent,Primitive_InstancePayloadDataStride,Primitive_InstancePayloadExtensionSize,Primitive_WireframeColor,Primitive_PackedNaniteFlags,Primitive_LevelColor,Primitive_PersistentPrimitiveIndex,Primitive_InstanceDrawDistanceMinMaxSquared,Primitive_InstanceWPODisableDistanceSquared,Primitive_NaniteRayTracingDataOffset,Primitive_MaxWPOExtent,Primitive_MinMaterialDisplacement,Primitive_MaxMaterialDisplacement,Primitive_CustomStencilValueAndMask,Primitive_VisibilityFlags,Primitive_CustomPrimitiveData,};
+
+#line 3 "/Engine/Generated/UniformBuffers/Material.ush"
+cbuffer  UniformBufferConstants_Material 
+{
+	 float4  Material_PreshaderBuffer[2];
+	 uint BindlessSampler_Material_Wrap_WorldGroupSettings ;
+	 uint  PrePadding_Material_36;
+	 uint BindlessSampler_Material_Clamp_WorldGroupSettings ;
+}
+
+#line 10 "/Engine/Generated/UniformBuffers/Material.ush"
+SamplerState  Material_Wrap_WorldGroupSettings;
+
+#line 11 "/Engine/Generated/UniformBuffers/Material.ush"
+SamplerState  Material_Clamp_WorldGroupSettings;
+
+#line 12 "/Engine/Generated/UniformBuffers/Material.ush"
+static const struct
+{
+	 float4  PreshaderBuffer[2];
+	SamplerState Wrap_WorldGroupSettings;
+	SamplerState Clamp_WorldGroupSettings;
+} Material = {Material_PreshaderBuffer,Material_Wrap_WorldGroupSettings,Material_Clamp_WorldGroupSettings,};
+
+#line 1 "/Engine/Generated/GeneratedInstancedStereo.ush"
+struct ViewState
+{
+	float4x4 TranslatedWorldToClip;
+	float4x4 RelativeWorldToClip;
+	float4x4 ClipToRelativeWorld;
+	float4x4 TranslatedWorldToView;
+	float4x4 ViewToTranslatedWorld;
+	float4x4 TranslatedWorldToCameraView;
+	float4x4 CameraViewToTranslatedWorld;
+	float4x4 ViewToClip;
+	float4x4 ViewToClipNoAA;
+	float4x4 ClipToView;
+	float4x4 ClipToTranslatedWorld;
+	float4x4 SVPositionToTranslatedWorld;
+	float4x4 ScreenToRelativeWorld;
+	float4x4 ScreenToTranslatedWorld;
+	float4x4 MobileMultiviewShadowTransform;
+	float3 ViewTilePosition;
+	float3 MatrixTilePosition;
+	float3 ViewForward;
+	float3 ViewUp;
+	float3 ViewRight;
+	float3 HMDViewNoRollUp;
+	float3 HMDViewNoRollRight;
+	float4 InvDeviceZToWorldZTransform;
+	float4 ScreenPositionScaleBias;
+	float3 RelativeWorldCameraOrigin;
+	float3 TranslatedWorldCameraOrigin;
+	float3 RelativeWorldViewOrigin;
+	float3 RelativePreViewTranslation;
+	float4x4 PrevViewToClip;
+	float4x4 PrevClipToView;
+	float4x4 PrevTranslatedWorldToClip;
+	float4x4 PrevTranslatedWorldToView;
+	float4x4 PrevViewToTranslatedWorld;
+	float4x4 PrevTranslatedWorldToCameraView;
+	float4x4 PrevCameraViewToTranslatedWorld;
+	float3 PrevTranslatedWorldCameraOrigin;
+	float3 PrevRelativeWorldCameraOrigin;
+	float3 PrevRelativeWorldViewOrigin;
+	float3 RelativePrevPreViewTranslation;
+	float4x4 PrevClipToRelativeWorld;
+	float4x4 PrevScreenToTranslatedWorld;
+	float4x4 ClipToPrevClip;
+	float4x4 ClipToPrevClipWithAA;
+	float4 TemporalAAJitter;
+	float4 GlobalClippingPlane;
+	float2 FieldOfViewWideAngles;
+	float2 PrevFieldOfViewWideAngles;
+	float4 ViewRectMin;
+	float4 ViewSizeAndInvSize;
+	uint4 ViewRectMinAndSize;
+	float4 LightProbeSizeRatioAndInvSizeRatio;
+	float4 BufferSizeAndInvSize;
+	float4 BufferBilinearUVMinMax;
+	float4 ScreenToViewSpace;
+	float2 BufferToSceneTextureScale;
+	float2 ResolutionFractionAndInv;
+	int NumSceneColorMSAASamples;
+	float ProjectionDepthThicknessScale;
+	float PreExposure;
+	float OneOverPreExposure;
+	float4 DiffuseOverrideParameter;
+	float4 SpecularOverrideParameter;
+	float4 NormalOverrideParameter;
+	float2 RoughnessOverrideParameter;
+	float PrevFrameGameTime;
+	float PrevFrameRealTime;
+	float OutOfBoundsMask;
+	float3 WorldCameraMovementSinceLastFrame;
+	float CullingSign;
+	float NearPlane;
+	float GameTime;
+	float RealTime;
+	float DeltaTime;
+	float MaterialTextureMipBias;
+	float MaterialTextureDerivativeMultiply;
+	uint Random;
+	uint FrameNumber;
+	uint FrameCounter;
+	uint StateFrameIndexMod8;
+	uint StateFrameIndex;
+	uint DebugViewModeMask;
+	uint WorldIsPaused;
+	float CameraCut;
+	float UnlitViewmodeMask;
+	float4 DirectionalLightColor;
+	float3 DirectionalLightDirection;
+	float4 TranslucencyLightingVolumeMin[2];
+	float4 TranslucencyLightingVolumeInvSize[2];
+	float4 TemporalAAParams;
+	float4 CircleDOFParams;
+	float DepthOfFieldSensorWidth;
+	float DepthOfFieldFocalDistance;
+	float DepthOfFieldScale;
+	float DepthOfFieldFocalLength;
+	float DepthOfFieldFocalRegion;
+	float DepthOfFieldNearTransitionRegion;
+	float DepthOfFieldFarTransitionRegion;
+	float MotionBlurNormalizedToPixel;
+	float GeneralPurposeTweak;
+	float GeneralPurposeTweak2;
+	float DemosaicVposOffset;
+	float DecalDepthBias;
+	float3 IndirectLightingColorScale;
+	float3 PrecomputedIndirectLightingColorScale;
+	float3 PrecomputedIndirectSpecularColorScale;
+	float4 AtmosphereLightDirection[2];
+	float4 AtmosphereLightIlluminanceOnGroundPostTransmittance[2];
+	float4 AtmosphereLightIlluminanceOuterSpace[2];
+	float4 AtmosphereLightDiscLuminance[2];
+	float4 AtmosphereLightDiscCosHalfApexAngle_PPTrans[2];
+	float4 SkyViewLutSizeAndInvSize;
+	float3 SkyCameraTranslatedWorldOrigin;
+	float4 SkyPlanetTranslatedWorldCenterAndViewHeight;
+	float4x4 SkyViewLutReferential;
+	float4 SkyAtmosphereSkyLuminanceFactor;
+	float SkyAtmospherePresentInScene;
+	float SkyAtmosphereHeightFogContribution;
+	float SkyAtmosphereBottomRadiusKm;
+	float SkyAtmosphereTopRadiusKm;
+	float4 SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize;
+	float SkyAtmosphereAerialPerspectiveStartDepthKm;
+	float SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution;
+	float SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv;
+	float SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm;
+	float SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv;
+	float SkyAtmosphereApplyCameraAerialPerspectiveVolume;
+	float3 NormalCurvatureToRoughnessScaleBias;
+	float RenderingReflectionCaptureMask;
+	float RealTimeReflectionCapture;
+	float RealTimeReflectionCapturePreExposure;
+	float4 AmbientCubemapTint;
+	float AmbientCubemapIntensity;
+	float SkyLightApplyPrecomputedBentNormalShadowingFlag;
+	float SkyLightAffectReflectionFlag;
+	float SkyLightAffectGlobalIlluminationFlag;
+	float4 SkyLightColor;
+	float4 MobileSkyIrradianceEnvironmentMap[8];
+	float MobilePreviewMode;
+	float HMDEyePaddingOffset;
+	float ReflectionCubemapMaxMip;
+	float ShowDecalsMask;
+	uint DistanceFieldAOSpecularOcclusionMode;
+	float IndirectCapsuleSelfShadowingIntensity;
+	float3 ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight;
+	int StereoPassIndex;
+	float4 GlobalVolumeTranslatedCenterAndExtent[6];
+	float4 GlobalVolumeTranslatedWorldToUVAddAndMul[6];
+	float4 GlobalDistanceFieldMipTranslatedWorldToUVScale[6];
+	float4 GlobalDistanceFieldMipTranslatedWorldToUVBias[6];
+	float GlobalDistanceFieldMipFactor;
+	float GlobalDistanceFieldMipTransition;
+	int GlobalDistanceFieldClipmapSizeInPages;
+	float3 GlobalDistanceFieldInvPageAtlasSize;
+	float3 GlobalDistanceFieldInvCoverageAtlasSize;
+	float GlobalVolumeDimension;
+	float GlobalVolumeTexelSize;
+	float MaxGlobalDFAOConeDistance;
+	uint NumGlobalSDFClipmaps;
+	float CoveredExpandSurfaceScale;
+	float NotCoveredExpandSurfaceScale;
+	float NotCoveredMinStepScale;
+	float DitheredTransparencyStepThreshold;
+	float DitheredTransparencyTraceThreshold;
+	int2 CursorPosition;
+	float bCheckerboardSubsurfaceProfileRendering;
+	float3 VolumetricFogInvGridSize;
+	float3 VolumetricFogGridZParams;
+	float2 VolumetricFogSVPosToVolumeUV;
+	float2 VolumetricFogViewGridUVToPrevViewRectUV;
+	float2 VolumetricFogPrevViewGridRectUVToResourceUV;
+	float2 VolumetricFogPrevUVMax;
+	float2 VolumetricFogScreenToResourceUV;
+	float2 VolumetricFogUVMax;
+	float VolumetricFogMaxDistance;
+	float3 VolumetricLightmapWorldToUVScale;
+	float3 VolumetricLightmapWorldToUVAdd;
+	float3 VolumetricLightmapIndirectionTextureSize;
+	float VolumetricLightmapBrickSize;
+	float3 VolumetricLightmapBrickTexelSize;
+	float IndirectLightingCacheShowFlag;
+	float EyeToPixelSpreadAngle;
+	float4 XRPassthroughCameraUVs[2];
+	float GlobalVirtualTextureMipBias;
+	uint VirtualTextureFeedbackShift;
+	uint VirtualTextureFeedbackMask;
+	uint VirtualTextureFeedbackStride;
+	uint VirtualTextureFeedbackJitterOffset;
+	uint VirtualTextureFeedbackSampleOffset;
+	float4 RuntimeVirtualTextureMipLevel;
+	float2 RuntimeVirtualTexturePackHeight;
+	float4 RuntimeVirtualTextureDebugParams;
+	float OverrideLandscapeLOD;
+	int FarShadowStaticMeshLODBias;
+	float MinRoughness;
+	float4 HairRenderInfo;
+	uint EnableSkyLight;
+	uint HairRenderInfoBits;
+	uint HairComponents;
+	float bSubsurfacePostprocessEnabled;
+	float4 SSProfilesTextureSizeAndInvSize;
+	float4 SSProfilesPreIntegratedTextureSizeAndInvSize;
+	float4 SpecularProfileTextureSizeAndInvSize;
+	float3 PhysicsFieldClipmapCenter;
+	float PhysicsFieldClipmapDistance;
+	int PhysicsFieldClipmapResolution;
+	int PhysicsFieldClipmapExponent;
+	int PhysicsFieldClipmapCount;
+	int PhysicsFieldTargetCount;
+	int4 PhysicsFieldTargets[32];
+	uint GPUSceneViewId;
+	float ViewResolutionFraction;
+	float SubSurfaceColorAsTransmittanceAtDistanceInMeters;
+	float4 TanAndInvTanHalfFOV;
+	float4 PrevTanAndInvTanHalfFOV;
+	float4 GlintLUTParameters0;
+	float4 GlintLUTParameters1;
+	FLWCInverseMatrix WorldToClip;
+	FLWCMatrix ClipToWorld;
+	FLWCMatrix ScreenToWorld;
+	FLWCMatrix PrevClipToWorld;
+	FLWCVector3 WorldCameraOrigin;
+	FLWCVector3 WorldViewOrigin;
+	FLWCVector3 PrevWorldCameraOrigin;
+	FLWCVector3 PrevWorldViewOrigin;
+	FLWCVector3 PreViewTranslation;
+	FLWCVector3 PrevPreViewTranslation;
+};
+
+#line 230 "/Engine/Generated/GeneratedInstancedStereo.ush"
+void FinalizeViewState(inout ViewState InOutView);
+
+#line 231 "/Engine/Generated/GeneratedInstancedStereo.ush"
+ViewState GetPrimaryView()
+{
+	ViewState Result;
+	Result.TranslatedWorldToClip = View.TranslatedWorldToClip;
+	Result.RelativeWorldToClip = View.RelativeWorldToClip;
+	Result.ClipToRelativeWorld = View.ClipToRelativeWorld;
+	Result.TranslatedWorldToView = View.TranslatedWorldToView;
+	Result.ViewToTranslatedWorld = View.ViewToTranslatedWorld;
+	Result.TranslatedWorldToCameraView = View.TranslatedWorldToCameraView;
+	Result.CameraViewToTranslatedWorld = View.CameraViewToTranslatedWorld;
+	Result.ViewToClip = View.ViewToClip;
+	Result.ViewToClipNoAA = View.ViewToClipNoAA;
+	Result.ClipToView = View.ClipToView;
+	Result.ClipToTranslatedWorld = View.ClipToTranslatedWorld;
+	Result.SVPositionToTranslatedWorld = View.SVPositionToTranslatedWorld;
+	Result.ScreenToRelativeWorld = View.ScreenToRelativeWorld;
+	Result.ScreenToTranslatedWorld = View.ScreenToTranslatedWorld;
+	Result.MobileMultiviewShadowTransform = View.MobileMultiviewShadowTransform;
+	Result.ViewTilePosition = View.ViewTilePosition;
+	Result.MatrixTilePosition = View.MatrixTilePosition;
+	Result.ViewForward = View.ViewForward;
+	Result.ViewUp = View.ViewUp;
+	Result.ViewRight = View.ViewRight;
+	Result.HMDViewNoRollUp = View.HMDViewNoRollUp;
+	Result.HMDViewNoRollRight = View.HMDViewNoRollRight;
+	Result.InvDeviceZToWorldZTransform = View.InvDeviceZToWorldZTransform;
+	Result.ScreenPositionScaleBias = View.ScreenPositionScaleBias;
+	Result.RelativeWorldCameraOrigin = View.RelativeWorldCameraOrigin;
+	Result.TranslatedWorldCameraOrigin = View.TranslatedWorldCameraOrigin;
+	Result.RelativeWorldViewOrigin = View.RelativeWorldViewOrigin;
+	Result.RelativePreViewTranslation = View.RelativePreViewTranslation;
+	Result.PrevViewToClip = View.PrevViewToClip;
+	Result.PrevClipToView = View.PrevClipToView;
+	Result.PrevTranslatedWorldToClip = View.PrevTranslatedWorldToClip;
+	Result.PrevTranslatedWorldToView = View.PrevTranslatedWorldToView;
+	Result.PrevViewToTranslatedWorld = View.PrevViewToTranslatedWorld;
+	Result.PrevTranslatedWorldToCameraView = View.PrevTranslatedWorldToCameraView;
+	Result.PrevCameraViewToTranslatedWorld = View.PrevCameraViewToTranslatedWorld;
+	Result.PrevTranslatedWorldCameraOrigin = View.PrevTranslatedWorldCameraOrigin;
+	Result.PrevRelativeWorldCameraOrigin = View.PrevRelativeWorldCameraOrigin;
+	Result.PrevRelativeWorldViewOrigin = View.PrevRelativeWorldViewOrigin;
+	Result.RelativePrevPreViewTranslation = View.RelativePrevPreViewTranslation;
+	Result.PrevClipToRelativeWorld = View.PrevClipToRelativeWorld;
+	Result.PrevScreenToTranslatedWorld = View.PrevScreenToTranslatedWorld;
+	Result.ClipToPrevClip = View.ClipToPrevClip;
+	Result.ClipToPrevClipWithAA = View.ClipToPrevClipWithAA;
+	Result.TemporalAAJitter = View.TemporalAAJitter;
+	Result.GlobalClippingPlane = View.GlobalClippingPlane;
+	Result.FieldOfViewWideAngles = View.FieldOfViewWideAngles;
+	Result.PrevFieldOfViewWideAngles = View.PrevFieldOfViewWideAngles;
+	Result.ViewRectMin = View.ViewRectMin;
+	Result.ViewSizeAndInvSize = View.ViewSizeAndInvSize;
+	Result.ViewRectMinAndSize = View.ViewRectMinAndSize;
+	Result.LightProbeSizeRatioAndInvSizeRatio = View.LightProbeSizeRatioAndInvSizeRatio;
+	Result.BufferSizeAndInvSize = View.BufferSizeAndInvSize;
+	Result.BufferBilinearUVMinMax = View.BufferBilinearUVMinMax;
+	Result.ScreenToViewSpace = View.ScreenToViewSpace;
+	Result.BufferToSceneTextureScale = View.BufferToSceneTextureScale;
+	Result.ResolutionFractionAndInv = View.ResolutionFractionAndInv;
+	Result.NumSceneColorMSAASamples = View.NumSceneColorMSAASamples;
+	Result.ProjectionDepthThicknessScale = View.ProjectionDepthThicknessScale;
+	Result.PreExposure = View.PreExposure;
+	Result.OneOverPreExposure = View.OneOverPreExposure;
+	Result.DiffuseOverrideParameter = View.DiffuseOverrideParameter;
+	Result.SpecularOverrideParameter = View.SpecularOverrideParameter;
+	Result.NormalOverrideParameter = View.NormalOverrideParameter;
+	Result.RoughnessOverrideParameter = View.RoughnessOverrideParameter;
+	Result.PrevFrameGameTime = View.PrevFrameGameTime;
+	Result.PrevFrameRealTime = View.PrevFrameRealTime;
+	Result.OutOfBoundsMask = View.OutOfBoundsMask;
+	Result.WorldCameraMovementSinceLastFrame = View.WorldCameraMovementSinceLastFrame;
+	Result.CullingSign = View.CullingSign;
+	Result.NearPlane = View.NearPlane;
+	Result.GameTime = View.GameTime;
+	Result.RealTime = View.RealTime;
+	Result.DeltaTime = View.DeltaTime;
+	Result.MaterialTextureMipBias = View.MaterialTextureMipBias;
+	Result.MaterialTextureDerivativeMultiply = View.MaterialTextureDerivativeMultiply;
+	Result.Random = View.Random;
+	Result.FrameNumber = View.FrameNumber;
+	Result.FrameCounter = View.FrameCounter;
+	Result.StateFrameIndexMod8 = View.StateFrameIndexMod8;
+	Result.StateFrameIndex = View.StateFrameIndex;
+	Result.DebugViewModeMask = View.DebugViewModeMask;
+	Result.WorldIsPaused = View.WorldIsPaused;
+	Result.CameraCut = View.CameraCut;
+	Result.UnlitViewmodeMask = View.UnlitViewmodeMask;
+	Result.DirectionalLightColor = View.DirectionalLightColor;
+	Result.DirectionalLightDirection = View.DirectionalLightDirection;
+	Result.TranslucencyLightingVolumeMin = View.TranslucencyLightingVolumeMin;
+	Result.TranslucencyLightingVolumeInvSize = View.TranslucencyLightingVolumeInvSize;
+	Result.TemporalAAParams = View.TemporalAAParams;
+	Result.CircleDOFParams = View.CircleDOFParams;
+	Result.DepthOfFieldSensorWidth = View.DepthOfFieldSensorWidth;
+	Result.DepthOfFieldFocalDistance = View.DepthOfFieldFocalDistance;
+	Result.DepthOfFieldScale = View.DepthOfFieldScale;
+	Result.DepthOfFieldFocalLength = View.DepthOfFieldFocalLength;
+	Result.DepthOfFieldFocalRegion = View.DepthOfFieldFocalRegion;
+	Result.DepthOfFieldNearTransitionRegion = View.DepthOfFieldNearTransitionRegion;
+	Result.DepthOfFieldFarTransitionRegion = View.DepthOfFieldFarTransitionRegion;
+	Result.MotionBlurNormalizedToPixel = View.MotionBlurNormalizedToPixel;
+	Result.GeneralPurposeTweak = View.GeneralPurposeTweak;
+	Result.GeneralPurposeTweak2 = View.GeneralPurposeTweak2;
+	Result.DemosaicVposOffset = View.DemosaicVposOffset;
+	Result.DecalDepthBias = View.DecalDepthBias;
+	Result.IndirectLightingColorScale = View.IndirectLightingColorScale;
+	Result.PrecomputedIndirectLightingColorScale = View.PrecomputedIndirectLightingColorScale;
+	Result.PrecomputedIndirectSpecularColorScale = View.PrecomputedIndirectSpecularColorScale;
+	Result.AtmosphereLightDirection = View.AtmosphereLightDirection;
+	Result.AtmosphereLightIlluminanceOnGroundPostTransmittance = View.AtmosphereLightIlluminanceOnGroundPostTransmittance;
+	Result.AtmosphereLightIlluminanceOuterSpace = View.AtmosphereLightIlluminanceOuterSpace;
+	Result.AtmosphereLightDiscLuminance = View.AtmosphereLightDiscLuminance;
+	Result.AtmosphereLightDiscCosHalfApexAngle_PPTrans = View.AtmosphereLightDiscCosHalfApexAngle_PPTrans;
+	Result.SkyViewLutSizeAndInvSize = View.SkyViewLutSizeAndInvSize;
+	Result.SkyCameraTranslatedWorldOrigin = View.SkyCameraTranslatedWorldOrigin;
+	Result.SkyPlanetTranslatedWorldCenterAndViewHeight = View.SkyPlanetTranslatedWorldCenterAndViewHeight;
+	Result.SkyViewLutReferential = View.SkyViewLutReferential;
+	Result.SkyAtmosphereSkyLuminanceFactor = View.SkyAtmosphereSkyLuminanceFactor;
+	Result.SkyAtmospherePresentInScene = View.SkyAtmospherePresentInScene;
+	Result.SkyAtmosphereHeightFogContribution = View.SkyAtmosphereHeightFogContribution;
+	Result.SkyAtmosphereBottomRadiusKm = View.SkyAtmosphereBottomRadiusKm;
+	Result.SkyAtmosphereTopRadiusKm = View.SkyAtmosphereTopRadiusKm;
+	Result.SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize = View.SkyAtmosphereCameraAerialPerspectiveVolumeSizeAndInvSize;
+	Result.SkyAtmosphereAerialPerspectiveStartDepthKm = View.SkyAtmosphereAerialPerspectiveStartDepthKm;
+	Result.SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution = View.SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolution;
+	Result.SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv = View.SkyAtmosphereCameraAerialPerspectiveVolumeDepthResolutionInv;
+	Result.SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm = View.SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKm;
+	Result.SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv = View.SkyAtmosphereCameraAerialPerspectiveVolumeDepthSliceLengthKmInv;
+	Result.SkyAtmosphereApplyCameraAerialPerspectiveVolume = View.SkyAtmosphereApplyCameraAerialPerspectiveVolume;
+	Result.NormalCurvatureToRoughnessScaleBias = View.NormalCurvatureToRoughnessScaleBias;
+	Result.RenderingReflectionCaptureMask = View.RenderingReflectionCaptureMask;
+	Result.RealTimeReflectionCapture = View.RealTimeReflectionCapture;
+	Result.RealTimeReflectionCapturePreExposure = View.RealTimeReflectionCapturePreExposure;
+	Result.AmbientCubemapTint = View.AmbientCubemapTint;
+	Result.AmbientCubemapIntensity = View.AmbientCubemapIntensity;
+	Result.SkyLightApplyPrecomputedBentNormalShadowingFlag = View.SkyLightApplyPrecomputedBentNormalShadowingFlag;
+	Result.SkyLightAffectReflectionFlag = View.SkyLightAffectReflectionFlag;
+	Result.SkyLightAffectGlobalIlluminationFlag = View.SkyLightAffectGlobalIlluminationFlag;
+	Result.SkyLightColor = View.SkyLightColor;
+	Result.MobileSkyIrradianceEnvironmentMap = View.MobileSkyIrradianceEnvironmentMap;
+	Result.MobilePreviewMode = View.MobilePreviewMode;
+	Result.HMDEyePaddingOffset = View.HMDEyePaddingOffset;
+	Result.ReflectionCubemapMaxMip = View.ReflectionCubemapMaxMip;
+	Result.ShowDecalsMask = View.ShowDecalsMask;
+	Result.DistanceFieldAOSpecularOcclusionMode = View.DistanceFieldAOSpecularOcclusionMode;
+	Result.IndirectCapsuleSelfShadowingIntensity = View.IndirectCapsuleSelfShadowingIntensity;
+	Result.ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight = View.ReflectionEnvironmentRoughnessMixingScaleBiasAndLargestWeight;
+	Result.StereoPassIndex = View.StereoPassIndex;
+	Result.GlobalVolumeTranslatedCenterAndExtent = View.GlobalVolumeTranslatedCenterAndExtent;
+	Result.GlobalVolumeTranslatedWorldToUVAddAndMul = View.GlobalVolumeTranslatedWorldToUVAddAndMul;
+	Result.GlobalDistanceFieldMipTranslatedWorldToUVScale = View.GlobalDistanceFieldMipTranslatedWorldToUVScale;
+	Result.GlobalDistanceFieldMipTranslatedWorldToUVBias = View.GlobalDistanceFieldMipTranslatedWorldToUVBias;
+	Result.GlobalDistanceFieldMipFactor = View.GlobalDistanceFieldMipFactor;
+	Result.GlobalDistanceFieldMipTransition = View.GlobalDistanceFieldMipTransition;
+	Result.GlobalDistanceFieldClipmapSizeInPages = View.GlobalDistanceFieldClipmapSizeInPages;
+	Result.GlobalDistanceFieldInvPageAtlasSize = View.GlobalDistanceFieldInvPageAtlasSize;
+	Result.GlobalDistanceFieldInvCoverageAtlasSize = View.GlobalDistanceFieldInvCoverageAtlasSize;
+	Result.GlobalVolumeDimension = View.GlobalVolumeDimension;
+	Result.GlobalVolumeTexelSize = View.GlobalVolumeTexelSize;
+	Result.MaxGlobalDFAOConeDistance = View.MaxGlobalDFAOConeDistance;
+	Result.NumGlobalSDFClipmaps = View.NumGlobalSDFClipmaps;
+	Result.CoveredExpandSurfaceScale = View.CoveredExpandSurfaceScale;
+	Result.NotCoveredExpandSurfaceScale = View.NotCoveredExpandSurfaceScale;
+	Result.NotCoveredMinStepScale = View.NotCoveredMinStepScale;
+	Result.DitheredTransparencyStepThreshold = View.DitheredTransparencyStepThreshold;
+	Result.DitheredTransparencyTraceThreshold = View.DitheredTransparencyTraceThreshold;
+	Result.CursorPosition = View.CursorPosition;
+	Result.bCheckerboardSubsurfaceProfileRendering = View.bCheckerboardSubsurfaceProfileRendering;
+	Result.VolumetricFogInvGridSize = View.VolumetricFogInvGridSize;
+	Result.VolumetricFogGridZParams = View.VolumetricFogGridZParams;
+	Result.VolumetricFogSVPosToVolumeUV = View.VolumetricFogSVPosToVolumeUV;
+	Result.VolumetricFogViewGridUVToPrevViewRectUV = View.VolumetricFogViewGridUVToPrevViewRectUV;
+	Result.VolumetricFogPrevViewGridRectUVToResourceUV = View.VolumetricFogPrevViewGridRectUVToResourceUV;
+	Result.VolumetricFogPrevUVMax = View.VolumetricFogPrevUVMax;
+	Result.VolumetricFogScreenToResourceUV = View.VolumetricFogScreenToResourceUV;
+	Result.VolumetricFogUVMax = View.VolumetricFogUVMax;
+	Result.VolumetricFogMaxDistance = View.VolumetricFogMaxDistance;
+	Result.VolumetricLightmapWorldToUVScale = View.VolumetricLightmapWorldToUVScale;
+	Result.VolumetricLightmapWorldToUVAdd = View.VolumetricLightmapWorldToUVAdd;
+	Result.VolumetricLightmapIndirectionTextureSize = View.VolumetricLightmapIndirectionTextureSize;
+	Result.VolumetricLightmapBrickSize = View.VolumetricLightmapBrickSize;
+	Result.VolumetricLightmapBrickTexelSize = View.VolumetricLightmapBrickTexelSize;
+	Result.IndirectLightingCacheShowFlag = View.IndirectLightingCacheShowFlag;
+	Result.EyeToPixelSpreadAngle = View.EyeToPixelSpreadAngle;
+	Result.XRPassthroughCameraUVs = View.XRPassthroughCameraUVs;
+	Result.GlobalVirtualTextureMipBias = View.GlobalVirtualTextureMipBias;
+	Result.VirtualTextureFeedbackShift = View.VirtualTextureFeedbackShift;
+	Result.VirtualTextureFeedbackMask = View.VirtualTextureFeedbackMask;
+	Result.VirtualTextureFeedbackStride = View.VirtualTextureFeedbackStride;
+	Result.VirtualTextureFeedbackJitterOffset = View.VirtualTextureFeedbackJitterOffset;
+	Result.VirtualTextureFeedbackSampleOffset = View.VirtualTextureFeedbackSampleOffset;
+	Result.RuntimeVirtualTextureMipLevel = View.RuntimeVirtualTextureMipLevel;
+	Result.RuntimeVirtualTexturePackHeight = View.RuntimeVirtualTexturePackHeight;
+	Result.RuntimeVirtualTextureDebugParams = View.RuntimeVirtualTextureDebugParams;
+	Result.OverrideLandscapeLOD = View.OverrideLandscapeLOD;
+	Result.FarShadowStaticMeshLODBias = View.FarShadowStaticMeshLODBias;
+	Result.MinRoughness = View.MinRoughness;
+	Result.HairRenderInfo = View.HairRenderInfo;
+	Result.EnableSkyLight = View.EnableSkyLight;
+	Result.HairRenderInfoBits = View.HairRenderInfoBits;
+	Result.HairComponents = View.HairComponents;
+	Result.bSubsurfacePostprocessEnabled = View.bSubsurfacePostprocessEnabled;
+	Result.SSProfilesTextureSizeAndInvSize = View.SSProfilesTextureSizeAndInvSize;
+	Result.SSProfilesPreIntegratedTextureSizeAndInvSize = View.SSProfilesPreIntegratedTextureSizeAndInvSize;
+	Result.SpecularProfileTextureSizeAndInvSize = View.SpecularProfileTextureSizeAndInvSize;
+	Result.PhysicsFieldClipmapCenter = View.PhysicsFieldClipmapCenter;
+	Result.PhysicsFieldClipmapDistance = View.PhysicsFieldClipmapDistance;
+	Result.PhysicsFieldClipmapResolution = View.PhysicsFieldClipmapResolution;
+	Result.PhysicsFieldClipmapExponent = View.PhysicsFieldClipmapExponent;
+	Result.PhysicsFieldClipmapCount = View.PhysicsFieldClipmapCount;
+	Result.PhysicsFieldTargetCount = View.PhysicsFieldTargetCount;
+	Result.PhysicsFieldTargets = View.PhysicsFieldTargets;
+	Result.GPUSceneViewId = View.GPUSceneViewId;
+	Result.ViewResolutionFraction = View.ViewResolutionFraction;
+	Result.SubSurfaceColorAsTransmittanceAtDistanceInMeters = View.SubSurfaceColorAsTransmittanceAtDistanceInMeters;
+	Result.TanAndInvTanHalfFOV = View.TanAndInvTanHalfFOV;
+	Result.PrevTanAndInvTanHalfFOV = View.PrevTanAndInvTanHalfFOV;
+	Result.GlintLUTParameters0 = View.GlintLUTParameters0;
+	Result.GlintLUTParameters1 = View.GlintLUTParameters1;
+	FinalizeViewState(Result);
+	return Result;
+}
+
+#line 17 "/Engine/Private/InstancedStereo.ush"
+void FinalizeViewState(inout ViewState InOutView)
+{
+	InOutView.WorldToClip = MakeLWCInverseMatrix(InOutView.MatrixTilePosition, InOutView.RelativeWorldToClip);
+	InOutView.ClipToWorld = MakeLWCMatrix(InOutView.MatrixTilePosition, InOutView.ClipToRelativeWorld);
+	InOutView.ScreenToWorld = MakeLWCMatrix(InOutView.MatrixTilePosition, InOutView.ScreenToRelativeWorld);
+	InOutView.PrevClipToWorld = MakeLWCMatrix(InOutView.MatrixTilePosition, InOutView.PrevClipToRelativeWorld);
+
+	InOutView.WorldCameraOrigin = MakeLWCVector3(InOutView.ViewTilePosition, InOutView.RelativeWorldCameraOrigin);
+	InOutView.WorldViewOrigin = MakeLWCVector3(InOutView.ViewTilePosition, InOutView.RelativeWorldViewOrigin);
+	InOutView.PrevWorldCameraOrigin = MakeLWCVector3(InOutView.ViewTilePosition, InOutView.PrevRelativeWorldCameraOrigin);
+	InOutView.PrevWorldViewOrigin = MakeLWCVector3(InOutView.ViewTilePosition, InOutView.PrevRelativeWorldViewOrigin);
+	InOutView.PreViewTranslation = MakeLWCVector3(-InOutView.ViewTilePosition, InOutView.RelativePreViewTranslation);
+	InOutView.PrevPreViewTranslation = MakeLWCVector3(-InOutView.ViewTilePosition, InOutView.RelativePrevPreViewTranslation);
+}
+
+#line 34 "/Engine/Private/InstancedStereo.ush"
+static ViewState ResolvedView = (ViewState)0.0f;
+
+#line 36 "/Engine/Private/InstancedStereo.ush"
+ViewState ResolveView()
+{
+	return GetPrimaryView();
+}
+
+#line 337 "/Engine/Private/Common.ush"
+float4 Texture2DSampleLevel(Texture2D Tex, SamplerState Sampler, float2 UV, float Mip)
+{
+	return Tex.SampleLevel(Sampler, UV, Mip);
+}
+
+#line 924 "/Engine/Private/Common.ush"
+float Pow2( float x )
+{
+	return x*x;
+}
+
+#line 929 "/Engine/Private/Common.ush"
+float2 Pow2( float2 x )
+{
+	return x*x;
+}
+
+#line 934 "/Engine/Private/Common.ush"
+float3 Pow2( float3 x )
+{
+	return x*x;
+}
+
+#line 939 "/Engine/Private/Common.ush"
+float4 Pow2( float4 x )
+{
+	return x*x;
+}
+
+#line 1187 "/Engine/Private/Common.ush"
+bool IsOrthoProjection(float4x4 ViewToClip)
+{
+	return asuint(ViewToClip._44);
+}
+
+#line 1193 "/Engine/Private/Common.ush"
+bool IsOrthoProjection()
+{
+	return IsOrthoProjection(View.ViewToClip);
+}
+
+#line 1229 "/Engine/Private/Common.ush"
+float2 ScreenPositionToBufferUV(float4 ScreenPosition)
+{
+	return float2(ScreenPosition.xy / ScreenPosition.w * ResolvedView.ScreenPositionScaleBias.xy + ResolvedView.ScreenPositionScaleBias.wz);
+}
+
+#line 1249 "/Engine/Private/Common.ush"
+float2 SvPositionToBufferUV(float4 SvPosition)
+{
+	return SvPosition.xy * View.BufferSizeAndInvSize.zw;
+}
+
+#line 1255 "/Engine/Private/Common.ush"
+float3 SvPositionToTranslatedWorld(float4 SvPosition)
+{
+	float4 HomWorldPos = mul(float4(SvPosition.xyz, 1), View.SVPositionToTranslatedWorld);
+
+	return HomWorldPos.xyz / HomWorldPos.w;
+}
+
+#line 1278 "/Engine/Private/Common.ush"
+float4 SvPositionToScreenPosition(float4 SvPosition)
+{
+	
+
+
+	float2 PixelPos = SvPosition.xy - View.ViewRectMin.xy;	
+
+	
+	float3 NDCPos = float3( (PixelPos * View.ViewSizeAndInvSize.zw - 0.5f) * float2(2, -2), SvPosition.z);
+
+	
+	return float4(NDCPos.xyz, 1) * SvPosition.w;
+}
+
+#line 1332 "/Engine/Private/Common.ush"
+float2 ViewportUVToBufferUV(float2 ViewportUV)
+{
+	float2 PixelPos = ViewportUV * View.ViewSizeAndInvSize.xy;
+	return (PixelPos + View.ViewRectMin.xy) * View.BufferSizeAndInvSize.zw;
+}
+
+#line 1366 "/Engine/Private/Common.ush"
+float2 ScreenAlignedPosition( float4 ScreenPosition )
+{
+	return float2(ScreenPositionToBufferUV(ScreenPosition));
+}
+
+#line 1658 "/Engine/Private/Common.ush"
+float3 TransformTangentVectorToWorld(float3x3 TangentToWorld, float3 InTangentVector)
+{
+	
+	
+	return mul(InTangentVector, TangentToWorld);
+}
+
+#line 25 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_0_UVViewportMin;
+
+#line 25 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_0_UVViewportSize;
+
+#line 26 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_1_UVViewportMin;
+
+#line 26 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_1_UVViewportSize;
+
+#line 27 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_2_UVViewportMin;
+
+#line 27 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_2_UVViewportSize;
+
+#line 28 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_3_UVViewportMin;
+
+#line 28 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_3_UVViewportSize;
+
+#line 29 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_4_UVViewportMin;
+
+#line 29 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessInput_4_UVViewportSize;
+
+#line 30 "/Engine/Private/PostProcessMaterialShaders.usf"
+uint2  PostProcessOutput_ViewportMin;
+
+#line 30 "/Engine/Private/PostProcessMaterialShaders.usf"
+float2  PostProcessOutput_ViewportSizeInverse;
+
+#line 69 "/Engine/Private/SceneTexturesCommon.ush"
+float LookupDeviceZ( float2 ScreenUV )
+{
+
+
+
+	
+	return Texture2DSampleLevel(SceneTexturesStruct.SceneDepthTexture, SceneTexturesStruct.PointClampSampler, ScreenUV, 0).r;
+
+}
+
+#line 80 "/Engine/Private/SceneTexturesCommon.ush"
+float LookupDeviceZ(uint2 PixelPos)
+{
+
+
+
+	return SceneTexturesStruct.SceneDepthTexture.Load(int3(PixelPos, 0)).r;
+
+}
+
+#line 13 "/Engine/Private/MonteCarlo.ush"
+float3x3 GetTangentBasis( float3 TangentZ )
+{
+	const float Sign = TangentZ.z >= 0 ? 1 : -1;
+	const float a = -rcp( Sign + TangentZ.z );
+	const float b = TangentZ.x * TangentZ.y * a;
+	
+	float3 TangentX = { 1 + Sign * a * Pow2( TangentZ.x ), Sign * b, -Sign * TangentZ.x };
+	float3 TangentY = { b,  Sign + a * Pow2( TangentZ.y ), -TangentZ.y };
+
+	return float3x3( TangentX, TangentY, TangentZ );
+}
+
+#line 48 "/Engine/Private/MonteCarlo.ush"
+float3 TangentToWorld( float3 Vec, float3 TangentZ )
+{
+	return mul( Vec, GetTangentBasis( TangentZ ) );
+}
+
+#line 93 "/Engine/Private/SceneData.ush"
+struct FPrimitiveSceneData
+{
+	uint		Flags;
+	uint		VisibilityFlags;
+	int			InstanceSceneDataOffset; 
+	int			NumInstanceSceneDataEntries;
+	int			PersistentPrimitiveIndex;
+	uint		SingleCaptureIndex; 
+	float3		TilePosition;
+	uint		PrimitiveComponentId; 
+	FLWCMatrix	LocalToWorld;
+	FLWCInverseMatrix WorldToLocal;
+	FLWCMatrix	PreviousLocalToWorld;
+	FLWCInverseMatrix PreviousWorldToLocal;
+	float4x4	WorldToPreviousWorld; 
+	float3		InvNonUniformScale;
+	float		ObjectBoundsX;
+	FLWCVector3	ObjectWorldPosition;
+	FLWCVector3	ActorWorldPosition;
+	float		ObjectRadius;
+	uint		LightmapUVIndex;   
+	float3		ObjectOrientation; 
+	uint		LightmapDataIndex; 
+	float4		NonUniformScale;
+	float3		PreSkinnedLocalBoundsMin;
+	uint		NaniteResourceID;
+	float3		PreSkinnedLocalBoundsMax;
+	uint		NaniteHierarchyOffset;
+	float3		LocalObjectBoundsMin;
+	float		ObjectBoundsY;
+	float3		LocalObjectBoundsMax;
+	float		ObjectBoundsZ;
+	uint		InstancePayloadDataOffset;
+	uint		InstancePayloadDataStride;
+	uint		InstancePayloadExtensionSize;
+	float3		InstanceLocalBoundsCenter;
+	float3		InstanceLocalBoundsExtent;
+	float3		WireframeColor; 
+	float3		LevelColor; 
+	uint		PackedNaniteFlags;
+	float2 		InstanceDrawDistanceMinMaxSquared;
+	float		InstanceWPODisableDistanceSquared;
+	uint		NaniteRayTracingDataOffset;
+	float		MaxWPOExtent;
+	float		MinMaterialDisplacement;
+	float		MaxMaterialDisplacement;
+	uint		CustomStencilValueAndMask;
+	float4		CustomPrimitiveData[9]; 
+};
+
+#line 404 "/Engine/Private/SceneData.ush"
+struct FInstanceSceneEditorData
+{
+	float3 HitProxyId;
+	uint   HitProxyPacked;
+	bool bIsSelected;
+};
+
+#line 434 "/Engine/Private/SceneData.ush"
+struct FInstanceSceneData
+{
+	FLWCMatrix LocalToWorld;
+	FLWCMatrix PrevLocalToWorld;
+	FLWCInverseMatrix WorldToLocal;
+	float4   NonUniformScale;
+	float3   InvNonUniformScale;
+	float    DeterminantSign;
+	float3   LocalBoundsCenter;
+	uint     PrimitiveId;
+	uint     RelativeId;
+	uint     PayloadDataOffset;
+	uint     PayloadExtensionOffset;
+	uint     PayloadExtensionSize;
+	float3   LocalBoundsExtent;
+	uint     LastUpdateSceneFrameNumber;
+	uint     NaniteRuntimeResourceID;
+	uint     NaniteHierarchyOffset;
+
+
+
+
+
+
+
+
+	float4   LightMapAndShadowMapUVBias;
+
+	bool     ValidInstance;
+	uint     Flags;
+
+
+	FInstanceSceneEditorData EditorData;
+
+};
+
+#line 1068 "/Engine/Private/SceneData.ush"
+struct FSceneDataIntermediates
+{
+	uint PrimitiveId;
+	uint InstanceId;
+	uint ViewIndex;
+	uint CullingFlags;
+	
+	uint InstanceIdLoadIndex;
+	FInstanceSceneData InstanceData;
+	FPrimitiveSceneData Primitive;
+};
+
+#line 29 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D SceneDepthTexture;
+
+#line 31 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferATexture;
+
+#line 32 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferBTexture;
+
+#line 33 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferCTexture;
+
+#line 34 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferDTexture;
+
+#line 35 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferETexture;
+
+#line 36 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferVelocityTexture;
+
+#line 37 "/Engine/Private/DeferredShadingCommon.ush"
+Texture2D GBufferFTexture;
+
+#line 169 "/Engine/Generated/Material.ush"
+struct FStrataData
+{
+	uint Dummy;
+};
+
+#line 173 "/Engine/Generated/Material.ush"
+FStrataData GetInitialisedStrataData() { return (FStrataData)0; }
+
+#line 186 "/Engine/Generated/Material.ush"
+struct FMaterialParticleParameters
+{
+	
+	float RelativeTime;
+	
+	float MotionBlurFade;
+	
+	float Random;
+	
+	float4 Velocity;
+	
+	float4 Color;
+	
+	float4 TranslatedWorldPositionAndSize;
+	
+	float4 MacroUV;
+
+	
+
+
+
+	float4 DynamicParameter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	FLWCMatrix ParticleToWorld;
+
+	
+	FLWCInverseMatrix WorldToParticle;
+
+
+
+
+
+
+
+
+	
+	float2 Size;
+
+	
+	float SpriteRotation;
+};
+
+#line 296 "/Engine/Generated/Material.ush"
+struct FMaterialAttributes
+{
+	float3 BaseColor;
+	float Metallic;
+	float Specular;
+	float Roughness;
+	float Anisotropy;
+	float3 EmissiveColor;
+	float Opacity;
+	float OpacityMask;
+	float3 Normal;
+	float3 Tangent;
+	float3 WorldPositionOffset;
+	float Displacement;
+	float3 SubsurfaceColor;
+	float ClearCoat;
+	float ClearCoatRoughness;
+	float AmbientOcclusion;
+	float3 Refraction;
+	float PixelDepthOffset;
+	uint ShadingModel;
+	float SurfaceThickness;
+	FStrataData FrontMaterial;
+	float2 CustomizedUV0;
+	float2 CustomizedUV1;
+	float2 CustomizedUV2;
+	float2 CustomizedUV3;
+	float2 CustomizedUV4;
+	float2 CustomizedUV5;
+	float2 CustomizedUV6;
+	float2 CustomizedUV7;
+	float3 BentNormal;
+	float3 ClearCoatBottomNormal;
+	float3 CustomEyeTangent;
+	float3 TransmittanceColor;
+};
+
+#line 373 "/Engine/Generated/Material.ush"
+struct FPixelMaterialInputs
+{
+	float3 EmissiveColor;
+	float Opacity;
+	float OpacityMask;
+	float3 BaseColor;
+	float Metallic;
+	float Specular;
+	float Roughness;
+	float Anisotropy;
+	float3 Normal;
+	float3 Tangent;
+	float4 Subsurface;
+	float AmbientOcclusion;
+	float3 Refraction;
+	float PixelDepthOffset;
+	uint ShadingModel;
+	FStrataData FrontMaterial;
+	float SurfaceThickness;
+	float Displacement;
+
+
+
+
+
+
+
+
+
+
+
+
+};
+
+#line 411 "/Engine/Generated/Material.ush"
+struct FMaterialPixelParameters
+{
+
+
+
+
+	
+	float4 VertexColor;
+
+	
+	float3 WorldNormal;
+	
+	
+	float3 WorldTangent;
+
+	
+	float3 ReflectionVector;
+
+	
+	float3 CameraVector;
+
+	
+	float3 LightVector;
+
+	
+
+
+
+
+	float4 SvPosition;
+		
+	
+	float4 ScreenPosition;
+
+	
+
+
+
+	float2 ViewBufferUV;
+
+
+
+
+
+	float UnMirrored;
+
+	float TwoSidedSign;
+
+	
+
+
+
+	float3x3 TangentToWorld;
+
+
+
+
+
+
+	
+
+
+
+	FLWCVector3 AbsoluteWorldPosition;
+
+	
+
+
+	float3 WorldPosition_CamRelative;
+
+	
+
+
+
+	FLWCVector3 WorldPosition_NoOffsets;
+
+	
+
+
+
+	float3 WorldPosition_NoOffsets_CamRelative;
+
+	
+	float3 LightingPositionOffset;
+
+	
+	float3 WorldPosition_DDX;
+	float3 WorldPosition_DDY;
+	float4 VertexColor_DDX;
+	float4 VertexColor_DDY;
+	float4 ScreenPosition_DDX;
+	float4 ScreenPosition_DDY;
+	
+
+
+
+
+
+	float AOMaterialMask;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	uint PrimitiveId;
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	FMaterialParticleParameters Particle;
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	uint Dummy;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 620 "/Engine/Generated/Material.ush"
+
+
+	FMaterialAttributes MaterialAttributes;
+};
+
+#line 639 "/Engine/Generated/Material.ush"
+FMaterialPixelParameters MakeInitializedMaterialPixelParameters()
+{
+	FMaterialPixelParameters MPP;
+	MPP = (FMaterialPixelParameters)0;
+	MPP.TangentToWorld = float3x3(1,0,0,0,1,0,0,0,1);
+	return MPP;
+}
+
+#line 651 "/Engine/Generated/Material.ush"
+struct FMaterialVertexParameters
+{
+	
+	
+	
+	float3 WorldPosition;
+	
+	float3x3 TangentToWorld;
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	FLWCMatrix PrevFrameLocalToWorld;
+
+	float3 PreSkinnedPosition;
+	float3 PreSkinnedNormal;
+
+	float4 VertexColor;
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	FMaterialParticleParameters Particle;
+
+
+
+
+
+	FMaterialAttributes MaterialAttributes;
+
+	
+	FSceneDataIntermediates SceneData;
+
+	
+	
+	uint PrimitiveId;
+
+	bool bEvaluateWorldPositionOffset;
+};
+
+#line 907 "/Engine/Generated/Material.ush"
+float4 GetScreenPosition(FMaterialVertexParameters Parameters)
+{
+	return mul(float4(Parameters.WorldPosition, 1.0f), ResolvedView.TranslatedWorldToClip);
+}
+
+#line 912 "/Engine/Generated/Material.ush"
+float4 GetScreenPosition(FMaterialPixelParameters Parameters)
+{
+	return Parameters.ScreenPosition;
+}
+
+#line 948 "/Engine/Generated/Material.ush"
+float2 GetSceneTextureUV(FMaterialVertexParameters Parameters)
+{
+	return ScreenAlignedPosition(GetScreenPosition(Parameters));
+}
+
+#line 953 "/Engine/Generated/Material.ush"
+float2 GetSceneTextureUV(FMaterialPixelParameters Parameters)
+{
+	return SvPositionToBufferUV(Parameters.SvPosition);
+}
+
+#line 958 "/Engine/Generated/Material.ush"
+float2 GetViewportUV(FMaterialVertexParameters Parameters)
+{
+
+	return Parameters.WorldPosition.xy;
+
+
+
+}
+
+#line 967 "/Engine/Generated/Material.ush"
+float2 GetPixelPosition(FMaterialVertexParameters Parameters)
+{
+	return GetViewportUV(Parameters) * View.ViewSizeAndInvSize.xy;
+}
+
+#line 974 "/Engine/Generated/Material.ush"
+float2 GetPixelPosition(FMaterialPixelParameters Parameters)
+{
+	return Parameters.SvPosition.xy - float2(PostProcessOutput_ViewportMin);
+}
+
+#line 979 "/Engine/Generated/Material.ush"
+float2 GetViewportUV(FMaterialPixelParameters Parameters)
+{
+	return GetPixelPosition(Parameters) * PostProcessOutput_ViewportSizeInverse;
+}
+
+#line 1017 "/Engine/Generated/Material.ush"
+bool IsPostProcessInputSceneTexture(const uint SceneTextureId)
+{
+	return (SceneTextureId >= 14 && SceneTextureId <= 20);
+}
+
+#line 1076 "/Engine/Generated/Material.ush"
+float2 ViewportUVToSceneTextureUV(float2 ViewportUV, const uint SceneTextureId)
+{
+	
+	if (IsPostProcessInputSceneTexture(SceneTextureId))
+	{
+		switch (SceneTextureId)
+		{
+		case 14:
+			return ViewportUV * PostProcessInput_0_UVViewportSize + PostProcessInput_0_UVViewportMin;
+		case 15:
+			return ViewportUV * PostProcessInput_1_UVViewportSize + PostProcessInput_1_UVViewportMin;
+		case 16:
+			return ViewportUV * PostProcessInput_2_UVViewportSize + PostProcessInput_2_UVViewportMin;
+		case 17:
+			return ViewportUV * PostProcessInput_3_UVViewportSize + PostProcessInput_3_UVViewportMin;
+		case 18:
+			return ViewportUV * PostProcessInput_4_UVViewportSize + PostProcessInput_4_UVViewportMin;
+		default:
+			return ViewportUV;
+		}
+	}
+	
+
+	return ViewportUVToBufferUV(ViewportUV);
+}
+
+#line 1111 "/Engine/Generated/Material.ush"
+float2 GetDefaultSceneTextureUV(FMaterialVertexParameters Parameters, const uint SceneTextureId)
+{
+	return GetSceneTextureUV(Parameters);
+}
+
+#line 1117 "/Engine/Generated/Material.ush"
+float2 GetDefaultSceneTextureUV(FMaterialPixelParameters Parameters, const uint SceneTextureId)
+{
+	
+		return ViewportUVToSceneTextureUV(GetViewportUV(Parameters), SceneTextureId);
+	
+
+
+}
+
+#line 2096 "/Engine/Generated/Material.ush"
+float3 ReflectionAboutCustomWorldNormal(FMaterialPixelParameters Parameters, float3 WorldNormal, bool bNormalizeInputNormal)
+{
+	if (bNormalizeInputNormal)
+	{
+		WorldNormal = normalize(WorldNormal);
+	}
+
+	return -Parameters.CameraVector + WorldNormal * dot(WorldNormal, Parameters.CameraVector) * 2.0;
+}
+
+#line 2803 "/Engine/Generated/Material.ush"
+float3 CustomExpression0(FMaterialPixelParameters Parameters)
+{
+return SceneTextureLookup(GetDefaultSceneTextureUV(Parameters, 0),  0, false);
+}
+
+#line 2901 "/Engine/Generated/Material.ush"
+float3 GetMaterialNormalRaw(FPixelMaterialInputs PixelMaterialInputs)
+{
+	return PixelMaterialInputs.Normal;
+}
+
+#line 2906 "/Engine/Generated/Material.ush"
+float3 GetMaterialNormal(FMaterialPixelParameters Parameters, FPixelMaterialInputs PixelMaterialInputs)
+{
+	float3 RetNormal;
+
+	RetNormal = GetMaterialNormalRaw(PixelMaterialInputs);
+		
+	
+	{
+		
+		float3 OverrideNormal = ResolvedView.NormalOverrideParameter.xyz;
+
+		
+
+
+
+		RetNormal = RetNormal * ResolvedView.NormalOverrideParameter.w + OverrideNormal;
+	}
+	
+
+	return RetNormal;
+}
+
+#line 2938 "/Engine/Generated/Material.ush"
+float3 GetMaterialEmissiveRaw(FPixelMaterialInputs PixelMaterialInputs)
+{
+	return PixelMaterialInputs.EmissiveColor;
+}
+
+#line 2943 "/Engine/Generated/Material.ush"
+float3 GetMaterialEmissive(FPixelMaterialInputs PixelMaterialInputs)
+{
+	float3 EmissiveColor = GetMaterialEmissiveRaw(PixelMaterialInputs);
+
+	EmissiveColor = max(EmissiveColor, 0.0f);
+
+	return EmissiveColor;
+}
+
+#line 3292 "/Engine/Generated/Material.ush"
+float3 TransformTangentNormalToWorld(float3x3 TangentToWorld, float3 TangentNormal)
+{
+	return normalize(float3(TransformTangentVectorToWorld(TangentToWorld, TangentNormal)));
+}
+
+#line 3353 "/Engine/Generated/Material.ush"
+void CalcPixelMaterialInputs(in out FMaterialPixelParameters Parameters, in out FPixelMaterialInputs PixelMaterialInputs)
+{
+	
+
+	
+	PixelMaterialInputs.Normal = float3(0.00000000,0.00000000,1.00000000);
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	float3 MaterialNormal = GetMaterialNormal(Parameters, PixelMaterialInputs);
+
+
+
+
+	
+	MaterialNormal = normalize(MaterialNormal);
+
+
+	
+	
+	Parameters.WorldNormal = TransformTangentNormalToWorld(Parameters.TangentToWorld, MaterialNormal);
+
+
+
+
+
+
+
+
+	
+	Parameters.WorldNormal *= Parameters.TwoSidedSign;
+
+
+	Parameters.ReflectionVector = ReflectionAboutCustomWorldNormal(Parameters, Parameters.WorldNormal, false);
+
+
+	Parameters.Particle.MotionBlurFade = 1.0f;
+
+
+	
+	float3 Local0 = CustomExpression0(Parameters);
+	float3 Local1 = lerp(Local0,Material.PreshaderBuffer[1].yzw,Material.PreshaderBuffer[1].x);
+
+	PixelMaterialInputs.EmissiveColor = Local1;
+	PixelMaterialInputs.Opacity = 1.00000000;
+	PixelMaterialInputs.OpacityMask = 1.00000000;
+	PixelMaterialInputs.BaseColor = float3(0.00000000,0.00000000,0.00000000);
+	PixelMaterialInputs.Metallic = 0.00000000;
+	PixelMaterialInputs.Specular = 0.50000000;
+	PixelMaterialInputs.Roughness = 0.50000000;
+	PixelMaterialInputs.Anisotropy = 0.00000000;
+	PixelMaterialInputs.Normal = float3(0.00000000,0.00000000,1.00000000);
+	PixelMaterialInputs.Tangent = float3(1.00000000,0.00000000,0.00000000);
+	PixelMaterialInputs.Subsurface = 0;
+	PixelMaterialInputs.AmbientOcclusion = 1.00000000;
+	PixelMaterialInputs.Refraction = 0;
+	PixelMaterialInputs.PixelDepthOffset = 0.00000000;
+	PixelMaterialInputs.ShadingModel = 0;
+	PixelMaterialInputs.FrontMaterial = GetInitialisedStrataData();
+	PixelMaterialInputs.SurfaceThickness = 0.01000000;
+	PixelMaterialInputs.Displacement = 0.00000000;
+
+
+
+
+
+	Parameters.WorldTangent = 0;
+
+}
+
+#line 3703 "/Engine/Generated/Material.ush"
+bool IsOrthoProjection(ViewState InView)
+{
+	return InView.ViewToClip[3][3] >= 1.0f;
+}
+
+#line 3709 "/Engine/Generated/Material.ush"
+void CalcMaterialParametersEx(
+	in out FMaterialPixelParameters Parameters,
+	in out FPixelMaterialInputs PixelMaterialInputs,
+	float4 SvPosition,
+	float4 ScreenPosition,
+	bool bIsFrontFace,
+	float3 TranslatedWorldPosition,
+	float3 TranslatedWorldPositionExcludingShaderOffsets)
+{
+	
+	Parameters.WorldPosition_CamRelative = TranslatedWorldPosition.xyz;
+	Parameters.AbsoluteWorldPosition = LWCSubtract(TranslatedWorldPosition.xyz, ResolvedView.PreViewTranslation);
+
+	
+	
+
+	Parameters.WorldPosition_NoOffsets_CamRelative = TranslatedWorldPositionExcludingShaderOffsets;
+	Parameters.WorldPosition_NoOffsets = LWCSubtract(TranslatedWorldPositionExcludingShaderOffsets, ResolvedView.PreViewTranslation);
+
+
+	Parameters.SvPosition = SvPosition;
+	Parameters.ScreenPosition = ScreenPosition;
+	Parameters.ViewBufferUV = ScreenPositionToBufferUV(ScreenPosition);
+
+	
+	
+
+
+		if (IsOrthoProjection(ResolvedView))
+		{
+			
+			Parameters.CameraVector = -ResolvedView.ViewForward;
+		}
+		else
+		{
+			
+			Parameters.CameraVector = normalize(-Parameters.WorldPosition_CamRelative.xyz);
+		}
+	
+
+	Parameters.LightVector = 0;
+
+
+
+
+
+
+
+	Parameters.TwoSidedSign = 1.0f;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	{
+		CalcPixelMaterialInputs(Parameters, PixelMaterialInputs);
+	}
+}
+
+#line 3804 "/Engine/Generated/Material.ush"
+void CalcMaterialParametersPost(
+	in out FMaterialPixelParameters Parameters,
+	in out FPixelMaterialInputs PixelMaterialInputs,
+	float4 SvPosition,
+	bool bIsFrontFace)
+{
+	float4 ScreenPosition = SvPositionToScreenPosition(SvPosition);
+	float3 TranslatedWorldPosition = SvPositionToTranslatedWorld(SvPosition);
+
+	CalcMaterialParametersEx(Parameters, PixelMaterialInputs, SvPosition, ScreenPosition, bIsFrontFace, TranslatedWorldPosition, TranslatedWorldPosition);
+}
+
+#line 86 "/Engine/Private/PostProcessMaterialShaders.usf"
+struct FPostProcessMaterialVSToPS
+{
+	float4 Position : SV_POSITION;
+
+
+
+
+};
+
+#line 204 "/Engine/Private/PostProcessMaterialShaders.usf"
+void MainPS(
+	in FPostProcessMaterialVSToPS Input,
+	out float4 OutColor : SV_Target0
+	)
+{
+	ResolvedView = ResolveView();
+	FMaterialPixelParameters Parameters = MakeInitializedMaterialPixelParameters();
+	FPixelMaterialInputs PixelMaterialInputs;
+
+	
+	float4 SvPosition = Input.Position;
+	float2 ViewportUV = (SvPosition.xy - PostProcessOutput_ViewportMin.xy) * PostProcessOutput_ViewportSizeInverse.xy;
+
+
+
+
+
+#line 236 "/Engine/Private/PostProcessMaterialShaders.usf"
+
+
+	Parameters.VertexColor = 1;
+	
+	SvPosition.z = LookupDeviceZ(ViewportUVToBufferUV(ViewportUV));
+	SvPosition.z = max(SvPosition.z, 1e-18);
+
+	
+	CalcMaterialParametersPost(Parameters, PixelMaterialInputs, SvPosition, true);
+
+	
+	
+	
+	
+	float Alpha = 0.0f;
+	float3 EmissiveColor = 0.0f;
+#line 286 "/Engine/Private/PostProcessMaterialShaders.usf"
+
+
+	
+  
+
+
+	EmissiveColor = GetMaterialEmissive(PixelMaterialInputs);
+
+
+	OutColor = float4(EmissiveColor, Alpha );
+
+
+	OutColor.xyz *= View.PreExposure;
+
+}
+
+
+
+#if 0 /*BEGIN_RESOURCE_TABLES*/
+View, 376963194
+Strata, 158337041
+DrawRectangleParameters, 3145984
+InstancedView, 450888449
+MobileReflectionCapture, 2425088
+InstanceVF, 104204038
+SingleLayerWater, 1641252
+PrimitiveDither, 1048832
+PrimitiveFade, 1048832
+DeferredDecal, 2097668
+SceneTexturesStruct, 158338568
+MobileSceneTextures, 147131313
+Primitive, 50331904
+Scene, 273683233
+InstanceCulling, 3146265
+SpeedTreeData, 39846144
+Atmosphere, 11534592
+BlueNoise, 3473677
+OpaqueBasePass, 159911720
+BasePass, 148439296
+Material, 3670272
+NULL, 0
+View_MaterialTextureBilinearWrapedSampler, View, 8, 0
+View_MaterialTextureBilinearClampedSampler, View, 8, 1
+View_VolumetricLightmapIndirectionTexture, View, 5, 2
+View_VolumetricLightmapBrickAmbientVector, View, 5, 3
+View_VolumetricLightmapBrickSHCoefficients0, View, 5, 4
+View_VolumetricLightmapBrickSHCoefficients1, View, 5, 5
+View_VolumetricLightmapBrickSHCoefficients2, View, 5, 6
+View_VolumetricLightmapBrickSHCoefficients3, View, 5, 7
+View_VolumetricLightmapBrickSHCoefficients4, View, 5, 8
+View_VolumetricLightmapBrickSHCoefficients5, View, 5, 9
+View_SkyBentNormalBrickTexture, View, 5, 10
+View_DirectionalLightShadowingBrickTexture, View, 5, 11
+View_VolumetricLightmapBrickAmbientVectorSampler, View, 8, 12
+View_VolumetricLightmapTextureSampler0, View, 8, 13
+View_VolumetricLightmapTextureSampler1, View, 8, 14
+View_VolumetricLightmapTextureSampler2, View, 8, 15
+View_VolumetricLightmapTextureSampler3, View, 8, 16
+View_VolumetricLightmapTextureSampler4, View, 8, 17
+View_VolumetricLightmapTextureSampler5, View, 8, 18
+View_SkyBentNormalTextureSampler, View, 8, 19
+View_DirectionalLightShadowingTextureSampler, View, 8, 20
+View_GlobalDistanceFieldPageAtlasTexture, View, 5, 21
+View_GlobalDistanceFieldCoverageAtlasTexture, View, 5, 22
+View_GlobalDistanceFieldPageTableTexture, View, 5, 23
+View_GlobalDistanceFieldMipTexture, View, 5, 24
+View_GlobalDistanceFieldPageAtlasTextureSampler, View, 8, 25
+View_GlobalDistanceFieldCoverageAtlasTextureSampler, View, 8, 26
+View_GlobalDistanceFieldMipTextureSampler, View, 8, 27
+View_AtmosphereTransmittanceTexture, View, 5, 28
+View_AtmosphereTransmittanceTextureSampler, View, 8, 29
+View_AtmosphereIrradianceTexture, View, 5, 30
+View_AtmosphereIrradianceTextureSampler, View, 8, 31
+View_AtmosphereInscatterTexture, View, 5, 32
+View_AtmosphereInscatterTextureSampler, View, 8, 33
+View_PerlinNoiseGradientTexture, View, 5, 34
+View_PerlinNoiseGradientTextureSampler, View, 8, 35
+View_PerlinNoise3DTexture, View, 5, 36
+View_PerlinNoise3DTextureSampler, View, 8, 37
+View_SobolSamplingTexture, View, 5, 38
+View_SharedPointWrappedSampler, View, 8, 39
+View_SharedPointClampedSampler, View, 8, 40
+View_SharedBilinearWrappedSampler, View, 8, 41
+View_SharedBilinearClampedSampler, View, 8, 42
+View_SharedBilinearAnisoClampedSampler, View, 8, 43
+View_SharedTrilinearWrappedSampler, View, 8, 44
+View_SharedTrilinearClampedSampler, View, 8, 45
+View_PreIntegratedBRDF, View, 5, 46
+View_PreIntegratedBRDFSampler, View, 8, 47
+View_SkyIrradianceEnvironmentMap, View, 6, 48
+View_TransmittanceLutTexture, View, 5, 49
+View_TransmittanceLutTextureSampler, View, 8, 50
+View_SkyViewLutTexture, View, 5, 51
+View_SkyViewLutTextureSampler, View, 8, 52
+View_DistantSkyLightLutTexture, View, 5, 53
+View_DistantSkyLightLutTextureSampler, View, 8, 54
+View_CameraAerialPerspectiveVolume, View, 5, 55
+View_CameraAerialPerspectiveVolumeSampler, View, 8, 56
+View_CameraAerialPerspectiveVolumeMieOnly, View, 5, 57
+View_CameraAerialPerspectiveVolumeMieOnlySampler, View, 8, 58
+View_CameraAerialPerspectiveVolumeRayOnly, View, 5, 59
+View_CameraAerialPerspectiveVolumeRayOnlySampler, View, 8, 60
+View_HairScatteringLUTTexture, View, 5, 61
+View_HairScatteringLUTSampler, View, 8, 62
+View_GGXLTCMatTexture, View, 5, 63
+View_GGXLTCMatSampler, View, 8, 64
+View_GGXLTCAmpTexture, View, 5, 65
+View_GGXLTCAmpSampler, View, 8, 66
+View_SheenLTCTexture, View, 5, 67
+View_SheenLTCSampler, View, 8, 68
+View_ShadingEnergyGGXSpecTexture, View, 5, 69
+View_ShadingEnergyGGXGlassTexture, View, 5, 70
+View_ShadingEnergyClothSpecTexture, View, 5, 71
+View_ShadingEnergyDiffuseTexture, View, 5, 72
+View_ShadingEnergySampler, View, 8, 73
+View_GlintTexture, View, 5, 74
+View_GlintSampler, View, 8, 75
+View_SimpleVolumeTexture, View, 5, 76
+View_SimpleVolumeTextureSampler, View, 8, 77
+View_SimpleVolumeEnvTexture, View, 5, 78
+View_SimpleVolumeEnvTextureSampler, View, 8, 79
+View_SSProfilesTexture, View, 5, 80
+View_SSProfilesSampler, View, 8, 81
+View_SSProfilesTransmissionSampler, View, 8, 82
+View_SSProfilesPreIntegratedTexture, View, 5, 83
+View_SSProfilesPreIntegratedSampler, View, 8, 84
+View_SpecularProfileTexture, View, 5, 85
+View_SpecularProfileSampler, View, 8, 86
+View_WaterIndirection, View, 6, 87
+View_WaterData, View, 6, 88
+View_RectLightAtlasTexture, View, 5, 89
+View_RectLightAtlasSampler, View, 8, 90
+View_IESAtlasTexture, View, 5, 91
+View_IESAtlasSampler, View, 8, 92
+View_LandscapeWeightmapSampler, View, 8, 93
+View_LandscapeIndirection, View, 6, 94
+View_LandscapePerComponentData, View, 6, 95
+View_VTFeedbackBuffer, View, 7, 96
+View_PhysicsFieldClipmapBuffer, View, 6, 97
+Strata_MaterialTextureArray, Strata, 9, 0
+Strata_TopLayerTexture, Strata, 9, 1
+Strata_OpaqueRoughRefractionTexture, Strata, 9, 2
+Strata_BSDFOffsetTexture, Strata, 9, 3
+Strata_BSDFTileTexture, Strata, 9, 4
+Strata_BSDFTileCountBuffer, Strata, 16, 5
+MobileReflectionCapture_Texture, MobileReflectionCapture, 5, 0
+MobileReflectionCapture_TextureSampler, MobileReflectionCapture, 8, 1
+InstanceVF_VertexFetch_InstanceOriginBuffer, InstanceVF, 6, 0
+InstanceVF_VertexFetch_InstanceTransformBuffer, InstanceVF, 6, 1
+InstanceVF_VertexFetch_InstanceLightmapBuffer, InstanceVF, 6, 2
+InstanceVF_InstanceCustomDataBuffer, InstanceVF, 6, 3
+SingleLayerWater_SceneColorWithoutSingleLayerWaterTexture, SingleLayerWater, 9, 0
+SingleLayerWater_SceneColorWithoutSingleLayerWaterSampler, SingleLayerWater, 8, 1
+SingleLayerWater_SceneDepthWithoutSingleLayerWaterTexture, SingleLayerWater, 9, 2
+SingleLayerWater_SceneDepthWithoutSingleLayerWaterSampler, SingleLayerWater, 8, 3
+SingleLayerWater_CustomDepthTexture, SingleLayerWater, 9, 4
+SingleLayerWater_CustomStencilTexture, SingleLayerWater, 12, 5
+SingleLayerWater_CustomDepthSampler, SingleLayerWater, 8, 6
+SingleLayerWater_ForwardDirLightCloudShadow_CloudShadowmapTexture, SingleLayerWater, 9, 7
+SingleLayerWater_ForwardDirLightCloudShadow_CloudShadowmapSampler, SingleLayerWater, 8, 8
+SingleLayerWater_BlueNoise_ScalarTexture, SingleLayerWater, 5, 9
+SingleLayerWater_BlueNoise_Vec2Texture, SingleLayerWater, 5, 10
+DeferredDecal_PreviousFrameNormal, DeferredDecal, 5, 0
+SceneTexturesStruct_SceneColorTexture, SceneTexturesStruct, 9, 0
+SceneTexturesStruct_SceneDepthTexture, SceneTexturesStruct, 9, 1
+SceneTexturesStruct_ScenePartialDepthTexture, SceneTexturesStruct, 9, 2
+SceneTexturesStruct_GBufferATexture, SceneTexturesStruct, 9, 3
+SceneTexturesStruct_GBufferBTexture, SceneTexturesStruct, 9, 4
+SceneTexturesStruct_GBufferCTexture, SceneTexturesStruct, 9, 5
+SceneTexturesStruct_GBufferDTexture, SceneTexturesStruct, 9, 6
+SceneTexturesStruct_GBufferETexture, SceneTexturesStruct, 9, 7
+SceneTexturesStruct_GBufferFTexture, SceneTexturesStruct, 9, 8
+SceneTexturesStruct_GBufferVelocityTexture, SceneTexturesStruct, 9, 9
+SceneTexturesStruct_ScreenSpaceAOTexture, SceneTexturesStruct, 9, 10
+SceneTexturesStruct_CustomDepthTexture, SceneTexturesStruct, 9, 11
+SceneTexturesStruct_CustomStencilTexture, SceneTexturesStruct, 12, 12
+SceneTexturesStruct_PointClampSampler, SceneTexturesStruct, 8, 13
+MobileSceneTextures_SceneColorTexture, MobileSceneTextures, 9, 0
+MobileSceneTextures_SceneColorTextureSampler, MobileSceneTextures, 8, 1
+MobileSceneTextures_SceneDepthTexture, MobileSceneTextures, 9, 2
+MobileSceneTextures_SceneDepthTextureSampler, MobileSceneTextures, 8, 3
+MobileSceneTextures_ScenePartialDepthTexture, MobileSceneTextures, 9, 4
+MobileSceneTextures_ScenePartialDepthTextureSampler, MobileSceneTextures, 8, 5
+MobileSceneTextures_CustomDepthTexture, MobileSceneTextures, 9, 6
+MobileSceneTextures_CustomDepthTextureSampler, MobileSceneTextures, 8, 7
+MobileSceneTextures_CustomStencilTexture, MobileSceneTextures, 12, 8
+MobileSceneTextures_SceneVelocityTexture, MobileSceneTextures, 9, 9
+MobileSceneTextures_SceneVelocityTextureSampler, MobileSceneTextures, 8, 10
+MobileSceneTextures_GBufferATexture, MobileSceneTextures, 9, 11
+MobileSceneTextures_GBufferBTexture, MobileSceneTextures, 9, 12
+MobileSceneTextures_GBufferCTexture, MobileSceneTextures, 9, 13
+MobileSceneTextures_GBufferDTexture, MobileSceneTextures, 9, 14
+MobileSceneTextures_SceneDepthAuxTexture, MobileSceneTextures, 9, 15
+MobileSceneTextures_LocalLightTextureA, MobileSceneTextures, 9, 16
+MobileSceneTextures_LocalLightTextureB, MobileSceneTextures, 9, 17
+MobileSceneTextures_GBufferATextureSampler, MobileSceneTextures, 8, 18
+MobileSceneTextures_GBufferBTextureSampler, MobileSceneTextures, 8, 19
+MobileSceneTextures_GBufferCTextureSampler, MobileSceneTextures, 8, 20
+MobileSceneTextures_GBufferDTextureSampler, MobileSceneTextures, 8, 21
+MobileSceneTextures_SceneDepthAuxTextureSampler, MobileSceneTextures, 8, 22
+Scene_GPUScene_GPUSceneInstanceSceneData, Scene, 16, 0
+Scene_GPUScene_GPUSceneInstancePayloadData, Scene, 16, 1
+Scene_GPUScene_GPUScenePrimitiveSceneData, Scene, 16, 2
+Scene_GPUScene_GPUSceneLightmapData, Scene, 16, 3
+Scene_GPUScene_GPUSceneLightData, Scene, 16, 4
+InstanceCulling_InstanceIdsBuffer, InstanceCulling, 16, 0
+InstanceCulling_PageInfoBuffer, InstanceCulling, 16, 1
+BlueNoise_ScalarTexture, BlueNoise, 5, 0
+BlueNoise_Vec2Texture, BlueNoise, 5, 1
+OpaqueBasePass_Shared_Forward_DirectionalLightShadowmapAtlas, OpaqueBasePass, 9, 0
+OpaqueBasePass_Shared_Forward_ShadowmapSampler, OpaqueBasePass, 8, 1
+OpaqueBasePass_Shared_Forward_DirectionalLightStaticShadowmap, OpaqueBasePass, 5, 2
+OpaqueBasePass_Shared_Forward_StaticShadowmapSampler, OpaqueBasePass, 8, 3
+OpaqueBasePass_Shared_Forward_ForwardLocalLightBuffer, OpaqueBasePass, 16, 4
+OpaqueBasePass_Shared_Forward_NumCulledLightsGrid, OpaqueBasePass, 16, 5
+OpaqueBasePass_Shared_Forward_CulledLightDataGrid32Bit, OpaqueBasePass, 16, 6
+OpaqueBasePass_Shared_Forward_CulledLightDataGrid16Bit, OpaqueBasePass, 16, 7
+OpaqueBasePass_Shared_ForwardISR_DirectionalLightShadowmapAtlas, OpaqueBasePass, 9, 8
+OpaqueBasePass_Shared_ForwardISR_ShadowmapSampler, OpaqueBasePass, 8, 9
+OpaqueBasePass_Shared_ForwardISR_DirectionalLightStaticShadowmap, OpaqueBasePass, 5, 10
+OpaqueBasePass_Shared_ForwardISR_StaticShadowmapSampler, OpaqueBasePass, 8, 11
+OpaqueBasePass_Shared_ForwardISR_ForwardLocalLightBuffer, OpaqueBasePass, 16, 12
+OpaqueBasePass_Shared_ForwardISR_NumCulledLightsGrid, OpaqueBasePass, 16, 13
+OpaqueBasePass_Shared_ForwardISR_CulledLightDataGrid32Bit, OpaqueBasePass, 16, 14
+OpaqueBasePass_Shared_ForwardISR_CulledLightDataGrid16Bit, OpaqueBasePass, 16, 15
+OpaqueBasePass_Shared_Reflection_SkyLightCubemap, OpaqueBasePass, 9, 16
+OpaqueBasePass_Shared_Reflection_SkyLightCubemapSampler, OpaqueBasePass, 8, 17
+OpaqueBasePass_Shared_Reflection_SkyLightBlendDestinationCubemap, OpaqueBasePass, 5, 18
+OpaqueBasePass_Shared_Reflection_SkyLightBlendDestinationCubemapSampler, OpaqueBasePass, 8, 19
+OpaqueBasePass_Shared_Reflection_ReflectionCubemap, OpaqueBasePass, 5, 20
+OpaqueBasePass_Shared_Reflection_ReflectionCubemapSampler, OpaqueBasePass, 8, 21
+OpaqueBasePass_Shared_Reflection_PreIntegratedGF, OpaqueBasePass, 5, 22
+OpaqueBasePass_Shared_Reflection_PreIntegratedGFSampler, OpaqueBasePass, 8, 23
+OpaqueBasePass_Shared_PlanarReflection_PlanarReflectionTexture, OpaqueBasePass, 5, 24
+OpaqueBasePass_Shared_PlanarReflection_PlanarReflectionSampler, OpaqueBasePass, 8, 25
+OpaqueBasePass_Shared_Fog_FogInscatteringColorCubemap, OpaqueBasePass, 5, 26
+OpaqueBasePass_Shared_Fog_FogInscatteringColorSampler, OpaqueBasePass, 8, 27
+OpaqueBasePass_Shared_Fog_IntegratedLightScattering, OpaqueBasePass, 9, 28
+OpaqueBasePass_Shared_Fog_IntegratedLightScatteringSampler, OpaqueBasePass, 8, 29
+OpaqueBasePass_Shared_FogISR_FogInscatteringColorCubemap, OpaqueBasePass, 5, 30
+OpaqueBasePass_Shared_FogISR_FogInscatteringColorSampler, OpaqueBasePass, 8, 31
+OpaqueBasePass_Shared_FogISR_IntegratedLightScattering, OpaqueBasePass, 9, 32
+OpaqueBasePass_Shared_FogISR_IntegratedLightScatteringSampler, OpaqueBasePass, 8, 33
+OpaqueBasePass_Strata_MaterialTextureArrayUAVWithoutRTs, OpaqueBasePass, 13, 34
+OpaqueBasePass_Strata_OpaqueRoughRefractionTextureUAV, OpaqueBasePass, 13, 35
+OpaqueBasePass_ForwardScreenSpaceShadowMaskTexture, OpaqueBasePass, 9, 36
+OpaqueBasePass_IndirectOcclusionTexture, OpaqueBasePass, 9, 37
+OpaqueBasePass_ResolvedSceneDepthTexture, OpaqueBasePass, 9, 38
+OpaqueBasePass_DBufferATexture, OpaqueBasePass, 9, 39
+OpaqueBasePass_DBufferBTexture, OpaqueBasePass, 9, 40
+OpaqueBasePass_DBufferCTexture, OpaqueBasePass, 9, 41
+OpaqueBasePass_DBufferRenderMask, OpaqueBasePass, 9, 42
+OpaqueBasePass_DBufferATextureSampler, OpaqueBasePass, 8, 43
+OpaqueBasePass_DBufferBTextureSampler, OpaqueBasePass, 8, 44
+OpaqueBasePass_DBufferCTextureSampler, OpaqueBasePass, 8, 45
+OpaqueBasePass_PreIntegratedGFTexture, OpaqueBasePass, 5, 46
+OpaqueBasePass_PreIntegratedGFSampler, OpaqueBasePass, 8, 47
+OpaqueBasePass_EyeAdaptationBuffer, OpaqueBasePass, 16, 48
+BasePass_Forward_DirectionalLightShadowmapAtlas, BasePass, 9, 0
+BasePass_Forward_ShadowmapSampler, BasePass, 8, 1
+BasePass_Forward_DirectionalLightStaticShadowmap, BasePass, 5, 2
+BasePass_Forward_StaticShadowmapSampler, BasePass, 8, 3
+BasePass_Forward_ForwardLocalLightBuffer, BasePass, 16, 4
+BasePass_Forward_NumCulledLightsGrid, BasePass, 16, 5
+BasePass_Forward_CulledLightDataGrid32Bit, BasePass, 16, 6
+BasePass_Forward_CulledLightDataGrid16Bit, BasePass, 16, 7
+BasePass_ForwardISR_DirectionalLightShadowmapAtlas, BasePass, 9, 8
+BasePass_ForwardISR_ShadowmapSampler, BasePass, 8, 9
+BasePass_ForwardISR_DirectionalLightStaticShadowmap, BasePass, 5, 10
+BasePass_ForwardISR_StaticShadowmapSampler, BasePass, 8, 11
+BasePass_ForwardISR_ForwardLocalLightBuffer, BasePass, 16, 12
+BasePass_ForwardISR_NumCulledLightsGrid, BasePass, 16, 13
+BasePass_ForwardISR_CulledLightDataGrid32Bit, BasePass, 16, 14
+BasePass_ForwardISR_CulledLightDataGrid16Bit, BasePass, 16, 15
+BasePass_Reflection_SkyLightCubemap, BasePass, 9, 16
+BasePass_Reflection_SkyLightCubemapSampler, BasePass, 8, 17
+BasePass_Reflection_SkyLightBlendDestinationCubemap, BasePass, 5, 18
+BasePass_Reflection_SkyLightBlendDestinationCubemapSampler, BasePass, 8, 19
+BasePass_Reflection_ReflectionCubemap, BasePass, 5, 20
+BasePass_Reflection_ReflectionCubemapSampler, BasePass, 8, 21
+BasePass_Reflection_PreIntegratedGF, BasePass, 5, 22
+BasePass_Reflection_PreIntegratedGFSampler, BasePass, 8, 23
+BasePass_PlanarReflection_PlanarReflectionTexture, BasePass, 5, 24
+BasePass_PlanarReflection_PlanarReflectionSampler, BasePass, 8, 25
+BasePass_Fog_FogInscatteringColorCubemap, BasePass, 5, 26
+BasePass_Fog_FogInscatteringColorSampler, BasePass, 8, 27
+BasePass_Fog_IntegratedLightScattering, BasePass, 9, 28
+BasePass_Fog_IntegratedLightScatteringSampler, BasePass, 8, 29
+BasePass_FogISR_FogInscatteringColorCubemap, BasePass, 5, 30
+BasePass_FogISR_FogInscatteringColorSampler, BasePass, 8, 31
+BasePass_FogISR_IntegratedLightScattering, BasePass, 9, 32
+BasePass_FogISR_IntegratedLightScatteringSampler, BasePass, 8, 33
+Material_Wrap_WorldGroupSettings, Material, 8, 0
+Material_Clamp_WorldGroupSettings, Material, 8, 1
+NULL, NULL, 0, 0
+#endif /*END_RESOURCE_TABLES*/
+#if 0 /*DIRECT COMPILE*/
+-directcompile -format=PCD3D_SM6 -entry=MainPS -shaderPlatformName=PCD3D_SM6 -ps C:/Dev/cis5660/hw04-stylization/StylizedShader/Saved/ShaderDebugInfo/PCD3D_SM6/PP_AnimatedLine_ea0fd9017178d2d9/Default/FPostProcessMaterialPS/0/PostProcessMaterialShaders.usf -cflags=8589938688 -nocrashreports
+#endif /*DIRECT COMPILE*/
