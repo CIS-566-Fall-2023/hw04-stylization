@@ -43,3 +43,22 @@ void GetDepthSobel_float(float2 UV, float Thickness, out float Out)
 
     Out = length(sobel);
 }
+
+void GetRobertsCross_float(float2 UV, float Thickness, out float Out)
+{
+    float2 offsetFactor = float2(1.f / _ScreenParams.x, 1.f / _ScreenParams.y) * Thickness;
+
+    float3 topLeft = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp,
+        UV + float2(-offsetFactor.x, offsetFactor.y)).rgb;
+    float3 topRight = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp,
+        UV + float2(offsetFactor.x, offsetFactor.y)).rgb;
+    float3 bottomLeft = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp,
+        UV + float2(-offsetFactor.x, -offsetFactor.y)).rgb;
+    float3 bottomRight = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp,
+        UV + float2(offsetFactor.x, -offsetFactor.y)).rgb;
+
+    float3 cross1 = topLeft - bottomRight;
+    float3 cross2 = topRight - bottomLeft;
+
+    Out = sqrt(dot(cross1, cross1) + dot(cross2, cross2));
+}
