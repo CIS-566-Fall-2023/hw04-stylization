@@ -9,7 +9,7 @@ This project was made for an assignment of creating stylised shaders for my proc
 
 Note: I am currently modelling an asset for the mushroom guy from my concept art, which I will then be updating on my README.md once it has been finished.
 
-### Table of Contents:
+# Table of Contents:
 1. Concept Art
 2. Multidirectional Lighting
 3. Painterly Shadow Shader
