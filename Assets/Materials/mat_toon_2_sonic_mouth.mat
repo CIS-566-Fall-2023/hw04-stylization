@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_toon_2_sonic_mouth
-  m_Shader: {fileID: -6465566751694194690, guid: 2fadafc0a6f04b74a868dd5c278e548f,
+  m_Shader: {fileID: -6465566751694194690, guid: 3f5ad547aa4eb2a4984d63a10716c6f9,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -89,8 +89,11 @@ Material:
     - _Threshold: 0
     - _Threshold_2: 0.6
     m_Colors:
-    - _Highlight: {r: 0, g: 0, b: 0, a: 1}
+    - _Highlight: {r: 0.6014299, g: 0.9150943, b: 0.79460776, a: 1}
+    - _Midtone: {r: 0.36661917, g: 0.6981132, b: 0.39457646, a: 0}
     - _Midtone_Tiling: {r: 10, g: 10, b: 0, a: 0}
-    - _Shadow: {r: 0, g: 0, b: 0, a: 1}
+    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
+    - _Shadow: {r: 0.048475105, g: 0.4056604, b: 0.24406117, a: 1}
     - _Shadow_Tiling: {r: 7, g: 7, b: 0, a: 0}
+    - _Thresholds: {r: 0.3, g: 0.75, b: 0, a: 0}
   m_BuildTextureStacks: []

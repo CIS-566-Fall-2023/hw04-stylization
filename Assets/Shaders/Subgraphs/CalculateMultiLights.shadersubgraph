@@ -8,14 +8,15 @@
         },
         {
             "m_Id": "15b8692b5c124abd9563e23bf38683a3"
-        },
-        {
-            "m_Id": "fb46f33df69f45cf9a599ded24d3225e"
         }
     ],
     "m_Keywords": [],
     "m_Dropdowns": [],
-    "m_CategoryData": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "b52800570d1c46a6b2eed4505a5ba37d"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "354ad0fb9767497dadb4b1979e574d12"
@@ -221,10 +222,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -254.39999389648438,
-            "y": 272.79998779296877,
-            "width": 198.39999389648438,
-            "height": 33.600006103515628
+            "x": -291.9999694824219,
+            "y": 215.3332977294922,
+            "width": 199.33328247070313,
+            "height": 36.000030517578128
         }
     },
     "m_Slots": [
@@ -317,10 +318,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -213.59999084472657,
-            "y": 216.79995727539063,
-            "width": 135.20004272460938,
-            "height": 33.60002136230469
+            "x": -235.3332977294922,
+            "y": 147.33328247070313,
+            "width": 136.66665649414063,
+            "height": 36.000030517578128
         }
     },
     "m_Slots": [
@@ -397,10 +398,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -306.0,
-            "y": -336.3333740234375,
-            "width": 209.3333740234375,
-            "height": 318.66668701171877
+            "x": -309.33331298828127,
+            "y": -189.3333740234375,
+            "width": 207.33334350585938,
+            "height": 134.66668701171876
         }
     },
     "m_Slots": [
@@ -412,7 +413,7 @@
         "location"
     ],
     "m_Precision": 1,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 2,
     "m_CustomColors": {
@@ -571,10 +572,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -306.0,
-            "y": -203.00006103515626,
-            "width": 209.3333740234375,
-            "height": 318.6666259765625
+            "x": -302.0,
+            "y": -29.33335304260254,
+            "width": 207.33334350585938,
+            "height": 134.66668701171876
         }
     },
     "m_Slots": [
@@ -586,13 +587,28 @@
         "surface direction"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 2,
     "m_CustomColors": {
         "m_SerializableColors": []
     },
     "m_Space": 2
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "b52800570d1c46a6b2eed4505a5ba37d",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "ee092bf0d721412b97a718da0db947eb"
+        },
+        {
+            "m_Id": "15b8692b5c124abd9563e23bf38683a3"
+        }
+    ]
 }
 
 {
@@ -701,34 +717,6 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "Thresholds",
     "m_DefaultReferenceName": "_Thresholds",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    }
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector3ShaderProperty",
-    "m_ObjectId": "fb46f33df69f45cf9a599ded24d3225e",
-    "m_Guid": {
-        "m_GuidSerialized": "a6ccbc7d-885c-4168-83d4-d639eb26afe6"
-    },
-    "m_Name": "Vector3",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Vector3",
-    "m_DefaultReferenceName": "_Vector3",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

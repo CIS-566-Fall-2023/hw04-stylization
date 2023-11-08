@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Watercolour 10
+  m_Shader: {fileID: -6465566751694194690, guid: bf7b400184610ef4f9be750fd4fc3f94,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: 6a1a7f67f765a8045acf60d3c0eb56c2, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - MAIN_LIGHT_CALCULATE_SHADOWS
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - Vector1_2BDF6FD9: 2.38
+    - Vector1_2FA10055: -0.86
+    - Vector1_35B4C0F1: 0.3
+    - Vector1_46F1304E: 0.29
+    - Vector1_BBEA2355: 1.41
+    m_Colors:
+    - Color_D9F05973: {r: 0.9294118, g: 0.80392164, b: 0.854902, a: 0}
+    - Color_DB04B181: {r: 0.95294124, g: 0.60784316, b: 0.74509805, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &2675043985188659146
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
