@@ -1,7 +1,7 @@
 # HW 4: *3D Stylization*
 
 <video width="320" height="240" controls>
-  <source src="./demo.mov" type="video/mp4">
+  <source src="https://github.com/Cryszzz/hw04-stylization/edit/main/demo.mov" type="video/mp4">
 </video>
 
 ### References:
