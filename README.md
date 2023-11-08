@@ -1,4 +1,7 @@
-# HW 4: *3D Stylization*
+# HW 4: *3D Stylization - Waterpaint*
+
+![](/Images/watercolor.png)
+
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
