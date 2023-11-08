@@ -91,6 +91,22 @@ Something that I tried was to scroll multiple textures at varying speeds in diff
 
 ## Outlines
 
+The outlines are a very basic sobel filter, and implemented using Unity's Renderer Features system.
+
+|Outline filter process|
+|:-:|
+|<img src="img/sobel.png">|
+
+|Depth buffer|Normal buffer|Outlines|
+|:-:|:-:|:-:|
+|<img src="img/depthBuffer.png" width=300>|<img src="img/normalsBuffer.png" width=300>|<img src="img/outlines.png" width=300>|
+
+|Final result with outlines|
+|:-:|
+|<img src="img/scene3.png" width=500>|
+
+These outlines are the main part of this project that I really want to spend some time on to improve. I'm not a huge fan of sobel filter based outlines because of their inconsistency, and something like inverted-hull only really works with meshes that can be scaled uniformly (or you need to create a custom outline mesh for everything, not fun). Something worth trying in the future is the Jump Flood method covered by these amazing articles on rendering consistent outlines: [article 1](https://ameye.dev/notes/rendering-outlines/) and [article 2](https://bgolus.medium.com/the-quest-for-very-wide-outlines-ba82ed442cd9).
+
 ## Dithered Fading
 
 ## Gerstner Waves
@@ -121,6 +137,8 @@ Something that I tried was to scroll multiple textures at varying speeds in diff
 
 ### Outlines 
 - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
+- [5 ways to draw an outline](https://ameye.dev/notes/rendering-outlines/)
+- [The Quest for Very Wide Outlines](https://bgolus.medium.com/the-quest-for-very-wide-outlines-ba82ed442cd9)
 
 ### Gerstner Waves
 - [Catlike Coding's Gerstner Waves tutorial](https://catlikecoding.com/unity/tutorials/flow/waves/)
