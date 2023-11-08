@@ -19,6 +19,23 @@ MonoBehaviour:
   NormalsTexture: {fileID: 8400000, guid: a348fe2d588e6ba48b8e31d4143cb7ba, type: 2}
   _NormalsEvent: 300
   normalsMaterial: {fileID: 2100000, guid: 615bcdfe1e375fb4fba813bb873e2880, type: 2}
+--- !u!114 &-3164770554760673458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: PostProcess Sobel Edges
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 500
+    material: {fileID: -876546973899608171, guid: 1b3d02cf6eaecf349984b1ba3f536f31,
+      type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,10 +53,11 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
+  - {fileID: -3164770554760673458}
   - {fileID: -4384711085131795347}
   - {fileID: 2914078642349134489}
   - {fileID: 191703527100293974}
-  m_RendererFeatureMap: 6d7400d07f6026c399d2c5f415e3702856a3009b5711a902
+  m_RendererFeatureMap: 4ec7dfb7f27914d46d7400d07f6026c399d2c5f415e3702856a3009b5711a902
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
