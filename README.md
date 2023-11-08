@@ -4,26 +4,31 @@
 
 <img height="400" alt="ref" src="/ref.jpg">
 
-Lorem ipsum 
+Inspired by this painting from the Barnes Foundation in Philly, I worked to recreate the unfinished but elegant painting look using Unity shaders. 
 
 ## Final Render
 
 <img height="400" alt="ref" src="/final.png">
 
-Lorem ipsum 
-
 ---
 ## Surface Shaders
 
-Lorem ipsum 
+<img height="200" alt="ref" src="/scene_cam.png">
+
+Beginning with the three-toned toon shader from the lab, I added adjustments so that the shader supports multiple lights. 
 
 ### Additional Feature: Stroke Alpha
 
 <img height="200" alt="ref" src="/specialized_effect.png">
 
+I used my own stroke texture, created in Procreate, to blend with the toon shader, creating the unfinished painting look. 
+This alpha feature uses the object's UVs and the alpha channel of the shader. 
+
 ### Paint Texture Shadow
 
 <img height="200" alt="ref" src="/shadow.png">
+
+I also created a paint texture shadow 
 
 ### Color Palette
 
