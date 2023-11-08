@@ -5,6 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class FullScreenFeature : ScriptableRendererFeature
 {
+    // settings so that the user can edit the settings 
     [System.Serializable]
     public class FullScreenPassSettings
     {
@@ -17,6 +18,7 @@ public class FullScreenFeature : ScriptableRendererFeature
     {
         const string ProfilerTag = "Full Screen Pass";
         public FullScreenFeature.FullScreenPassSettings settings;
+        // render target identifier for post processing 
         RenderTargetIdentifier colorBuffer, temporaryBuffer;
         private int temporaryBufferID = Shader.PropertyToID("_TemporaryBuffer");
 
@@ -24,6 +26,8 @@ public class FullScreenFeature : ScriptableRendererFeature
         {
             this.settings = passSettings;
             this.renderPassEvent = settings.renderPassEvent;
+            // don't worry about null material 
+            // if null -> create an engine material based on invert material we made previously 
             if (settings.material == null) settings.material = CoreUtils.CreateEngineMaterial("Shader Graphs/Invert");
         }
 
@@ -51,7 +55,13 @@ public class FullScreenFeature : ScriptableRendererFeature
             using (new ProfilingScope(cmd, new ProfilingSampler(ProfilerTag)))
             {
                 // HW 4 Hint: Blit from the color buffer to a temporary buffer and *back*.
+                // color buffer that starts off as "what color on screen"
+                // temporary buffer -> blit pixel data from color to temp buffer
+                // settings.material: in the process of bliting from color to temp we apply the material 
+                // pixel data in temp buffer stores material applied to scene 
                 Blit(cmd, colorBuffer, temporaryBuffer, settings.material);
+                // added: BLit back to color from temporary buffer 
+                Blit(cmd, temporaryBuffer, colorBuffer);
             }
 
             // Execute the command buffer and release it.
@@ -67,6 +77,8 @@ public class FullScreenFeature : ScriptableRendererFeature
         }
     }
 
+    // pass is a class defined by the ScriptableRendererFeature 
+    // when the feature is created -> creates a Pass -> gets queued onto render call 
     FullScreenPass m_FullScreenPass;
 
     /// <inheritdoc/>
