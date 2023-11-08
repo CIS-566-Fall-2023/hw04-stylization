@@ -1,5 +1,8 @@
 # HW 4: *3D Stylization*
-<video src="./demo.mov"></video>
+
+<video width="320" height="240" controls>
+  <source src="./demo.mov" type="video/mp4">
+</video>
 
 ### References:
 ![](./ref.jpeg)
