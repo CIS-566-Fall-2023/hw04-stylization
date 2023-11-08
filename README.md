@@ -61,6 +61,9 @@ Looking back at the chosen concept art, we see a non-uniform outline surrounding
 
 <img width="400px" src="images/inv_hull.gif">
 
+The extrusion along normals causes the mesh to 'break-apart' for larger scaling factors. I tried adding a vertex displacement noise to achieve the non-uniform boundary look from the concept art, but couldn't figure out a good way to achieve that look due to time restrictions. Therefore, I used low and appropriate scale values to get a slightly different but appealing final look. _(It is not a bug, it is a feature. Right?)_
+
+
 <a id="scene"></a>
 ## Assembling the Scene
 I was able to find [this](https://sketchfab.com/3d-models/spider-punk-from-across-the-spider-verse-31b9e56833d34121a9a0012985c6bc09) fantastic FBX model on Sketchfab by [CVRxEarth](https://sketchfab.com/CVRxEarth). I was also able to find [this](https://sketchfab.com/3d-models/lightning-4bb6b257007e4797b2edd68dedb22664) lightning model asset by [daedaljs](https://skfb.ly/6D8Io) licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/). I got to work on creating the materials:  
