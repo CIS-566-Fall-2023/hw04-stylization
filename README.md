@@ -12,7 +12,7 @@ Below is my final render!
 ---
 ## Surface Shaders
 
-<img height="200" alt="ref" src="/scene_cam.png">
+<img height="400" alt="ref" src="/scene_cam.png">
 
 Beginning with the three-toned toon shader from the lab, I added adjustments so that the shader supports multiple lights. 
 
@@ -22,6 +22,8 @@ Beginning with the three-toned toon shader from the lab, I added adjustments so 
 
 I used my own stroke texture, created in Procreate, to blend with the toon shader, creating the unfinished painting look. 
 This alpha feature uses the object's UVs and the alpha channel of the shader. 
+
+In my final render above, the leftmost building, water, ground, and background use this shader, creating the unfinished painting look. 
 
 ### Paint Texture Shadow
 
