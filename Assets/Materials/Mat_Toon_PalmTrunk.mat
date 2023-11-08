@@ -30,7 +30,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f9a58d6cb3c5e4e4eb980e37b603fb3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
@@ -51,6 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: 9027b562d5381a74981004d97c43c6c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTexture:
@@ -99,23 +103,29 @@ Material:
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _MidtoneTextureRotation: 0.5
     - _MidtoneThreshold: 0.32
+    - _OverlayMovementSpeed: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
-    - _ShadowTextureRotation: -1
-    - _ShadowThreshold: 0.29
+    - _ShadowTextureRotation: -1.91
+    - _ShadowThreshold: 0.31
     - _Threshold: 0.5
     - _Threshold2: 0.7
     - _Threshold_2: 0.7
     m_Colors:
     - _AdditionalLightsRampedDiffuseValues: {r: 0, g: 0, b: 0, a: 0}
     - _Highlight: {r: 1, g: 0.6932729, b: 0, a: 1}
-    - _MainColor: {r: 0.49411768, g: 0.3647059, b: 0.16862746, a: 1}
-    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _MainColor: {r: 0.6320754, g: 0.46469542, b: 0.2110893, a: 1}
+    - _MainTextureColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainTextureOffset: {r: 0.32, g: -0.1, b: 0, a: 0}
+    - _MainTextureTiling: {r: 2, g: 2, b: 0, a: 0}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _OverlayTextureColor: {r: 0.9433962, g: 0.9334579, b: 0.38625845, a: 1}
+    - _OverlayTextureOffset: {r: 0.16, g: 0, b: 0, a: 0}
+    - _OverlayTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow: {r: 0.6698113, g: 0.50822395, b: 0.141545, a: 1}
-    - _ShadowColor: {r: 0.38431376, g: 0.27058825, b: 0.11764707, a: 1}
+    - _ShadowColor: {r: 0.5, g: 0.3623522, b: 0.1669811, a: 1}
     - _ShadowTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow_Tiling: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []

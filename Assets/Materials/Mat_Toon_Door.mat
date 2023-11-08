@@ -30,7 +30,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f9a58d6cb3c5e4e4eb980e37b603fb3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
@@ -51,6 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: f9a58d6cb3c5e4e4eb980e37b603fb3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShadowTexture:
@@ -117,6 +121,9 @@ Material:
     - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _OverlayTextureColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OverlayTextureOffset: {r: 0.77, g: 1, b: 0, a: 0}
+    - _OverlayTextureTiling: {r: 4, g: 1, b: 0, a: 0}
     - _Shadow: {r: 0.20270556, g: 0.36792448, b: 0.20877975, a: 1}
     - _ShadowColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _ShadowTextureTiling: {r: 5, g: 5, b: 0, a: 0}
