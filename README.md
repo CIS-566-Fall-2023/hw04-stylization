@@ -1,4 +1,11 @@
 # HW 4: *3D Stylization*
+<video src="./demo.mov"></video>
+
+### References:
+![](./ref.jpeg)
+![](./ref2.png)
+
+I adjusted the light of the additional light to be smoothed lighting instead of hard edges. I also added vertex animation on snowflakes, I used waterpaint texture for overall shadowing and coloring, and use canvas texture as post processing effect. For the outline, I made it more like pencil texture. 
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
