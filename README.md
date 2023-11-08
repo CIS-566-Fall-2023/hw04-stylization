@@ -52,103 +52,68 @@ After getting multidirectional lighting to work, my next step was to make my tex
 [Cool Watercolour Shader Reference](https://github.com/chrisloop/WetShadows)
 
 Below is an image of the shader graph inspired by the reference.
-![]()
+![](Pictures/shaderWatercolourInspired.png)
 
 I ended up creating two shaders: one inspired by the fuzzy shadow borders that I saw on Github, and another that applied some extra textures to the threshold of my original toon shader. Below is the shader graph implementation of the toon graph modification shader.
 ![](Pictures/shaderSpecialShadow.png)
 
----
-## 4. Full Screen Post Process Effect
-We're nearing the end! 
+The textures that you can observe on both shaders are custom handpainted textures that I created in Procreate using one of the oil paint brushes. I applied these textures onto the Aranara model and the background box models to generate painted textures in my scene.
 
-### To-Do:
-Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
-* A vingette that darkens the edges of your images with a color or pattern
-* Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
-* A texture to make your image look like it's drawn on paper or some other surface.
-* A blur to make your image look smudged.
-* Fog or clouds that drift over your scene
-* Whatever else you can think of that complements your scene!
+|![](Pictures/aranaraWIPPainted2.png)|![](Pictures/aranaraWIPPainted.png)|
+|:--:|:--:|
+|Painted textures front view.|Painted textures side view.|
 
-***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
+I also created a custom sinusoidal function that takes the regular toon shader and warps the border based on mapped values between the threshold values that I set for the toon shaders. Instead of making the values below or above the set thresholds be hardcoded, I instead used another parametre called the Threshold Border, in which I would leave a band where if my Diffuse values were within that band of values, I would apply a function to modify those values and nowhere else. That function is what I affectionately call the Camel function, due to it having two humps to determine where I would be remapping my Diffuse values. Below is the shader graph that I used to generate this custom function that I never used in scene.
+![](Pictures/shaderExtraSwirly.png)
+As you can see in the shader graph, I first pass my diffuse values through the camel function, which creates the two white bands that you see as the output. Any Diffuse value that matches the values within the white bands will then be rendered with a sine function in my colouring function for the toon shader. Note that the sine function can be interchanged with any type of function. I plan on modifying the sine function to be some variant of noise function in order to mayhaps use entirely procedural techniques to generate my painterly textures, or perhaps to discover a new effect to use in the future.
 
 ---
-## 5. Create a Scene
-Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
+## 4. Outlines
+The outlines caused me the most anguish for this assignment because I had a lot of trouble dealing with the render features for the URP pipeline. I first tested that my normals rendering feature was working on the URP rendering pipeline, and when I did, I proceeded to follow [this tutorial](https://www.youtube.com/watch?v=RMt6DcaMxcE) by NedMakesGames to create the outlines in the Outlines.hlsl file. However, I soon discovered that my outlines were not showing up at all despite my depth map having been activated. It appears after some debugging that my depth map only generated values from between 0.01 - 0.04, which was causing the parametres for the outline to be drawn was extremely small. I found a method around this roadblock by using the normals to implement the outline instead of using the depth map, which gave me significantly better results due to the fact that my normals were always being mapped from a scale of 0 - 1. Here is the code that I used to generate the sobel normal maps for the outlines.
+![](Pictures/shaderCodeNormalSobel.png)
 
-Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; If you choose to model your own geometry for this project, be aware of the time-constraint and risk!)
+However, getting the shader to generate the outline shapes themselves was only the first step to getting shapes around my outlines, because if I applied this shader as it is directly to the rendering feature, then my result would turn into a black and white outline of every object in my scene, where my goal was to retain the original colour integrity of the scene despite the post process. Therefore, I added a lerp node before I output my shaders that took in the main texture value of the scene and the outline colour and used the value obtained from the sobel shader to interpolate between these two values. That way, only on very bright patches of the sobel shader will colour be drawn. Below is an image of the shader that I used to generate outlines.
+![](Pictures/shaderOutline.png)
 
-Some example resources for finding 3D assets to populate your scene With:
-1. [SketchFab](https://sketchfab.com/)
-2. [Mixamo](https://www.mixamo.com/#/)
-3. [TurboSquid](https://www.turbosquid.com/)
+Here are some of the results that I got by using my outline shader.
+|![](Pictures/aranaraPostProcessOutline.png)|![](Pictures/aranaraGlitch1.png)|
+|:--:|:--:|
+|Post process white coloured outlines, normal.|Post process glitch displacement outlines with some applied perlin noise.|
 
-## 6. Interactivity
-As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
-* Party mode (things speed up, different colorization)
-* Memory mode (different post-processing effects to color you scene differently)
-* Fanart mode (different surface shaders, as if done by a different artist)
-* Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
+## 5. Post Process Effects: The Accidental Shader
+This shader came about as I was attempting to use my scuffed depth values to create outlines around my objects. I ended up preserving the shader after I saw its warped effects on my scene, which I personally thought matched the callousness of my brushstrokes, and my occasional use of brush layer post processing on my own artwork. Here is the shader in action.
+![](Pictures/shaderPostProcess.png)
 
-### To-Do:
-* Create at least one new material to be swapped in using a key press
-* Create and attach a new C# script that listens for a key press and swaps out the material on that key press. 
-Your C# script should look something like this:
-```
-public Material[] materials;
-private MeshRenderer meshRenderer;
-int index;
+|![](Pictures/aranaraPostProcess2.png)|![](Pictures/AranaraPostProcess.png)|
+|:--:|:--:|
+|Funny post process shader side shot.|Funny post process shader front shot.|
 
-void Start () {
-          meshRenderer = GetComponent<MeshRenderer>();
-}
-
-void Update () {
-          if (Input.GetKeyDown(KeyCode.Space)){
-                 index = (index + 1) % materials.Count;
-                 SwapToNextMaterial(index);
-          }
-}
-
-void SwapToNextMaterial (int index) {
-          meshRenderer.material = materials[index % materials.Count];
-}
-```
-* Attach the c# script as a component to the object(s) that you want to change on keypress
-* Assign all the relevant materials to the Materials list field so you object knows what to swap between.
- 
 ---
-## 7. Extra Credit
-Explore! What else can you do to polish your scene?
-  
-- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
-    - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
-- Add an interesting terrain with grass and/or other interesting features
-- Implement a Custom Skybox alongside a day-night cycle lighting script that changes the main directional light's colors and direction over time.
-- Add water puddles with screenspace reflections!
-- Any other similar level of extra spice to your scene : ) (Evaluated on a case-by-case basis by TAs/Rachel/Adam)
+## 6. Post Process Effects: The Watercolour Shader
+The watercolour post process effect came about as I was tooling away at more render features after I had finished implementation of the base scene. As I had the glow, particles, and painterly textures, my next step was to perhaps... add another interesting overlay over my scene? After all, one of the processes that I always perform at the tail end of creating one of my pieces is to add layers upon layers of post processing over my 2D artwork, including countless overlays, adds, and colour burns for my more intensive pieces. I decided to play with the texture that I gave myself as a painterly texture base, and I ended up getting a shader that essentially covered splotches of my scene in blue/purple tints, giving it a slight watercolour effect. I ended up liking this shader quite a bit, so I kept it. Here is a video of me using said shader. 
 
-## Submission
-1. Video of a turnaround of your scene
-2. A comprehensive readme doc that outlines all of the different components you accomplished throughout the homework. 
-3. All your source files, submitted as a PR against this repository.
+https://github.com/sagescherrytree/hw04-stylization/assets/90532115/9188d4be-c6ec-43bc-ae6b-a84c844e76ef.mp4
 
-## Resources:
+Here is also a shader graph with the experimental watercolour implementation.
+![](Pictures/shaderWatercolour.png)
 
-1. Link to all my videos:
+|![](Pictures/aranaraWatercolour2.png)|![](Pictures/aranaraWatercolour.png)|
+|:--:|:--:|
+|Watercolour post process shader front view.|Watercolour post process shader back view.|
+
+## Interactivity
+For the interactivity component, I simply made the buttons of the post processing able to be turned on and off, so that you are able to see the layers getting added one right after another.
+
+Since the video of the breakdown file is too big, I will leave a copy of it in the Pictures folder. Please find it and watch it as you please.
+
+## Resources and inspirations:
+
+1. CIS 5660 laboratory videos:
     - [Playlist link](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
-2. [Lab Video](https://youtu.be/jc5MLgzJong?si=JycYxROACJk8KpM4)
-3. Very Helpful Creators/Videos from the internet
-    - [Cyanilux](https://www.cyanilux.com/)
-        - [Article on Depth in Unity | How depth buffers work!](https://www.cyanilux.com/tutorials/depth/) 
+    -  [Lab Video](https://youtu.be/jc5MLgzJong?si=JycYxROACJk8KpM4)
+2. Interwebs references:
+    - [Chris Loop](https://github.com/chrisloop/WetShadows)
     - [NedMakesGames](https://www.youtube.com/@NedMakesGames)
         - [Toon Shader Lighting Tutorial](https://www.youtube.com/watch?v=GQyCPaThQnA&ab_channel=NedMakesGames)
-        - [Tutorial on Depth Buffer Sobel Edge Detection Outlines in Unity URP](https://youtu.be/RMt6DcaMxcE?si=WI7H5zyECoaqBsqF)
-    - [MinionsArt](https://www.youtube.com/@MinionsArt)
-        - [Toon Shader Tutorial](https://www.youtube.com/watch?v=FIP6I1x6lMA&ab_channel=MinionsArt)
-    - [Brackeys](https://www.youtube.com/@Brackeys)
-        - [Intro to Unity Shader Graph](https://www.youtube.com/watch?v=Ar9eIn4z6XE&ab_channel=Brackeys)
-    - [Robin Seibold](https://www.youtube.com/@RobinSeibold)
-        - [Tutorial on Depth and Normal Buffer Robert's Cross Outliens in Unity](https://youtu.be/LMqio9NsqmM?si=zmtWxtdb1ViG2tFs)
-    - [Alexander Ameye](https://ameye.dev/about/)
-        - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
+    - [Cody Gindi](https://www.youtube.com/watch?v=s8N00rjil_4)
+        - I did not actually use his code, but I considered it because the effects were too pretty!
