@@ -53,6 +53,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _OverlayTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -99,6 +103,7 @@ Material:
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _MidtoneTextureRotation: 0.5
     - _MidtoneThreshold: 0.126
+    - _OverlayMovementSpeed: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
@@ -110,12 +115,15 @@ Material:
     m_Colors:
     - _AdditionalLightsRampedDiffuseValues: {r: 0.3, g: 0.5, b: 1, a: 0}
     - _Highlight: {r: 0.46603763, g: 1, b: 0.4881814, a: 1}
-    - _MainColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainTextureColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     - _MainTextureOffset: {r: 0, g: 0, b: 0, a: 0}
     - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _OverlayTextureColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OverlayTextureOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _OverlayTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _Shadow: {r: 0.20270556, g: 0.36792448, b: 0.20877975, a: 1}
     - _ShadowColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
     - _ShadowTextureTiling: {r: 5, g: 5, b: 0, a: 0}
