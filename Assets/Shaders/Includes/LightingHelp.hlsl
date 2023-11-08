@@ -1,3 +1,60 @@
+void WaterWaves_float(float3 WorldPos, float SineTime, out float3 Position) {
+    
+    Position = WorldPos;
+    //Position[1] = SineTime * WorldPos[1] * 0.01 * abs(sin(WorldPos[2]));
+    Position[1] = WorldPos[1] * 0.02 * abs(sin(WorldPos[2] * 100000 + SineTime));
+    
+}
+
+float2 Random2(float2 p)
+{
+    return frac(sin(float2(dot(p, float2(127.1, 311.7)), dot(p, float2(269.5, 183.3)))) * 43209);
+
+}
+
+float WorleyNoise(float2 uv, float time) {
+    
+    uv *= 10;
+    
+    float2 uvInt = floor(uv);
+    
+    float2 uvFract = frac(uv);
+    
+    float minDist = 1.0;
+    
+    for (int y = -1; y <= 1; ++y)
+    {
+        for (int x = -1; x <= 1; ++x)
+        {
+            float2 neighbor = float2(float(x), float(y));
+            float2 p = Random2(uvInt + neighbor);
+            float2 diff = neighbor + p - uvFract;
+            float dist = length(diff);
+            minDist = min(minDist, dist);
+
+        }
+
+    }
+    return minDist;
+}
+
+void WaterCaustics_float(float3 WorldUV, float3 CurrColor, float SineTime, out
+float3 FinalColor) {
+    
+    if (WorleyNoise(float2(WorldUV[0], WorldUV[2]), SineTime) < 0.9)
+    {
+        FinalColor = CurrColor * (2 - WorleyNoise(float2(WorldUV[0], WorldUV[2]), SineTime));
+    
+    }
+    else
+    {
+        FinalColor = CurrColor;
+    }
+    
+   
+    
+}
+
 void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
 {
 #ifdef SHADERGRAPH_PREVIEW
@@ -59,7 +116,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
+        
+        
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
 
+        }
         
         if (light.distanceAttenuation <= 0)
         {
@@ -69,17 +132,10 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Shadow, float3 Midtone, float Diffuse, float2 Thresholds, out float3 OUT)
 {
     if (Diffuse < Thresholds.x)
     {
