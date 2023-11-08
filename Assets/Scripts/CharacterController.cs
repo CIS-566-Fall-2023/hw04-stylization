@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float dist2ToChangeWaves = 40f;
     [SerializeField] private float dist2DeactivateDoor = 2.0f;
     [SerializeField] private float dist2ToFullVignette = 2.0f;
+    [SerializeField] private float dist2ToFullDistortion = 2.0f;
 
     [Header("Vignette Curves")]
     [SerializeField] private Material vignetteMaterial;
@@ -29,6 +30,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private AnimationCurve vignetteAlphaCurve;
     [SerializeField] private Gradient vignetteGradient;
     [SerializeField] private AnimationCurve vignetteIntensityCurve;
+
+    [Header("Portal Visuals")]
+    [SerializeField] private MeshRenderer portalRenderer;
+    [SerializeField] private AnimationCurve portalDistortionSpeedCurve;
+    [SerializeField] private AnimationCurve portalFresnelCurve;
+    [SerializeField] private float portalFresnelDuration;
 
     private float maxSpeed;
     private float maxDist2;
@@ -92,10 +99,17 @@ public class CharacterController : MonoBehaviour
         float distance2 = Vector3.SqrMagnitude(doorTransform.position - transform.position);
         Move(distance2);
 
-        if (distance2 < dist2ToOpenDoor && !hasDoorOpened)
+        if (distance2 < dist2ToOpenDoor)
         {
-            hasDoorOpened = true;
-            door.OpenDoor();
+            if (!hasDoorOpened)
+            {
+                hasDoorOpened = true;
+                door.OpenDoor();
+            }
+
+            float distorPercent = 1.0f - (distance2 - dist2ToFullDistortion) / (dist2ToOpenDoor - dist2ToFullDistortion);
+            float t = portalDistortionSpeedCurve.Evaluate(distorPercent);
+            portalRenderer.material.SetFloat("_DistortionIntensity", t);
         }
 
         //if (distance2 < dist2ToChangeWaves && !hasChangedWaves)
@@ -124,7 +138,6 @@ public class CharacterController : MonoBehaviour
         if (distance2 <= 1.0f)
         {
             SwitchVisuals();
-            OnChangeToSecondVisuals?.Invoke();
         }
     }
 
@@ -132,8 +145,38 @@ public class CharacterController : MonoBehaviour
     {
         hasStartedSecondVisuals = true;
         rb.isKinematic = true;      // disable any non-programmatic movement including external forces like gravity
+
+        StartCoroutine(SwitchVisualsCoroutine());
+    }
+
+    private IEnumerator SwitchVisualsCoroutine()
+    {
+        yield return StartCoroutine(PortalCoroutine());
+
+        OnChangeToSecondVisuals?.Invoke();
         StartCoroutine(MoveCharacterCoroutine());
         StartCoroutine(LerpFOV());
+    }
+
+    private IEnumerator PortalCoroutine()
+    {
+        float timeSinceStarted = 0.0f;
+        float percentageComplete = 0.0f;
+
+        float t;
+
+        while (percentageComplete <= 1.0f)
+        {
+            timeSinceStarted += Time.deltaTime;
+            percentageComplete = timeSinceStarted / portalFresnelDuration;
+
+            t = portalFresnelCurve.Evaluate(percentageComplete);
+            portalRenderer.material.SetFloat("_FresnelPower", t);
+
+            yield return null;
+        }
+
+        rb.MovePosition(characterFinalLocation.position);
     }
 
     private IEnumerator MoveCharacterCoroutine()
