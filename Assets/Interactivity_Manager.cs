@@ -25,8 +25,6 @@ public class Interactivity_Manager : MonoBehaviour
     }
     private ParticleSystem _CachedSystem;
 
-    float emissionRate = EmissionModule.rateOverTime.scalar;
-
     // RenderFeature DangoSteam
     // Start is called before the first frame update
     void Start()
@@ -50,7 +48,7 @@ public class Interactivity_Manager : MonoBehaviour
                 // DirLight.SetActive(toggle);
                 toggle = true;
                 Feature.rendererFeatures[2].SetActive(toggle);
-                system.rateOverTime = emissionRate;
+                //system.rateOverTime = emissionRate;
                 system.Play(true);
             }             
         } else {
@@ -58,7 +56,7 @@ public class Interactivity_Manager : MonoBehaviour
                 // DirLight.SetActive(toggle);
                 toggle = false;
                 Feature.rendererFeatures[2].SetActive(toggle);
-                system.rateOverTime = 0;
+                //system.rateOverTime = 0;
                 system.Pause(true);
             }
         }
