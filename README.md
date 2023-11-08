@@ -49,5 +49,5 @@ Lorem ipsum
 ---
 ## Interactivity: In-Progress Painting
 
-https://github.com/yuhanliu-tech/hw04-stylization/assets/42754447/12482c78-3841-4901-b82e-e9fe0284e628
+https://github.com/yuhanliu-tech/hw04-stylization/assets/42754447/04993df6-634e-4ec3-80b2-10677c6d1111
 
