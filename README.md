@@ -35,9 +35,9 @@
 
 **Vertex Animation + Specular Light Animation**
 
-<video width="600" height="420" controls>
-  <source src="results/scene2.mp4" type="video/mp4">
-</video>
+[**Video**](https://github.com/CaballoMa/hw04-stylization/blob/main/results/scene2.mp4)
+
+![](results/scene2.gif)
 
 ### Gaara (Illustration style Shadow)
 
