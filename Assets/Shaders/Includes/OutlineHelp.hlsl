@@ -36,13 +36,30 @@ void GetNormal_float(float2 uv, out float3 Normal)
 }
 
 void DepthSobel_float(float2 UV, float Thickness, out float Out) {
-    float2 sobel = 0;
+    float2 sobelR = 0;
+    float2 sobelG = 0;
+    float2 sobelB = 0;
 
     [unroll] for (int i = 0; i < 9; i++) {
-        float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + sobelSamplePoints[i] * Thickness);
-        sobel += depth * float2(sobelXMatrix[i], sobelYMatrix[i]);
+        //float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + sobelSamplePoints[i] * Thickness);
+        float3 normal;
+        GetNormal_float(UV, normal);
+
+        sobelR += normal.r * float2(sobelXMatrix[i], sobelYMatrix[i]);
+        sobelG += normal.g * float2(sobelXMatrix[i], sobelYMatrix[i]);
+        sobelB += normal.b * float2(sobelXMatrix[i], sobelYMatrix[i]);
     }
-    Out = length(sobel);
+    float lR = length(sobelR);
+    float lG = length(sobelG);
+    float lB = length(sobelB);
+
+    if (lR > lG && lR > lB) {
+        Out = lR;
+    } else if (lG > lR && lG > lB) {
+        Out = lG;
+    } else {
+        Out = lB;
+    }
 }
 
 #endif
