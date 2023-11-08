@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CharacterController : MonoBehaviour
@@ -53,8 +54,11 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private AnimationCurve camFOVChangeCurve;
     [SerializeField] private float fovChangeDuration;
 
+    public static event Action OnChangeToSecondVisualsStarted;
     public static event Action OnChangeToSecondVisuals;
     private bool hasStartedSecondVisuals;
+
+    public static float TimeSinceLastInput = 0.0f;
 
     // Start is called before the first frame update
     void Awake()
@@ -77,6 +81,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
+            TimeSinceLastInput = 0.0f;
             curSpeed += moveSpeed * Time.deltaTime;
             curSpeed = Mathf.Clamp(curSpeed, 0.0f, maxSpeed);
         }
@@ -91,8 +96,17 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        TimeSinceLastInput += Time.deltaTime;
+
         if (hasStartedSecondVisuals)
         {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                // very bad code but its fast and will work.
+                TimeSinceLastInput = 0.0f;
+                SceneLoader.Instance.Restart();
+            }
+
             return;     // no more user control, the aliens have taken over, sorry :(
         }
 
@@ -145,6 +159,7 @@ public class CharacterController : MonoBehaviour
     {
         hasStartedSecondVisuals = true;
         rb.isKinematic = true;      // disable any non-programmatic movement including external forces like gravity
+        OnChangeToSecondVisualsStarted?.Invoke();
 
         StartCoroutine(SwitchVisualsCoroutine());
     }

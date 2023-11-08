@@ -32,7 +32,7 @@ static float2 offsets[9] = {
     float2(-1,-1), float2(0,-1), float2(1,-1)
 };
 
-void GetOutline_float(float2 uv, float2 screenResolution, float outlineWidth,  out float outlineMask)
+void GetOutline_float(float2 uv, float2 screenResolution, float outlineWidth, float outlineShake, float noise, out float outlineMask)
 {
     float2 curPx = 0;
     float curPxDepth = 0;
@@ -42,9 +42,13 @@ void GetOutline_float(float2 uv, float2 screenResolution, float outlineWidth,  o
     float2 sobelNorY = 0;
     float2 sobelNorZ = 0;
 
+    float2 shake = float2(noise, noise);
+    shake *= outlineShake;
+    shake *= 0.001f * noise;
+
     [unroll] for (int i = 0; i < 9; i++)
     {
-        curPx = uv + offsets[i] * 0.001 * outlineWidth;
+        curPx = uv + shake + offsets[i] * 0.001 * outlineWidth;
 
         GetDepth_float(curPx, curPxDepth);
         GetNormal_float(curPx, curPxNor);
