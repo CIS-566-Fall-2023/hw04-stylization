@@ -51,7 +51,7 @@ I add this support by adding another distance-based factor to the Toon Material,
 <img width="600px" src="images/toon_3.png">
 
 <a id="inv-hull"></a>
-Polka-dot texture used for shadows:  
+Polka-dot texture used for specular highlights:  
 <img width="200px" src="Assets/Textures/ben-day-dots.jpg">
 
 ## Contextual Spice-Up: Inverted Hull
