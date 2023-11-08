@@ -1,6 +1,6 @@
 # HW 4: *3D Stylization*
 
-https://github.com/Cryszzz/hw04-stylization/demo.mov
+[https://github.com/Cryszzz/hw04-stylization/demo.mov](https://github.com/Cryszzz/hw04-stylization/blob/main/demo.mov)
 
 <video width="320" height="240" controls>
   <source src="https://github.com/Cryszzz/hw04-stylization/edit/main/demo.mov" type="video/mp4">
