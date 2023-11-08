@@ -39,7 +39,7 @@ To visualise my scene better, I imported an Aranara model that I created, and se
 |:--:|
 | A photo I took of my additional lighting affecting my model setup. At this time, I have not added the particle simulation yet. |
 
-| https://github.com/sagescherrytree/hw04-stylization/assets/90532115/e0bc13ef-3791-431a-ad86-746df0af2584 |
+ https://github.com/sagescherrytree/hw04-stylization/assets/90532115/e0bc13ef-3791-431a-ad86-746df0af2584 
 |:--:|
 | A recording that I took of the additional lighting with the particle simulation emitting lights. |
 
