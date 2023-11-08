@@ -17,6 +17,7 @@ The original goal was to take a piece of concept art and make a stylized scene i
   - [Inspirations](#inspirations)
   - [Toon Shading](#toon-shading)
   - [Outlines](#outlines)
+  - [Dithered Fading](#dithered-fading)
   - [Gerstner Waves](#gerstner-waves)
   - [Portal Distortion](#portal-distortion)
   - ["Vignette?"](#vignette)
@@ -39,25 +40,58 @@ The original goal was to take a piece of concept art and make a stylized scene i
 
 |Suzume Movie Poster|
 |:-:|
-<img src="img/suzumeDoor.png" width=400>
+|<img src="img/suzumeDoor.png" width=400>|
 
 2. [Gris](https://www.youtube.com/watch?v=BRiKQIVo7ao) by Nomada Studio uses a very minimalistic, water-coloured, aesthetic with simple outlines, and the analogous colour scheme is very pleasing. This is what I decided to try and replicate.
 
 |Gris Trailer Screenshot|
 |:-:|
-|<img src="img/gris1.png" width=400>|
+|<img src="img/gris1.png" width=500>|
 
 3. At some point while working on this project, I got inspired to do something with the mysterious doors that was a little more interesting than just scattering a bunch of doors over the scene. I decided to find another art style that would be relatively easy to create with the shaders I had already created, but would still be a stark contrast to the main style. The door would act as a portal from one realm to the other. I found [this artwork by "rudut2015"](https://stock.adobe.com/images/japan-traditional-japanese-painting-sumi-e-art-sun-mountain-sakura-lake/156204903) for this purpose.
 
 |Artwork|
 |:-:|
-|<img src="img/japaneseArt1.png" width=400>|
+|<img src="img/japaneseArt1.png" width=500>|
 
 ## Toon Shading
 
+Suzume, like most anime, uses a toon shaded art style. Toon shading is a great basis look to start off of.
 
+![](img/toon1.png)
+
+The shader graph for this toon shader looks very complex, but it is rather simple in concept. It first performs Lambertian shading on a model, then `step`s anything above a certain threshold to the lit area of the surface, and everything else into the unlit (in shadow) area of the surface. There is an additional `step` that finds a "midtone" between the lit and shadow colours (the midtone colour is a halfway lerp between the lit and shadow colours), and this colour is put in between the lit and shadow areas.
+
+I added support for **textures** on the shadow and midtone sections. This can be used to add something like a hatched shadow effect, though that is not something that is used in the demo scene. Additional lights are also supported, but similarly not used.
+
+|Simple Toon Shading|
+|:-:|
+|<img src="img/scene1.png" width=500>|
+
+One of the things that Gris does is affect surfaces based on a watercolour like texture sampled in screen-space. I first tried to do this by sampling a texture only in the lit areas, but that didn't look good, so I changed this texture to be an *overlay* on top of the whole surface. This looked a lot closer to the Gris art style.
+
+I created a few "watercolour" textures in Photoshop to overlay on to the scene, and allowed manually changing the colour for this overlay.
+
+<table>
+    <tr>
+        <td colSpan=3 align="center">Watercolour textures</td>
+    </tr>
+    <tr>
+        <td><img src="Assets/Textures/watercolor_texture.jpg" width=200></td>
+        <td><img src="Assets/Textures/watercolor_texture_2.jpg" width=200></td>
+        <td><img src="Assets/Textures/watercolor_texture_3.jpg" width=200></td>
+    <tr>
+</table>
+
+|Toon Shading + Screen Space Sampled Texture Overlay|
+|:-:|
+|<img src="img/scene2.png" width=500>|
+
+Something that I tried was to scroll multiple textures at varying speeds in different directions over the surface and then using the multiplied result of that as the overlay texture. The results looked good but it added too much motion to the scene, removing the focus from the doors, so I decided to scrape this idea.
 
 ## Outlines
+
+## Dithered Fading
 
 ## Gerstner Waves
 
