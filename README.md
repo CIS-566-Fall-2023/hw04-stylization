@@ -2,6 +2,7 @@
 
 ![](/Images/watercolor.png)
 
+![](/Images/watercolor_turntable.mp4)
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
