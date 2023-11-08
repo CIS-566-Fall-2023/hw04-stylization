@@ -5,9 +5,15 @@
 In this assignment, I turned a 2D concept art piece into a 3D Stylized scene in Unity via stylized graphics techniques and non-physically-based real-time rendering workflows. 
 
 ## Videos 
-- https://github.com/debbylin02/hw04-stylization/blob/main/Sunflower-turnaround.mp4
-- https://github.com/debbylin02/hw04-stylization/blob/main/Sunflower-straight.mp4
-- https://github.com/debbylin02/hw04-stylization/blob/main/Sunflower-interactable.mp4
+
+https://github.com/debbylin02/hw04-stylization/assets/82790216/34fd707f-00dd-4bce-856a-e69e7bccba9a
+
+
+https://github.com/debbylin02/hw04-stylization/assets/82790216/f953e437-0fa1-468b-9f95-959c723714e3
+
+
+https://github.com/debbylin02/hw04-stylization/assets/82790216/79c22591-728a-448c-82e7-1787c442303a
+
 
 # Tasks
 
