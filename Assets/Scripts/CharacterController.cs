@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -172,8 +171,8 @@ public class CharacterController : MonoBehaviour
             timeSinceStarted += Time.deltaTime;
             percentageComplete = timeSinceStarted / characterMoveToSecondLocationDuration;
 
-            t = characterMovementCurve.Evaluate(percentageComplete);
-            cam.fieldOfView = Mathf.Lerp(startFOV, secondCamFOV, t);
+            t = camFOVChangeCurve.Evaluate(percentageComplete);
+            cam.fieldOfView = Mathf.LerpUnclamped(startFOV, secondCamFOV, t);
 
             yield return null;
         }

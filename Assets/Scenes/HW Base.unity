@@ -243,7 +243,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aad35c085e8475147b8e32ad335d5489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 930.60767
+      value: 1282.6077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aad35c085e8475147b8e32ad335d5489,
         type: 3}
@@ -606,13 +606,14 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
+  - component: {fileID: 410087043}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -683,13 +684,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5824495, y: -0.6337048, z: 0.029177139, w: 0.50825155}
+  m_LocalRotation: {x: 0.31124058, y: -0.78030086, z: 0.49318177, w: -0.2259019}
   m_LocalPosition: {x: 7.4015045, y: -7.21, z: 81.861404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 141.021, y: 2211.713, z: -605.708}
+  m_LocalEulerAnglesHint: {x: 141.021, y: 2101.96, z: -605.708}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +714,19 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &410087043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410087039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e588b60c61b76046b562c1ce198a29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalTransform: {fileID: 1366998059}
 --- !u!4 &419348494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5603127158822140934, guid: 3419988ed7afafc44abd74eb379a6546,
@@ -750,7 +764,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 40b5b9551b120234a859d76c998aba25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 826.60767
+      value: 1178.6077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40b5b9551b120234a859d76c998aba25,
         type: 3}
@@ -1594,6 +1608,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1366998059}
   - {fileID: 1710124952}
   - {fileID: 1092871234}
   m_Father: {fileID: 0}
@@ -2062,31 +2077,31 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.14498334
     - serializedVersion: 3
-      time: 0.5955491
-      value: 0.31556398
-      inSlope: 1.7221036
-      outSlope: 1.7221036
+      time: 0.24212378
+      value: 0.46522695
+      inSlope: 3.6317165
+      outSlope: 3.6317165
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.20557947
-      outWeight: 0.17484888
+      inWeight: 0.1549021
+      outWeight: 0.11493903
     - serializedVersion: 3
-      time: 0.9364504
-      value: 1.012388
-      inSlope: -1.7340914
-      outSlope: -1.7340914
+      time: 0.8244479
+      value: 1.2548515
+      inSlope: -3.2210548
+      outSlope: -3.2210548
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.38511235
-      outWeight: 0.78241634
+      inWeight: 0.11654622
+      outWeight: 1
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1.3015229
-      outSlope: 1.3015229
+      inSlope: -0.2680463
+      outSlope: -0.2680463
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.21287087
+      inWeight: 1
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -2484,7 +2499,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3c0cffcf4f88e6a4593626a3c8c8d1cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 786
+      value: 1138
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c0cffcf4f88e6a4593626a3c8c8d1cb,
         type: 3}
@@ -2630,7 +2645,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b8087cfbeca8b4d4a9b5ed739cfed8db,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 873
+      value: 1225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8087cfbeca8b4d4a9b5ed739cfed8db,
         type: 3}
@@ -3079,7 +3094,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 50fc5da14c317ae4f92ff22b33b33f07,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 782.60767
+      value: 1134.6077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 50fc5da14c317ae4f92ff22b33b33f07,
         type: 3}
@@ -3484,12 +3499,12 @@ GameObject:
   - component: {fileID: 1366998058}
   - component: {fileID: 1366998057}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light_Second
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1366998057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3583,13 +3598,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366998056}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15652767, y: -0.68258107, z: 0.5617809, w: -0.44043666}
-  m_LocalPosition: {x: 7.4015045, y: -7.21, z: 81.861404}
+  m_LocalRotation: {x: 0.3460559, y: -0.79458076, z: 0.46940976, w: -0.16894177}
+  m_LocalPosition: {x: 693.7228, y: -82.60233, z: -284.80164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 141.021, y: 2068.587, z: -605.708}
+  m_Father: {fileID: 801349034}
+  m_LocalEulerAnglesHint: {x: 141.021, y: 2110.245, z: -605.708}
 --- !u!1001 &1374234183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5073,7 +5088,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410087041}
-  - {fileID: 1366998059}
   - {fileID: 510549503}
   - {fileID: 1501816197}
   - {fileID: 806843190}
