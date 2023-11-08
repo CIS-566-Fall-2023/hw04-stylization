@@ -29,11 +29,6 @@ public class VisualChangeEventListener : MonoBehaviour
                 mats[i] = visual.MatToChangeTo;
             }
             visual.MeshRenderer.sharedMaterials = mats;
-
-            //for (int i = 0; i < visual.MeshRenderer.materials.Length; i++)
-            //{
-            //    visual.MeshRenderer.materials[i] = visual.MatToChangeTo;
-            //}
         }
     }
 

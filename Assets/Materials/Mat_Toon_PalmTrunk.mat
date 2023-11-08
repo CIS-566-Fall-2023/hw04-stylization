@@ -49,6 +49,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 8b003871b0e41984ea657290c549c872, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -107,6 +111,7 @@ Material:
     - _AdditionalLightsRampedDiffuseValues: {r: 0, g: 0, b: 0, a: 0}
     - _Highlight: {r: 1, g: 0.6932729, b: 0, a: 1}
     - _MainColor: {r: 0.49411768, g: 0.3647059, b: 0.16862746, a: 1}
+    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _MidtoneTextureTiling: {r: 5, g: 5, b: 0, a: 0}
     - _Midtone_Tiling: {r: 5, g: 5, b: 0, a: 0}
     - _Shadow: {r: 0.6698113, g: 0.50822395, b: 0.141545, a: 1}
