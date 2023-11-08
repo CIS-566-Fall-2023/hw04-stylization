@@ -2,7 +2,9 @@
 
 ![](/Images/watercolor.png)
 
-![](/Images/watercolor_turntable.mp4)
+https://github.com/LinDadaism/ProceduralGraphics-Stylization/assets/46789205/0bc1bffd-128b-4060-9e6c-cec8e8c2096b
+
+
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
