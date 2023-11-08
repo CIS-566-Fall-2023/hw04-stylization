@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class Interactivity_Manager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Interactivity_Manager : MonoBehaviour
     private GameObject DirLight;
     private bool toggle = false;
 
+    [SerializeField]
     ParticleSystem system
     {
         get
@@ -24,6 +26,10 @@ public class Interactivity_Manager : MonoBehaviour
         }
     }
     private ParticleSystem _CachedSystem;
+
+    //float emissionRate = system.rateOverTime;
+
+    float timeStop;
 
     // RenderFeature DangoSteam
     // Start is called before the first frame update
@@ -50,7 +56,8 @@ public class Interactivity_Manager : MonoBehaviour
                 Feature.rendererFeatures[2].SetActive(toggle);
                 //system.rateOverTime = emissionRate;
                 system.Play(true);
-            }             
+            }
+            // system.rateOverTime = t * 0 + (1 - t) * emissionRate;
         } else {
             if (toggle == true) {
                 // DirLight.SetActive(toggle);
@@ -58,7 +65,13 @@ public class Interactivity_Manager : MonoBehaviour
                 Feature.rendererFeatures[2].SetActive(toggle);
                 //system.rateOverTime = 0;
                 system.Pause(true);
+                timeStop = Time.time;
             }
+            float delta = 4;
+            float curr = Time.time;
+            float t = (curr - timeStop) / delta;
+
+            // system.rateOverTime = t * emissionRate + (1 - t) * 0;
         }
     }
 }

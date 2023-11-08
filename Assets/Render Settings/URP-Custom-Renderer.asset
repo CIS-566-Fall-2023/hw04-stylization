@@ -35,6 +35,22 @@ MonoBehaviour:
   settings:
     renderPassEvent: 500
     material: {fileID: 2100000, guid: 78b94724fb4c62647a5776fedb887c07, type: 2}
+--- !u!114 &-3000741975332356648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faec35144280c146ac2395f7d7187de, type: 3}
+  m_Name: BrushStrokes
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 500
+    material: {fileID: 2100000, guid: 69fe9e3dcb139534b9a5de77bb6211cb, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +72,8 @@ MonoBehaviour:
   - {fileID: 2914078642349134489}
   - {fileID: -3164770554760673458}
   - {fileID: 191703527100293974}
-  m_RendererFeatureMap: 6d7400d07f6026c399d2c5f415e370284ec7dfb7f27914d456a3009b5711a902
+  - {fileID: -3000741975332356648}
+  m_RendererFeatureMap: 6d7400d07f6026c399d2c5f415e370284ec7dfb7f27914d456a3009b5711a902d8fdb57112395bd6
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 0}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}

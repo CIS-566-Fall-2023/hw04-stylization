@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Outlines Fullscreen
-  m_Shader: {fileID: -6465566751694194690, guid: 129cffdaf64882347af37c1bca27eb1f,
+  m_Name: BrushStrokes
+  m_Shader: {fileID: -6465566751694194690, guid: 937d4526139c17f4f8a59d263bbb92bb,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - REQUIRE_DEPTH_TEXTURE
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -28,7 +29,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalsBuffer:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_dcdb96f40762410bb0b930d5dab7b9da_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ee2953a8b74ea07488d04ce79bf1870e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_fdd197de2e45440783292ab1d62966f9_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ee2953a8b74ea07488d04ce79bf1870e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_cd8864ca44be4f728bcc9bc496e3915b_Out_0_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -46,7 +63,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - REQUIRE_DEPTH_TEXTURE: 1
+    - _DepthStrength: 0
+    - _DepthThickness: 0
+    - _DepthThreshold: 0
+    - _Opacity: 0.5
     - _Thickness: 0
     m_Colors:
-    - _Color: {r: 0.5150944, g: 0.95071596, b: 1, a: 0}
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
