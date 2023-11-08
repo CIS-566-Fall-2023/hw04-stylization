@@ -1,6 +1,10 @@
 # HW 4: *3D Stylization*
 
-https://github.com/Cryszzz/hw04-stylization/demo.mov
+
+
+https://github.com/Cryszzz/hw04-stylization/assets/69176305/c5b813eb-f065-4c48-82dd-23e3a434619c
+
+
 
 <video width="320" height="240" controls>
   <source src="https://github.com/Cryszzz/hw04-stylization/edit/main/demo.mov" type="video/mp4">
@@ -148,7 +152,11 @@ Ok, now regardless of what your concept art looks like, using what you know abou
 * Fog or clouds that drift over your scene
 * Whatever else you can think of that complements your scene!
 
-***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
+***Note: This should be easily ac
+
+
+
+complishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
 
 ---
 ## 5. Create a Scene
