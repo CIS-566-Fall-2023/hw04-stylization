@@ -59,7 +59,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
+        
+        
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
 
+        }
         
         if (light.distanceAttenuation <= 0)
         {
@@ -69,13 +75,6 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
