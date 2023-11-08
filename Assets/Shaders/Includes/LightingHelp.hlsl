@@ -78,29 +78,46 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float DiffuseM, float DiffuseSB, float Min_Threshold, float Max_Threshold, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float DiffuseM, float DiffuseT1, float DiffuseT2, float Min_Threshold, float Max_Threshold, out float3 OUT)
 {
     float3 col;
+    float a = 1.025;
+    float b = 1.05;
+    float c = 1.1;
+    float d = 1.15;
+
+    float3 MinMidtone = 0.5 * Shadow + 0.5 * Midtone;
+    Shadow = DiffuseT1 * Shadow + (1 - DiffuseT1) * MinMidtone;
+
+    float t = (DiffuseM - Min_Threshold) / (Max_Threshold - Min_Threshold);
+    float3 MaxMidtone = 0.4 * Midtone + 0.6 * Highlight;
+    Midtone = (1 - t) * Shadow + t * MaxMidtone;
+
     if (DiffuseM < Min_Threshold) {
         col = Shadow;      
-        float a = 1.025;
-        float b = 1.05;
-        float c = 1.1;
-        float d = 1.15;
-        if (DiffuseSB <= Min_Threshold * 0.25) {
+        
+        /*if (DiffuseT1 <= Min_Threshold * 0.25) {
             OUT = float3(col[0] / d, col[1] / c, col[2] / a);
-        } else if (DiffuseSB < Min_Threshold * 0.5) {
+        } else if (DiffuseT1 < Min_Threshold * 0.5) {
             OUT = float3(col[0] / c, col[1] / d, col[2] / b);
-        } else if (DiffuseSB < Min_Threshold * 0.75) {
+        } else if (DiffuseT1 < Min_Threshold * 0.75) {
             OUT = float3(col[0] / c, col[1] / c, col[2] / b);
         } else {
             OUT = float3(col[0] / b, col[1] / b, col[2] / 1.01);
+        }*/
+
+        if (DiffuseT2 <= Min_Threshold) {
+            OUT = Shadow;
+        } else {
+            OUT = Midtone;
         }
     } else if (DiffuseM >= Max_Threshold) {
-        OUT = Highlight;
+        if (DiffuseT2 >= Max_Threshold) {
+            OUT = Highlight;
+        } else {
+            OUT = Midtone;
+        }
     } else {
-        float t = (DiffuseM - Min_Threshold) / (Max_Threshold - Min_Threshold);
-        //OUT = Vector3.Lerp(Highlight, Midtone, t);
         OUT = Midtone;
     }
 

@@ -35,31 +35,24 @@ void GetNormal_float(float2 uv, out float3 Normal)
     Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
 }
 
-void DepthSobel_float(float2 UV, float Thickness, out float Out) {
+//thickness = # of pixels between us, and our neighbor
+void DepthSobel_float(float2 UV, float Thickness, float2 RealPixelWidth, out float Out) {
     float2 sobelR = 0;
     float2 sobelG = 0;
     float2 sobelB = 0;
 
     [unroll] for (int i = 0; i < 9; i++) {
-        //float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + sobelSamplePoints[i] * Thickness);
+        float2 currPixel = UV + sobelSamplePoints[i] * RealPixelWidth * Thickness;
+
         float3 normal;
-        GetNormal_float(UV, normal);
+        GetNormal_float(currPixel, normal);
 
         sobelR += normal.r * float2(sobelXMatrix[i], sobelYMatrix[i]);
         sobelG += normal.g * float2(sobelXMatrix[i], sobelYMatrix[i]);
         sobelB += normal.b * float2(sobelXMatrix[i], sobelYMatrix[i]);
     }
-    float lR = length(sobelR);
-    float lG = length(sobelG);
-    float lB = length(sobelB);
 
-    if (lR > lG && lR > lB) {
-        Out = lR;
-    } else if (lG > lR && lG > lB) {
-        Out = lG;
-    } else {
-        Out = lB;
-    }
+    Out = max(length(sobelR), max(length(sobelG), length(sobelB)));
 }
 
 #endif
