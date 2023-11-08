@@ -74,3 +74,5 @@ https://github.com/yuhanliu-tech/hw04-stylization/assets/42754447/04993df6-634e-
 
 I created a C# script that alters the materials of several objects in the scene. For a selection of objects, I alternate between the shader with paint-textured shadows and the shader with alpha shadows. This allows for the user to press SPACE to alternate between a painting that seems more or less incomplete. 
 
+The video is a bit choppy, the movements should be smoother in Unity? I think my computer was losing its patience on me oops. 
+
