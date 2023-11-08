@@ -1,6 +1,6 @@
 # Punk Rockin' Shader Graphs
 
-This is my first attempt at both generating **stylized renders** as well as working with **Unity's shader graphs**. As soon as the context of *stylized* was established for this project, the first thing to come to my mind was the Spiderverse movie franchise. Gwen's Universe and Hobe Brown's Spider Punk were the 2 most stylistically mind-blowinig aspects of the movie for me personally, and therefore it was imperative that I pick one of those as my reference goals. And I am really happy with how the final outcome turned out - see below! (Here is a [link](https://vimeo.com/882373896?share=copy) to a high-res video).
+This is my first attempt at both generating **stylized renders** as well as working with **Unity's shader graphs**. As soon as the context of *stylized* was established for this project, the first thing to come to my mind was the Spiderverse movie franchise. Gwen's Universe and Hobie Brown's Spider Punk were the 2 most stylistically mind-blowinig aspects of the movie for me personally, and therefore it was imperative that I pick one of those as my reference goals. And I am really happy with how the final outcome turned out - see below! (Here is a [link](https://vimeo.com/882373896?share=copy) to a high-res video).
 
 https://github.com/Saksham03/stylization-unity-shader-graph/assets/20259371/2852c33d-b1d7-4eda-91fa-92bc8a4ba933
 
