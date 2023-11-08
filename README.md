@@ -19,6 +19,7 @@ https://github.com/debbylin02/hw04-stylization/assets/82790216/79c22591-728a-448
 
 ## 1. Picking a Piece of Concept Art
 I chose work made by @riibirengo 
+
 <img width="500px" src=https://github.com/debbylin02/hw04-stylization/blob/main/sunflower-rabbits-concept-art-riibrego-2.png>
 
 ## 2. Interesting Shaders
