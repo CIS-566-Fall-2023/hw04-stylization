@@ -55,6 +55,6 @@ void DepthSobel_float(float2 UV, float Thickness, float2 RealPixelWidth, out flo
     Out = max(length(sobelR), max(length(sobelG), length(sobelB)));
 }
 
-void GaussianBlur_float(
+
 
 #endif
