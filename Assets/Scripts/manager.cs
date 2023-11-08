@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Manager : MonoBehaviour
+public class ChangeMode : MonoBehaviour
 {
+    public Material[] materials;
+    private MeshRenderer meshRenderer;
+    int index;
 
-    [SerializeField]
-    public float stroke;
-    //public GameObject building;
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*when mouse clicked/draggged {
-            building.getCompoennt().material. ... do fun stuff
-        }*/
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            index = (index + 1) % materials.Length;
+            SwapToNextMaterial(index);
+        }
+    }
+
+    void SwapToNextMaterial(int index)
+    {
+        meshRenderer.material = materials[index % materials.Length];
     }
 }

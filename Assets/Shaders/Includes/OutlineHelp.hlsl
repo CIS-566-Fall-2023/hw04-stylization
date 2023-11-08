@@ -13,6 +13,48 @@ void GetNormal_float(float2 uv, out float3 Normal)
     Normal = SAMPLE_TEXTURE2D(_NormalsBuffer, sampler_point_clamp, uv).rgb;
 }
 
+// Perlin noise for outline animation
+
+float2 random2(float2 p2)
+{
+    return frac(sin(dot(p2, float2(11.092, 81.299))) * 412128.2434);
+}
+
+
+float surflet2D(float2 p, float2 gridPoint)
+{
+
+    float t2x = abs(p.x - gridPoint.x);
+    float t2y = abs(p.y - gridPoint.y);
+
+    float tx = 1 - 6 * pow(t2x, 5) + 15 * pow(t2x, 4) - 10 * pow(t2x, 3);
+    float ty = 1 - 6 * pow(t2y, 5) + 15 * pow(t2y, 4) - 10 * pow(t2y, 3);
+
+    float2 gradient = random2(gridPoint) * 2 - float2(1,1);
+
+    float2 diff = p - gridPoint;
+
+    float height = dot(diff, gradient);
+
+    return height * tx * ty;
+}
+
+float perlinNoise2D(float2 p)
+{
+    float surfletSum = 0;
+
+    for (int dx = 0; dx <= 1; ++dx)
+    {
+        for (int dy = 0; dy <= 1; ++dy)
+        {
+         
+            surfletSum += surflet2D(p, floor(p) + float2(dx, dy));
+            
+        }
+    }
+    return surfletSum;
+}
+
 // Sobel Outline from tutorial 
 
 // offsets for each cell in matrix relative to central pixel
@@ -40,14 +82,15 @@ static float sobelYMatrix[9] =
 };
 
 // run sobel algorithm over depth texture
-void DepthSobel_float(float2 UV, float Thickness, out float OUT)
+void DepthSobel_float(float2 UV, float Thickness, float t, out float OUT)
 {
     float2 sobel = 0;
     
     // compute each cell in convolution matrix
     for (int i = 0; i < 9; i++)
     {
-        float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + sobelSamplePoints[i] * Thickness);
+        float noise = 0.001 * sin(t);
+        float depth = SHADERGRAPH_SAMPLE_SCENE_DEPTH(UV + sobelSamplePoints[i] * Thickness + noise);
         sobel += depth * float2(sobelXMatrix[i], sobelYMatrix[i]);
     }
 
@@ -69,8 +112,8 @@ void ColorSobel_float(float2 UV, float Thickness, out float OUT)
 
     for (int i = 0; i < 9; i++)
     {
-     
-        float3 rgb = SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, UV + sobelSamplePoints[i] * Thickness).rgb;
+        float noise = perlinNoise2D(UV);
+        float3 rgb = SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, UV + sobelSamplePoints[i] * Thickness + noise).rgb;
         float2 kernel = float2(sobelXMatrix[i], sobelYMatrix[i]);
         
         sobelR += rgb.r * kernel;
@@ -79,86 +122,4 @@ void ColorSobel_float(float2 UV, float Thickness, out float OUT)
     }
     
     OUT = max(length(sobelR), max(length(sobelG), length(sobelB)));
-}
-
-// Kuwahara filter function
-float4 KuwaharaFilter(float2 uv, int radius)
-{
-    // Fixed sizes for arrays
-    const int sectors = 4;
-    
-    // Mean colors for each sector
-    float4 means[sectors] = { float4(0, 0, 0, 0), float4(0, 0, 0, 0), float4(0, 0, 0, 0), float4(0, 0, 0, 0) };
-    
-    // Variances for each sector
-    float variances[sectors] = { 0, 0, 0, 0 };
-
-    // The number of samples taken in each sector is a square of the radius
-    int samplesPerSector = radius * radius;
-    
-    // Calculate means
-    for (int i = -radius; i <= radius; ++i)
-    {
-        for (int j = -radius; j <= radius; ++j)
-        {
-            float2 sampleUV = uv + float2(i, j) * _ScreenParams.xy;
-            float4 sampleColor = SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, sampleUV);
-            
-            // Determine the sector for the current sample
-            int sector = (i < 0) ? ((j < 0) ? 0 : 1) : ((j < 0) ? 2 : 3);
-            means[sector] += sampleColor;
-        }
-    }
-    
-    // Finalize means calculation
-    for (int i = 0; i < sectors; ++i)
-    {
-        means[i] /= samplesPerSector;
-    }
-    
-    // Calculate variances
-    for (int i = -radius; i <= radius; ++i)
-    {
-        for (int j = -radius; j <= radius; ++j)
-        {
-            float2 sampleUV = uv + float2(i, j) * _ScreenParams.xy;
-            float4 sampleColor = SAMPLE_TEXTURE2D(_MainTex, sampler_point_clamp, sampleUV);
-            
-            // Determine the sector for the current sample
-            int sector = (i < 0) ? ((j < 0) ? 0 : 1) : ((j < 0) ? 2 : 3);
-            float4 diff = sampleColor - means[sector];
-            variances[sector] += dot(diff, diff);
-        }
-    }
-    
-    // Normalize variances
-    for (int i = 0; i < sectors; ++i)
-    {
-        variances[i] /= samplesPerSector;
-    }
-    
-    // Find the sector with the minimum variance
-    int minVarianceSector = 0;
-    float minVariance = variances[0];
-    for (int i = 1; i < sectors; ++i)
-    {
-        if (variances[i] < minVariance)
-        {
-            minVariance = variances[i];
-            minVarianceSector = i;
-        }
-    }
-    
-    // Return the color of the sector with the minimum variance
-    return means[minVarianceSector];
-}
-
-// Main image function
-void kuwahara_float(float2 uv, out float4 color)
-{
-    // Radius of the Kuwahara filter
-    const int radius = 2;
-    
-    // Apply the Kuwahara filter
-    color = KuwaharaFilter(uv, radius);
 }
