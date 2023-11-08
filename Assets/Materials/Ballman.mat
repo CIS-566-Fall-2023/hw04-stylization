@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Default
+  m_Name: Ballman
   m_Shader: {fileID: -6465566751694194690, guid: 856d20f3316bc884a9a4c5a0c2f39bb6,
     type: 3}
   m_Parent: {fileID: 0}
@@ -140,8 +140,8 @@ Material:
     - _Glossiness: 0.5
     - _GlossinessSource: 0
     - _GlossyReflections: 1
-    - _HighlightThreshold: 0.71
-    - _Highlight_Threshold: 0.7
+    - _HighlightThreshold: 0.89
+    - _Highlight_Threshold: 0.85
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _Metallic: 0
     - _Midtone_Edge_Darken: 0.5
@@ -153,10 +153,10 @@ Material:
     - _ReceiveShadows: 1
     - _ReflectionSource: 0
     - _SHADOWS_SOFT: 1
-    - _ShadowThreshold: 0.05
-    - _Shadow_Texture_Blend: 0.19
-    - _Shadow_Threshold: 0.3
-    - _Shadow_UV_Scale: 20
+    - _ShadowThreshold: 0.35
+    - _Shadow_Texture_Blend: 0.8
+    - _Shadow_Threshold: 0.15
+    - _Shadow_UV_Scale: 7
     - _Shininess: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -166,16 +166,17 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _UVSec: 0
-    - _Use_UV_for_Shadows: 1
+    - _Use_UV_for_Shadows: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 1, g: 1, b: 1, a: 0}
-    - _Midtone: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.6, b: 1, a: 0}
-    - _Shadow: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0}
+    - _Highlight: {r: 0.8254717, g: 1, b: 0.89672834, a: 0}
+    - _Midtone: {r: 0.37798145, g: 0.5849056, b: 0.45672193, a: 0}
+    - _Ramped_DIffuse_Values: {r: 0, g: 0, b: 0, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0.05, g: 0.55, b: 1, a: 0}
+    - _Shadow: {r: 0.22027414, g: 0.2830189, b: 0.23532069, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

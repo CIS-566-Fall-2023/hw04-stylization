@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8081582795363580827
+--- !u!114 &-6039612731498283255
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,17 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Default
-  m_Shader: {fileID: -6465566751694194690, guid: 856d20f3316bc884a9a4c5a0c2f39bb6,
+  m_Name: WorbleEffect
+  m_Shader: {fileID: -6465566751694194690, guid: 362fff390211b3144a5f1b2252fa21fa,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - ADDITIONAL_LIGHT_CALCULATE_SHADOWS
-  - MAIN_LIGHT_CALCULATE_SHADOWS
-  - _ADDITIONAL_LIGHTS
-  - _MAIN_LIGHT_SHADOWS_CASCADE
-  - _SHADOWS_SOFT
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -47,14 +42,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ClearCoatMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -82,20 +69,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicSpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4b24c78c65da49fb9a472142f11ba6f2_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2072caaa72db08541ae279b016cd01b6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -116,15 +95,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
-    - MAIN_LIGHT_CALCULATE_SHADOWS: 1
-    - _ADDITIONAL_LIGHTS: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _ClearCoat: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -133,49 +108,28 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _Edge_Glow: 0.25
-    - _Edge_Glow_Exponent: 2
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossinessSource: 0
-    - _GlossyReflections: 1
-    - _HighlightThreshold: 0.71
-    - _Highlight_Threshold: 0.7
-    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
     - _Metallic: 0
-    - _Midtone_Edge_Darken: 0.5
-    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _QueueControl: 0
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ReflectionSource: 0
-    - _SHADOWS_SOFT: 1
-    - _ShadowThreshold: 0.05
-    - _Shadow_Texture_Blend: 0.19
-    - _Shadow_Threshold: 0.3
-    - _Shadow_UV_Scale: 20
-    - _Shininess: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UVSec: 0
-    - _Use_UV_for_Shadows: 1
+    - _Worble_Distance: 0.0012
+    - _Worble_Noise_Scale: 400
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Highlight: {r: 1, g: 1, b: 1, a: 0}
-    - _Midtone: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
-    - _Ramped_Diffuse_Values: {r: 0.2, g: 0.6, b: 1, a: 0}
-    - _Shadow: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
