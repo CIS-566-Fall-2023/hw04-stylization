@@ -109,6 +109,18 @@ These outlines are the main part of this project that I really want to spend som
 
 ## Dithered Fading
 
+The scene has two "fake" doors that fade away as the player approaches them, revealing another door behind them. This uses dithered fading based on distance from camera, a technique many games use now because it's sometimes much cheaper than using transparency. Under the hood pixels are simply `discard`ed, and this can be implemented in Unity using alpha clipping. Games do this for performance reasons. This project is not meant to be performance, but I just wanted to achieve fading using something more stylized than a simple fade using alpha.
+
+|Dithering shader graph|
+|:-:|
+|<img src="img/dither.png" width=500>|
+
+|Dithered fading|
+|:-:|
+|<img src="img/scene4.gif" width=500>|
+
+An unfortunate side effect of this method is that anything covered by the material that is faded, but still rendered in the same render queue, will no longer have outlines. This is because the depth and normals buffer are still rendering the object that has been dithered out. For the purposes of this project, this is acceptable.
+
 ## Gerstner Waves
 
 ## Portal Distortion
