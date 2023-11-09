@@ -10,10 +10,6 @@ The original goal was to take a piece of concept art and make a stylized scene i
 
 # Table of Contents
 
-- [Stylized Worlds](#stylized-worlds)
-  - [Live Interactive Demo](#live-interactive-demo)
-- [Project Overview](#project-overview)
-- [Table of Contents](#table-of-contents)
 - [Breakdown](#breakdown)
   - [Inspirations](#inspirations)
   - [Toon Shading](#toon-shading)
@@ -127,7 +123,7 @@ An unfortunate side effect of this method is that anything covered by the materi
 
 ## Gerstner Waves
 
-I wanted to add a fun element of oceans to the game, to add to the "mystery" of this place the player is in. I first became aware of the concept of Gerstner waves through the "[how water works in Sea of Thieves](https://www.youtube.com/watch?v=EMb_FUmr0Ts) video by Stylized Station, and I've been obsessed ever since. I've wanted to tackle the challenge of implementing Gerstner waves for a while in whatever projects I worked on, and I finally found the time - and aesthetic reason - to do it!
+I wanted to add a fun element of oceans to the game, to add to the "mystery" of this place the player is in. I first became aware of the concept of Gerstner waves through the "[how water works in Sea of Thieves](https://www.youtube.com/watch?v=EMb_FUmr0Ts)" video by Stylized Station, and I've been obsessed ever since. I've wanted to tackle the challenge of implementing Gerstner waves for a while in whatever projects I worked on, and I finally found the time - and aesthetic reason - to do it!
 
 The simplest form of waves can be created by using a sin wave to displace the vertices of a plane, but this merely makes the vertices move up and down. In a Gerstner wave, each vertex moves in a circular motion. Combining multiple Gerstner waves together results in a complex wave like motion.
 [Catlike coding](https://catlikecoding.com/unity/tutorials/flow/waves/) has an excellent explanation and tutorial on implementing Gerstner waves, and my implementation is a modified version of it.
