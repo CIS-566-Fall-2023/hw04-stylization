@@ -26,6 +26,7 @@ https://github.com/Saksham03/stylization-unity-shader-graph/assets/20259371/e64b
 * [Renderer Features](#ren-feat)
 * [Vignette](#vignette)
 * [User Interactivity](#user-int)
+* [Credits](#credits)
 
 
 <a id="toon-shading"></a>
@@ -120,3 +121,13 @@ To author some level of user interactivity, I wrote the script `Assets/Scripts/M
 
 ## Still Here? Thank You!
 If you made it all the way here, I apologize for rambling on and on about every minute detail of the project. I had a lot of fun learning Unity, shader graphs, and non-photorealistic rendering techniques, and hope to pick up more such projects in the near future! Thank you for reading through my brain dump, hope you have a great day!
+
+## Credits
+* [Logan Cho](https://www.logancho.com/) and his amazing walkthroughs:
+    - [Playlist link](https://www.youtube.com/playlist?list=PLEScZZttnDck7Mm_mnlHmLMfR3Q83xIGp)
+    - [Color Lab Video](https://youtu.be/jc5MLgzJong?si=JycYxROACJk8KpM4)
+* [Spider-Punk Model](https://sketchfab.com/3d-models/spider-punk-from-across-the-spider-verse-31b9e56833d34121a9a0012985c6bc09) by [CVRxEarth](https://sketchfab.com/CVRxEarth)
+* [Lightning model asset](https://sketchfab.com/3d-models/lightning-4bb6b257007e4797b2edd68dedb22664) by [daedaljs](https://skfb.ly/6D8Io) licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)
+* Concept Art reference from the work of [Sony Pictures Animation](https://www.sonypicturesanimation.com/)
+* Music Track "Across the Titles" from Spider-Man: Across the Spider-Verse, Music by Daniel Pemberton. [Listen Here](https://www.youtube.com/watch?v=Hll8zxAbvH0&list=PLRW80bBvVD3XsSk0eXKIQW_kZMMsQtlz-&index=8)
+* Peers [Utkarsh Dwivedi](https://utkarshdwivedi.com/) and [Linda Zhu](https://www.linkedin.com/in/lindadaism/) for all their help along the way!
