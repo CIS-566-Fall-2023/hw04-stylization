@@ -79,6 +79,10 @@ Coffee Steam |
 ![](/Images/coffeeSteam.gif) |
 ![](/Images/wobbleAnim.png) |
 
+*A side note:*
+
+*It striked me how a simple translation animation can be achieved in so many ways: vertex shader, Unity's animation system, and C# scripting. While I was scraping my head off how to make the leaf fall in ShaderGraph, there was this moment that I realized I was taking a longer route because creating a 2-key key-framing animation would be the fastest/ easiest/ most intuitive approach, attaching a C# script to the leaf object the second. Why in the world I chose vertex shader?? Nevertheless, I thought this is an interesting experiment of modifying vertex attributes in ShaderGraph.*
+
 
 ## Full Screen Post Process Effect
 The last step is to add a watercolor background. I tried to insert a render pass of just a texture sample using my hand-painted watercolor paper (scanned to produce a digital copy) but it was always blocking the opaque objects. As I was running out of time, I chose a work-around, i.e. creating a 6-sided skybox with the same texture flipped in the positive and negative direction of each axis. The output isn't seamless -- as the turn table rotates you can recognize the sharp edges of a cube. Future improvement is to fix the background full screen render pass, or to generate 6 skybox textures to match each side of the 3 axes.
