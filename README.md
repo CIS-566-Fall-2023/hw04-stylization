@@ -28,4 +28,4 @@ Interactivity:
 When the user hovers their mouse over the dango, the outlines will appear and smoke will rise. When the user moves their mouse off of the dango, the outlines will disappear and the smoke will stop rising. Holding down the space bar will toggle the color of the background material.
 
 Video link: 
-https://studio.youtube.com/video/T8TMRsGIspI/edit
+https://www.youtube.com/watch?v=T8TMRsGIspI&ab_channel=LotusCrescent
