@@ -134,7 +134,15 @@ The simplest form of waves can be created by using a sin wave to displace the ve
 
 This doesn't really go super well with the overall aesthetic of the scene, but that's okay since the scene is constructed such that the player will see the waves along side the main "portal" door. The hope is that the door diverts the player's attention, while the out-of-aesthetic-style waves do the work of adding to the mysteriousness of the scene. Perhaps the waves are somehow connected to multidimensional travel... we'll never know.
 
+**Specular highlights on the waves**: Note the sparkling dots on the waves. They appear only in areas that should receive specular highlights based on the game view camera.
+
 ## Portal Distortion
+
+As the player approaches the real portal door, the door opens and a distortion effects starts forming inside, which becomes more and more intense as the player gets closer to the door. This is a simple noise based distortion of the scene colour applied to a plane that is aligned with the door. The shader is rendered in the Transparent queue, and the opaque objects would have been rendered before this. This is why the scene colour node returns a valid value from the sampled texture.
+
+|Portal|
+|:-:|
+|<img src="img/portal.gif" width=500>|
 
 ## "Vignette?"
 
