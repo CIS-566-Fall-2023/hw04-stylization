@@ -9,6 +9,7 @@ This project is a small stylization experiment I did for a homework in my Proced
 The original goal was to take a piece of concept art and make a stylized scene in the Unity Engine inspired by that concept art. I took a slightly modified approach
 
 # Table of Contents
+
 - [Stylized Worlds](#stylized-worlds)
   - [Live Interactive Demo](#live-interactive-demo)
 - [Project Overview](#project-overview)
@@ -22,11 +23,11 @@ The original goal was to take a piece of concept art and make a stylized scene i
   - [Portal Distortion](#portal-distortion)
   - [Curtains (Vignette?) Post Process Effect](#curtains-vignette-post-process-effect)
   - [The Second Scene](#the-second-scene)
+  - [Animation Curves!](#animation-curves)
   - [Skybox](#skybox)
   - [UI and Fonts](#ui-and-fonts)
-  - [Dimensional Travel](#dimensional-travel)
-  - [Animation Curves!](#animation-curves)
-  - [Credits](#credits)
+- [Future](#future)
+- [Credits](#credits)
     - [Style Inspirations](#style-inspirations)
     - [3D Models](#3d-models)
     - [Fonts](#fonts)
@@ -43,7 +44,7 @@ The original goal was to take a piece of concept art and make a stylized scene i
 
 |Suzume Movie Poster|
 |:-:|
-|<img src="img/suzumeDoor.png" width=400>|
+|<img src="img/suzumeDoor.png" width=300>|
 
 2. [Gris](https://www.youtube.com/watch?v=BRiKQIVo7ao) by Nomada Studio uses a very minimalistic, water-coloured, aesthetic with simple outlines, and the analogous colour scheme is very pleasing. This is what I decided to try and replicate.
 
@@ -71,7 +72,7 @@ I added support for **textures** on the shadow and midtone sections. This can be
 |:-:|
 |<img src="img/scene1.png" width=500>|
 
-One of the things that Gris does is affect surfaces based on a watercolour like texture sampled in screen-space. I first tried to do this by sampling a texture only in the lit areas, but that didn't look good, so I changed this texture to be an *overlay* on top of the whole surface. This looked a lot closer to the Gris art style.
+One of the things that Gris does is affect surfaces based on a *static* watercolour like texture sampled in screen-space. I first tried to do this by sampling a texture only in the lit areas, but that didn't look good, so I changed this texture to be an *overlay* on top of the whole surface. This looked a lot closer to the Gris art style.
 
 I created a few "watercolour" textures in Photoshop to overlay on to the scene, and allowed manually changing the colour for this overlay.
 
@@ -163,11 +164,11 @@ The specifics are not super important, but you can see towards the right that th
 
 ## The Second Scene
 
-## Skybox
+As I mentioned [above](#inspirations), the second realm uses a completely different art style. Except, not really. It's the same toon shaded effects with vastly different parameters. The only addition here is the different skybox and noisy outlines on top of the floating rocks. I'll talk about the skyboxes in the next section. The noisy outlines use the same outline sobel filter, but the sampling of the depth and normal buffers is offset based on a noise. The reason only the floating rocks have noisy outlines is that they have a separate layer, and that layer is processed in a separate outline Renderer Feature.
 
-## UI and Fonts
-
-## Dimensional Travel
+|Second Scene|
+|:-:|
+|<img src="img/scene5.gif" width=500>|
 
 ## Animation Curves!
 
@@ -211,7 +212,49 @@ I've used Animation Curves in pretty much everything, from affecting alpha value
 |:-:|
 |<img src="img/animCurves.png" width=300>|
 
-## Credits
+## Skybox
+
+There are two different skybox shaders in this project, one for each scene.
+
+The first one uses the same watercolour textures used for the toon shader overlay to colour the skybox differently based on the greyscale value of the texture.
+
+|Skybox Shader for first scene|
+|:-:|
+|<img src="img/skybox1.png" width=500>|
+
+The second one uses perturbed noise to generate these squiggly lines.
+
+|Skybox Shader for second scene|
+|:-:|
+|<img src="img/skybox2.png" width=500>|
+
+Both shaders are affected by time and a vertical gradient.
+
+|Skybox 1|Skybox 2|
+|:-:|:-:|
+|<img src="img/scene6.gif" width=400>|<img src="img/scene5.gif" width=400>|
+
+## UI and Fonts
+
+This is a *playable* demo, and I made a loop where the player walks up to the real portal door in the first realm, is teleported to the second realm, and can return back to the first realm based on key inputs. There was no indication of how to do this. For someone who simply loads the scene, this is just a scene with a static door on a desert, surrounded by a bunch of palm trees. That's not super interesting.
+
+To fix this, I added UI hints in both scenes if you don't do anything for some time. I wanted both realms to be *distinct*, which meant the UI also had to be taken into account when changing the visuals. I made two quick textures in Photoshop for the background of the UI, and found two fonts that suited the overall aesthetics of the scenes. The first one is a cute, friendly, font, but the second one is more grunge. The text hints are very intentional too. Simply saying "move forward" and "reset scene" breaks immersion, whereas "approach door" and "escape this realm" not only tells the player what buttons to press, it also tells them what their objective is. I think this really sells the core theme of realm shift while maintaining immersion.
+
+|UI backgrounds|
+|:-:|
+|<img src="img/ui.png" width=200>|
+
+|UI 1|UI 2|
+|:-:|:-:|
+|<img src="img/font1.png" width=400>|<img src="img/font2.png" width=400>|
+
+# Future
+
+- Add music: I *really* wanted to add music and change it along with the visuals, and also affect the visuals in some way based on the music. Perhaps also affect music when the user is nearing the portal.
+- Make better outlines: I think these are the weakest portion of this project and can be improved significantly.
+- MORE PORTALS: portals are never not fun. Using this system as an excuse to do many different art styles is even more fun.
+
+# Credits
 
 ### Style Inspirations
 - [This Gris trailer by Nomada Studio](https://www.youtube.com/watch?v=BRiKQIVo7ao)
