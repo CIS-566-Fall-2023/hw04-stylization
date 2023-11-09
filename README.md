@@ -1,8 +1,11 @@
-# Punk Rockin' Shader Graphs
+# Punk Rockin' Shader Graphs:guitar:
 
-This is my first attempt at both generating **stylized renders** as well as working with **Unity's shader graphs**. As soon as the context of *stylized* was established for this project, the first thing to come to my mind was the Spiderverse movie franchise. Gwen's Universe and Hobie Brown's Spider Punk were the 2 most stylistically mind-blowinig aspects of the movie for me personally, and therefore it was imperative that I pick one of those as my reference goals. And I am really happy with how the final outcome turned out - see below! (Here is a [link](https://vimeo.com/882373896?share=copy) to a high-res video).
+This is my first attempt at both generating **stylized renders** as well as working with **Unity's shader graphs**. As soon as the context of *stylized* was established for this project, the first thing to come to my mind was the Spiderverse movie franchise. Gwen's Universe and Hobie Brown's Spider Punk were the 2 most stylistically mind-blowinig aspects of the movie for me personally, and therefore it was imperative that I pick one of those as my reference goals. And I am really happy with how the final outcome turned out - see below (**Sound ON**:sound:)! (Here is a [link](https://vimeo.com/882373896?share=copy) to a high-res video).
 
-https://github.com/Saksham03/stylization-unity-shader-graph/assets/20259371/2852c33d-b1d7-4eda-91fa-92bc8a4ba933
+
+https://github.com/Saksham03/stylization-unity-shader-graph/assets/20259371/80740788-7d6f-4ee6-b9bc-a8412a86890b
+
+[comment]: <> (without music: https://github.com/Saksham03/stylization-unity-shader-graph/assets/20259371/2852c33d-b1d7-4eda-91fa-92bc8a4ba933)
 
 | <img width="550px" src="images/concept_art.png">  | <img width="550px" src="images/post_process_vignette.png"> |
 |:--:|:--:|
@@ -68,7 +71,10 @@ The extrusion along normals causes the mesh to 'break-apart' for larger scaling 
 ## Assembling the Scene
 I was able to find [this](https://sketchfab.com/3d-models/spider-punk-from-across-the-spider-verse-31b9e56833d34121a9a0012985c6bc09) fantastic FBX model on Sketchfab by [CVRxEarth](https://sketchfab.com/CVRxEarth). I was also able to find [this](https://sketchfab.com/3d-models/lightning-4bb6b257007e4797b2edd68dedb22664) lightning model asset by [daedaljs](https://skfb.ly/6D8Io) licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/). I got to work on creating the materials:  
 <img width="500px" src="images/materiasl.png">  
-Finally, I had the following scene assembled:  
+At this point, I had the following scene assembled:  
+<img width="600px" src="images/demo_scene1_nodot.png">
+
+Finally, I added a blue point light to include the Ben-Day dotting effect:  
 <img width="600px" src="images/demo_scene1.png">
 
 <a id="outlines"></a>
