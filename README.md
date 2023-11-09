@@ -23,13 +23,17 @@ From @chitchatchiou's work, I got inspired by still-life drawings and wanted to 
 ---
 ## Creating Custom Surface Shaders
 
-1. **Multiple Light Support**
-- I first used [Logan's Tutorial Video](https://youtu.be/1CJ-ZDSFsMM) to implement support for both directional and point lights.
+### Multiple Light Support
+I first used [Logan's Tutorial Video](https://youtu.be/1CJ-ZDSFsMM) to implement support for both directional and point lights.
 
-2. **Specular Highlight Feature**
-          - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
-3. **Custom Hand-Drawn Textures**
-          1. Create your own custom shadow texture!
+![Screenshot 2023-11-09 153009](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/28400048-fd2e-4546-a7bd-b13dd79c8ae6)
+
+### Specular Highlight Feature
+
+
+          
+### Custom Hand-Drawn Textures
+I used Photoshop to create custom hand-drawn textures for midtones and shadows.
               - You can use whatever tools you have available! Digital art (Photoshop, CSP, Procreate, etc.), traditional art (drawing on paper, and then taking a photo/scan)-you have complete freedom!
           2. Make your texture seamless/tesselatable! You can do this through the following online tool: https://www.imgonline.com.ua/eng/make-seamless-texture.php
           3. Modify your shadows using this custom texture in a similar way to Puzzle 3 from the Lab
