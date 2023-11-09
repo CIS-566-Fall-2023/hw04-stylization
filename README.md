@@ -1,45 +1,28 @@
 # HW 4: *3D Stylization*
 
-### Got an extension from Rachel until Wednesday 11/8 11:59 pm!
+### Got an extension from Rachel until Friday 11/10 11:59 pm!
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
+This project is an exploration of stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity, with the goal being to replicate a piece of 2D illustration into a 3D stylized scene.
 
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
 
 ---
-# Tasks
+## Inspiration
 
-## 0. Base Project Overview
+As a major fan of Studio MDHR's Cuphead, a video game with a distinct 1930s cartoon-inspired style, I saw lots of potential inspiration for stylization from in-game screenshots, concept art for the game, and even the style of the animated spin-off "The Cuphead Show". I compiled some references demonstrating the major stylistic characteristics I want to try implementing, such as:
 
-After forking the repo, take a moment to watch this brief HW/Base Project Overview which goes over things that you're expected to bring over from the lab, and etc.
-- [See the Project Overview here](https://youtu.be/JmVTmpgSz5U)
-
-## 1. Picking a Piece of Concept Art
-
-Choose a simple illustration to guide your stylization. Choose a relatively simple piece of art THAT INCLUDES OUTLINES. You *might* want to look through the rest of the homework instructions before committing to one. Here are some examples of styles that will work well. Feel free to choose one of these, but we encourage your to pick your own.
-
-| ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/dae1ffc2-8269-493d-919f-b3811c76ed30) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/9c345ee6-19df-4191-9e47-6722b6597a5a) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/48521733-f83a-4704-ac8d-9d2f24574922) | ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/3068bdc4-1b08-41cf-9a16-08d94be5f1ea) |  ![](https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/ae1d0fae-7998-4287-8269-13e2cafd740b) | 
-|:--:|:--:|:--:|:--:|:--:|
-| *https://twitter.com/stefscribbles/status/1646235145110683650* | *https://twitter.com/trudicastle/status/1122648793009098752* | *https://twitter.com/caomor/status/1049494055518908416* | *https://www.artstation.com/requinoesis* | *https://twitter.com/cysketch/status/1712442821389713597* | 
+| ![cff2245c55839dc07f8e5b2c65b9e371](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/02d29ada-3a5b-4295-a7ee-7917df3cc8fc) | ![TheCupheadShow__Season1_Episode2_00_00_24_03](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/16f02719-9587-489b-a94c-394e803c0260) |  ![Screenshot 2023-11-08 211003](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/ef7dc75a-07d7-420b-8e29-bb4d49665721)  | ![Screenshot 2023-11-08 210933](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/a5c12e9b-6679-46b7-b226-2dae44ab2cb6) |
+|:--:|:--:|:--:|:--:|
+| *#1. Paper/film grain post-processing effect* | *2. Watercolor painted / paper grain backgrounds* | *3. Outlines with varying width (pen inked feel)* | *4. Chromatic Aberration (distorted color or "color bleed" around outlines* | ** | 
 
 
-**Disclaimer: Don't forget to identify and credit the artist who created the concept art : )**
-
-**[Emma Koch](https://www.artstation.com/ekoch)**, an amazing 3D artist I happened to stumble upon on ArtStation produces incredible 2D-esque 3D art pieces. Some of the references I picked above were inspired directly from her work. I'd definitely check out her artstation for any inspiraiton if you want some! [Link](https://www.artstation.com/ekoch)
+**[Emma Koch](https://www.artstation.com/ekoch)**
 
 ---
-## 2. Interesting Shaders
+## Creating Custom Surface Shaders
 
 Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
 
