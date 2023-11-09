@@ -3,9 +3,7 @@
 
 Concept Art: 
 ![image](https://github.com/RachelDLin/hw04-stylization/assets/43388455/70b89c7b-bd12-43b6-9448-1d1d22e9353c)
-(https://tips.clip-studio.com/en-us/articles/3746)
-
-I was inspired by the colorful cel shaded style seen in anime. I've linked above some concept art by Clip Studio artist Shin that I used as a reference. 
+I was inspired by the colorful cel shaded style seen in anime. I've linked above some concept art by Clip Studio artist Shin that I used as a reference (https://tips.clip-studio.com/en-us/articles/3746). 
 
 Surface Shader: 
 I created a basic toon shader by computing a diffuse term based on the direction, distance attenuation, and shadow attenuation, and bucketing the material into colors based on its value. I liked the appearance of the specular highlights on the dango in the concept art, so I implemented a Blinn Phong specular model and bucketed its value to match the cel shaded look of the rest of the shader. I also noticed that instead of using perfectly cel-shaded regions, the artist breaks up the shapes with some noise. To achieve a similar painterly effect, I created some procedural tileable textures in Substance Designer: 
