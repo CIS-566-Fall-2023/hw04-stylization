@@ -55,9 +55,11 @@ Normal Map | Depth Map
 
 Back to outlining 3D objects, the logic behind my post-process shaders is quite straight-forward: detect areas of large depth and normal difference across the screen. I explored different kinds of edge detection methods in HLSL, including Sobel operator and Robert's Cross filters. The following table shows the different approaches after fine-tuning.
 
-No Outlines | Sobel | Robert's Cross | Sobel + Robert's Cross
----|---|---|---
-![](/Images/noOutlines.png) | ![](/Images/outlinesSobel.png) | ![](/Images/watercolor.png) | ![](/Images/bothOutlines.png)
+No Outlines | Sobel |
+---|---|
+![](/Images/noOutlines.png) | ![](/Images/outlinesSobel.png) |
+Robert's Cross | Sobel + Robert's Cross |
+![](/Images/watercolor.png) | ![](/Images/bothOutlines.png) |
 
 I tweaked some outline parameters such as outline thickness, normal and depth sensitivities (i.e. discontinuity threshold) to replicate the subtle wobbly outlines in the concept art. Using only Robert's Cross gives me the most desirable result. In addition, the outlines are dynamically traced based on the view change in terms of camera angle and position.
 
@@ -70,6 +72,7 @@ Falling Leaf |
 ![](/Images/fallingLeaf.gif) |
 ![](/Images/vertAnim.png) |
 
+I used a ease-out quadratic toolbox function applied to the time variable in the linear interpolation node to create an effect that the leaf first drops quickly and then slows down when landing once it is close to the table.
 
 Coffee Steam | 
 ---|
