@@ -3,6 +3,7 @@
 
 Concept Art: 
 ![image](https://github.com/RachelDLin/hw04-stylization/assets/43388455/70b89c7b-bd12-43b6-9448-1d1d22e9353c)
+(https://tips.clip-studio.com/en-us/articles/3746)
 I was inspired by the colorful cel shaded style seen in anime. I've linked above some concept art by Clip Studio artist Shin that I used as a reference. 
 
 Surface Shader: 
