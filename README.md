@@ -20,9 +20,10 @@ The original goal was to take a piece of concept art and make a stylized scene i
   - [Dithered Fading](#dithered-fading)
   - [Gerstner Waves](#gerstner-waves)
   - [Portal Distortion](#portal-distortion)
-  - ["Vignette?"](#vignette)
+  - [Curtains (Vignette?) Post Process Effect](#curtains-vignette-post-process-effect)
   - [Skybox](#skybox)
   - [Dimensional Travel](#dimensional-travel)
+  - [Animation Curves!](#animation-curves)
   - [Credits](#credits)
     - [Style Inspirations](#style-inspirations)
     - [3D Models](#3d-models)
@@ -144,11 +145,65 @@ As the player approaches the real portal door, the door opens and a distortion e
 |:-:|
 |<img src="img/portal.gif" width=500>|
 
-## "Vignette?"
+## Curtains (Vignette?) Post Process Effect
+
+This is probably my favourite effect from this project, simply because how satisfying it turned out to be in the final result! In essence, it's a simple voronoi noise with multiple transformations separately in the horizontal and vertical axes to get a "curtain mask" that is moved based on tweakable parameters. It is applied as a final post-process render feature after all other render passes have finished.
+
+|Curtain Shader|
+|:-:|
+|<img src="img/vignetteShader.png" width=500>|
+
+The specifics are not super important, but you can see towards the right that there are separate horizontal and vertical mask nodes that are combined together. This gives the following result:
+
+|Curtain Effect|
+|:-:|
+|<img src="img/vignetteMain.gif" width=500>|
 
 ## Skybox
 
 ## Dimensional Travel
+
+## Animation Curves!
+
+I use Unity's Animation Curves so aggressively that I felt they deserved their own section. I've got a history of using them in pretty much any animation or gameplay related effect that I've ever implemented, so I wasn't about to stop that for this project. They're just SO useful!
+
+**Player Movement**
+
+If you tried the live demo, you probably noticed that the player speed decreases as the player gets closer and closer to the final portal door. If you didn't notice that, then the transition was subtle enough and did its job, and my efforts worked!
+
+This was implemented by sampling an AnimationCurve to affect the maximum speed a player can achieve, where the `t` value fed into this animation curve was based on the distance of the player from the portal door.
+
+|Max Speed Interpolation Curve|
+|:-:|
+|<img src="img/maxSpeedCurve.png" width=200>|
+
+```C#
+float percent = 1.0f - (distance2 / maxDist2);  // get a percent value between 0 and 1. This is linear based on distance.
+float t = maxSpeedCurve.Evaluate(percent);      // sample the animation curve based on this percent value. This is not linear.
+maxSpeed = Mathf.Lerp(maxSpeedInitial, maxSpeedFinal, t);   // feed this t value into lerp. It's no longer a linear interpolation, but instead based on a curve. "maxSpeedInitial" and "maxSpeedFinal" are user defined values
+```
+
+**Curtain Effect Changes**
+
+The same technique is employed to achieve different curtain opening and closing effects by sampling different animation curves, based on different parameters!
+
+In this first example, the curtain closes based on distance of player to door (the curve is reversed from right to left based on distance). First the curtain starts closing in on the screen in "steps", until it approaches the door's boundary, and then it opens up aligned with the door boundary. This was a lot of manual tweaking of the curve by playing the demo, moving closer to the door, seeing where the curtain should be, and applying that on the curve, and this process took a lot of time."
+
+|<img src="img/vignette1.gif" width=300>|<img src="img/vignetteCurveClose.png" width=200>|
+|:-:|:-:|
+
+In this next example, the curtain opens up based on a timer, but uses this curve to find the t value for interpolation.
+
+|<img src="img/vignette2.gif" width=300>|<img src="img/vignetteOpenCurve.png" width=200>|
+|:-:|:-:|
+
+**Other use cases**
+
+I've used Animation Curves in pretty much everything, from affecting alpha values to speeds, to changing the camera's FOV when transitioning to the second realm.
+
+|Animation curves|
+|:-:|
+|<img src="img/animCurves.png" width=300>|
 
 ## Credits
 
