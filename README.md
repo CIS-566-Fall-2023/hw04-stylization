@@ -1,37 +1,27 @@
-# HW 4: *3D Stylization*
+# 3D Still Life Stylization in Unity
 
 ### Got an extension from Rachel until Friday 11/10 11:59 pm!
 
 ## Project Overview:
 This project is an exploration of stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity, with the goal being to replicate a piece of 2D illustration into a 3D stylized scene.
 
-| <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
-|:--:|:--:|
-| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-
----
 ## Inspiration
 
-As a major fan of Studio MDHR's Cuphead, a video game with a distinct 1930s cartoon-inspired style, I saw lots of potential inspiration for stylization from in-game screenshots, concept art for the game, and even the style of the animated spin-off "The Cuphead Show". I compiled some references demonstrating the major stylistic characteristics I want to try implementing, such as:
+For the original 2D reference, I used the following illustration by artist [@chitchatchiou](https://twitter.com/chitchatchiou/status/1695202874374987852). I really liked the color scheme, composition, lighting, and visible texture, and tried to recreate the overall feel of the 2D concept in my final 3D scene.
 
-| ![cff2245c55839dc07f8e5b2c65b9e371](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/02d29ada-3a5b-4295-a7ee-7917df3cc8fc) | ![TheCupheadShow__Season1_Episode2_00_00_24_03](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/16f02719-9587-489b-a94c-394e803c0260) |  ![Screenshot 2023-11-08 211003](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/ef7dc75a-07d7-420b-8e29-bb4d49665721)  | ![Screenshot 2023-11-08 210933](https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/a5c12e9b-6679-46b7-b226-2dae44ab2cb6) |
-|:--:|:--:|:--:|:--:|
-| *#1. Paper/film grain post-processing effect* | *2. Watercolor painted / paper grain backgrounds* | *3. Outlines with varying width (pen inked feel)* | *4. Chromatic Aberration (distorted color or "color bleed" around outlines* | ** | 
+<p align="center">
+  <img width="650px" height=auto src=https://github.com/CIIINDYXUU/hw04-stylization/assets/88256581/0e6876e4-807d-4d23-909a-e479cc7f0fbd>
+</p>
 
+From @chitchatchiou's work, I got inspired by still-life drawings and wanted to replicate the texture that comes from cross-hatching and pencil on paper. In this project, I wanted to push the stylization of the original 2D illustration and combine the composition with a hand-drawn, sketchy feel.
 
-**[Emma Koch](https://www.artstation.com/ekoch)**
+| <img width="400px" src="https://www.pencil-topics.co.uk/images/fruit-bowl-still-life-finished.jpg"/> | <img width="450px" src="https://as2.ftcdn.net/v2/jpg/02/65/99/87/1000_F_265998700_ML2uNeokrXJOrU8huds8rQvjdv8KfXnr.jpg"/> |
+|:--:|:--:|
+| Color (Colored Pencil) | Black and White (Graphite) |
+
 
 ---
 ## Creating Custom Surface Shaders
-
-Let's create some custom surface shaders for the objects in your scene, inspired by your concept art! 
-
-Take a moment to think about the main characteristics that you see in the shading of your concept art. What makes it look appealing/aesthetic?
-  * Is it the color palette? How are the different colors blending into each other? Is there any particular texture or pattern you notice?
-  * Are there additional effects such as rim or specular highlights?
-  * Are there multiple lights in the scene?
-
-These are all things we want you to think about before diving into your shaders!
 
 ### To-Do:
 1. **Improved Surface Shader**
