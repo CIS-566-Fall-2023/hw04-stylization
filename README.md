@@ -4,7 +4,7 @@ https://github.com/LinDadaism/ProceduralGraphics-Stylization/assets/46789205/0bc
 
 
 ## Project Overview:
-In this project, I used some watercolor/ water paint 2D concept art pieces as inspiration to create a 3D Stylized scene in Unity. This give me the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows using the Universal Render Pipeline (URP).
+In this project, I used some watercolor/ water paint 2D concept art pieces as inspiration to create a 3D Stylized scene in Unity. This gave me the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows using the Universal Render Pipeline (URP).
 
 | ![](/Images/poppiesVase.png)  | ![](/Images/watercolor.png) |
 |:--:|:--:|
@@ -27,10 +27,10 @@ Watercolor Shader | Watercolor Shader with Shadow
 ---|---
 ![](/Images/watercolorShader.png) | ![](/Images/watercolorShadow.png)
 
-*Note: I decreased the noise value for the second screenshot here to better showcase the shadow.*
+*Note: I decreased the noise value of the floor material for the second screenshot to better showcase the shadow.*
 
 
-Although there's no distinct/ complex lighting in my concept art, I experimented with multiple lights in the scene below using a basic 3-tone shader. Unfortunately the result was not satisfying so I decided to not incorporate multi-lights support in my final stylized render.
+Although there's no distinct/ complex lighting in my concept art, I experimented with multiple lights in the scene using a basic 3-tone shader. Unfortunately the result was not satisfying so I decided to not incorporate multi-lights support in my stylized render.
 
 ![](/Images/additionalLights.png)
 
@@ -39,7 +39,7 @@ Although there's no distinct/ complex lighting in my concept art, I experimented
 ### Post-process Shader
 The subtle outlines on the 3D objects are achieved by post-processing effects. I mainly relied on Render Features in Unity URP to add customizable full screen render passes to any part of the render pipeline. 
 
-I followed the tutorials below to learn the use cases of Render Features and the various techniques to outlining 3D objects:
+I followed these tutorials to learn the use cases of Render Features and the various techniques to outlining 3D objects:
  - [Show Silhouette When Hidden](https://youtu.be/GAh225QNpm0?si=XvKqVsvv9Gy1ufi3)
  - [Alexander Ameye](https://ameye.dev/about/)
     - [Article on Edge Detection Post Process Outlines in Unity](https://ameye.dev/notes/edge-detection-outlines/)
@@ -52,13 +52,14 @@ Normal Map | Depth Map
 ---|---
 ![](/Images/normalMap.png) | ![](/Images/depthMap.png)
 
-The logic behind my outline shaders is quite straight-forward: detect areas of large depth and normal difference across the screen. I explored different kinds of edge detection methods, including Sobel operator and Robert's Cross filters.
+
+Back to outlining 3D objects, the logic behind my post-process shaders is quite straight-forward: detect areas of large depth and normal difference across the screen. I explored different kinds of edge detection methods in HLSL, including Sobel operator and Robert's Cross filters. The following table shows the different approaches after fine-tuning.
 
 No Outlines | Sobel | Robert's Cross | Sobel + Robert's Cross
 ---|---|---|---
 ![](/Images/noOutlines.png) | ![](/Images/outlinesSobel.png) | ![](/Images/watercolor.png) | ![](/Images/bothOutlines.png)
 
-I tweaked around the outline parameters such as outline thickness, normal and depth sensitivities (i.e. discontinuity threshold) to replicate the subtle wobbly outlines in the concept art. Using Robert's Cross only gives me the most desirable result. Finally the outlines are dynamically traced based on the view change in terms of camera angle and position.
+I tweaked some outline parameters such as outline thickness, normal and depth sensitivities (i.e. discontinuity threshold) to replicate the subtle wobbly outlines in the concept art. Using only Robert's Cross gives me the most desirable result. In addition, the outlines are dynamically traced based on the view change in terms of camera angle and position.
 
 
 ## Vertex Animation
@@ -79,7 +80,7 @@ Coffee Steam |
 ## Full Screen Post Process Effect
 The last step is to add a watercolor background. I tried to insert a render pass of just a texture sample using my hand-painted watercolor paper (scanned to produce a digital copy) but it was always blocking the opaque objects. As I was running out of time, I chose a work-around, i.e. creating a 6-sided skybox with the same texture flipped in the positive and negative direction of each axis. The output isn't seamless -- as the turn table rotates you can recognize the sharp edges of a cube. Future improvement is to fix the background full screen render pass, or to generate 6 skybox textures to match each side of the 3 axes.
 
-![](/Assets/Textures/skybox1.jpg))
+![](/Assets/Textures/skybox1.jpg)
 
 ## Resources:
 In addition to the references mentioned in the descriptions,
