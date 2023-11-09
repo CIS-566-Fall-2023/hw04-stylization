@@ -36,7 +36,6 @@ public class Interactivity_Manager : MonoBehaviour
     void Start()
     {
         system.Pause(true);
-        
     }
 
     // Update is called once per frame
@@ -73,5 +72,8 @@ public class Interactivity_Manager : MonoBehaviour
 
             // system.rateOverTime = t * emissionRate + (1 - t) * 0;
         }
+
+        
     }
+    
 }

@@ -55,6 +55,21 @@ void DepthSobel_float(float2 UV, float Thickness, float2 RealPixelWidth, out flo
     Out = max(length(sobelR), max(length(sobelG), length(sobelB)));
 }
 
+void DepthOnlySobel_float(float2 UV, float Thickness, float2 RealPixelWidth, out float Out) {
+    float2 sobel = 0;
+
+    [unroll] for (int i = 0; i < 9; i++) {
+        float2 currPixel = UV + sobelSamplePoints[i] * RealPixelWidth * Thickness;
+
+        float depth;
+        GetDepth_float(currPixel, depth);
+
+        sobel += depth * float2(sobelXMatrix[i], sobelYMatrix[i]);
+    }
+
+    Out = length(sobel);
+}
+
 
 
 #endif
