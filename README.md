@@ -38,7 +38,7 @@ Hatching texture used for shadows:
 
 <a id="light-int"></a>
 ## Light Interaction
-After factoring in the Directional Light for the Toon Shader, we need to consider more light sources in the scene such as point lights. The`ComputeAdditionalLighting` function in `Assets\Shaders\Includes\LightingHelp.hlsl` helps us achieve this. We use the same by adding a **Custom Function** node in `Assets/Shaders/Toon Shader.shadergraph`. To demonstrate the result, we use a **Blue-colored point light**:  
+After factoring in the Directional Light for the Toon Shader, we need to consider more light sources in the scene such as point lights. The`ComputeAdditionalLighting` function in `Assets/Shaders/Includes/LightingHelp.hlsl` helps us achieve this. We use the same by adding a **Custom Function** node in `Assets/Shaders/Toon Shader.shadergraph`. To demonstrate the result, we use a **Blue-colored point light**:  
 1. When the point light is far away, only the Directional Light affects the material:
 <img width="600px" src="images/toon_1.png">
 2. As we move the point light nearer, the interaction of light results in a highlight appearing on the material's surface:
@@ -79,7 +79,7 @@ Finally, I added a blue point light to include the Ben-Day dotting effect:
 
 <a id="outlines"></a>
 ## Up Next: Post-Process Squiggly Outlines
-To match the concept art, I attempted to render outlines on the lighting assets as a **Sobel Post-Process** using Depth and Normal Buffers. The script for this can be found at `Assets\Shaders\Includes\EdgeDetectionOutlines.hlsl`. This was implemented in its own shadergraph `Assets/Shaders/Edge Detection Outlines.shadergraph`. A static outline implementation looks something like:
+To match the concept art, I attempted to render outlines on the lighting assets as a **Sobel Post-Process** using Depth and Normal Buffers. The script for this can be found at `Assets/Shaders/Includes/EdgeDetectionOutlines.hlsl`. This was implemented in its own shadergraph `Assets/Shaders/Edge Detection Outlines.shadergraph`. A static outline implementation looks something like:
 <img width="600px" src="images/demo_nor_stat.png">  
 The material created off of the shadergraph has a check-box for applying Noise that the user can toggle ON or OFF. If noise is applied, then the output looks something like:  
 <img width="600px" src="images/demo_nor_noise.gif">
@@ -91,8 +91,9 @@ Unity's **URP (Universal Render Pipeline)** gives us access to **Renderer Featur
 2. **Background**  
 In `Assets/Shaders/Background.shadergraph`, I define a simple Full screen shadergraph that samples a given texture to render it on the entire screen. I use a newspaper background texture downloaded from the internet to match the concept art. This gives us the following result:
 <img width="600px" src="images/render_feature_bg.png">  
+
 3. **Drawing the Normals** on the screen before we move on to apply post-processing effects, and
-4. Chromatic Aberration  
+4. **Chromatic Aberration**  
 To give the iconic glitchy effect to my render, I chalked out a quick and easy shadergraph `Assets/Shaders/ChromAberr.shadergraph` that applies Chromatic Aberration to the entire screen:  
 <img width="600px" src="images/render_feature_chrom_aberr.png">  
 
