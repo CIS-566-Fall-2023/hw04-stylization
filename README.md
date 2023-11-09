@@ -38,8 +38,6 @@ The original goal was to take a piece of concept art and make a stylized scene i
 
 1. [This trailer](https://www.youtube.com/watch?v=IfKNOUUtyCA) for the movie Suzume has been something I keep going back to every once in a while. I haven't even seen the movie yet, but the trailer itself is just so aesthetically pleasing! The very first shot of a door is something that I wanted to recreate in some way, and that's where the mysterious door theme came from in this project.
 
-    While Suzume's art style is great, it was a little too complex for such a short project. Rendering grass that looked good and performed well on a WebGL build was a little out of scope - so I looked elsewhere for the general visual art style.
-
 |Suzume Movie Poster|
 |:-:|
 |<img src="img/suzumeDoor.png" width=300>|
@@ -134,7 +132,7 @@ The simplest form of waves can be created by using a sin wave to displace the ve
 |:-:|
 |<img src="img/gerstner.gif" width=500>|
 
-This doesn't really go super well with the overall aesthetic of the scene, but that's okay since the scene is constructed such that the player will see the waves along side the main "portal" door. The hope is that the door diverts the player's attention, while the out-of-aesthetic-style waves do the work of adding to the mysteriousness of the scene. Perhaps the waves are somehow connected to multidimensional travel... we'll never know.
+This doesn't really go super well with the overall aesthetic of the scene, but that's okay since the scene is constructed such that the player will only see the waves when they come close to the portal door. The hope is that the door diverts the player's attention, while the out-of-aesthetic-style waves do the work of adding to the mysteriousness of the scene. Perhaps the waves are somehow connected to multidimensional travel... we'll never know.
 
 **Specular highlights on the waves**: Note the sparkling dots on the waves. They appear only in areas that should receive specular highlights based on the game view camera.
 
