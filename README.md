@@ -4,9 +4,11 @@
 
 # Project Overview
 
+![](img/highlight.gif)
+
 This project is a small stylization experiment I did for a homework in my Procedural Graphics course at the University of Pennsylvania. It was completed in roughly 5 days.
 
-The original goal was to take a piece of concept art and make a stylized scene in the Unity Engine inspired by that concept art. I took a slightly modified approach
+The original goal was to take a piece of concept art and make a stylized scene in the Unity Engine inspired by that concept art. I took a slightly modified approach and made a very simple playable loop where the player travels between two very different worlds through a door that acts like a portal.
 
 # Table of Contents
 
