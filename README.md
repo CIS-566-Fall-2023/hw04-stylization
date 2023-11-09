@@ -21,7 +21,9 @@ The original goal was to take a piece of concept art and make a stylized scene i
   - [Gerstner Waves](#gerstner-waves)
   - [Portal Distortion](#portal-distortion)
   - [Curtains (Vignette?) Post Process Effect](#curtains-vignette-post-process-effect)
+  - [The Second Scene](#the-second-scene)
   - [Skybox](#skybox)
+  - [UI and Fonts](#ui-and-fonts)
   - [Dimensional Travel](#dimensional-travel)
   - [Animation Curves!](#animation-curves)
   - [Credits](#credits)
@@ -159,7 +161,11 @@ The specifics are not super important, but you can see towards the right that th
 |:-:|
 |<img src="img/vignetteMain.gif" width=500>|
 
+## The Second Scene
+
 ## Skybox
+
+## UI and Fonts
 
 ## Dimensional Travel
 
@@ -189,12 +195,12 @@ The same technique is employed to achieve different curtain opening and closing 
 
 In this first example, the curtain closes based on distance of player to door (the curve is reversed from right to left based on distance). First the curtain starts closing in on the screen in "steps", until it approaches the door's boundary, and then it opens up aligned with the door boundary. This was a lot of manual tweaking of the curve by playing the demo, moving closer to the door, seeing where the curtain should be, and applying that on the curve, and this process took a lot of time."
 
-|<img src="img/vignette1.gif" width=300>|<img src="img/vignetteCurveClose.png" width=200>|
+|<img src="img/vignette1.gif" width=400>|<img src="img/vignetteCurveClose.png" width=300>|
 |:-:|:-:|
 
 In this next example, the curtain opens up based on a timer, but uses this curve to find the t value for interpolation.
 
-|<img src="img/vignette2.gif" width=300>|<img src="img/vignetteOpenCurve.png" width=200>|
+|<img src="img/vignette2.gif" width=400>|<img src="img/vignetteOpenCurve.png" width=300>|
 |:-:|:-:|
 
 **Other use cases**
