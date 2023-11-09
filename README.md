@@ -1,6 +1,6 @@
 # 3D Stylization Shaders - *Waterpaint*
 
-https://github.com/LinDadaism/ProceduralGraphics-Stylization/assets/46789205/0bc1bffd-128b-4060-9e6c-cec8e8c2096b
+https://github.com/LinDadaism/ProceduralGraphics-Stylization/assets/46789205/8413d4bd-1d12-459b-955d-0bfcce68fa61
 
 
 ## Project Overview:
