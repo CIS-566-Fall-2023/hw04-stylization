@@ -13,11 +13,15 @@ public class SwapMats : MonoBehaviour
     private Renderer meshRenderer1;
     private Renderer meshRenderer2;
     private Renderer meshRenderer3;
+    private Renderer meshRenderer4;
+    private Renderer meshRenderer5;
 
     // game object
     public GameObject plane1;
     public GameObject plane2;
     public GameObject plane3;
+    public GameObject plane4;
+    public GameObject plane5;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,8 @@ public class SwapMats : MonoBehaviour
         meshRenderer1 = plane1.GetComponent<Renderer>();
         meshRenderer2 = plane2.GetComponent<Renderer>();
         meshRenderer3 = plane3.GetComponent<Renderer>();
+        meshRenderer4 = plane4.GetComponent<Renderer>();
+        meshRenderer5 = plane5.GetComponent<Renderer>();
         mat = true;
     }
 
@@ -46,10 +52,14 @@ public class SwapMats : MonoBehaviour
             meshRenderer1.material = mat1;
             meshRenderer2.material = mat1;
             meshRenderer3.material = mat1;
+            meshRenderer4.material = mat1;
+            meshRenderer5.material = mat1;
         } else {
             meshRenderer1.material = mat2;
             meshRenderer2.material = mat2;
             meshRenderer3.material = mat2;
+            meshRenderer4.material = mat2;
+            meshRenderer5.material = mat2;
         }
     }
 }
