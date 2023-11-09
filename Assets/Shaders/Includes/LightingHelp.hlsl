@@ -31,7 +31,7 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #ifndef SHADERGRAPH_PREVIEW
 
     int pixelLightCount = GetAdditionalLightsCount();
-    
+
     for (int i = 0; i < pixelLightCount; ++i)
     {
         Light light = GetAdditionalLight(i, WorldPosition);
@@ -39,14 +39,14 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         uint light_i = tmp[i % 4];
 
         half shadowAtten = light.shadowAttenuation * AdditionalLightRealtimeShadow(light_i, WorldPosition, light.direction);
-        
+
         half NdotL = saturate(dot(WorldNormal, light.direction));
         half distanceAtten = light.distanceAttenuation;
 
         half thisDiffuse = distanceAtten * shadowAtten * NdotL;
-        
+
         half rampedDiffuse = 0;
-        
+
         if (thisDiffuse < Thresholds.x)
         {
             rampedDiffuse = RampedDiffuseValues.x;
@@ -60,7 +60,13 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
             rampedDiffuse = RampedDiffuseValues.z;
         }
 
-        
+
+        if (shadowAtten * NdotL == 0)
+        {
+            rampedDiffuse = 0;
+
+        }
+
         if (light.distanceAttenuation <= 0)
         {
             rampedDiffuse = 0.0;
@@ -69,13 +75,6 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Color += max(rampedDiffuse, 0) * light.color.rgb;
         Diffuse += rampedDiffuse;
     }
-    
-    if (Diffuse <= 0.3)
-    {
-        Color = float3(0, 0, 0);
-        Diffuse = 0;
-    }
-    
 #endif
 }
 
@@ -88,6 +87,37 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
     else if (Diffuse < Thresholds.y)
     {
         OUT = Midtone;
+    }
+    else
+    {
+        OUT = Highlight;
+    }
+}
+//void ChooseColor_float(float3 Highlight, float3 Shadow, float Diffuse, float Threshold, out float3 OUT)
+//{
+//    if (Diffuse < Threshold)
+//    {
+//        OUT = Shadow;
+//    }
+//    else
+//    {
+//        OUT = Highlight;
+//    }
+//}
+
+void ChooseColor3Tone_float(float3 Highlight, float3 Shadow, float3 MidTone, float Diffuse, float Threshold, float Threshold2, out float3 OUT, out float3 SHADOW_HATCH_MASK, out float3 MIDTONE_HATCH_MASK)
+{
+    SHADOW_HATCH_MASK = float3(0.0f, 0.0f, 0.0f);
+    MIDTONE_HATCH_MASK = float3(0.0f, 0.0f, 0.0f);
+    if (Diffuse < Threshold && Diffuse < Threshold2)
+    {
+        OUT = Shadow;
+        SHADOW_HATCH_MASK = float3(1.0f, 1.0f, 1.0f);
+    }
+    else if (Diffuse < Threshold2)
+    {
+        OUT = MidTone;
+        MIDTONE_HATCH_MASK = float3(1.0f, 1.0f, 1.0f);
     }
     else
     {
