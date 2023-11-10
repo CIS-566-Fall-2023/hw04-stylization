@@ -41,7 +41,7 @@
 
 ### Gaara (Illustration style Shadow)
 
-**Outline**
+**Outline: Enter Space to switch Material**
 
 ![](results/outline.png)
 
