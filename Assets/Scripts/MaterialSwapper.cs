@@ -6,12 +6,12 @@ using UnityEngine;
 public class MaterialSwapper : MonoBehaviour
 {
     public Material[] materials;
-    private MeshRenderer meshRenderer;
+    private SkinnedMeshRenderer meshRenderer;
     int index;
 
     void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponent<SkinnedMeshRenderer>();
     }
 
     void Update()
