@@ -52,8 +52,8 @@ In this project, I set out to create a 3D stylized scene in Unity, drawing inspi
 	+ Vibrant colors
 	+ Watercolor effect
 	+ Paper texture
-	+ White glowy outline
-	+ Rim highlight
+	+ Fun sketchy outline
+	+ Fresnel/Rim glow effect
 
 ---
 ## 2. Interesting Shaders
