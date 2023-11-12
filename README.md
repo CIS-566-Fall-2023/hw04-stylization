@@ -59,7 +59,7 @@ In this project, I set out to create a 3D stylized scene in Unity, drawing inspi
 ## 2. Interesting Shaders
 
 1. **Improved Surface Shader**
-   - Starting with my three-tone toon shader from the previous lab, I added a starry sky texture and multiple light support. As an additional lighting feature, I added a glowly rim lighting effect using a Fresnel node. Then, I created a custom shadow texture using noise and the object's UV coordinates instead of screen position. Finally, I did my best to emulate the vibrant, happy colors I often associate with Super Mario Galaxy and the Lumas! As a special effect for the Lumas, I added an animated scrolling noise overlay to add some flare, since after all, they are the ***stars*** of the show! (ba-dum-tshhh ;))
+   - Starting with my three-tone toon shader from the previous lab, I added a starry sky texture and multiple light support. As an additional lighting feature, I added a glowy rim lighting effect using a Fresnel node. Then, I created a custom shadow texture using noise and the object's UV coordinates instead of screen position. Finally, I did my best to emulate the vibrant, happy colors I often associate with Super Mario Galaxy and the Lumas! As a special effect for the Lumas, I added an animated scrolling noise overlay to add some flare, since after all, they are the ***stars*** of the show! (ba-dum-tshhh ;))
 
 ![](Recordings/lab.png)</br>
 ![](Recordings/customshader.png)
@@ -71,7 +71,7 @@ Next, I created a post process outline effect based on the Depth and Normal buff
 
 ---
 ## 4. Full Screen Post Process Effect
-I added a watercolor paper overlay to my scene, as well as a brush stroke effect.
+I added a watercolor paper overlay to my scene, as well as a white watercolor-style vignette effect.
 
 ---
 ## 5. Create a Scene
