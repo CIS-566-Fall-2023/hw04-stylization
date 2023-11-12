@@ -1,4 +1,4 @@
-# HW 4: *3D Stylization*
+# Amy Liu - HW 4: *3D Stylization*
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
@@ -6,14 +6,13 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
+
+## Result:
+
+![](imgs/demo.gif)
+
+### Inspiration:
+![](imgs/art-style-1.jpeg)
 
 ---
 # Tasks
