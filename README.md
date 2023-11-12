@@ -89,9 +89,10 @@ As a finishing touch, I added a material swapping script to my scene and fine-tu
 ## Final Result!
 ![](Recordings/result.png)
 
-![](Recordings/novignette.mp4)
-
-![](Recordings/result.mp4)
+Videos of my results:
+https://drive.google.com/file/d/1JjvHjLzPiGKP8uw8jMes_L9kBCJN4yQL/view?usp=drive_link
+https://drive.google.com/file/d/1G6deDIw-n78ekuMrCV60hgykCSvvWXub/view?usp=drive_link
+https://drive.google.com/file/d/1HZ7rHFPPz9X8U56KX6d8_ECsSCUACyHY/view?usp=drive_link
 
 ## Resources:
 
