@@ -49,15 +49,18 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         
         if (thisDiffuse < Thresholds.x)
         {
-            rampedDiffuse = RampedDiffuseValues.x;
+            float factor=(Thresholds.x-thisDiffuse)/(Thresholds.x);
+            rampedDiffuse = (1-factor)*RampedDiffuseValues.x;
         }
         else if (thisDiffuse < Thresholds.y)
         {
-            rampedDiffuse = RampedDiffuseValues.y;
+            float factor=(Thresholds.y-thisDiffuse)/(Thresholds.y-Thresholds.x);
+            rampedDiffuse = (1-factor)*RampedDiffuseValues.y+factor*RampedDiffuseValues.x;
         }
         else
         {
-            rampedDiffuse = RampedDiffuseValues.z;
+            float factor=(1.0-thisDiffuse)/(1-Thresholds.y);
+            rampedDiffuse = (1-factor)*RampedDiffuseValues.z+factor*RampedDiffuseValues.y;
         }
 
         
@@ -70,11 +73,11 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         Diffuse += rampedDiffuse;
     }
     
-    if (Diffuse <= 0.3)
+    /*if (Diffuse <= 0.3)
     {
         Color = float3(0, 0, 0);
         Diffuse = 0;
-    }
+    }*/
     
 #endif
 }
@@ -93,4 +96,57 @@ void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Di
     {
         OUT = Highlight;
     }
+}
+
+void ChooseColorText_float(float3 Highlight, float3 Midtone, float3 Shadow, float3 text_color, float Diffuse, float2 Thresholds, out float3 OUT)
+{
+    float color_strength=1-length(text_color);
+    if (Diffuse < Thresholds.x)
+    {
+        OUT = Shadow*color_strength;
+    }
+    else if (Diffuse < Thresholds.y)
+    {
+        OUT = Midtone*color_strength;
+    }
+    else
+    {
+        OUT = Highlight*color_strength;
+    }
+    //OUT=Highlight*color_strength+(1.0f-color_strength)*Shadow;
+}
+
+void blackline_float(float linethreshold, float input_dot, float3 color, out float3 OUT)
+{
+    if (input_dot > linethreshold)
+    {
+        OUT = color;
+    }
+    else
+    {
+        OUT = float3(0, 0, 0);
+    }
+}
+
+void texture_color_float(float3 text_color, float3 original, out float3 OUT)
+{
+    float color_strength=1.0f-length(text_color);
+    OUT=original*color_strength+(1.0f-color_strength)*float3(1,1,1);
+}
+
+void ChooseColor3_float(float3 Highlight, float3 Midtone,float3 Shadow, float3 Transparency,float Diffuse, float Threshold1, float Threshold2,float Attenuation, out float3 OUT)
+{
+        if(Diffuse < Threshold1){
+            OUT = Shadow;
+        }
+        else if (Diffuse < Threshold2)
+        {
+            float Alpha=length(Transparency);
+            OUT = (1.0f-Alpha)*Shadow+Alpha*Midtone;
+        }
+        else
+        {
+            OUT = Highlight;
+        }
+    
 }
