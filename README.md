@@ -1,5 +1,69 @@
 # HW 4: *3D Stylization*
 
+## Results
+
+### Reference
+
+**Watercolor style illustration:**
+
+![](results/ref1.png)
+![](results/ref2.png)
+
+**Author:** [Алёна Кедавра](https://www.instagram.com/kedavra.art/)
+
+### Shader Feature
+
+**Additional Light**
+
+![](results/additionallight.gif)
+
+**Rim & Specular Light**
+
+![](results/mat.png)
+
+### Japanese Girl
+
+**Post Effect Off:**
+
+![](results/japan.png)
+
+**Post Effect On:**
+
+![](results/japanP.png)
+
+### Dancer
+
+**Vertex Animation + Specular Light Animation**
+
+[**Video**](https://github.com/CaballoMa/hw04-stylization/blob/main/results/scene2.mp4)
+
+![](results/scene2.gif)
+
+### Gaara (Illustration style Shadow)
+
+**Outline: Enter Space to switch Material**
+
+![](results/outline.png)
+
+**Original**
+
+![](results/outlineCompare.png)
+
+### Garden (Illustration style Shadow)
+
+**Turanable**
+
+![](results/scene4.gif)
+
+**Post Effect Off**
+
+![](results/scene4Ori.png)
+
+**Post Effect On**
+
+![](results/scene4.png)
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
