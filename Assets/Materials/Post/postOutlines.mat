@@ -60,13 +60,15 @@ Material:
     - REQUIRE_OPAQUE_TEXTURE: 1
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
-    - _ColorStrength: 0.88
-    - _ColorThickness: 2.23
-    - _ColorThreshold: 1.7
+    - _Brightness: 0.8
+    - _ColorStrength: 2.22
+    - _ColorThickness: -0.7
+    - _ColorThreshold: 2.42
     - _DepthStrength: 3.55
-    - _DepthThickness: 0.34
-    - _DepthThreshold: 0.36
-    - _Thickness: 1
+    - _DepthThickness: 0.62
+    - _DepthThreshold: 0.64
+    - _Thickness: 2
+    - _WiggleStrength: 0.01
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
