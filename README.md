@@ -3,9 +3,7 @@
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
-| ![81sicgpYcjL _AC_UF1000,1000_QL80_](https://github.com/inshalak/hw04-stylization/assets/104465349/4d4ed00c-44cf-4a3e-bb1c-c24750b9f475) | ![Flash](https://github.com/inshalak/hw04-stylization/assets/104465349/4f52c8c8-4e75-43b1-bb4e-193a68a223aa)
- |
-| *2D Concept Illustration* | *3D Stylized Scene in Unity* |
+ | ![Flash](https://github.com/inshalak/hw04-stylization/assets/104465349/4f52c8c8-4e75-43b1-bb4e-193a68a223aa)| *3D Stylized Scene in Unity* |
 
 ---
 # Tasks
