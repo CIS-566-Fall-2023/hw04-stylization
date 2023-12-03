@@ -31,7 +31,13 @@ Special Animated Surface Shader -- Fireball with Color Change:
 ![](https://github.com/uluyek/hw04-stylization/blob/main/fireball.png)
 
 ### Outline: 
+Outlined Image:
 ![](https://github.com/uluyek/hw04-stylization/blob/main/outline%2011.png)
+
+Outline Example:
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20shader%20graph.png)
+
+Outline's Shader graph
 
 ### Full-Screen Post-Process Effect: 
 Fog Effect Applied: 
