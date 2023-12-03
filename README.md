@@ -3,6 +3,7 @@
 ## Keyu Lu's Submission
 
 Final Submission:
+
 ![](https://github.com/uluyek/hw04-stylization/blob/main/video-output-01FFCA0D-A1FC-40EE-B571-759645BEE737.gif)
 
 ## Project Overview:
