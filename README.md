@@ -1,5 +1,59 @@
 # HW 4: *3D Stylization*
 
+## Keyu Lu's Submission
+
+### Final Submission:
+
+GIF:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/video-output-01FFCA0D-A1FC-40EE-B571-759645BEE737.gif)
+
+Image:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/submission%20final.png)
+
+
+### Concept Art: 
+Concept Art by Pavel Kolomeyets
+![](https://github.com/uluyek/hw04-stylization/blob/main/pavel-kolomeyets-f-immortal%20(1).jpg)
+
+### Interesting Shaders: 
+Three-tone shader is applied on the skeleton prefab: 
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader%20skeleton.png)
+
+Three-tone shader's shader graph:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader.png)
+
+Special Animated Surface Shader -- Fireball with Color Change:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/fireball.png)
+
+### Outline: 
+Outlined Image:
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%2011.png)
+
+Outline Example:
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20example.png)
+
+Outline's Shader graph:
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20shader%20graph.png)
+
+### Full-Screen Post-Process Effect: 
+Fog Effect Applied: 
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/fog.png)
+
+Fog Effect's Shader Graph:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/fog%20shader%20graph.png)
+
+### Interactivity: 
+I added one new point light and once the player hit the space bar the color of the light will change
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/video-output-54AEE2D6-69C7-49AD-A48B-F625643599B9.gif)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
