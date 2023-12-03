@@ -2,12 +2,14 @@
 
 ## Keyu Lu's Submission
 
-Final Submission:
+### Final Submission:
 
 ![](https://github.com/uluyek/hw04-stylization/blob/main/video-output-01FFCA0D-A1FC-40EE-B571-759645BEE737.gif)
 
-## Concept Art
+### Concept Art
+Concept Art by Pavel Kolomeyets
 ![](https://github.com/uluyek/hw04-stylization/blob/main/pavel-kolomeyets-f-immortal%20(1).jpg)
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
 
