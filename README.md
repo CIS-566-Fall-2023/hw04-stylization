@@ -12,8 +12,11 @@ Concept Art by Pavel Kolomeyets
 
 ### Three Tone Shader
 Three tone shader is applied on skeleton prefab: 
+
 ![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader%20skeleton.png)
+
 Three tone shader's shader graph:
+
 ![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader.png)
 
 ## Project Overview:
