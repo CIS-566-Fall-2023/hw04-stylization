@@ -35,9 +35,10 @@ Outlined Image:
 ![](https://github.com/uluyek/hw04-stylization/blob/main/outline%2011.png)
 
 Outline Example:
-![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20shader%20graph.png)
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20example.png)
 
-Outline's Shader graph
+Outline's Shader graph:
+![](https://github.com/uluyek/hw04-stylization/blob/main/outline%20shader%20graph.png)
 
 ### Full-Screen Post-Process Effect: 
 Fog Effect Applied: 
