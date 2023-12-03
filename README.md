@@ -30,13 +30,13 @@ Three tone shader's shader graph:
 ![](https://github.com/uluyek/hw04-stylization/blob/main/outline%2011.png)
 
 ### Full Screen Post Process Effect
-Fog: 
+Fog Effect Applied: 
 
 ![](https://github.com/uluyek/hw04-stylization/blob/main/fog.png)
 
 Fog Shader Graph:
 
-![]()
+![](https://github.com/uluyek/hw04-stylization/blob/main/fog%20shader%20graph.png)
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
