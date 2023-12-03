@@ -14,6 +14,7 @@ Concept Art by Pavel Kolomeyets
 Three tone shader is applied on skeleton prefab: 
 ![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader%20skeleton.png)
 Three tone shader's shader graph:
+![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader.png)
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
