@@ -24,7 +24,11 @@ Three tone shader is applied on skeleton prefab:
 
 Three tone shader's shader graph:
 
-![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader.png
+![](https://github.com/uluyek/hw04-stylization/blob/main/threetone%20shader.png)
+
+Special Animated Surface Shader -- Fireball:
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/fireball.png)
 
 ### Outline
 ![](https://github.com/uluyek/hw04-stylization/blob/main/outline%2011.png)
