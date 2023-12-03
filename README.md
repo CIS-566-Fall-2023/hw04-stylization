@@ -50,6 +50,9 @@ Fog Effect's Shader Graph:
 ![](https://github.com/uluyek/hw04-stylization/blob/main/fog%20shader%20graph.png)
 
 ### Interactivity: 
+I added one new point light and once the player hit the space bar the color of the light will change
+
+![](https://github.com/uluyek/hw04-stylization/blob/main/video-output-54AEE2D6-69C7-49AD-A48B-F625643599B9.gif)
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity.
