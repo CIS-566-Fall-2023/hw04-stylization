@@ -4,6 +4,9 @@
 ## Demo:
 ![](Demo1.png)
 ![](Demo2.gif)
+|<img src="Reference_Image.png" width="100%">|<img src="MAYA_Demo.png" width="100%">|<img src="Labubu.png" width="100%">|
+|:-:|:-:|:-:|
+|Reference Image|Created Maya FBX|Toon Shading|
 
 ## Inspiration
 ![](Inspire.jpg)  
