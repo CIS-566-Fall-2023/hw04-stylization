@@ -1,7 +1,8 @@
 # HW 4: *3D Stylization*
 
 ## Project Overview:
-In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-physically-based real-time rendering workflows in Unity. I wanted to recreate a comic book-esque stylization, inspired by depictions of characters running "toward" the screen in the Comics. This is what I came up with. 
+I wanted to recreate a comic book-esque stylization, inspired by depictions of characters running "toward" the screen in the Comics. This is what I came up with. 
+
  ![Flash](https://github.com/inshalak/hw04-stylization/assets/104465349/4f52c8c8-4e75-43b1-bb4e-193a68a223aa)
 ---
 # Tasks
@@ -13,8 +14,7 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
       2. **Additional Lighting Feature**
           - Implement a Specular Highlight, Rim Highlight or another similarly interesting lighting-related effect
       3. **Interesting Shadow**
-          1. Create your own custom shadow texture!
-             I followed the instructions in the Homework description to use a custom "paint" texture to mimic the comic-book effect feel. I'm particularly proud of how this shadow teture turned out on the face of the Flash.
+         - I followed the instructions in the Homework description to use a custom "paint" texture to mimic the comic-book effect feel. I'm particularly proud of how this shadow teture turned out on the face of the Flash.
       4. **Accurate Color Palette**
           
 3. **Special Surface Shader**
@@ -27,74 +27,16 @@ I implemented a basic outline for my Flash and gave him a pencil-y exterior. Ani
 ---
 ## 4. Full Screen Post Process Effect
 My final post processing effect HAD to be speed lines. I worked on using the vignette method and polar coordinates to add spherical lines 
-We're nearing the end! 
-
-### To-Do:
-Ok, now regardless of what your concept art looks like, using what you know about toolbox functions and screen space effects, add an appealing post-process effect to give your scene a unique look. Your post processing effect should do at least one of the following.
-* A vingette that darkens the edges of your images with a color or pattern
-* Color / tone mapping that changes the colorization of your renders. [Here's some basic ideas, but please experiment](https://gmshaders.com/tutorials/basic_colors/) 
-* A texture to make your image look like it's drawn on paper or some other surface.
-* A blur to make your image look smudged.
-* Fog or clouds that drift over your scene
-* Whatever else you can think of that complements your scene!
-
-***Note: This should be easily accomplishable using what you should have already learnt about working with Unity's Custom Render Features from the Outline section!***
 
 ---
 ## 5. Create a Scene
-Using Unity's controls, create a ***SUPER BASIC*** scene with a few elements to show off your unique rendering stylization. Be sure to apply the materials you've created. Please don't go crazy with the geometry -- then you'll have github problems if your files are too large. [See here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). 
-
-Note that your modelling will NOT be graded at all for this assignment. It is **NOT** expected that your scene will be a one-to-one faithful replica of your concept art. You are **STRONGLY ENCOURAGED** to find free assets online, even if they don't strongly resemble the geometry/objects present in your concept art. (TLDR; If you choose to model your own geometry for this project, be aware of the time-constraint and risk!)
-
-Some example resources for finding 3D assets to populate your scene With:
-1. [SketchFab](https://sketchfab.com/)
-2. [Mixamo](https://www.mixamo.com/#/)
-3. [TurboSquid](https://www.turbosquid.com/)
 
 ## 6. Interactivity
-As a finishing touch, let's show off the fact that our scene is rendered in real-time! Please add an element of interactivity to your scene. Change some major visual aspect of your scene on a keypress. The triggered change could be
-* Party mode (things speed up, different colorization)
-* Memory mode (different post-processing effects to color you scene differently)
-* Fanart mode (different surface shaders, as if done by a different artist)
-* Whatever else you can think of! Combine these ideas, or come up with something new. Just note, your interactive change should be at least as complex as implementing a new type of post processing effect or surface shader. We'll be disappointed if its just a parameter change. There should be significant visual change.
-
-### To-Do:
-* Create at least one new material to be swapped in using a key press
-* Create and attach a new C# script that listens for a key press and swaps out the material on that key press. 
-Your C# script should look something like this:
-```
-public Material[] materials;
-private MeshRenderer meshRenderer;
-int index;
-
-void Start () {
-          meshRenderer = GetComponent<MeshRenderer>();
-}
-
-void Update () {
-          if (Input.GetKeyDown(KeyCode.Space)){
-                 index = (index + 1) % materials.Count;
-                 SwapToNextMaterial(index);
-          }
-}
-
-void SwapToNextMaterial (int index) {
-          meshRenderer.material = materials[index % materials.Count];
-}
-```
-* Attach the c# script as a component to the object(s) that you want to change on keypress
-* Assign all the relevant materials to the Materials list field so you object knows what to swap between.
+Pressing the space bar translates Flash forward, places a monochrome material on flash, a black and white post processing shader and makes the vignette vibrate faster, making it seem like he is running closer to you!
  
 ---
 ## 7. Extra Credit
-Explore! What else can you do to polish your scene?
-  
-- Implement Texture Support for your Toon Surface Shader with Appealing Procedural Coloring.
-    - I.e. The procedural coloring needs to be more than just multiplying by 0.6 or 1.5 to decrease/increase the value. Consider more deeply the relationship between things such as value and saturation in artist-crafted color palettes? 
-- Add an interesting terrain with grass and/or other interesting features
-- Implement a Custom Skybox alongside a day-night cycle lighting script that changes the main directional light's colors and direction over time.
-- Add water puddles with screenspace reflections!
-- Any other similar level of extra spice to your scene : ) (Evaluated on a case-by-case basis by TAs/Rachel/Adam)
+My surface shader is VFX shader graph based? Unsure if that qualifies.
 
 ## Submission
 1. Video of a turnaround of your scene
