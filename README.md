@@ -4,7 +4,9 @@
 I wanted to recreate a comic book-esque stylization, inspired by depictions of characters running "toward" the screen in the Comics. This is what I came up with. 
 
  ![Flash](https://github.com/inshalak/hw04-stylization/assets/104465349/4f52c8c8-4e75-43b1-bb4e-193a68a223aa)
----
+
+https://github.com/inshalak/hw04-stylization/assets/104465349/93ab4d7a-dc0f-4722-b647-a0a34202ffcc
+
 # Tasks
 ---
 ## q. Interesting Shaders
