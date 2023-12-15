@@ -1,4 +1,5 @@
 # HW 4: *3D Stylization*
+https://drive.google.com/file/d/1D1GnFNvL_OJwXxBt7AMKndQ3mr7anPu4/view?usp=sharing
 
 ## Project Overview:
 I wanted to recreate a comic book-esque stylization, inspired by depictions of characters running "toward" the screen in the Comics. This is what I came up with. 
