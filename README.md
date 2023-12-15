@@ -43,6 +43,7 @@ Procedure:
 3. Used depth and normal information to detect edges of objects, essentially determining which pixels correspond to object edges based on depth or normal changes.
 4. Used the identified edge pixels to draw outlines around objects, and applied post-process outline effect.
 5. Utilized the identified edge information as a mask to overlay the outline effect on the scene and combined the outlined pixels with the original scene.
+
 ### Full Screen Post Process Effect
 For this feature, the main effect I added was small dust bunnies (not sure if this is the correct classification) that floated around the screen and gave a dream-y atmosphere feel. Other effects involved adding simple grain.
 Dust bunny procedure overview: 
