@@ -29,6 +29,7 @@ Procedure:
 6. Lightly adjusted shader properties such as albedo, emission, and specular colors to match the inspo's color palette.
 
 ### Special Surface Shader - Vertex Displacement
+** gif is a bit scuffed, sorry, but you can see the displacement at the very beginning and the end if you watch all 20-ish seconds
 ![](imgs/special-shader.gif)
 I chose to implement a vertex displacement shader for the bushes and trees in the scene, as if they
 are moving in the wind. To do this, I took inspo from given tutorials but also spent some time
