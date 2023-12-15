@@ -19,8 +19,6 @@ outline, and the muted color lookup.
 ---
 # Requirements and Implementation
 
-## 1. Shaders
-
 ### Surface Shader
 Procedure:
 1. To accommodate multiple lights, I used Unity's built-in variables like `UNITY_LIGHTMODEL_AMBIENT` and `unity_4LightIndices0` to access light information.
