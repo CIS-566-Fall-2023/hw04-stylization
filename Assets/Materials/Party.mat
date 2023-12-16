@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6154151420477691623
+--- !u!114 &-1564223525471813697
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AnimatedTest
-  m_Shader: {fileID: -6465566751694194690, guid: 176449dddf4aa0446a1328c1678404e6,
+  m_Name: Party
+  m_Shader: {fileID: -6465566751694194690, guid: 4a1c77582abbaa24cbf7b5693f64837c,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -63,19 +63,19 @@ Material:
     - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
     - MAIN_LIGHT_CALCULATE_SHADOWS: 1
     - _ADDITIONAL_LIGHTS: 1
-    - _AnimateSpeed: 0.7
+    - _AnimateSpeed: 2
     - _BlendOpacity: 1.2
     - _ColorMix: 0.5
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
-    - _Shininess: 7
-    - _Specular_Size: 0.266
+    - _Shininess: 6
+    - _Specular_Size: 0.6
     m_Colors:
-    - _Highlight: {r: 0.9803922, g: 0.8235295, b: 0.3529412, a: 1}
-    - _Midtone: {r: 0.3372549, g: 0.6039216, b: 0.2627451, a: 1}
+    - _Highlight: {r: 0.909804, g: 0.8941177, b: 0.8431373, a: 1}
+    - _Midtone: {r: 0.8980393, g: 0.7882354, b: 0.5921568, a: 1}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
-    - _Shadow: {r: 0.08627451, g: 0.4666667, b: 0.19215688, a: 1}
-    - _Thresholds: {r: 0.3, g: 0.6, b: 0, a: 0}
+    - _Shadow: {r: 0.7843138, g: 0.6470588, b: 0.40784317, a: 1}
+    - _Thresholds: {r: 0.5, g: 0.6, b: 0, a: 0}
   m_BuildTextureStacks: []
