@@ -14,15 +14,17 @@ Sorry for being late, I had a hard time on working with depth field, but I enjoy
 ---
 
 ## 1. Picking a Piece of Concept Art
-Art credit:  Danae Correa https://www.artstation.com/artwork/GeklZ3
+Concept Art credit:  Danae Correa https://www.artstation.com/artwork/GeklZ3
+![](c0.jpg)
 
-| ![](p0.png) | ![](c0.png) |
+My scene: 
+![](p0.png)
 
 ## 2. Interesting Shaders
 1. **Improved Surface Shader**
     I have Multiple Light Support, Additional Light Feature (Specular Light), Customized Shadow(homemade Pokeball shape), and Acuurate Colors
 
-3. **Special Surface Shader**
+2. **Special Surface Shader**
     I have a color changing animated shaders. 
 
 ---
