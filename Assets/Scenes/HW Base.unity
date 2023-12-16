@@ -154,7 +154,7 @@ PrefabInstance:
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.79
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
@@ -164,7 +164,7 @@ PrefabInstance:
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.64
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
@@ -474,6 +474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2495858706405661235, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9d64de94f30e6542ac3517131e3396a, type: 2}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -635,6 +640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2495858706405661235, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f974f159a916464db545dc1190f8650, type: 2}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -856,7 +866,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d60db1350aa31bd4080a3bb5e2541934, type: 2}
+  - {fileID: 2100000, guid: 02bec0e3e0220b549bb9749d4fecbb25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -946,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b3558e9a6562a4e8a6e448bdbadb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 15
 --- !u!1001 &1522882035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -973,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.37
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
@@ -983,7 +993,7 @@ PrefabInstance:
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.22
+      value: -2.67
       objectReference: {fileID: 0}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
@@ -1140,8 +1150,8 @@ Transform:
   m_GameObject: {fileID: 1858563929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 4.813, z: 1.34}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 5.19, z: -2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1209,6 +1219,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2b60cc0660a285342b6a9dfa680370b9, type: 2}
+    - target: {fileID: -8335762084600699551, guid: d342172e29e7edd40aafdd4564c8f4b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f3a0099e8731cb41b89ebb2bb313adf, type: 2}
+    - target: {fileID: -8335762084600699551, guid: d342172e29e7edd40aafdd4564c8f4b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4389200e1bb1ce14d830c9fcf8ad23ca, type: 2}
     - target: {fileID: -3294154683808607951, guid: d342172e29e7edd40aafdd4564c8f4b1,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1271,6 +1291,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 2495858706405661235, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67898de08940ede4e8b0e76a7c7e63c7, type: 2}
     - target: {fileID: 5746700076919529819, guid: a5ddfe6bde3ca6145a3fd41f66bd9030,
         type: 3}
       propertyPath: m_LocalScale.x
