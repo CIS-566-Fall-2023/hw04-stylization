@@ -1,4 +1,4 @@
-# HW 4: *3D Stylization*
+# Amy Liu - HW 4: *3D Stylization*
 
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
@@ -6,16 +6,58 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/755780f1-8b8c-47e1-b14f-3a619f92fd3a/>  | <img width="500px" src=https://github.com/CIS-566-Fall-2023/hw04-stylization/assets/72320867/70550c09-ba75-4d10-9b30-60874179ad10/> |
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
-### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
-4. Full Screen Post Process Effect
-5. Creating a Scene
-6. Interactivity
-7. Extra Credit
+
+## Result: 
+Here is a demo of my results with 3D models of Totoro and Mei from online, and a city scene borrowed from a pre-made
+Unity package (Quibli).
+![](imgs/demo.gif)
+
+### Inspiration:
+I was inspired by this photo of Ghibli Merch (?) and specifically wanted to replicate the grain, 
+outline, and the muted color lookup.
+![](imgs/art-style-1.jpeg)
 
 ---
+# Requirements and Implementation
+
+### Surface Shader
+Procedure:
+1. To accommodate multiple lights, I used Unity's built-in variables like `UNITY_LIGHTMODEL_AMBIENT` and `unity_4LightIndices0` to access light information.
+2. I calculated the contribution of each light to the final color by looping through all active lights.
+3. I then calculated specular highlights using the dot product between the view direction and reflected light direction and between normal and view direction for rim lighting.
+4. Modified the shader to use object UV coordinates to control shadows instead of screen position.
+5. Added an exposed float parameter ("Shadow Scale") to control the tiling of the shadow texture.
+6. Lightly adjusted shader properties such as albedo, emission, and specular colors to match the inspo's color palette.
+
+### Special Surface Shader - Vertex Displacement
+** gif is a bit scuffed, sorry, but you can see the displacement at the very beginning and the end if you watch all 20-ish seconds
+![](imgs/special-shader.gif)
+I chose to implement a vertex displacement shader for the bushes and trees in the scene, as if they
+are moving in the wind. To do this, I took inspo from given tutorials but also spent some time
+customizing the displacement function (mostly through a trial-and-error process honestly) to create
+the desired movement effect.
+
+### Post Process Surface Shader - Outlines
+Procedure:
+1. Accessed depth and normal buffers, and used these textures to identify object edges by detecting depth discontinuities or normal changes.
+2. Used depth and normal information to detect edges of objects, essentially determining which pixels correspond to object edges based on depth or normal changes.
+3. Used the identified edge pixels to draw outlines around objects, and applied post-process outline effect.
+4. Utilized the identified edge information as a mask to overlay the outline effect on the scene and combined the outlined pixels with the original scene.
+
+### Full Screen Post Process Effect
+For this feature, the main effect I added was small dust bunnies (not sure if this is the correct classification) that floated around the screen and gave a dream-y atmosphere feel. Other effects involved adding simple grain.
+Dust bunny procedure overview: 
+1. I implemented a randomization function that helped determine the particles' positions, movements, and densities.
+2. I slightly experimented with alpha blending to create a transparent effect for some particles.
+3. I applied the created simulation to a full-screen quad.
+4. I used additive blending style (decided after some trial-and-error) to overlay the effect onto the screen.
+
+Disclaimer: Procedure and code was guided by Quibli asset structures.
+
+### Interactivity
+- User is able to change size of shadows and enter a custom seed for the particle randomization.
+  - Unfortunately, due to time constraints these are pretty basic interactions :(
+
 # Tasks
 
 ## 0. Base Project Overview
