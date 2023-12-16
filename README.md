@@ -8,6 +8,7 @@ Originally I wanted to get something like the ultimate weapon from Pokemon Origi
 2. Had multiple light support and rim light
 3. Used sobel outline, with perlin noise to wiggle the image for non-uniformity
 4. Implemented vignette shader on top of sobel
+5. Incomplete
 6. Space bar interactivity
 
 
