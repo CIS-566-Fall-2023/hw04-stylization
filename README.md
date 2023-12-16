@@ -1,6 +1,8 @@
 # HW 4: *3D Stylization*
 
 ## Project Overview:
+https://www.youtube.com/watch?v=Ag4PXgfZer0
+
 Sorry for being late, I had a hard time on working with depth field, but I enjoyed the project overall. Thank you!
 
 ### HW Task List:
