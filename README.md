@@ -8,7 +8,8 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 
 ## Result: 
-Here is a demo of my results with 3D models of Totoro, Mei, and a city scene found from online.
+Here is a demo of my results with 3D models of Totoro and Mei from online, and a city scene borrowed from a pre-made
+Unity package (Quibli).
 ![](imgs/demo.gif)
 
 ### Inspiration:
@@ -38,11 +39,10 @@ the desired movement effect.
 
 ### Post Process Surface Shader - Outlines
 Procedure:
-1. Created a custom render feature and implemented some necessary methods (AddRenderPasses, CreateRenderPass, etc.).
-2. Accessed depth and normal buffers, and used these textures to identify object edges by detecting depth discontinuities or normal changes.
-3. Used depth and normal information to detect edges of objects, essentially determining which pixels correspond to object edges based on depth or normal changes.
-4. Used the identified edge pixels to draw outlines around objects, and applied post-process outline effect.
-5. Utilized the identified edge information as a mask to overlay the outline effect on the scene and combined the outlined pixels with the original scene.
+1. Accessed depth and normal buffers, and used these textures to identify object edges by detecting depth discontinuities or normal changes.
+2. Used depth and normal information to detect edges of objects, essentially determining which pixels correspond to object edges based on depth or normal changes.
+3. Used the identified edge pixels to draw outlines around objects, and applied post-process outline effect.
+4. Utilized the identified edge information as a mask to overlay the outline effect on the scene and combined the outlined pixels with the original scene.
 
 ### Full Screen Post Process Effect
 For this feature, the main effect I added was small dust bunnies (not sure if this is the correct classification) that floated around the screen and gave a dream-y atmosphere feel. Other effects involved adding simple grain.
@@ -51,6 +51,8 @@ Dust bunny procedure overview:
 2. I slightly experimented with alpha blending to create a transparent effect for some particles.
 3. I applied the created simulation to a full-screen quad.
 4. I used additive blending style (decided after some trial-and-error) to overlay the effect onto the screen.
+
+Disclaimer: Procedure and code was guided by Quibli asset structures.
 
 ### Interactivity
 - User is able to change size of shadows and enter a custom seed for the particle randomization.
