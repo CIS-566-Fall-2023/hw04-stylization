@@ -7,9 +7,9 @@ In this assignment, you will use a 2D concept art piece as inspiration to create
 |:--:|:--:|
 | *2D Concept Illustration* | *3D Stylized Scene in Unity* |
 ### HW Task List:
-1. Picking a Piece of Concept Art
-2. Interesting Shaders
-3. Outlines
+1. Picking a Piece of Concept Art (yes)
+2. Interesting Shaders (yes)
+3. Outlines (in progress)
 4. Full Screen Post Process Effect
 5. Creating a Scene
 6. Interactivity
