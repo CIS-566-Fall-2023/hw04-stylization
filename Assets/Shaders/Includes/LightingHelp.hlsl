@@ -1,17 +1,16 @@
-void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten)
-{
+void GetMainLight_float(float3 WorldPos, out float3 Color, out float3 Direction, out float DistanceAtten, out float ShadowAtten) {
 #ifdef SHADERGRAPH_PREVIEW
     Direction = normalize(float3(0.5, 0.5, 0));
     Color = 1;
     DistanceAtten = 1;
     ShadowAtten = 1;
 #else
-#if SHADOWS_SCREEN
+    #if SHADOWS_SCREEN
         float4 clipPos = TransformWorldToClip(WorldPos);
         float4 shadowCoord = ComputeScreenPos(clipPos);
-#else
-    float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
-#endif
+    #else
+        float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    #endif
 
     Light mainLight = GetMainLight(shadowCoord);
     Direction = mainLight.direction;
@@ -59,7 +58,6 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
         {
             rampedDiffuse = RampedDiffuseValues.z;
         }
-
         
         if (light.distanceAttenuation <= 0)
         {
@@ -79,15 +77,26 @@ void ComputeAdditionalLighting_float(float3 WorldPosition, float3 WorldNormal,
 #endif
 }
 
-void ChooseColor_float(float3 Highlight, float3 Midtone, float3 Shadow, float Diffuse, float2 Thresholds, out float3 OUT)
+void ChooseColor_float(float3 Highlight, float3 Shadow, float Diffuse, float Threshold, out float3 OUT)
 {
-    if (Diffuse < Thresholds.x)
+    if (Diffuse < Threshold)
     {
         OUT = Shadow;
     }
-    else if (Diffuse < Thresholds.y)
+    else
     {
-        OUT = Midtone;
+        OUT = Highlight;
+    }
+}
+
+void ChooseColor3Tone_float(float3 Highlight, float3 Shadow, float Diffuse, float2 Threshold, out float3 OUT)
+{
+    if (Diffuse < Threshold.x)
+    {
+        OUT = Shadow;
+    }
+    else if (Diffuse < Threshold.y) {
+        OUT = lerp(Highlight, Shadow, 0.5);
     }
     else
     {

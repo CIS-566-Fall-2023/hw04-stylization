@@ -1,5 +1,17 @@
 # HW 4: *3D Stylization*
 
+I was in a big crunch for time so I just threw in a bunch of shader features for as much points as possible.
+
+Originally I wanted to get something like the ultimate weapon from Pokemon Origins, if you're curious.
+![Ultimate Weapon](ultimate-weapon.png)
+
+2. Had multiple light support and rim light
+3. Used sobel outline, with perlin noise to wiggle the image for non-uniformity
+4. Implemented vignette shader on top of sobel
+5. Incomplete
+6. Space bar interactivity
+
+
 ## Project Overview:
 In this assignment, you will use a 2D concept art piece as inspiration to create a 3D Stylized scene in Unity. This will give you the opportunity to explore stylized graphics techniques alongside non-photo-realistic (NPR) real-time rendering workflows in Unity.
 
