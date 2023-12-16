@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineShader
-  m_Shader: {fileID: -6465566751694194690, guid: cac8f989d1108db408ef255446c589aa,
+  m_Name: OutlineD+N
+  m_Shader: {fileID: -6465566751694194690, guid: 7163f590fc0900a40b7040d4389d5965,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,9 +48,13 @@ Material:
     m_Ints: []
     m_Floats:
     - REQUIRE_DEPTH_TEXTURE: 1
-    - _DepthStrength: 2
-    - _DepthThickness: 1
-    - _DepthThreshold: 0.2
+    - _DepthStrength: 1
+    - _DepthThreshold: 1
+    - _DepthTightening: 1
+    - _Movement: 0.5
+    - _NormalStrength: 1
+    - _NormalThreshold: 1
+    - _NormalTightening: 1
     - _Thickness: -0.001
     m_Colors:
     - _Colorr: {r: 0, g: 0, b: 0, a: 0}
